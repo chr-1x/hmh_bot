@@ -2,12 +2,19 @@ import willie
 from datetime import datetime, timedelta
 from pytz import timezone
 
-@willie.module.commands('time', 'now', 'pst', 'PST')
+commands = []
+def command(*args):
+    commands.extend(args)
+    def passthrough(func):
+        return willie.module.commands(*args)(func)
+    return passthrough
+
+@command('time', 'now', 'pst', 'PST')
 def time(bot, trigger):
     now = datetime.now(timezone("PST8PDT"))
     bot.say("The current time in Seattle is %s:%s %s PST" % (now.strftime("%I"), now.minute, "PM" if now.hour > 11 else "AM"))
 
-@willie.module.commands('timer', "when", "howlong")
+@command('timer', "when", "howlong")
 def timer(bot, trigger):
     streamTime = datetime.now(timezone("PST8PDT"))
     
@@ -36,70 +43,70 @@ def timer(bot, trigger):
     else:
         bot.say('Next stream is in %d hours %d minutes' % (untilHours, untilMinutes))
 
-@willie.module.commands('site')
+@command('site')
 def siteInfo(bot, trigger):
     bot.say('HH Website: http://handmadehero.org/  ::  HH Forums: http://forums.handmadehero.org/')
 
-@willie.module.commands('old', 'archive')
+@command('old', 'archive')
 def archiveInfo(bot, trigger):
     bot.say('YT Archive: https://www.youtube.com/user/handmadeheroarchive')
 
-@willie.module.commands('wrist', 'braces')
+@command('wrist', 'braces')
 def wristInfo(bot, trigger):
     bot.say('The wrist braces Casey wears help make typing more comfortable and prevent Repetitive Strain Injury.')
 
-@willie.module.commands('milk', 'almondmilk')
+@command('milk', 'almondmilk')
 def milkInfo(bot, trigger):
     bot.say("One of Casey's drinks of choice is Almond Milk, a delicious and refreshing beverage. Some common brands are Silk and Almond Breeze.")
 
-@willie.module.commands('who', 'casey')
+@command('who', 'casey')
 def caseyInfo(bot, trigger):
     bot.say("Casey Muratori is a software engineer who lives in Seattle. He has done work for various companies such as RAD game tools and on games such as The Witness, and has also done fiction writing and podcasting. He started Handmade Hero to give the general public a better idea of what coding a game from scratch in C is like based on his experiences in the industry.")
 
-@willie.module.commands('thanks')
+@command('thanks')
 def thanksMessage(bot, trigger):
     bot.say("Thanks for streaming, Casey! <3")
 
-@willie.module.commands('hello', 'hi')
+@command('hello', 'hi')
 def helloMessage(bot, trigger):
-    bot.say("Hello, I am an IRC bot! Try some commands: !timer, !site, !google, !info")
+    bot.say("Hello, I am an IRC bot! Try some commands: !timer, !site, !info")
 
-@willie.module.commands('info')
+@command('info')
 def infoMessage(bot, trigger):
     bot.say("I am a Python IRC bot based on Willie (http://willie.dftba.net/). I am run by ChronalDragon, who can be contacted via https://tinyurl.com/ChronalDragon")
 
-@willie.module.commands('buy', 'purchase')
+@command('buy', 'purchase')
 def buyInfo(bot, trigger):
     bot.say("Handmade Hero, the compiled game with art assets and full source code, can be purchased at http://handmadehero.org/#buy_now")
 
-@willie.module.commands('game', 'what')
+@command('game', 'what')
 def gameInfo(bot, trigger):
     bot.say("Handmade Hero is a project to build an entire game in C from scratch, no libraries. We don't know what kind of game it will be yet, but we know it will be 2D, cross-platform, and feature art by Yangtian Li as well as specially licensed music. For more information, visit http://handmadehero.org/")
 
-@willie.module.commands('beep', 'boop')
+@command('beep', 'boop')
 def beepBoop(bot, trigger):
     bot.say("Don't speak of my mother that way!")
 
-@willie.module.commands('why')
+@command('why')
 def whyInfo(bot, trigger):
     bot.say("Because he can.")
 
-@willie.module.commands('random')
+@command('random')
 def randomNumber(bot, trigger):
     bot.say("Your random number is %s" % 4)
 
-@willie.module.commands('lang', 'language', 'codedin')
+@command('lang', 'language', 'codedin')
 def langInfo(bot, trigger):
     bot.say("The language we are using in Handmade Hero is C++ coded in a C-like style. We will most likely not be using classes, inheritance, or polymorphism to any significant degree.")
 
-@willie.module.commands('ide', 'emacs', 'editor')
+@command('ide', 'emacs', 'editor')
 def ideInfo(bot, trigger):
     bot.say("Casey uses emacs to edit his code, because that is what he is used to. It is getting pretty old, so you should use whatever you feel most comfortable in.")
 
-@willie.module.commands('keyboard', 'kb')
+@command('keyboard', 'kb')
 def keyboardInfo(bot, trigger):
     bot.say("The mechanical keyboard Casey uses is a Das Keyboard 4.")
 
-@willie.module.commands('list', 'commands', 'cmds')
+@command('list', 'commands', 'cmds')
 def commandList(bot, trigger): 
-    bot.say("Here are all of my commands: %s" % "<TBD>")    
+    bot.say("Here are all of my commands: !%s" % ",!".join(commands))    
