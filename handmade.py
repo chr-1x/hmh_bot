@@ -3,6 +3,7 @@ import random
 from datetime import datetime, timedelta
 import pytz
 from pytz import timezone
+from time import sleep
 
 class Cmd:
     def __init__(self, cmds, func, hide=False):
@@ -22,18 +23,26 @@ commands = []
 def command(*args, **kwargs):
 
     def passthrough(func):
-        if (not(kwargs.get("hide"))):
-            commands.append(Cmd(args,func,kwargs.get("hide")))
+        commands.append(Cmd(args,func,kwargs.get("hide")))
         return willie.module.commands(*args)(func)
 
     return passthrough
 
+def info(bot, trigger, text):
+    if (trigger):
+        if (hasattr(trigger, "args") and len(trigger.args) > 0):
+            bot.say("@%s: %s" % (trigger.args[0], text))
+        else:
+            bot.say("@%s: %s" % (trigger.nick, text))
+    else:
+        bot.say(text)
+
 @command('time', 'now', 'pst', 'PST')
 def time(bot, trigger):
     now = datetime.now(timezone("PST8PDT"))
-    bot.say("The current time in Seattle is %s:%s %s PST" % (now.strftime("%I"), now.strftime("%M"), "PM" if now.hour > 11 else "AM"))
+    info(bot, trigger, "The current time in Seattle is %s:%s %s PST" % (now.strftime("%I"), now.strftime("%M"), "PM" if now.hour > 11 else "AM"))
 
-@command('timer', "when", "howlong")
+@command('timer', "when", "howlong, timeleft")
 def timer(bot, trigger):
 
     streamTime = datetime.now(timezone("PST8PDT"))
@@ -44,7 +53,7 @@ def timer(bot, trigger):
 
         streamTime = streamTime + timedelta(minutes=1) #inc minutes
 
-    bot.say(timeToStream(streamTime, nowTime))
+    info(bot, trigger, timeToStream(streamTime, nowTime))
 
 def timeToStream(streamTime, nowTime):
     
@@ -79,23 +88,23 @@ def timeToStream(streamTime, nowTime):
 
 @command('site')
 def siteInfo(bot, trigger):
-    bot.say('HH Website: http://handmadehero.org/  ::  HH Forums: http://forums.handmadehero.org/')
+    info(bot, trigger, 'HH Website: http://handmadehero.org/  ::  HH Forums: http://forums.handmadehero.org/')
 
 @command('old', 'archive')
 def archiveInfo(bot, trigger):
-    bot.say('YT Archive: https://www.youtube.com/user/handmadeheroarchive')
+    info(bot, trigger, 'YT Archive: https://www.youtube.com/user/handmadeheroarchive')
 
 @command('wrist', 'braces')
 def wristInfo(bot, trigger):
-    bot.say('The wrist braces Casey wears help make typing more comfortable and prevent Repetitive Strain Injury.')
+    info(bot, trigger, 'The wrist braces Casey wears help make typing more comfortable and prevent Repetitive Strain Injury.')
 
 @command('milk', 'almondmilk')
 def milkInfo(bot, trigger):
-    bot.say("One of Casey's drinks of choice is Almond Milk, a delicious and refreshing beverage. Some common brands are Silk and Almond Breeze.")
+    info(bot, trigger, "One of Casey's drinks of choice is Almond Milk, a delicious and refreshing beverage. Some common brands are Silk and Almond Breeze.")
 
 @command('who', 'casey')
 def caseyInfo(bot, trigger):
-    bot.say("Casey Muratori is a software engineer who lives in Seattle. He has done work for various companies such as RAD game tools and on games such as The Witness, and has also done fiction writing and podcasting. He started Handmade Hero to give the general public a better idea of what coding a game from scratch in C is like based on his experiences in the industry.")
+    info(bot, trigger, "Casey Muratori is a software engineer who lives in Seattle. He has done work for various companies such as RAD game tools and on games such as The Witness, and has also done fiction writing and podcasting. He started Handmade Hero to give the general public a better idea of what coding a game from scratch in C is like based on his experiences in the industry.")
 
 @command('thanks')
 def thanksMessage(bot, trigger):
@@ -111,11 +120,11 @@ def infoMessage(bot, trigger):
 
 @command('buy', 'purchase')
 def buyInfo(bot, trigger):
-    bot.say("Handmade Hero, the compiled game with art assets and full source code, can be purchased at http://handmadehero.org/#buy_now")
+    info(bot, trigger, "Handmade Hero, the compiled game with art assets and full source code, can be purchased at http://handmadehero.org/#buy_now")
 
 @command('game', 'what')
 def gameInfo(bot, trigger):
-    bot.say("Handmade Hero is a project to build an entire game in C from scratch, no libraries. We don't know what kind of game it will be yet, but we know it will be 2D, cross-platform, and feature art by Yangtian Li as well as specially licensed music. For more information, visit http://handmadehero.org/")
+    info(bot, trigger, "Handmade Hero is a project to build an entire game in C from scratch, no libraries. We don't know what kind of game it will be yet, but we know it will be 2D, cross-platform, and feature art by Yangtian Li as well as specially licensed music. For more information, visit http://handmadehero.org/")
 
 @command('beep', 'boop', hide=True)
 def beepBoop(bot, trigger):
@@ -147,20 +156,35 @@ def whyInfo(bot, trigger):
 
 @command('random')
 def randomNumber(bot, trigger):
-    bot.say("Your random number is %s" % 4)
+    info(bot, trigger, "Your random number is %s" % 4)
 
 @command('lang', 'language', 'codedin')
 def langInfo(bot, trigger):
-    bot.say("The language we are using in Handmade Hero is C++ coded in a C-like style. We will most likely not be using classes, inheritance, or polymorphism to any significant degree.")
+    info(bot, trigger, "The language we are using in Handmade Hero is C++ coded in a C-like style. We will most likely not be using classes, inheritance, or polymorphism to any significant degree.")
 
 @command('ide', 'emacs', 'editor')
 def ideInfo(bot, trigger):
-    bot.say("Casey uses emacs to edit his code, because that is what he is used to. It is getting pretty old, so you should use whatever you feel most comfortable in.")
+    info(bot, trigger, "Casey uses emacs to edit his code, because that is what he is used to. It is getting pretty old, so you should use whatever you feel most comfortable in.")
 
 @command('keyboard', 'kb')
 def keyboardInfo(bot, trigger):
-    bot.say("The mechanical keyboard Casey uses is a Das Keyboard 4.")
+    info(bot, trigger, "The mechanical keyboard Casey uses is a Das Keyboard 4.")
+
+@command('alias', 'alt')
+def aliasList(bot, trigger):
+    if (hasattr(trigger, "args") and len(trigger.args) > 0):
+        for arg in trigger.args:
+            cmd = next((c for c in commands if arg in c.cmds), None)
+            if (cmd):
+                info(bot, trigger, "Aliases of !%s: !%s" % (cmd.main, ", !".join(cmd.cmds)))
+                if (len(trigger.args) > 1): 
+                    sleep(0.300)
+            else:
+                info(bot, trigger, "No aliases found for %s!" % arg)
+
+    else:
+        info(bot, trigger, "Please specify a command to list the aliases of.")
 
 @command('list', 'commands', 'cmds', hide=True)
 def commandList(bot, trigger): 
-    bot.say("Here are all of the HH stream commands: !%s" % ", !".join([c.main for c in commands]))    
+    bot.say("Here are all of the HH stream commands: !%s" % ", !".join([c.main for c in commands if not(c.hide==True)]))

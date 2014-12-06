@@ -16,12 +16,23 @@ def testAllCommands():
 	printTitle("Handmade Hero Command Test Cases")
 
 	for cfp in willie.module.funcs:
-		print(cfp.cmds)
+		#print(cfp.cmds)
 		print("\n%s" % ", ".join(cfp.cmds))
 		cfp.func(bot, None)
 
+		handmade.aliasList(bot, willie.Trigger(nick="senderGuy", args=[random.choice(cfp.cmds)]))
+
 
 	print("\nTotal Commands: %s\n" % len(handmade.commands))
+
+def testInfoCommands():
+	printTitle("Handmade Hero Info Commands Test Cases")
+
+	handmade.time(bot, willie.Trigger(nick="senderGuy"))
+	handmade.time(bot, willie.Trigger(nick="senderGuy", args=["dumbGuy", "dummyArg"]))
+	handmade.keyboardInfo(bot, willie.Trigger(nick="senderGuy", args=["dumbGuy", "dummyArg"]))
+
+	print("\n")
 
 # Cases we need to check:
 # 1) stream time greater than now time
@@ -46,4 +57,5 @@ def testStreamTimer():
 		print(handmade.timeToStream(streamTimes[i], nowTimes[i]))
 
 testAllCommands()
+testInfoCommands()
 testStreamTimer()
