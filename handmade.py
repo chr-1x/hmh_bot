@@ -1,47 +1,81 @@
 import willie
+import random
 from datetime import datetime, timedelta
+import pytz
 from pytz import timezone
 
+class Cmd:
+    def __init__(self, cmds, func, hide=False):
+        self.main = cmds[0]
+        self.cmds = cmds
+        self.func = func
+        self.hide = hide
+
+    def randCmd(self):
+        return random.choice(self.cmds)
+
+    def __str__(self):
+        return self.main
+
 commands = []
-def command(*args):
-    commands.extend(args)
+
+def command(*args, **kwargs):
+
     def passthrough(func):
+        if (not(kwargs.get("hide"))):
+            commands.append(Cmd(args,func,kwargs.get("hide")))
         return willie.module.commands(*args)(func)
+
     return passthrough
 
 @command('time', 'now', 'pst', 'PST')
 def time(bot, trigger):
     now = datetime.now(timezone("PST8PDT"))
-    bot.say("The current time in Seattle is %s:%s %s PST" % (now.strftime("%I"), now.minute, "PM" if now.hour > 11 else "AM"))
+    bot.say("The current time in Seattle is %s:%s %s PST" % (now.strftime("%I"), now.strftime("%M"), "PM" if now.hour > 11 else "AM"))
 
 @command('timer', "when", "howlong")
 def timer(bot, trigger):
-    streamTime = datetime.now(timezone("PST8PDT"))
-    
-    if (((streamTime.hour == 20 or (streamTime.hour == 21 and streamTime.minute <= 30)) and streamTime.weekday() < 4)
-        or
-        ((streamTime.hour == 11 or (streamTime.hour == 12 and streamTime.minute <= 30)) and streamTime.weekday() == 4)):
-        bot.say("The stream is currently running!")
-        return
-        #todo: how much time is left        
 
+    streamTime = datetime.now(timezone("PST8PDT"))
+    nowTime = datetime.now(timezone("PST8PDT"))
     while(not(streamTime.minute == 0 and 
         (streamTime.weekday() == 4 and streamTime.hour == 11) or
         (streamTime.weekday() < 4 and streamTime.hour == 20 ))):
 
         streamTime = streamTime + timedelta(minutes=1) #inc minutes
 
+    bot.say(timeToStream(streamTime, nowTime))
 
-    nowTime = datetime.now(timezone("PST8PDT"))
+def timeToStream(streamTime, nowTime):
+    
+    if (not (streamTime.tzinfo == timezone("PST8PDT"))):
+        streamTime = pytz.utc.localize(streamTime)
+        streamTime = streamTime.astimezone(timezone("PST8PDT"))
+    if (not (nowTime.tzinfo == timezone("PST8PDT"))):
+        nowTime = pytz.utc.localize(nowTime)
+        nowTime = nowTime.astimezone(timezone("PST8PDT"))
+
+    sinceStream = nowTime - streamTime;
+    sinceHours = int(sinceStream.seconds / 3600)
+    sinceMinutes = (sinceStream.seconds - sinceHours * 3600) / 60  
+
     untilStream = streamTime - nowTime;
-
-    untilHours = untilStream.seconds / 3600
+    untilHours = int(untilStream.seconds / 3600)
     untilMinutes = (untilStream.seconds - untilHours * 3600) / 60
 
+    if (sinceHours < 1):
+        return "%d minutes into stream (if Casey is on schedule)" % sinceMinutes
+    elif (sinceHours < 2 and sinceMinutes < 30):
+        return "%d minutes into the Q&A (if Casey is on schedule)" % sinceMinutes
+
+    if (nowTime > streamTime + timedelta(hours=1, minutes=30)):
+        return "I'm confused and think that the stream is %d hours %d minutes in the past!" % (abs(untilStream.days * 24 + untilHours), untilMinutes)
+
     if (untilStream.days != 0):
-        bot.say('Next stream is in %d days, %d hours %d minutes' % (untilStream.days, untilHours, untilMinutes))
+        return 'Next stream is in %d days, %d hours %d minutes' % (untilStream.days, untilHours, untilMinutes)
     else:
-        bot.say('Next stream is in %d hours %d minutes' % (untilHours, untilMinutes))
+        return 'Next stream is in %d hours %d minutes' % (untilHours, untilMinutes)
+
 
 @command('site')
 def siteInfo(bot, trigger):
@@ -69,7 +103,7 @@ def thanksMessage(bot, trigger):
 
 @command('hello', 'hi')
 def helloMessage(bot, trigger):
-    bot.say("Hello, I am an IRC bot! Try some commands: !timer, !site, !info")
+    bot.say("Hello, I am an IRC bot! Try some commands: !when, !now, !site, !game, !info")
 
 @command('info')
 def infoMessage(bot, trigger):
@@ -83,9 +117,29 @@ def buyInfo(bot, trigger):
 def gameInfo(bot, trigger):
     bot.say("Handmade Hero is a project to build an entire game in C from scratch, no libraries. We don't know what kind of game it will be yet, but we know it will be 2D, cross-platform, and feature art by Yangtian Li as well as specially licensed music. For more information, visit http://handmadehero.org/")
 
-@command('beep', 'boop')
+@command('beep', 'boop', hide=True)
 def beepBoop(bot, trigger):
-    bot.say("Don't speak of my mother that way!")
+    responses = [
+    "Don't speak of my mother that way!",
+    "That command was deprecated as of version 1.6.7, please use 1.3.1 for more a more updated API",
+    ":)",
+    "Pushing random buttons isn't meaningful communication, you know!",
+    "What goes around, comes around",
+    "Do it again. I dare you.",
+    "What good is an IRC bot without easter egg commands?"
+    ]
+    bot.say(random.choice(responses))
+
+@command('throwdown', 'badlanguage', hide=True)
+def badLanguage(bot, trigger):
+    langs = [ "Ruby", "Python", "C++", "PHP", "Rust", "Go", "Perl", "C#", "Java", "Scala", "Objective-C", "F#",
+    "Haskell", "Clojure", "BASIC", "Visual Basic", "HTML", "CSS", "Javascript", "Actionscript", "D" ]
+    bot.say("%s is a bad language :)" % random.choice(langs))
+
+@command('holywar', 'besteditor', hide=True)
+def bestEditor(bot, trigger):
+    editors = ["emacs", "vim"]
+    bot.say("%s is the best editor :)" % random.choice(editors))
 
 @command('why')
 def whyInfo(bot, trigger):
@@ -107,6 +161,6 @@ def ideInfo(bot, trigger):
 def keyboardInfo(bot, trigger):
     bot.say("The mechanical keyboard Casey uses is a Das Keyboard 4.")
 
-@command('list', 'commands', 'cmds')
+@command('list', 'commands', 'cmds', hide=True)
 def commandList(bot, trigger): 
-    bot.say("Here are all of the HH stream commands: !%s" % ", !".join(commands))    
+    bot.say("Here are all of the HH stream commands: !%s" % ", !".join([c.main for c in commands]))    
