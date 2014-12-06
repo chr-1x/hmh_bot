@@ -109,4 +109,4 @@ def keyboardInfo(bot, trigger):
 
 @command('list', 'commands', 'cmds')
 def commandList(bot, trigger): 
-    bot.say("Here are all of my commands: !%s" % ",!".join(commands))    
+    bot.say("Here are all of the HH stream commands: !%s" % ", !".join(commands))    
