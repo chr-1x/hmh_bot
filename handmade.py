@@ -30,8 +30,9 @@ def command(*args, **kwargs):
 
 def info(bot, trigger, text):
     if (trigger):
-        if (hasattr(trigger, "args") and len(trigger.args) > 0):
-            bot.say("@%s: %s" % (trigger.args[0], text))
+        if (trigger.group(2)):
+            args = trigger.group(2).split(" ")
+            bot.say("@%s: %s" % (args[0], text))
         else:
             bot.say("@%s: %s" % (trigger.nick, text))
     else:

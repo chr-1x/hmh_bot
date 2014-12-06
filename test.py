@@ -29,8 +29,8 @@ def testInfoCommands():
 	printTitle("Handmade Hero Info Commands Test Cases")
 
 	handmade.time(bot, willie.Trigger(nick="senderGuy"))
-	handmade.time(bot, willie.Trigger(nick="senderGuy", args=["dumbGuy", "dummyArg"]))
-	handmade.keyboardInfo(bot, willie.Trigger(nick="senderGuy", args=["dumbGuy", "dummyArg"]))
+	handmade.time(bot, willie.Trigger(nick="senderGuy", args=["#channel", "!cmd dumbGuy dummyArg"]))
+	handmade.keyboardInfo(bot, willie.Trigger(nick="senderGuy", args=["#channel", "!cmd dumbGuy dummyArg"]))
 
 	print("\n")
 

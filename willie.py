@@ -13,6 +13,10 @@ class Trigger:
 		for arg in kwargs:
 			setattr(self, arg, kwargs[arg])
 
+	def group(self, num):
+		if (hasattr(self, "args") and len(self.args) > 1):
+			return " ".join(self.args[1].split(" ")[1:])
+
 class CmdFuncPair:
 	def __init__(self, cmds, func):
 		self.cmds = cmds
