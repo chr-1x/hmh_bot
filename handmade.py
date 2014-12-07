@@ -140,7 +140,14 @@ def beepBoop(bot, trigger):
     ]
     bot.say(random.choice(responses))
 
-@command('flame', 'throwdown', 'badlanguage', hide=True)
+@command('flame', hide=True)
+def flameWar(bot, trigger):
+    if (random.random() < 0.5):
+        badLanguage(bot, trigger)
+    else:
+        bestEditor(bot, trigger)
+
+@command('throwdown', 'badlanguage', hide=True)
 def badLanguage(bot, trigger):
     langs = [ "Ruby", "Python", "C++", "PHP", "Rust", "Go", "Perl", "C#", "Java", "Scala", "Objective-C", "F#",
     "Haskell", "Clojure", "BASIC", "Visual Basic", "HTML", "CSS", "Javascript", "Actionscript", "D" ]
