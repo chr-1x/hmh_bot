@@ -173,12 +173,13 @@ def keyboardInfo(bot, trigger):
 
 @command('alias', 'alt')
 def aliasList(bot, trigger):
-    if (hasattr(trigger, "args") and len(trigger.args) > 0):
-        for arg in trigger.args:
+    args = trigger.group(2)
+    if (len(args) > 0):
+        for arg in args:
             cmd = next((c for c in commands if arg in c.cmds), None)
             if (cmd):
                 info(bot, trigger, "Aliases of !%s: !%s" % (cmd.main, ", !".join(cmd.cmds)))
-                if (len(trigger.args) > 1): 
+                if (len(args) > 1): 
                     sleep(0.300)
             else:
                 info(bot, trigger, "No aliases found for %s!" % arg)
