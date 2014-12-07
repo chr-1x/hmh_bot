@@ -43,7 +43,7 @@ def time(bot, trigger):
     now = datetime.now(timezone("PST8PDT"))
     info(bot, trigger, "The current time in Seattle is %s:%s %s PST" % (now.strftime("%I"), now.strftime("%M"), "PM" if now.hour > 11 else "AM"))
 
-@command('timer', "when", "howlong, timeleft")
+@command('timer', "when", "howlong", "timeleft")
 def timer(bot, trigger):
 
     streamTime = datetime.now(timezone("PST8PDT"))
@@ -140,7 +140,7 @@ def beepBoop(bot, trigger):
     ]
     bot.say(random.choice(responses))
 
-@command('throwdown', 'badlanguage', hide=True)
+@command('flame', 'throwdown', 'badlanguage', hide=True)
 def badLanguage(bot, trigger):
     langs = [ "Ruby", "Python", "C++", "PHP", "Rust", "Go", "Perl", "C#", "Java", "Scala", "Objective-C", "F#",
     "Haskell", "Clojure", "BASIC", "Visual Basic", "HTML", "CSS", "Javascript", "Actionscript", "D" ]
