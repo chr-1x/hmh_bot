@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import pytz
 from pytz import timezone
 from time import sleep
+from willie.modules.search import google_search
 
 class Cmd:
     def __init__(self, cmds, func, hide=False):
@@ -38,13 +39,27 @@ def info(bot, trigger, text):
     else:
         bot.say(text)
 
-@command('isAdmin')
+@willie.module.commands('amIadmin')
 def isAdmin(bot, trigger):
     if (trigger):
         if (trigger.admin or trigger.owner):
             bot.say("%s, you are an admin!" % trigger.nick)
         else:
             bot.say("%s, you are not an admin." % trigger.nick)
+
+
+sites_query = ' site:msdn.microsoft.com' # -site:' + ' -site:'.join(ignored_sites)
+def google(query):
+    url = google_search(query + sites_query)
+    return url
+
+@command('msdn')
+def msdnSearch(bot, trigger):
+    if not trigger.group(2):
+        bot.say("@%s: http://msdn.microsoft.com/" % trigger.nick)
+    else:
+        query = trigger.group(2).strip()
+        bot.say("@%s: %s" % (trigger.nick, google(query)))
 
 @command('time', 'now', 'pst', 'PST')
 def time(bot, trigger):
