@@ -1,4 +1,5 @@
 import willie
+import willie.module
 import random
 from datetime import datetime, timedelta
 import pytz
@@ -55,6 +56,7 @@ def google(query):
 
 @command('msdn')
 def msdnSearch(bot, trigger):
+    if not trigger: return
     if not trigger.group(2):
         bot.say("@%s: http://msdn.microsoft.com/" % trigger.nick)
     else:
