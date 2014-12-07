@@ -38,6 +38,14 @@ def info(bot, trigger, text):
     else:
         bot.say(text)
 
+@command('isAdmin')
+def isAdmin(bot, trigger):
+    if (trigger):
+        if (trigger.admin or trigger.owner):
+            bot.say("%s, you are an admin!" % trigger.nick)
+        else:
+            bot.say("%s, you are not an admin." % trigger.nick)
+
 @command('time', 'now', 'pst', 'PST')
 def time(bot, trigger):
     now = datetime.now(timezone("PST8PDT"))
