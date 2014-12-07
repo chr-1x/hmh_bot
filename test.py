@@ -20,7 +20,7 @@ def testAllCommands():
 		print("\n%s" % ", ".join(cfp.cmds))
 		cfp.func(bot, None)
 
-		handmade.aliasList(bot, willie.Trigger(nick="senderGuy", args=[random.choice(cfp.cmds)]))
+		handmade.aliasList(bot, willie.Trigger(nick="senderGuy", args=["#channel", "!alias %s" % random.choice(cfp.cmds)]))
 
 
 	print("\nTotal Commands: %s\n" % len(handmade.commands))
