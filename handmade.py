@@ -178,7 +178,7 @@ def aliasList(bot, trigger):
         for arg in args:
             cmd = next((c for c in commands if arg in c.cmds), None)
             if (cmd):
-                bot.say("Aliases of !%s: !%s" % (cmd.main, ", !".join(cmd.cmds)))
+                bot.say("Aliases of !%s: !%s" % (arg, ", !".join(cmd.cmds)))
                 if (len(args) > 1): 
                     sleep(0.300)
             else:
