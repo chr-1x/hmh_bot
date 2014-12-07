@@ -178,14 +178,14 @@ def aliasList(bot, trigger):
         for arg in args:
             cmd = next((c for c in commands if arg in c.cmds), None)
             if (cmd):
-                info(bot, trigger, "Aliases of !%s: !%s" % (cmd.main, ", !".join(cmd.cmds)))
+                bot.say("Aliases of !%s: !%s" % (cmd.main, ", !".join(cmd.cmds)))
                 if (len(args) > 1): 
                     sleep(0.300)
             else:
-                info(bot, trigger, "No aliases found for %s!" % arg)
+                bot.say("No aliases found for %s!" % arg)
 
     else:
-        info(bot, trigger, "Please specify a command to list the aliases of.")
+        bot.say("Please specify a command to list the aliases of.")
 
 @command('list', 'commands', 'cmds', hide=True)
 def commandList(bot, trigger): 
