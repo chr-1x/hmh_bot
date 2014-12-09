@@ -187,7 +187,7 @@ def bestEditor(bot, trigger):
 def whyInfo(bot, trigger):
     bot.say("Because he can.")
 
-@command('randomnoexist')
+@command('random')
 def randomNumber(bot, trigger):
     info(bot, trigger, "Your random number is %s" % 4)
 
