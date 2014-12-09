@@ -1,0 +1,4 @@
+1) remove google unless the module is enabled **DONEISH**
+2) make timer show stream time if stream is on **DONE**
+3) make an easily configurable alt schedule in case that happens
+4) q&A question queuing

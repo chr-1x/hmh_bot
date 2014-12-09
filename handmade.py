@@ -205,7 +205,7 @@ def keyboardInfo(bot, trigger):
 
 @command('alias', 'alt')
 def aliasList(bot, trigger):
-    args = trigger.group(2).split(" ") if trigger else None
+    args = trigger.group(2).split(" ") if trigger and trigger.group(2) else None
     if (args and len(args) > 0):
         for arg in args:
             cmd = next((c for c in commands if arg in c.cmds), None)
