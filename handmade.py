@@ -92,11 +92,11 @@ def timeToStream(streamTime, nowTime):
 
     sinceStream = nowTime - streamTime;
     sinceHours = int(sinceStream.seconds / 3600)
-    sinceMinutes = (sinceStream.seconds - sinceHours * 3600) / 60  
+    sinceMinutes = (sinceStream.seconds - sinceHours * 3600.0) / 60.0
 
     untilStream = streamTime - nowTime;
     untilHours = int(untilStream.seconds / 3600)
-    untilMinutes = (untilStream.seconds - untilHours * 3600) / 60
+    untilMinutes = (untilStream.seconds - untilHours * 3600.0) / 60.0
 
     if (sinceHours < 1):
         return "%d minutes into stream (if Casey is on schedule)" % sinceMinutes
