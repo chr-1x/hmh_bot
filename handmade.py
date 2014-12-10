@@ -135,7 +135,7 @@ def archiveInfo(bot, trigger):
 
 @command('wrist', 'wrists', 'braces')
 def wristInfo(bot, trigger):
-    info(bot, trigger, 'The wrist braces Casey wears help make typing more comfortable and prevent Repetitive Strain Injury.')
+    info(bot, trigger, "The wrist braces Casey wears help make typing more comfortable and prevent Repetitive Strain Injury. They probably aren't made anymore, but they're the Medi-Active ones without the thumb brace.")
 
 @command('milk', 'almondmilk')
 def milkInfo(bot, trigger):
