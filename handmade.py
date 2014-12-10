@@ -30,6 +30,19 @@ def command(*args, **kwargs):
 
     return passthrough
 
+#def whitelistedcommand(*args, **kwargs):
+
+    #result = command(args, kwargs)
+
+
+def whitelistedfunc(func):
+    def wrapperFunc(trigger, bot):
+        if (trigger.admin or trigger.owner):
+            func(trigger, bot)
+        else:
+            pass #Don't say anything back to the user, to avoid spam.
+    return wrapperFunc        
+
 def info(bot, trigger, text):
     if (trigger):
         if (trigger.group(2)):
@@ -99,9 +112,9 @@ def timeToStream(streamTime, nowTime):
     untilMinutes = (untilStream.seconds - untilHours * 3600.0) / 60.0
 
     if (sinceHours < 1):
-        return "%d minutes into stream (if Casey is on schedule)" % sinceMinutes
+        return "Currently streaming (if Casey is on schedule)" % sinceMinutes #%d minutes into stream
     elif (sinceHours < 2 and sinceMinutes < 30):
-        return "%d minutes into the Q&A (if Casey is on schedule)" % sinceMinutes
+        return "Currently doing Q&A (if Casey is on schedule)" % sinceMinutes #%d minutes into the Q&A
 
     if (nowTime > streamTime + timedelta(hours=1, minutes=30)):
         return "I'm confused and think that the stream is %d hours %d minutes in the past!" % (abs(untilStream.days * 24 + untilHours), untilMinutes)
@@ -118,9 +131,9 @@ def siteInfo(bot, trigger):
 
 @command('old', 'archive')
 def archiveInfo(bot, trigger):
-    info(bot, trigger, 'YT Archive: https://www.youtube.com/user/handmadeheroarchive')
+    info(bot, trigger, 'Forum Archive: https://forums.handmadehero.org/jace/   ::   YT Archive: https://www.youtube.com/user/handmadeheroarchive')
 
-@command('wrist', 'braces')
+@command('wrist', 'wrists', 'braces')
 def wristInfo(bot, trigger):
     info(bot, trigger, 'The wrist braces Casey wears help make typing more comfortable and prevent Repetitive Strain Injury.')
 
@@ -165,31 +178,31 @@ def beepBoop(bot, trigger):
     ]
     bot.say(random.choice(responses))
 
-@command('flame', hide=True)
-def flameWar(bot, trigger):
-    if (random.random() < 0.5):
-        badLanguage(bot, trigger)
-    else:
-        bestEditor(bot, trigger)
+# @command('flame', hide=True)
+# def flameWar(bot, trigger):
+#     if (random.random() < 0.5):
+#         badLanguage(bot, trigger)
+#     else:
+#         bestEditor(bot, trigger)
 
-@command('throwdown', 'badlanguage', hide=True)
-def badLanguage(bot, trigger):
-    langs = [ "Ruby", "Python", "C++", "PHP", "Rust", "Go", "Perl", "C#", "Java", "Scala", "Objective-C", "F#",
-    "Haskell", "Clojure", "BASIC", "Visual Basic", "HTML", "CSS", "Javascript", "Actionscript", "D" ]
-    bot.say("%s is a bad language :)" % random.choice(langs))
+# @command('throwdown', 'badlanguage', hide=True)
+# def badLanguage(bot, trigger):
+#     langs = [ "Ruby", "Python", "C++", "PHP", "Rust", "Go", "Perl", "C#", "Java", "Scala", "Objective-C", "F#",
+#     "Haskell", "Clojure", "BASIC", "Visual Basic", "HTML", "CSS", "Javascript", "Actionscript", "D" ]
+#     bot.say("%s is a bad language :)" % random.choice(langs))
 
-@command('holywar', 'besteditor', hide=True)
-def bestEditor(bot, trigger):
-    editors = ["emacs", "vim"]
-    bot.say("%s is the best editor :)" % random.choice(editors))
+# @command('holywar', 'besteditor', hide=True)
+# def bestEditor(bot, trigger):
+#     editors = ["emacs", "vim"]
+#     bot.say("%s is the best editor :)" % random.choice(editors))
 
 @command('why')
 def whyInfo(bot, trigger):
     bot.say("Because he can.")
 
-@command('random')
-def randomNumber(bot, trigger):
-    info(bot, trigger, "Your random number is %s" % 4)
+# @command('random')
+# def randomNumber(bot, trigger):
+#     info(bot, trigger, "Your random number is %s" % 4)
 
 @command('lang', 'language', 'codedin')
 def langInfo(bot, trigger):
