@@ -6,3 +6,4 @@
 6) how long will the game take faq
 7) whitelist certain commands
 8) whitelist certain times (can't call !random during stream)
+9) Don't let bot @cmuratori or @naysayer88 (unless admin)

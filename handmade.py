@@ -112,9 +112,9 @@ def timeToStream(streamTime, nowTime):
     untilMinutes = (untilStream.seconds - untilHours * 3600.0) / 60.0
 
     if (sinceHours < 1):
-        return "Currently streaming (if Casey is on schedule)" % sinceMinutes #%d minutes into stream
+        return "Currently streaming (if Casey is on schedule)" #% sinceMinutes #%d minutes into stream
     elif (sinceHours < 2 and sinceMinutes < 30):
-        return "Currently doing Q&A (if Casey is on schedule)" % sinceMinutes #%d minutes into the Q&A
+        return "Currently doing Q&A (if Casey is on schedule)" #% sinceMinutes #%d minutes into the Q&A
 
     if (nowTime > streamTime + timedelta(hours=1, minutes=30)):
         return "I'm confused and think that the stream is %d hours %d minutes in the past!" % (abs(untilStream.days * 24 + untilHours), untilMinutes)
@@ -196,13 +196,17 @@ def beepBoop(bot, trigger):
 #     editors = ["emacs", "vim"]
 #     bot.say("%s is the best editor :)" % random.choice(editors))
 
+@command('hug')
+def hug(bot, trigger):
+    info(bot, trigger, "Were I not a transient being circling through an ether of intangible bits and bytes, I would hug you, with all the human emotional context it implies")
+
 @command('why')
 def whyInfo(bot, trigger):
     bot.say("Because he can.")
 
-# @command('random')
-# def randomNumber(bot, trigger):
-#     info(bot, trigger, "Your random number is %s" % 4)
+@command('random')
+def randomNumber(bot, trigger):
+    info(bot, trigger, "Your random number is %s" % (random.randint(100) if random.random() < 0.0001 else 4))
 
 @command('lang', 'language', 'codedin')
 def langInfo(bot, trigger):
