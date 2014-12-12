@@ -7,6 +7,12 @@ from pytz import timezone
 from time import sleep
 from willie.modules.search import google_search
 
+###  Unspecific (not affiliated with existing commands) TODO(chronister):
+###    1. Conditionally enable some modules/commands based on how close it is to a stream time
+###         (this could perhaps be accomplished by checking number of users in IRC)
+###    2. Q & A question management (queueing, moderation, replication)
+###    3. FAQ for the "how long will the game take" question
+###TODO(chronister): Make the above be github issues! (Then remove this block)
 
 class Cmd:
     """ Wrapper class that stores the list of commands, main command name (assumed to be first in 
@@ -63,6 +69,7 @@ def info(bot, trigger, text):
     ###TODO(chronister): Check if the caller provided their own @ symbol, and if so, don't print one.
     ###TODO(chronister): Can this be done as a decorator? (would have to give a custom bot 
     ###     or something?)
+    ###TODO(chronister): Don't let people throw these at @cmuratori to avoid Q&A spam
     if (trigger):
         if (trigger.group(2)):
             args = trigger.group(2).split(" ")
