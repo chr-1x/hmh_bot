@@ -1,9 +1,0 @@
-1) remove google unless the module is enabled **DONEISH**
-2) make timer show stream time if stream is on **NEEDS FIX**
-3) make an easily configurable alt schedule in case that happens
-4) q&A question queuing
-5) q&A question moderation
-6) how long will the game take faq
-7) whitelist certain commands
-8) whitelist certain times (can't call !random during stream)
-9) Don't let bot @cmuratori or @naysayer88 (unless admin)
