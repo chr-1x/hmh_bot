@@ -178,11 +178,30 @@ def timeToStream(streamTime, nowTime):
     if (nowTime > streamTime + timedelta(hours=1, minutes=30)):
         return "I'm confused and think that the stream is %d hours %d minutes in the past!" % (abs(untilStream.days * 24 + untilHours), untilMinutes)
 
-    if (untilStream.days != 0):
-        return 'Next stream is in %d days, %d hours %d minutes' % (untilStream.days, untilHours, untilMinutes)
-    else:
-        return 'Next stream is in %d hours %d minutes' % (untilHours, untilMinutes)
+    mydays = ''
+    myhours = ''
+    myminutes = ''
 
+    if untilStream.days == 1:
+        mydays = 'day'
+    else:
+        mydays = 'days'
+    
+    if untilHours == 1:
+        myhours = 'hour'
+    else:
+        myhours = 'hours'
+
+    if untilMinutes == 1:
+        myminutes = 'minute'
+    else:
+        myminutes = 'minutes'
+
+    if untilStream.days != 0:
+        # look at format here after substitution is working
+        return 'Next stream is in %d %s, %d %s, %d %s' % (untilStream.days, mydays, untilHours, myhours, untilMinutes, myminutes)
+    elif untilStream.days == 0:
+        return 'Next stream is in %d %s, %d %s' % (untilHours, myhours, untilMinutes, myminutes)
 
 @command('site')
 def siteInfo(bot, trigger):
