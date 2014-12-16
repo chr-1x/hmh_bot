@@ -1,0 +1,2256 @@
+>>1418444334.78	CAP LS
+>>1418444334.78	NICK chronalRobot
+>>1418444334.78	USER willie +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418444334.83	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418444334.87	:tmi.twitch.tv NOTICE * :Login unsuccessful
+>>1418444365.27	CAP LS
+>>1418444365.27	NICK chronalRobot
+>>1418444365.27	USER willie +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418444365.31	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418444365.35	:tmi.twitch.tv NOTICE * :Login unsuccessful
+>>1418444411.13	CAP LS
+>>1418444411.13	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418444411.13	NICK chronalRobot
+>>1418444411.13	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418444411.18	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418444411.22	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418444411.22	MODE  chronalRobot +B
+>>1418444411.22	JOIN #chronalrobot
+>>1418444411.22	JOIN #handmade_hero
+<<1418444411.22	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418444411.22	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418444411.22	:tmi.twitch.tv 004 chronalrobot :-
+<<1418444411.22	:tmi.twitch.tv 375 chronalrobot :-
+<<1418444411.22	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418444411.22	:tmi.twitch.tv 376 chronalrobot :>
+<<1418444411.38	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418444411.38	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418444411.38	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418444411.38	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418444411.4	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418444411.4	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418444411.4	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418444411.4	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418444426.49	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Hahaha. 
+<<1418444432.92	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :That got an actual laugh
+<<1418444433.54	:drive137!drive137@drive137.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:ilovetsundere!ilovetsundere@ilovetsundere.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:embah!embah@embah.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:t4zzm4nn!t4zzm4nn@t4zzm4nn.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:draiodoir!draiodoir@draiodoir.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:moobals!moobals@moobals.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:klemensbaum!klemensbaum@klemensbaum.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:rioseblade!rioseblade@rioseblade.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:clunk0!clunk0@clunk0.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:x3stenlite!x3stenlite@x3stenlite.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:acquark!acquark@acquark.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:cmuratori!cmuratori@cmuratori.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:tenoften!tenoften@tenoften.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:jth_!jth_@jth_.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:tatamii!tatamii@tatamii.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:skhme!skhme@skhme.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:johanofverstedt!johanofverstedt@johanofverstedt.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:blueravengt!blueravengt@blueravengt.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.54	:paperscraps!paperscraps@paperscraps.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:gnuvince!gnuvince@gnuvince.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:andyboy223!andyboy223@andyboy223.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:culver_fly!culver_fly@culver_fly.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:seudafed!seudafed@seudafed.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:accoun_!accoun_@accoun_.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:sirgutu!sirgutu@sirgutu.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:ortholabs!ortholabs@ortholabs.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:fincodr!fincodr@fincodr.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:cottonflop!cottonflop@cottonflop.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:dravorek!dravorek@dravorek.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:maxxkioku!maxxkioku@maxxkioku.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:quylthulg!quylthulg@quylthulg.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:boz_float!boz_float@boz_float.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv JOIN #handmade_hero
+<<1418444433.55	:jtv MODE #handmade_hero +o cmuratori
+<<1418444434.66	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!time
+<<1418444489.76	:jtv MODE #chronalrobot +o chronalrobot
+<<1418444540.01	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!wrist
+>>1418444551.05	CAP LS
+>>1418444551.07	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418444551.07	NICK chronalRobot
+>>1418444551.07	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418444551.11	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418444551.15	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418444551.15	MODE  chronalRobot +B
+>>1418444551.15	JOIN #chronalrobot
+>>1418444551.15	JOIN #handmade_hero
+<<1418444551.15	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418444551.15	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418444551.15	:tmi.twitch.tv 004 chronalrobot :-
+<<1418444551.15	:tmi.twitch.tv 375 chronalrobot :-
+<<1418444551.15	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418444551.15	:tmi.twitch.tv 376 chronalrobot :>
+<<1418444551.29	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418444551.3	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418444551.3	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418444551.3	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418444551.31	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418444551.31	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418444551.32	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :acquark johanofverstedt maxxkioku drive137 quylthulg andyboy223 rioseblade moobals chronalrobot iamdefinitelybatman gnuvince cottonflop accoun_ jth_ tenoften seudafed cmuratori culver_fly tatamii skhme paperscraps dravorek fincodr klemensbaum sirgutu ikkir_isth yuhoshi ilovetsundere ortholabs t4zzm4nn clunk0 embah blueravengt steelgolem x3stenlite boz_float draiodoir
+<<1418444551.32	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418444551.32	:jtv MODE #handmade_hero +o cmuratori
+<<1418444598.2	:jtv MODE #chronalrobot +o chronalrobot
+>>1418444661.31	CAP LS
+>>1418444661.32	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418444661.32	NICK chronalRobot
+>>1418444661.32	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418444661.36	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418444661.41	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418444661.41	MODE  chronalRobot +B
+>>1418444661.41	JOIN #chronalrobot
+>>1418444661.41	JOIN #handmade_hero
+<<1418444661.41	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418444661.41	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418444661.41	:tmi.twitch.tv 004 chronalrobot :-
+<<1418444661.41	:tmi.twitch.tv 375 chronalrobot :-
+<<1418444661.41	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418444661.41	:tmi.twitch.tv 376 chronalrobot :>
+<<1418444661.57	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418444661.57	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418444661.57	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418444661.57	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418444661.59	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418444661.59	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418444661.59	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418444661.59	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418444678.34	:rioseblade!rioseblade@rioseblade.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:seudafed!seudafed@seudafed.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:drive137!drive137@drive137.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:tenoften!tenoften@tenoften.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:acquark!acquark@acquark.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:ortholabs!ortholabs@ortholabs.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:gnuvince!gnuvince@gnuvince.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:t4zzm4nn!t4zzm4nn@t4zzm4nn.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:moobals!moobals@moobals.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:maxxkioku!maxxkioku@maxxkioku.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:andyboy223!andyboy223@andyboy223.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:paperscraps!paperscraps@paperscraps.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:accoun_!accoun_@accoun_.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:dravorek!dravorek@dravorek.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:tatamii!tatamii@tatamii.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:jth_!jth_@jth_.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:boz_float!boz_float@boz_float.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:johanofverstedt!johanofverstedt@johanofverstedt.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:ilovetsundere!ilovetsundere@ilovetsundere.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.34	:fincodr!fincodr@fincodr.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:embah!embah@embah.t
+<<1418444678.35	mi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:blueravengt!blueravengt@blueravengt.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:sirgutu!sirgutu@sirgutu.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:quylthulg!quylthulg@quylthulg.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:x3stenlite!x3stenlite@x3stenlite.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:clunk0!clunk0@clunk0.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:cmuratori!cmuratori@cmuratori.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:cottonflop!cottonflop@cottonflop.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:klemensbaum!klemensbaum@klemensbaum.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:draiodoir!draiodoir@draiodoir.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:culver_fly!culver_fly@culver_fly.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:skhme!skhme@skhme.tmi.twitch.tv JOIN #handmade_hero
+<<1418444678.35	:jtv MODE #handmade_hero +o cmuratori
+<<1418444686.03	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!time
+>>1418444686.04	PRIVMSG #handmade_hero :@iamdefinitelybatman: The current time in Seattle is 08:24 PM PST
+<<1418444689.51	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Thank ***. 
+<<1418444720.78	:skhme!skhme@skhme.tmi.twitch.tv PRIVMSG #handmade_hero :!why
+>>1418444720.78	PRIVMSG #handmade_hero :Because he can.
+<<1418444731.53	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Oh jesus. 
+<<1418444742.49	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :I didn't see that you typed that, and I was like "it has a mind of it's own"
+<<1418444743.21	:rayder42!rayder42@rayder42.tmi.twitch.tv PRIVMSG #handmade_hero :is there a stream tonight?
+<<1418444743.65	:rayder42!rayder42@rayder42.tmi.twitch.tv JOIN #handmade_hero
+<<1418444743.65	:t4zzm4nn!t4zzm4nn@t4zzm4nn.tmi.twitch.tv PART #handmade_hero
+<<1418444743.65	:jtv MODE #chronalrobot +o chronalrobot
+<<1418444753.05	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Streams are at 11am on Fridays
+<<1418444764.22	:rayder42!rayder42@rayder42.tmi.twitch.tv PRIVMSG #handmade_hero :ah
+<<1418444765.16	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Video should be up on the youtube channel
+<<1418444766.55	:skhme!skhme@skhme.tmi.twitch.tv PRIVMSG #handmade_hero :!friday friday gotta get down on friday
+<<1418444780.6	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :That's a good idea, I need to write a friday module. 
+<<1418444813.25	:rayder42!rayder42@rayder42.tmi.twitch.tv PART #handmade_hero
+<<1418444838.75	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :wait module as in file or command? 
+<<1418444847.63	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Command. 
+<<1418444852.97	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Function. 
+<<1418444863.38	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :ok, srry pyhon talk so annoying lol 
+<<1418444863.46	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :I use the wrong term for everything. 
+<<1418444870.92	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :ya its python 
+<<1418444894.06	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :It's confusing writing in Python, C/C++, bash, actionscript, javascript, css, and html. 
+<<1418444905.62	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :ya
+<<1418444922.79	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :I'm probably going to repackage this for Chrono - his setup wasn't easy to implement. 
+<<1418444947.5	PING :tmi.twitch.tv
+>>1418444947.5	PONG tmi.twitch.tv
+<<1418444971.77	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :!kb
+>>1418444971.77	PRIVMSG #handmade_hero :@drive137: The mechanical keyboard Casey uses is a Das Keyboard 4.
+<<1418444996.04	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!support
+<<1418445004.14	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :we possibly make it eaiser with notice instead of say
+<<1418445007.39	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Damn. Hoped it was reading the handmade file on the fly. 
+<<1418445027.41	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :?
+>>1418445039.8	CAP LS
+>>1418445039.8	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418445039.8	NICK chronalRobot
+>>1418445039.8	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418445039.84	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418445039.89	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418445039.89	MODE  chronalRobot +B
+>>1418445039.89	JOIN #chronalrobot
+>>1418445039.89	JOIN #handmade_hero
+<<1418445039.89	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418445039.89	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418445039.89	:tmi.twitch.tv 004 chronalrobot :-
+<<1418445039.89	:tmi.twitch.tv 375 chronalrobot :-
+<<1418445039.89	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418445039.89	:tmi.twitch.tv 376 chronalrobot :>
+<<1418445040.05	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418445040.05	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418445040.06	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418445040.06	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418445040.07	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418445040.07	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418445040.07	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :yuhoshi iamdefinitelybatman draiodoir rioseblade quylthulg dravorek accoun_ andyboy223 cmuratori ortholabs clunk0 x3stenlite acquark blueravengt ilovetsundere cottonflop embah drive137 skhme johanofverstedt tenoften steelgolem gnuvince jth_ tatamii chronalrobot maxxkioku fincodr paperscraps moobals ikkir_isth klemensbaum boz_float culver_fly sirgutu seudafed
+<<1418445040.07	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418445040.07	:jtv MODE #handmade_hero +o cmuratori
+<<1418445044.24	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!support
+>>1418445044.25	PRIVMSG #handmade_hero :@iamdefinitelybatman: Handmade Hero, the compiled game with art assets and full source code, can be purchased at http://handmadehero.org/#buy_now You can now also support Casey monthly at http://www.patreon.com/cmuratori
+<<1418445048.95	:jtv MODE #chronalrobot +o chronalrobot
+<<1418445080.04	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :irc has a notice function that just sends it to the user not the channel, but doesnt open a private msg
+<<1418445130.38	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Ah. That would be good. 
+<<1418445162.07	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Let me edit these bot.says and see if they go to just you. Give me a second to type and reboot. 
+<<1418445177.09	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :np
+<<1418445184.45	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :I don't know if willie can use it by default
+<<1418445195.12	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :mine runs of the irc module
+>>1418445231.93	CAP LS
+>>1418445231.93	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418445231.93	NICK chronalRobot
+>>1418445231.93	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418445231.98	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418445232.02	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418445232.02	MODE  chronalRobot +B
+>>1418445232.02	JOIN #chronalrobot
+>>1418445232.02	JOIN #handmade_hero
+<<1418445232.02	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418445232.03	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418445232.03	:tmi.twitch.tv 004 chronalrobot :-
+<<1418445232.03	:tmi.twitch.tv 375 chronalrobot :-
+<<1418445232.03	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418445232.03	:tmi.twitch.tv 376 chronalrobot :>
+<<1418445232.18	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418445232.18	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418445232.18	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418445232.18	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418445232.2	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418445232.2	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418445232.2	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418445232.2	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418445241.97	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :do hello, hi, or thanks. 
+<<1418445260.08	:cottonflop!cottonflop@cottonflop.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.08	:drive137!drive137@drive137.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.08	:cmuratori!cmuratori@cmuratori.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.08	:dravorek!dravorek@dravorek.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.08	:gnuvince!gnuvince@gnuvince.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.08	:johanofverstedt!johanofverstedt@johanofverstedt.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.08	:embah!embah@embah.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.08	:blueravengt!blueravengt@blueravengt.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.08	:x3stenlite!x3stenlite@x3stenlite.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:ortholabs!ortholabs@ortholabs.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:jth_!jth_@jth_.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:draiodoir!draiodoir@draiodoir.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:boz_float!boz_float@boz_float.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:skhme!skhme@skhme.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:maxxkioku!maxxkioku@maxxkioku.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:tenoften!tenoften@tenoften.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:sirgutu!sirgutu@sirgutu.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:fincodr!fincodr@fincodr.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:rioseblade!rioseblade@rioseblade.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:clunk0!clunk0@clunk0.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:ilovetsund
+<<1418445260.09	ere!ilovetsundere@ilovetsundere.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:klemensbaum!klemensbaum@klemensbaum.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:tatamii!tatamii@tatamii.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:accoun_!accoun_@accoun_.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:quylthulg!quylthulg@quylthulg.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:moobals!moobals@moobals.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:andyboy223!andyboy223@andyboy223.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:paperscraps!paperscraps@paperscraps.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:seudafed!seudafed@seudafed.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:culver_fly!culver_fly@culver_fly.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:acquark!acquark@acquark.tmi.twitch.tv JOIN #handmade_hero
+<<1418445260.09	:jtv MODE #handmade_hero +o cmuratori
+<<1418445322.91	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!hello
+>>1418445322.92	NOTICE #handmade_hero :Hello, I am an IRC bot! Try some commands: !when, !now, !site, !game, !info
+<<1418445322.96	:tmi.twitch.tv 421 chronalrobot NOTICE :Unknown command
+<<1418445328.0	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!hi
+>>1418445328.0	NOTICE #handmade_hero :Hello, I am an IRC bot! Try some commands: !when, !now, !site, !game, !info
+<<1418445328.05	:tmi.twitch.tv 421 chronalrobot NOTICE :Unknown command
+<<1418445329.67	:jtv MODE #chronalrobot +o chronalrobot
+<<1418445332.44	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :!kb
+>>1418445332.44	PRIVMSG #handmade_hero :@drive137: The mechanical keyboard Casey uses is a Das Keyboard 4.
+<<1418445332.65	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Not installed.
+<<1418445340.52	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :ok
+<<1418445346.57	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :so ya don't have that function 
+<<1418445355.48	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :was worth a shot
+>>1418445471.94	PING irc.twitch.tv
+<<1418445472.09	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418445514.66	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #handmade_hero
+<<1418445514.66	:fincodr!fincodr@fincodr.tmi.twitch.tv PART #handmade_hero
+<<1418445526.8	PING :tmi.twitch.tv
+>>1418445526.8	PONG tmi.twitch.tv
+<<1418445529.06	:skhme!skhme@skhme.tmi.twitch.tv PRIVMSG #handmade_hero :!thanks
+>>1418445529.06	NOTICE #handmade_hero :Thanks for streaming, Casey! <3
+<<1418445529.1	:tmi.twitch.tv 421 chronalrobot NOTICE :Unknown command
+<<1418445577.86	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418445577.87	:fincodr!fincodr@fincodr.tmi.twitch.tv JOIN #handmade_hero
+>>1418445611.0	CAP LS
+>>1418445611.0	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418445611.0	NICK chronalRobot
+>>1418445611.0	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418445611.05	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418445611.09	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418445611.09	MODE  chronalRobot +B
+>>1418445611.09	JOIN #chronalrobot
+>>1418445611.09	JOIN #handmade_hero
+<<1418445611.09	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418445611.09	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418445611.09	:tmi.twitch.tv 004 chronalrobot :-
+<<1418445611.09	:tmi.twitch.tv 375 chronalrobot :-
+<<1418445611.09	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418445611.09	:tmi.twitch.tv 376 chronalrobot :>
+<<1418445611.24	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418445611.24	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronaldragon chronalrobot
+<<1418445611.24	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418445611.24	:jtv MODE #chronalrobot +o chronalrobot
+<<1418445611.24	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418445611.25	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418445611.26	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :rioseblade seudafed paperscraps cottonflop blueravengt sirgutu ortholabs iamdefinitelybatman jth_ x3stenlite andyboy223 drive137 chronaldragon cmuratori keyguru quylthulg accoun_ embah draiodoir maxxkioku tatamii gnuvince skhme chronalrobot dravorek yuhoshi klemensbaum clunk0 ikkir_isth culver_fly moobals ilovetsundere boz_float acquark tenoften steelgolem johanofverstedt fincodr
+<<1418445611.26	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418445611.26	:jtv MODE #handmade_hero +o cmuratori
+<<1418445611.26	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418445611.45	:jtv MODE #chronalrobot -o chronalrobot
+<<1418445614.11	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!thanks
+>>1418445614.11	PRIVMSG #handmade_hero :Thanks for streaming, Casey! <3
+<<1418445619.82	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :There we go.
+<<1418445628.6	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!buy
+>>1418445628.6	PRIVMSG #handmade_hero :@iamdefinitelybatman: Handmade Hero, the compiled game with art assets and full source code, can be purchased at http://handmadehero.org/#buy_now You can now also support Casey monthly at http://www.patreon.com/cmuratori
+<<1418445640.18	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Damn. \n didn't work in the string. 
+<<1418445644.85	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :hello there, chronalrobot
+<<1418445648.5	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Hahaha
+<<1418445649.48	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :I take it you've got him hosted somewhere?
+<<1418445657.29	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Yeah, he's hosted on my iMac. 
+<<1418445660.23	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :cool
+<<1418445675.69	:jtv MODE #chronalrobot +o chronalrobot
+<<1418445675.73	:keyguru!keyguru@keyguru.tmi.twitch.tv PART #handmade_hero
+<<1418445679.57	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!length
+>>1418445679.57	PRIVMSG #handmade_hero :@iamdefinitelybatman: The project does not have an exact finish date. This is an ongoing project, although it is estimated to take longer than a year at a rate of one hour per night, 5 days a week.
+<<1418445705.34	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :So @Drive137 let me know there's an irc feature for notice instead of say, which shows it to just that person and not the entire chat. 
+<<1418445718.91	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :does twitch support it?
+<<1418445732.68	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :I don't know. He or she just told me like three minutes ago. 
+<<1418445734.17	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :I know the bot does, but I was under the impression it wouldn't work on twitch
+<<1418445739.39	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Figures. 
+<<1418445747.79	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :also I'm assuming this means you're @alexwidener on github??
+<<1418445752.22	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Yup
+<<1418445755.47	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :cool
+<<1418445780.3	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :So I had an idea for the Q&A which was to create a logging text file for casey between 8:05 and 9:00
+<<1418445801.53	:ilovetsundere!ilovetsundere@ilovetsundere.tmi.twitch.tv PART #handmade_hero
+<<1418445802.17	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :that could work
+<<1418445808.38	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :And then you could run !qatime(limit it to an admin, maybe) and it would post a question for Casey every ~10 seconds?
+<<1418445817.53	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :sounds good
+<<1418445833.63	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Cool - question, how do I limit it to an admin? 
+<<1418445834.42	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :put all that in a comment on issue #2
+<<1418445843.33	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :so I was going to make a generic method for that
+<<1418445850.7	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :but in general, you can check trigger.admin
+<<1418445857.32	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Cool. 
+<<1418445858.69	:ilovetsundere!ilovetsundere@ilovetsundere.tmi.twitch.tv JOIN #handmade_hero
+<<1418445860.32	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :admins are listed in the config.cfg
+<<1418445865.45	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :willie.cfg*
+<<1418445872.5	PING :tmi.twitch.tv
+>>1418445872.5	PONG tmi.twitch.tv
+<<1418445887.8	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :The reason for the text file is in case you need to reboot, we won't lose all the information, and it would still write it if the date matches up. 
+<<1418445898.95	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :yeah
+>>1418445971.02	PING irc.twitch.tv
+<<1418445971.06	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418445980.6	:fincodr!fincodr@fincodr.tmi.twitch.tv PART #handmade_hero
+<<1418446043.94	:fincodr!fincodr@fincodr.tmi.twitch.tv JOIN #handmade_hero
+<<1418446056.46	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Maybe a time-based module that goes off at 8:00, 8:10, 8:20, 8:30, 8:40, and 8:50 that reminds people about the !question/qa tag so people start submitting to it. 
+<<1418446058.09	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :? 
+<<1418446090.91	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :mm, that might be a little too often
+<<1418446099.44	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :maybe just at 8:30 and 8:55
+<<1418446104.96	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Okay. Cool. 
+<<1418446113.94	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :And then 11:30 and 11:55
+<<1418446117.98	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :or, more generally, :30 and :55 minute of the stream
+<<1418446124.19	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :but since we don't have a general stream schedule yet
+<<1418446139.98	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Okay. 
+<<1418446154.6	PING :tmi.twitch.tv
+>>1418446154.6	PONG tmi.twitch.tv
+>>1418446271.04	PING irc.twitch.tv
+<<1418446271.13	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418446291.86	:embah!embah@embah.tmi.twitch.tv PART #handmade_hero
+>>1418446391.09	PING irc.twitch.tv
+<<1418446391.13	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418446425.5	:dravorek!dravorek@dravorek.tmi.twitch.tv PART #handmade_hero
+<<1418446448.78	PING :tmi.twitch.tv
+>>1418446448.78	PONG tmi.twitch.tv
+>>1418446481.47	CAP LS
+>>1418446481.47	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418446481.47	NICK chronalRobot
+>>1418446481.47	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418446481.52	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418446481.56	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418446481.56	MODE  chronalRobot +B
+>>1418446481.56	JOIN #chronalrobot
+>>1418446481.56	JOIN #handmade_hero
+<<1418446481.56	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418446481.56	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418446481.56	:tmi.twitch.tv 004 chronalrobot :-
+<<1418446481.56	:tmi.twitch.tv 375 chronalrobot :-
+<<1418446481.56	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418446481.56	:tmi.twitch.tv 376 chronalrobot :>
+<<1418446481.73	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418446481.73	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418446481.73	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418446481.73	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418446481.75	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418446481.75	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418446481.75	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :yuhoshi cmuratori paperscraps chronalrobot skhme boz_float gnuvince moobals tenoften clunk0 tatamii ortholabs x3stenlite sirgutu maxxkioku klemensbaum ilovetsundere blueravengt acquark iamdefinitelybatman accoun_ johanofverstedt jth_ steelgolem rioseblade culver_fly ikkir_isth chronaldragon fincodr draiodoir quylthulg seudafed andyboy223 cottonflop drive137
+<<1418446481.75	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418446481.75	:jtv MODE #handmade_hero +o cmuratori
+>>1418446512.88	CAP LS
+>>1418446512.88	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418446512.88	NICK chronalRobot
+>>1418446512.88	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418446512.92	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418446512.96	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418446512.96	MODE  chronalRobot +B
+>>1418446512.97	JOIN #chronalrobot
+>>1418446512.97	JOIN #handmade_hero
+<<1418446512.97	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418446512.97	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418446512.97	:tmi.twitch.tv 004 chronalrobot :-
+<<1418446512.97	:tmi.twitch.tv 375 chronalrobot :-
+<<1418446512.97	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418446512.97	:tmi.twitch.tv 376 chronalrobot :>
+<<1418446513.11	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418446513.11	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418446513.11	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418446513.11	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418446513.13	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418446513.13	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418446513.13	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :maxxkioku jth_ moobals chronalrobot boz_float klemensbaum tatamii ilovetsundere blueravengt iamdefinitelybatman skhme draiodoir tenoften ikkir_isth ortholabs clunk0 accoun_ johanofverstedt fincodr quylthulg chronaldragon cmuratori seudafed steelgolem drive137 x3stenlite acquark culver_fly gnuvince paperscraps andyboy223 rioseblade sirgutu yuhoshi cottonflop
+<<1418446513.13	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418446513.13	:jtv MODE #handmade_hero +o cmuratori
+<<1418446520.99	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!alextimer
+>>1418446521.03	PRIVMSG #handmade_hero :TypeError: qaReminder() takes exactly 1 argument (2 given) (file "/usr/local/lib/python2.7/site-packages/willie/bot.py", line 741, in call)
+<<1418446540.49	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :we should probably look into making the bot not spit out real directories into chat
+<<1418446549.92	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418446549.92	:jtv MODE #chronalrobot +o chronalrobot
+<<1418446598.14	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Or I should look into not putting errors in the bot :) 
+<<1418446602.76	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :that works too :P
+>>1418446664.03	CAP LS
+>>1418446664.03	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418446664.03	NICK chronalRobot
+>>1418446664.03	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418446664.07	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418446664.11	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418446664.11	MODE  chronalRobot +B
+>>1418446664.11	JOIN #chronalrobot
+>>1418446664.11	JOIN #handmade_hero
+<<1418446664.11	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418446664.11	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418446664.11	:tmi.twitch.tv 004 chronalrobot :-
+<<1418446664.11	:tmi.twitch.tv 375 chronalrobot :-
+<<1418446664.11	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418446664.11	:tmi.twitch.tv 376 chronalrobot :>
+<<1418446664.27	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418446664.27	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418446664.27	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418446664.27	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418446664.31	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418446664.31	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418446664.31	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :johanofverstedt clunk0 tatamii moobals sirgutu tenoften drive137 chronaldragon steelgolem maxxkioku jth_ andyboy223 x3stenlite gnuvince acquark culver_fly paperscraps ortholabs cottonflop ikkir_isth quylthulg boz_float draiodoir accoun_ yuhoshi seudafed rioseblade cmuratori ilovetsundere klemensbaum chronalrobot iamdefinitelybatman skhme fincodr blueravengt
+<<1418446664.31	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418446664.31	:jtv MODE #handmade_hero +o cmuratori
+<<1418446666.35	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :very default
+<<1418446670.38	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Same here. 
+<<1418446678.41	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :I bought it andddd then put it back in the box. 
+<<1418446688.3	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!alextimer
+>>1418446688.35	PRIVMSG #handmade_hero :TypeError: qaReminder() takes exactly 1 argument (2 given) (file "/usr/local/lib/python2.7/site-packages/willie/bot.py", line 741, in call)
+<<1418446697.72	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :***. 
+<<1418446717.65	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418446717.66	:jtv MODE #chronalrobot +o chronalrobot
+<<1418446731.21	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :I've done some web servery stuff with mine but nothing very DIY or maker-ish
+<<1418446756.67	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :its mostly useful as a cheap-*** computer
+<<1418446780.03	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :I couldn't stand it when I was on it. Took forever for stuff. But it's useful for stuff like this. Tiny little bots.
+>>1418446844.04	PING irc.twitch.tv
+<<1418446844.1	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418446925.03	PING :tmi.twitch.tv
+>>1418446925.03	PONG tmi.twitch.tv
+>>1418447738.69	CAP LS
+>>1418447738.71	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418447738.72	NICK chronalRobot
+>>1418447738.72	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418447738.75	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418447738.8	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418447738.8	MODE  chronalRobot +B
+>>1418447738.83	JOIN #chronalrobot
+>>1418447738.83	JOIN #handmade_hero
+<<1418447738.83	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418447738.83	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418447738.83	:tmi.twitch.tv 004 chronalrobot :-
+<<1418447738.84	:tmi.twitch.tv 375 chronalrobot :-
+<<1418447738.84	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418447738.84	:tmi.twitch.tv 376 chronalrobot :>
+<<1418447738.99	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418447738.99	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418447738.99	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418447738.99	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418447739.01	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418447739.01	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418447739.01	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :steelgolem tenoften acquark fincodr sirgutu boz_float cottonflop draiodoir quylthulg jth_ accoun_ klemensbaum chronaldragon ilovetsundere x3stenlite maxxkioku ikkir_isth clunk0 paperscraps rioseblade gnuvince seudafed tatamii johanofverstedt ortholabs andyboy223 yuhoshi iamdefinitelybatman blueravengt drive137 cmuratori moobals skhme
+<<1418447739.01	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418447739.01	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418447739.01	:jtv MODE #handmade_hero +o cmuratori
+<<1418447746.08	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!time
+>>1418447746.12	PRIVMSG #handmade_hero :@iamdefinitelybatman: The current time in Seattle is 09:15 PM PST
+<<1418447781.84	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418447781.84	:jtv MODE #chronalrobot +o chronalrobot
+>>1418447821.0	CAP LS
+>>1418447821.01	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418447821.01	NICK chronalRobot
+>>1418447821.01	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418447821.05	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418447821.09	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418447821.09	MODE  chronalRobot +B
+>>1418447821.09	JOIN #chronalrobot
+>>1418447821.09	JOIN #handmade_hero
+<<1418447821.09	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418447821.09	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418447821.09	:tmi.twitch.tv 004 chronalrobot :-
+<<1418447821.09	:tmi.twitch.tv 375 chronalrobot :-
+<<1418447821.09	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418447821.09	:tmi.twitch.tv 376 chronalrobot :>
+<<1418447821.24	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418447821.24	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418447821.24	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418447821.24	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418447821.26	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418447821.26	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :paperscraps acquark johanofverstedt clunk0 gnuvince drive137 andyboy223 sirgutu tenoften cottonflop yuhoshi draiodoir quylthulg moobals accoun_ blueravengt x3stenlite cmuratori ortholabs chronaldragon boz_float rioseblade skhme tatamii iamdefinitelybatman klemensbaum ilovetsundere jth_ fincodr ikkir_isth chronalrobot maxxkioku seudafed steelgolem
+<<1418447821.26	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418447821.26	:jtv MODE #handmade_hero +o cmuratori
+<<1418447821.26	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418447824.69	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!wrist
+>>1418447824.69	PRIVMSG #handmade_hero :@iamdefinitelybatman: The wrist braces Casey wears help make typing more comfortable and prevent Repetitive Strain Injury. They probably aren't made anymore, but they're the Medi-Active ones without the thumb brace.
+<<1418447872.46	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418447872.46	:jtv MODE #chronalrobot +o chronalrobot
+>>1418447936.72	CAP LS
+>>1418447936.73	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418447936.73	NICK chronalRobot
+>>1418447936.73	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418447936.77	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418447936.82	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418447936.82	MODE  chronalRobot +B
+>>1418447936.82	JOIN #chronalrobot
+>>1418447936.82	JOIN #handmade_hero
+<<1418447936.82	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418447936.82	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418447936.82	:tmi.twitch.tv 004 chronalrobot :-
+<<1418447936.82	:tmi.twitch.tv 375 chronalrobot :-
+<<1418447936.82	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418447936.82	:tmi.twitch.tv 376 chronalrobot :>
+<<1418447936.97	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418447936.97	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418447936.97	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418447936.97	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418447936.99	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418447936.99	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :johanofverstedt andyboy223 fincodr tatamii cottonflop seudafed skhme yuhoshi quylthulg ikkir_isth steelgolem drive137 gnuvince ilovetsundere ortholabs tenoften chronaldragon chronalrobot blueravengt jth_ rioseblade x3stenlite draiodoir accoun_ acquark clunk0 paperscraps klemensbaum iamdefinitelybatman moobals maxxkioku boz_float sirgutu cmuratori
+<<1418447936.99	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418447936.99	:jtv MODE #handmade_hero +o cmuratori
+<<1418447936.99	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418447943.26	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!help
+<<1418447949.07	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!milk
+<<1418447972.62	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+>>1418447982.99	CAP LS
+>>1418447983.01	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418447983.03	NICK chronalRobot
+>>1418447983.03	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418447983.05	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418447983.1	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418447983.1	MODE  chronalRobot +B
+>>1418447983.1	JOIN #chronalrobot
+>>1418447983.11	JOIN #handmade_hero
+<<1418447983.11	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418447983.11	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418447983.11	:tmi.twitch.tv 004 chronalrobot :-
+<<1418447983.11	:tmi.twitch.tv 375 chronalrobot :-
+<<1418447983.11	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418447983.11	:tmi.twitch.tv 376 chronalrobot :>
+<<1418447983.24	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418447983.24	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418447983.24	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418447983.24	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418447983.26	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418447983.26	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418447983.26	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :acquark cottonflop rioseblade blueravengt yuhoshi boz_float draiodoir chronaldragon andyboy223 tenoften chronalrobot moobals drive137 quylthulg ortholabs iamdefinitelybatman fincodr steelgolem paperscraps gnuvince skhme x3stenlite clunk0 johanofverstedt sirgutu maxxkioku accoun_ cmuratori jth_ seudafed ikkir_isth ilovetsundere klemensbaum tatamii
+<<1418447983.26	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418447983.26	:jtv MODE #handmade_hero +o cmuratori
+<<1418447985.28	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!milk
+<<1418447989.51	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!wrist
+>>1418448058.39	CAP LS
+>>1418448058.4	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418448058.4	NICK chronalRobot
+>>1418448058.41	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418448058.44	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418448058.48	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418448058.48	MODE  chronalRobot +B
+>>1418448058.48	JOIN #chronalrobot
+>>1418448058.48	JOIN #handmade_hero
+<<1418448058.48	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418448058.48	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418448058.48	:tmi.twitch.tv 004 chronalrobot :-
+<<1418448058.48	:tmi.twitch.tv 375 chronalrobot :-
+<<1418448058.48	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418448058.48	:tmi.twitch.tv 376 chronalrobot :>
+<<1418448058.63	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418448058.63	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418448058.63	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418448058.63	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418448058.66	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418448058.66	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418448058.66	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :cottonflop ortholabs clunk0 boz_float skhme andyboy223 jth_ drive137 ikkir_isth johanofverstedt seudafed iamdefinitelybatman ilovetsundere accoun_ quylthulg chronaldragon cmuratori gnuvince chronalrobot klemensbaum x3stenlite blueravengt acquark sirgutu steelgolem rioseblade maxxkioku paperscraps tenoften draiodoir yuhoshi tatamii moobals fincodr
+<<1418448058.66	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418448058.66	:jtv MODE #handmade_hero +o cmuratori
+<<1418448061.93	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!milk
+<<1418448067.32	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!wrist
+>>1418448098.47	CAP LS
+>>1418448098.47	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418448098.47	NICK chronalRobot
+>>1418448098.47	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418448098.51	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418448098.56	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418448098.56	MODE  chronalRobot +B
+>>1418448098.56	JOIN #chronalrobot
+>>1418448098.56	JOIN #handmade_hero
+<<1418448098.56	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418448098.56	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418448098.56	:tmi.twitch.tv 004 chronalrobot :-
+<<1418448098.56	:tmi.twitch.tv 375 chronalrobot :-
+<<1418448098.56	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418448098.56	:tmi.twitch.tv 376 chronalrobot :>
+<<1418448098.7	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418448098.7	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418448098.7	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418448098.7	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418448098.72	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418448098.72	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418448098.72	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :sirgutu boz_float drive137 blueravengt quylthulg tatamii draiodoir seudafed tenoften ortholabs fincodr yuhoshi cottonflop accoun_ rioseblade iamdefinitelybatman maxxkioku clunk0 cmuratori ilovetsundere x3stenlite acquark moobals ikkir_isth paperscraps klemensbaum skhme andyboy223 chronalrobot gnuvince
+<<1418448098.72	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418448098.72	:jtv MODE #handmade_hero +o cmuratori
+<<1418448104.89	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!length
+<<1418448124.07	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418448124.07	:jtv MODE #chronalrobot +o chronalrobot
+<<1418448124.07	:jth_!jth_@jth_.tmi.twitch.tv JOIN #handmade_hero
+<<1418448124.07	:johanofverstedt!johanofverstedt@johanofverstedt.tmi.twitch.tv JOIN #handmade_hero
+<<1418448124.07	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #handmade_hero
+<<1418448124.07	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv JOIN #handmade_hero
+<<1418448124.07	:draiodoir!draiodoir@draiodoir.tmi.twitch.tv PART #handmade_hero
+<<1418448124.07	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch.tv PART #handmade_hero
+>>1418448172.09	CAP LS
+>>1418448172.09	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418448172.09	NICK chronalRobot
+>>1418448172.09	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418448172.13	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418448172.17	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418448172.17	MODE  chronalRobot +B
+>>1418448172.17	JOIN #chronalrobot
+>>1418448172.18	JOIN #handmade_hero
+<<1418448172.18	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418448172.18	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418448172.18	:tmi.twitch.tv 004 chronalrobot :-
+<<1418448172.18	:tmi.twitch.tv 375 chronalrobot :-
+<<1418448172.18	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418448172.18	:tmi.twitch.tv 376 chronalrobot :>
+<<1418448172.35	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418448172.35	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418448172.35	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418448172.35	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418448172.4	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418448172.4	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418448172.41	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :seudafed tatamii ilovetsundere draiodoir maxxkioku cottonflop johanofverstedt jth_ yuhoshi moobals blueravengt sirgutu accoun_ quylthulg boz_float tenoften gnuvince fincodr chronalrobot ortholabs drive137 clunk0 steelgolem ikkir_isth klemensbaum skhme x3stenlite rioseblade cmuratori iamdefinitelybatman acquark paperscraps andyboy223 chronaldragon
+<<1418448172.41	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418448172.41	:jtv MODE #handmade_hero +o cmuratori
+<<1418448237.02	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418448237.02	:jtv MODE #chronalrobot +o chronalrobot
+>>1418448248.23	CAP LS
+>>1418448248.23	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418448248.23	NICK chronalRobot
+>>1418448248.23	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418448248.27	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418448248.31	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418448248.31	MODE  chronalRobot +B
+>>1418448248.31	JOIN #chronalrobot
+>>1418448248.31	JOIN #handmade_hero
+<<1418448248.31	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418448248.31	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418448248.31	:tmi.twitch.tv 004 chronalrobot :-
+<<1418448248.31	:tmi.twitch.tv 375 chronalrobot :-
+<<1418448248.31	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418448248.31	:tmi.twitch.tv 376 chronalrobot :>
+<<1418448248.47	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418448248.47	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418448248.47	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418448248.47	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418448248.49	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418448248.49	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418448248.49	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronaldragon seudafed steelgolem acquark ilovetsundere maxxkioku boz_float moobals ikkir_isth drive137 andyboy223 jth_ tenoften blueravengt yuhoshi johanofverstedt fincodr accoun_ quylthulg sirgutu rioseblade x3stenlite iamdefinitelybatman gnuvince cmuratori klemensbaum clunk0 draiodoir paperscraps
+<<1418448248.49	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418448248.49	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418448248.49	:jtv MODE #handmade_hero +o cmuratori
+<<1418448251.04	:skhme!skhme@skhme.tmi.twitch.tv JOIN #handmade_hero
+<<1418448251.04	:tatamii!tatamii@tatamii.tmi.twitch.tv JOIN #handmade_hero
+<<1418448251.04	:ortholabs!ortholabs@ortholabs.tmi.twitch.tv JOIN #handmade_hero
+<<1418448251.04	:cottonflop!cottonflop@cottonflop.tmi.twitch.tv JOIN #handmade_hero
+<<1418448251.05	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418448251.05	:jtv MODE #chronalrobot +o chronalrobot
+>>1418448260.81	CAP LS
+>>1418448260.81	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418448260.81	NICK chronalRobot
+>>1418448260.81	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418448260.85	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418448260.89	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418448260.89	MODE  chronalRobot +B
+>>1418448260.89	JOIN #chronalrobot
+>>1418448260.89	JOIN #handmade_hero
+<<1418448260.89	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418448260.89	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418448260.89	:tmi.twitch.tv 004 chronalrobot :-
+<<1418448260.89	:tmi.twitch.tv 375 chronalrobot :-
+<<1418448260.89	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418448260.89	:tmi.twitch.tv 376 chronalrobot :>
+<<1418448261.03	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418448261.03	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418448261.03	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418448261.03	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418448261.05	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418448261.05	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418448261.05	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :gnuvince yuhoshi jth_ draiodoir cottonflop tenoften sirgutu ikkir_isth boz_float moobals cmuratori fincodr maxxkioku iamdefinitelybatman johanofverstedt quylthulg x3stenlite klemensbaum tatamii ilovetsundere rioseblade ortholabs andyboy223 seudafed skhme blueravengt paperscraps drive137 acquark accoun_ chronaldragon clunk0 steelgolem chronalrobot
+<<1418448261.05	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418448261.05	:jtv MODE #handmade_hero +o cmuratori
+<<1418448277.13	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418448277.13	:jtv MODE #chronalrobot +o chronalrobot
+>>1418448379.67	CAP LS
+>>1418448379.67	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418448379.67	NICK chronalRobot
+>>1418448379.67	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418448379.72	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418448379.76	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418448379.76	MODE  chronalRobot +B
+>>1418448379.76	JOIN #chronalrobot
+>>1418448379.76	JOIN #handmade_hero
+<<1418448379.76	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418448379.76	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418448379.76	:tmi.twitch.tv 004 chronalrobot :-
+<<1418448379.76	:tmi.twitch.tv 375 chronalrobot :-
+<<1418448379.76	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418448379.76	:tmi.twitch.tv 376 chronalrobot :>
+<<1418448379.92	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418448379.92	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418448379.92	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418448379.92	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418448379.94	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418448379.94	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418448379.94	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :blueravengt jth_ sirgutu chronaldragon accoun_ tenoften fincodr maxxkioku ikkir_isth iamdefinitelybatman yuhoshi chronalrobot boz_float seudafed gnuvince cmuratori tatamii paperscraps moobals x3stenlite steelgolem clunk0 rioseblade draiodoir johanofverstedt quylthulg drive137 ortholabs cottonflop skhme ilovetsundere klemensbaum andyboy223 acquark
+<<1418448379.94	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418448379.94	:jtv MODE #handmade_hero +o cmuratori
+>>1418448410.02	CAP LS
+>>1418448410.02	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418448410.02	NICK chronalRobot
+>>1418448410.02	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418448410.06	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418448410.1	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418448410.1	MODE  chronalRobot +B
+>>1418448410.1	JOIN #chronalrobot
+>>1418448410.1	JOIN #handmade_hero
+<<1418448410.1	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418448410.1	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418448410.1	:tmi.twitch.tv 004 chronalrobot :-
+<<1418448410.1	:tmi.twitch.tv 375 chronalrobot :-
+<<1418448410.1	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418448410.1	:tmi.twitch.tv 376 chronalrobot :>
+<<1418448410.24	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418448410.24	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418448410.24	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418448410.24	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418448410.26	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418448410.26	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418448410.26	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :clunk0 steelgolem moobals ilovetsundere acquark maxxkioku jth_ rioseblade ortholabs klemensbaum paperscraps sirgutu draiodoir iamdefinitelybatman tenoften cmuratori blueravengt fincodr drive137 seudafed chronaldragon boz_float johanofverstedt yuhoshi x3stenlite cottonflop accoun_ gnuvince andyboy223 tatamii chronalrobot skhme ikkir_isth quylthulg
+<<1418448410.26	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418448410.26	:jtv MODE #handmade_hero +o cmuratori
+<<1418448442.65	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418448442.65	:jtv MODE #chronalrobot +o chronalrobot
+>>1418448471.03	CAP LS
+>>1418448471.03	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418448471.03	NICK chronalRobot
+>>1418448471.04	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418448471.07	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418448471.12	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418448471.12	MODE  chronalRobot +B
+>>1418448471.12	JOIN #chronalrobot
+>>1418448471.12	JOIN #handmade_hero
+<<1418448471.12	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418448471.12	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418448471.12	:tmi.twitch.tv 004 chronalrobot :-
+<<1418448471.12	:tmi.twitch.tv 375 chronalrobot :-
+<<1418448471.12	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418448471.12	:tmi.twitch.tv 376 chronalrobot :>
+<<1418448471.12	PING :tmi.twitch.tv
+>>1418448471.12	PONG tmi.twitch.tv
+<<1418448471.27	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418448471.27	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418448471.27	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418448471.27	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418448471.29	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418448471.29	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418448471.29	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :sirgutu steelgolem yuhoshi skhme cmuratori johanofverstedt andyboy223 seudafed chronaldragon tatamii clunk0 ilovetsundere ikkir_isth jth_ ortholabs cottonflop blueravengt fincodr maxxkioku tenoften quylthulg rioseblade accoun_ moobals x3stenlite chronalrobot klemensbaum draiodoir drive137 gnuvince iamdefinitelybatman paperscraps boz_float acquark
+<<1418448471.29	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418448471.29	:jtv MODE #handmade_hero +o cmuratori
+>>1418448487.7	CAP LS
+>>1418448487.7	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418448487.7	NICK chronalRobot
+>>1418448487.7	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418448487.75	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418448487.79	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418448487.79	MODE  chronalRobot +B
+>>1418448487.79	JOIN #chronalrobot
+>>1418448487.79	JOIN #handmade_hero
+<<1418448487.79	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418448487.79	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418448487.79	:tmi.twitch.tv 004 chronalrobot :-
+<<1418448487.79	:tmi.twitch.tv 375 chronalrobot :-
+<<1418448487.79	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418448487.79	:tmi.twitch.tv 376 chronalrobot :>
+<<1418448487.93	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418448487.93	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418448487.93	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot chronaldragon
+<<1418448487.93	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418448487.93	:jtv MODE #chronalrobot +o chronalrobot
+<<1418448487.94	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418448487.94	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418448487.94	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :gnuvince rioseblade maxxkioku steelgolem chronaldragon clunk0 ilovetsundere moobals draiodoir chronalrobot sirgutu blueravengt x3stenlite tatamii boz_float cmuratori jth_ fincodr iamdefinitelybatman paperscraps ortholabs quylthulg johanofverstedt klemensbaum skhme acquark ikkir_isth drive137 yuhoshi accoun_ andyboy223 seudafed cottonflop tenoften
+<<1418448487.94	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418448487.94	:jtv MODE #handmade_hero +o cmuratori
+>>1418448562.3	CAP LS
+>>1418448562.3	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418448562.3	NICK chronalRobot
+>>1418448562.3	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418448562.34	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418448562.38	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418448562.39	MODE  chronalRobot +B
+>>1418448562.39	JOIN #chronalrobot
+>>1418448562.39	JOIN #handmade_hero
+<<1418448562.39	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418448562.39	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418448562.39	:tmi.twitch.tv 004 chronalrobot :-
+<<1418448562.39	:tmi.twitch.tv 375 chronalrobot :-
+<<1418448562.39	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418448562.39	:tmi.twitch.tv 376 chronalrobot :>
+<<1418448562.54	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418448562.55	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418448562.55	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418448562.55	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418448562.58	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418448562.58	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418448562.58	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :ilovetsundere quylthulg skhme moobals x3stenlite drive137 gnuvince maxxkioku paperscraps draiodoir johanofverstedt ikkir_isth chronalrobot ortholabs boz_float accoun_ blueravengt cmuratori klemensbaum acquark cottonflop rioseblade yuhoshi chronaldragon sirgutu jth_ tenoften clunk0 fincodr steelgolem iamdefinitelybatman tatamii seudafed andyboy223
+<<1418448562.58	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418448562.58	:jtv MODE #handmade_hero +o cmuratori
+>>1418448612.34	CAP LS
+>>1418448612.34	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418448612.34	NICK chronalRobot
+>>1418448612.34	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418448612.38	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418448612.43	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418448612.43	MODE  chronalRobot +B
+>>1418448612.43	JOIN #chronalrobot
+>>1418448612.43	JOIN #handmade_hero
+<<1418448612.43	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418448612.43	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418448612.43	:tmi.twitch.tv 004 chronalrobot :-
+<<1418448612.43	:tmi.twitch.tv 375 chronalrobot :-
+<<1418448612.43	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418448612.43	:tmi.twitch.tv 376 chronalrobot :>
+<<1418448612.57	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418448612.57	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418448612.57	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418448612.58	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418448612.6	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418448612.6	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418448612.6	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418448612.6	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418448630.88	:quylthulg!quylthulg@quylthulg.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:rioseblade!rioseblade@rioseblade.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:accoun_!accoun_@accoun_.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:fincodr!fincodr@fincodr.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:ilovetsundere!ilovetsundere@ilovetsundere.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:klemensbaum!klemensbaum@klemensbaum.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:maxxkioku!maxxkioku@maxxkioku.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:acquark!acquark@acquark.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:boz_float!boz_float@boz_float.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:ortholabs!ortholabs@ortholabs.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:drive137!drive137@drive137.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:jth_!jth_@jth_.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:clunk0!clunk0@clunk0.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:moobals!moobals@moobals.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:draiodoir!draiodoir@draiodoir.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:seudafed!seudafed@seudafed.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:tenoften!tenoften@tenoften.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:blueravengt!blueravengt@blueravengt.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:tatamii!tatamii@tatamii.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:andyboy223!andyboy223@andyboy223.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:x3stenlite!x3stenlite@x3stenlite.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:johanofverstedt!johanofverstedt@johanofverstedt.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:skhme!skhme@skhme.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:cmuratori!cmuratori@cmuratori.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:cottonflop!cottonflop@cottonflop.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:gnuvince!gnuvince@gnuvince.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:paperscraps!paperscraps@paperscraps.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:sirgutu!sirgutu@sirgutu.tmi.twitch.tv JOIN #handmade_hero
+<<1418448630.88	:jtv MODE #handmade_hero +o cmuratori
+<<1418448630.88	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418448695.62	:jtv MODE #chronalrobot +o chronalrobot
+>>1418448792.36	PING irc.twitch.tv
+<<1418448792.39	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418448843.69	CAP LS
+>>1418448843.69	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418448843.69	NICK chronalRobot
+>>1418448843.69	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418448843.73	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418448843.77	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418448843.77	MODE  chronalRobot +B
+>>1418448843.77	JOIN #chronalrobot
+>>1418448843.77	JOIN #handmade_hero
+<<1418448843.77	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418448843.78	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418448843.78	:tmi.twitch.tv 004 chronalrobot :-
+<<1418448843.78	:tmi.twitch.tv 375 chronalrobot :-
+<<1418448843.78	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418448843.78	:tmi.twitch.tv 376 chronalrobot :>
+<<1418448843.93	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418448843.93	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418448843.93	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418448843.93	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418448843.96	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418448843.96	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418448843.96	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :andyboy223 jth_ quylthulg ikkir_isth drive137 tatamii x3stenlite maxxkioku cottonflop steelgolem johanofverstedt rioseblade acquark blueravengt seudafed chronaldragon gnuvince accoun_ draiodoir tenoften ilovetsundere moobals skhme sirgutu yuhoshi cmuratori boz_float clunk0 fincodr klemensbaum chronalrobot paperscraps iamdefinitelybatman ortholabs
+<<1418448843.96	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418448843.96	:jtv MODE #handmade_hero +o cmuratori
+<<1418448884.15	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418448948.67	:jtv MODE #chronalrobot +o chronalrobot
+<<1418448948.72	:fincodr!fincodr@fincodr.tmi.twitch.tv PART #handmade_hero
+>>1418449023.7	PING irc.twitch.tv
+<<1418449023.74	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418449033.57	CAP LS
+>>1418449033.57	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418449033.57	NICK chronalRobot
+>>1418449033.57	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418449033.61	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418449033.65	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418449033.65	MODE  chronalRobot +B
+>>1418449033.65	JOIN #chronalrobot
+>>1418449033.65	JOIN #handmade_hero
+<<1418449033.65	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418449033.65	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418449033.65	:tmi.twitch.tv 004 chronalrobot :-
+<<1418449033.65	:tmi.twitch.tv 375 chronalrobot :-
+<<1418449033.66	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418449033.66	:tmi.twitch.tv 376 chronalrobot :>
+<<1418449033.8	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418449033.8	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418449033.8	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418449033.8	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418449033.83	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418449033.83	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418449033.83	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :yuhoshi klemensbaum johanofverstedt clunk0 seudafed quylthulg x3stenlite acquark accoun_ skhme cmuratori ikkir_isth tenoften draiodoir moobals boz_float steelgolem ortholabs andyboy223 maxxkioku chronalrobot iamdefinitelybatman rioseblade sirgutu gnuvince paperscraps jth_ drive137 tatamii ilovetsundere blueravengt cottonflop chronaldragon
+<<1418449033.83	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418449033.83	:jtv MODE #handmade_hero +o cmuratori
+<<1418449039.89	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!wrist
+>>1418449039.89	PRIVMSG #handmade_hero :@iamdefinitelybatman: The wrist braces Casey wears help make typing more comfortable and prevent Repetitive Strain Injury. They probably aren't made anymore, but they're the Medi-Active ones without the thumb brace.
+<<1418449050.95	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Still there? 
+>>1418449640.09	CAP LS
+>>1418449640.1	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418449640.1	NICK chronalRobot
+>>1418449640.1	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418449640.14	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418449640.18	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418449640.18	MODE  chronalRobot +B
+>>1418449640.18	JOIN #chronalrobot
+>>1418449640.18	JOIN #handmade_hero
+<<1418449640.18	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418449640.18	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418449640.18	:tmi.twitch.tv 004 chronalrobot :-
+<<1418449640.18	:tmi.twitch.tv 375 chronalrobot :-
+<<1418449640.18	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418449640.18	:tmi.twitch.tv 376 chronalrobot :>
+<<1418449640.33	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418449640.33	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418449640.33	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418449640.33	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418449640.35	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418449640.35	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418449640.35	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :klemensbaum x3stenlite drive137 cmuratori tenoften chronaldragon maxxkioku paperscraps accoun_ boz_float seudafed clunk0 tatamii moobals cottonflop johanofverstedt blueravengt quylthulg sirgutu steelgolem rioseblade gnuvince andyboy223 acquark skhme ikkir_isth iamdefinitelybatman jth_ ilovetsundere ortholabs yuhoshi draiodoir
+<<1418449640.35	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418449640.35	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418449640.35	:jtv MODE #handmade_hero +o cmuratori
+<<1418449654.29	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418449654.3	:cmuratori!cmuratori@cmuratori.tmi.twitch.tv PART #handmade_hero
+<<1418449654.3	:jtv MODE #handmade_hero -o cmuratori
+<<1418449710.89	:jtv MODE #chronalrobot +o chronalrobot
+>>1418449743.6	CAP LS
+>>1418449743.6	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418449743.6	NICK chronalRobot
+>>1418449743.6	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418449743.65	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418449743.69	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418449743.69	MODE  chronalRobot +B
+>>1418449743.69	JOIN #chronalrobot
+>>1418449743.69	JOIN #handmade_hero
+<<1418449743.69	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418449743.69	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418449743.69	:tmi.twitch.tv 004 chronalrobot :-
+<<1418449743.69	:tmi.twitch.tv 375 chronalrobot :-
+<<1418449743.69	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418449743.69	:tmi.twitch.tv 376 chronalrobot :>
+<<1418449743.84	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418449743.84	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418449743.84	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418449743.84	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418449743.86	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418449743.86	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :seudafed maxxkioku x3stenlite boz_float ortholabs andyboy223 tenoften iamdefinitelybatman gnuvince moobals jth_ rioseblade cottonflop skhme ikkir_isth draiodoir clunk0 acquark steelgolem yuhoshi chronalrobot accoun_ paperscraps tatamii drive137 johanofverstedt quylthulg ilovetsundere chronaldragon klemensbaum blueravengt sirgutu
+<<1418449743.86	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418449743.86	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418449771.19	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418449771.19	:jtv MODE #chronalrobot +o chronalrobot
+>>1418449863.61	PING irc.twitch.tv
+<<1418449863.65	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418449872.47	CAP LS
+>>1418449872.47	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418449872.47	NICK chronalRobot
+>>1418449872.47	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418449872.51	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418449872.55	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418449872.55	MODE  chronalRobot +B
+>>1418449872.55	JOIN #chronalrobot
+>>1418449872.55	JOIN #handmade_hero
+<<1418449872.55	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418449872.55	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418449872.55	:tmi.twitch.tv 004 chronalrobot :-
+<<1418449872.55	:tmi.twitch.tv 375 chronalrobot :-
+<<1418449872.55	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418449872.55	:tmi.twitch.tv 376 chronalrobot :>
+<<1418449872.7	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418449872.7	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418449872.7	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418449872.7	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418449872.72	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418449872.72	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418449872.72	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :drive137 seudafed ikkir_isth tenoften paperscraps blueravengt steelgolem draiodoir iamdefinitelybatman quylthulg yuhoshi moobals ilovetsundere maxxkioku x3stenlite chronalrobot skhme boz_float ortholabs klemensbaum clunk0 chronaldragon jth_ acquark gnuvince johanofverstedt rioseblade cottonflop tatamii andyboy223 accoun_ sirgutu
+<<1418449872.72	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+>>1418449891.88	CAP LS
+>>1418449891.88	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418449891.88	NICK chronalRobot
+>>1418449891.88	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418449891.92	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418449891.97	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418449891.97	MODE  chronalRobot +B
+>>1418449891.97	JOIN #chronalrobot
+>>1418449891.97	JOIN #handmade_hero
+<<1418449891.97	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418449891.97	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418449891.97	:tmi.twitch.tv 004 chronalrobot :-
+<<1418449891.97	:tmi.twitch.tv 375 chronalrobot :-
+<<1418449891.97	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418449891.97	:tmi.twitch.tv 376 chronalrobot :>
+<<1418449892.11	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418449892.11	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418449892.11	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418449892.11	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418449892.23	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418449892.23	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418449892.23	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418449892.23	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418449892.69	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :for a while at least.
+<<1418449907.13	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :will try it out tomorrow
+<<1418449920.33	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :*** good luck. 
+<<1418449951.2	:clunk0!clunk0@clunk0.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.2	:accoun_!accoun_@accoun_.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.22	:drive137!drive137@drive137.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.22	:andyboy223!andyboy223@andyboy223.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.22	:tenoften!tenoften@tenoften.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.22	:ortholabs!ortholabs@ortholabs.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.22	:rioseblade!rioseblade@rioseblade.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.22	:johanofverstedt!johanofverstedt@johanofverstedt.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.22	:seudafed!seudafed@seudafed.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.22	:sirgutu!sirgutu@sirgutu.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.22	:quylthulg!quylthulg@quylthulg.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.22	:x3stenlite!x3stenlite@x3stenlite.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:blueravengt!blueravengt@blueravengt.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:draiodoir!draiodoir@draiodoir.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:ilovetsundere!ilovetsundere@ilovetsundere.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:cottonflop!cottonflop@cottonflop.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:jth_!jth_@jth_.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:tatamii!tatamii@tatamii.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:gnuvince!gnuvince@gnuvince.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:maxxkioku!maxxkioku@maxxkioku.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:moob
+<<1418449951.23	als!moobals@moobals.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:acquark!acquark@acquark.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:paperscraps!paperscraps@paperscraps.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:klemensbaum!klemensbaum@klemensbaum.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:boz_float!boz_float@boz_float.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:skhme!skhme@skhme.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv JOIN #handmade_hero
+<<1418449951.23	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418449951.23	:jtv MODE #chronalrobot +o chronalrobot
+<<1418449953.21	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :i'm hoping i can get a hello, world program written, compiled, and running by the end of the day tomorrow
+<<1418449954.89	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :that's my goal
+<<1418450017.72	:kemosabe76!kemosabe76@kemosabe76.tmi.twitch.tv JOIN #handmade_hero
+<<1418450035.97	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Any reason? 
+<<1418450052.37	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :I find writing in Sublime and using SublimeREPL for the command line stuff is the easiest thing for me. 
+>>1418450131.89	PING irc.twitch.tv
+<<1418450131.98	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418450175.94	PING :tmi.twitch.tv
+>>1418450175.95	PONG tmi.twitch.tv
+<<1418450197.24	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PART #handmade_hero
+<<1418450224.95	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Test
+<<1418450263.19	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv JOIN #handmade_hero
+<<1418450318.48	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :I'm in (what I think) is the IRC channel and I don't see anyone else, so I'm assuming I'm not in the same one. 
+<<1418450360.81	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv PRIVMSG #handmade_hero :what, this IRC?
+<<1418450369.07	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Yeah
+<<1418450386.37	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :I'm typing in the Twitch Chat.
+<<1418450406.83	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv PRIVMSG #handmade_hero :should be 33 people here, 30ish of which are afk
+<<1418450423.86	PING :tmi.twitch.tv
+>>1418450423.86	PONG tmi.twitch.tv
+<<1418450431.18	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :So I connected to irc.twitch.tv and put handmade_hero as the channel
+<<1418450454.63	:kemosabe76!kemosabe76@kemosabe76.tmi.twitch.tv PART #handmade_hero
+<<1418450454.63	:sirgutu!sirgutu@sirgutu.tmi.twitch.tv PART #handmade_hero
+<<1418450457.96	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :did you do the oath password?
+<<1418450461.03	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :oauth*
+<<1418450477.12	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Let me grab it from that config
+<<1418450541.2	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Nada. 
+<<1418450582.69	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv PRIVMSG #handmade_hero :I followed this guide to setup on KVIrc http://help.twitch.tv/customer/portal/articles/1302780-twitch-irc
+>>1418450671.97	PING irc.twitch.tv
+<<1418450672.05	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418450705.26	PING :tmi.twitch.tv
+>>1418450705.26	PONG tmi.twitch.tv
+>>1418450792.01	PING irc.twitch.tv
+<<1418450792.06	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418450912.02	PING irc.twitch.tv
+<<1418450912.08	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418450962.71	PING :tmi.twitch.tv
+>>1418450962.75	PONG tmi.twitch.tv
+>>1418451032.05	PING irc.twitch.tv
+<<1418451032.13	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418451152.1	PING irc.twitch.tv
+<<1418451152.14	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418451231.21	PING :tmi.twitch.tv
+>>1418451231.21	PONG tmi.twitch.tv
+>>1418451332.11	PING irc.twitch.tv
+<<1418451332.19	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418451452.16	PING irc.twitch.tv
+<<1418451452.24	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418451483.43	PING :tmi.twitch.tv
+>>1418451483.45	PONG tmi.twitch.tv
+<<1418451485.84	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :test
+<<1418451491.42	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :hullo
+<<1418451502.08	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Good. Set up hexchat. Thanks @ikkir_isth
+>>1418451572.21	PING irc.twitch.tv
+<<1418451572.24	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418451692.21	PING irc.twitch.tv
+<<1418451692.25	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418451704.93	:matra774!matra774@matra774.tmi.twitch.tv JOIN #handmade_hero
+<<1418451731.04	PING :tmi.twitch.tv
+>>1418451731.04	PONG tmi.twitch.tv
+>>1418451812.22	PING irc.twitch.tv
+<<1418451812.26	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418451897.8	CAP LS
+>>1418451897.8	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418451897.8	NICK chronalRobot
+>>1418451897.8	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418451897.84	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418451897.88	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418451897.88	MODE  chronalRobot +B
+>>1418451897.9	JOIN #chronalrobot
+>>1418451897.9	JOIN #handmade_hero
+<<1418451897.9	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418451897.9	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418451897.9	:tmi.twitch.tv 004 chronalrobot :-
+<<1418451897.9	:tmi.twitch.tv 375 chronalrobot :-
+<<1418451897.9	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418451897.9	:tmi.twitch.tv 376 chronalrobot :>
+<<1418451898.06	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418451898.06	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418451898.06	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418451898.06	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418451898.08	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418451898.08	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418451898.08	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :draiodoir drive137 iamdefinitelybatman maxxkioku tatamii chronalrobot ikkir_isth steelgolem cottonflop matra774 jth_ seudafed ortholabs klemensbaum chronaldragon clunk0 gnuvince paperscraps ilovetsundere tenoften yuhoshi johanofverstedt moobals boz_float accoun_ skhme x3stenlite quylthulg acquark blueravengt rioseblade andyboy223
+<<1418451898.08	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418451938.72	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418452006.44	:jtv MODE #chronalrobot +o chronalrobot
+>>1418452077.82	PING irc.twitch.tv
+<<1418452077.86	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418452187.25	PING :tmi.twitch.tv
+>>1418452187.25	PONG tmi.twitch.tv
+<<1418452203.54	:spaceeraser!spaceeraser@spaceeraser.tmi.twitch.tv JOIN #handmade_hero
+>>1418452242.05	CAP LS
+>>1418452242.05	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418452242.05	NICK chronalRobot
+>>1418452242.05	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418452242.09	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418452242.14	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418452242.14	MODE  chronalRobot +B
+>>1418452242.14	JOIN #chronalrobot
+>>1418452242.14	JOIN #handmade_hero
+<<1418452242.14	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418452242.14	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418452242.14	:tmi.twitch.tv 004 chronalrobot :-
+<<1418452242.14	:tmi.twitch.tv 375 chronalrobot :-
+<<1418452242.14	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418452242.14	:tmi.twitch.tv 376 chronalrobot :>
+<<1418452242.29	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418452242.29	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418452242.3	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418452242.3	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418452242.31	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418452242.32	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418452242.32	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :matra774 tenoften johanofverstedt klemensbaum ilovetsundere quylthulg rioseblade drive137 iamdefinitelybatman draiodoir paperscraps seudafed ikkir_isth yuhoshi skhme acquark gnuvince steelgolem clunk0 spaceeraser accoun_ chronalrobot chronaldragon blueravengt ortholabs jth_ boz_float moobals maxxkioku andyboy223 tatamii x3stenlite cottonflop
+<<1418452242.32	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+>>1418452280.74	CAP LS
+>>1418452280.74	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418452280.74	NICK chronalRobot
+>>1418452280.74	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418452280.78	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418452280.83	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418452280.83	MODE  chronalRobot +B
+>>1418452280.83	JOIN #chronalrobot
+>>1418452280.83	JOIN #handmade_hero
+<<1418452280.83	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418452280.83	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418452280.83	:tmi.twitch.tv 004 chronalrobot :-
+<<1418452280.83	:tmi.twitch.tv 375 chronalrobot :-
+<<1418452280.83	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418452280.83	:tmi.twitch.tv 376 chronalrobot :>
+<<1418452281.01	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418452281.01	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418452281.01	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418452281.01	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418452281.03	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418452281.03	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418452281.03	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418452281.03	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+>>1418452456.74	CAP LS
+>>1418452456.74	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418452456.74	NICK chronalRobot
+>>1418452456.74	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418452456.78	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418452456.82	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418452456.82	MODE  chronalRobot +B
+>>1418452456.82	JOIN #chronalrobot
+>>1418452456.82	JOIN #handmade_hero
+<<1418452456.82	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418452456.82	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418452456.82	:tmi.twitch.tv 004 chronalrobot :-
+<<1418452456.82	:tmi.twitch.tv 375 chronalrobot :-
+<<1418452456.82	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418452456.82	:tmi.twitch.tv 376 chronalrobot :>
+<<1418452456.97	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418452456.97	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418452456.97	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418452456.97	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418452457.0	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418452457.0	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418452457.0	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :x3stenlite blueravengt tenoften skhme moobals clunk0 klemensbaum seudafed draiodoir boz_float matra774 cottonflop ikkir_isth drive137 maxxkioku acquark tatamii iamdefinitelybatman yuhoshi spaceeraser johanofverstedt steelgolem quylthulg rioseblade ortholabs jth_ paperscraps ilovetsundere gnuvince accoun_ chronaldragon andyboy223
+<<1418452457.0	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418452457.0	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418452471.88	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418452471.88	:spaceeraser!spaceeraser@spaceeraser.tmi.twitch.tv PART #handmade_hero
+<<1418452528.7	:jtv MODE #chronalrobot +o chronalrobot
+<<1418452635.93	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :test
+<<1418452644.08	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :hullo again
+<<1418452655.97	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Haha. Found a prettier IRC client called LimeChat
+<<1418452667.36	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :might have to check that out
+<<1418452672.86	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :hexchat isn't exactly a feast for the eyes
+<<1418452685.79	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Yeah, and 2 minutes into it, I was already getting bugs.
+<<1418452710.63	PING :tmi.twitch.tv
+>>1418452710.63	PONG tmi.twitch.tv
+>>1418452816.76	PING irc.twitch.tv
+<<1418452816.8	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418452936.76	PING irc.twitch.tv
+<<1418452936.8	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418452980.47	PING :tmi.twitch.tv
+>>1418452980.47	PONG tmi.twitch.tv
+>>1418453056.77	PING irc.twitch.tv
+<<1418453056.81	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418453087.94	CAP LS
+>>1418453087.94	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418453087.94	NICK chronalRobot
+>>1418453087.94	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418453087.98	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418453088.03	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418453088.03	MODE  chronalRobot +B
+>>1418453088.03	JOIN #chronalrobot
+>>1418453088.03	JOIN #handmade_hero
+<<1418453088.03	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418453088.03	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418453088.03	:tmi.twitch.tv 004 chronalrobot :-
+<<1418453088.03	:tmi.twitch.tv 375 chronalrobot :-
+<<1418453088.03	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418453088.03	:tmi.twitch.tv 376 chronalrobot :>
+<<1418453088.18	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418453088.18	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418453088.18	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418453088.18	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418453088.2	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418453088.2	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418453088.2	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418453088.2	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418453096.6	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.6	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.6	:draiodoir!draiodoir@draiodoir.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.6	:x3stenlite!x3stenlite@x3stenlite.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.6	:ilovetsundere!ilovetsundere@ilovetsundere.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.6	:skhme!skhme@skhme.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.6	:boz_float!boz_float@boz_float.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.6	:tatamii!tatamii@tatamii.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.6	:ortholabs!ortholabs@ortholabs.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.6	:andyboy223!andyboy223@andyboy223.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.6	:gnuvince!gnuvince@gnuvince.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:matra774!matra774@matra774.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:drive137!drive137@drive137.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:blueravengt!blueravengt@blueravengt.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:moobals!moobals@moobals.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:cottonflop!cottonflop@cottonflop.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:quylthulg!quylthulg@quylthulg.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:maxxkioku!maxxkioku@maxxkioku.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:jth_!jth_@jth_.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:acquark!acquark@acquark.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:paperscraps!paperscraps@paperscraps.tmi.twi
+<<1418453096.61	tch.tv JOIN #handmade_hero
+<<1418453096.61	:tenoften!tenoften@tenoften.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:clunk0!clunk0@clunk0.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:seudafed!seudafed@seudafed.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:johanofverstedt!johanofverstedt@johanofverstedt.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:accoun_!accoun_@accoun_.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.61	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.62	:rioseblade!rioseblade@rioseblade.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.62	:klemensbaum!klemensbaum@klemensbaum.tmi.twitch.tv JOIN #handmade_hero
+<<1418453096.62	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418453096.62	:jtv MODE #chronalrobot +o chronalrobot
+>>1418453125.15	CAP LS
+>>1418453125.15	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418453125.15	NICK chronalRobot
+>>1418453125.15	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418453125.19	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418453125.23	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418453125.23	MODE  chronalRobot +B
+>>1418453125.23	JOIN #chronalrobot
+>>1418453125.24	JOIN #handmade_hero
+<<1418453125.24	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418453125.24	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418453125.24	:tmi.twitch.tv 004 chronalrobot :-
+<<1418453125.24	:tmi.twitch.tv 375 chronalrobot :-
+<<1418453125.24	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418453125.24	:tmi.twitch.tv 376 chronalrobot :>
+<<1418453125.37	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418453125.37	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418453125.37	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418453125.37	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418453125.4	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418453125.4	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418453125.4	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418453125.4	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418453179.75	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418453179.75	:jtv MODE #chronalrobot +o chronalrobot
+<<1418453179.77	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:cottonflop!cottonflop@cottonflop.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:seudafed!seudafed@seudafed.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:x3stenlite!x3stenlite@x3stenlite.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:accoun_!accoun_@accoun_.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:skhme!skhme@skhme.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:rioseblade!rioseblade@rioseblade.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:quylthulg!quylthulg@quylthulg.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:boz_float!boz_float@boz_float.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:drive137!drive137@drive137.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:moobals!moobals@moobals.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:ilovetsundere!ilovetsundere@ilovetsundere.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:blueravengt!blueravengt@blueravengt.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:clunk0!clunk0@clunk0.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:maxxkioku!maxxkioku@maxxkioku.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:jth_!jth_@jth_.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:matra774!matra774@matra774.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:gnuvince!gnuvince@gnuvince.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.77	:tenoften!tenoften@tenoften.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.78	:iamdefinitelybatman
+<<1418453179.78	!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.78	:klemensbaum!klemensbaum@klemensbaum.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.78	:acquark!acquark@acquark.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.78	:paperscraps!paperscraps@paperscraps.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.78	:johanofverstedt!johanofverstedt@johanofverstedt.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.78	:ortholabs!ortholabs@ortholabs.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.78	:tatamii!tatamii@tatamii.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.78	:draiodoir!draiodoir@draiodoir.tmi.twitch.tv JOIN #handmade_hero
+<<1418453179.78	:andyboy223!andyboy223@andyboy223.tmi.twitch.tv JOIN #handmade_hero
+>>1418453198.65	CAP LS
+>>1418453198.65	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418453198.66	NICK chronalRobot
+>>1418453198.66	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418453198.7	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418453198.74	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418453198.74	MODE  chronalRobot +B
+>>1418453198.74	JOIN #chronalrobot
+>>1418453198.74	JOIN #handmade_hero
+<<1418453198.74	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418453198.74	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418453198.74	:tmi.twitch.tv 004 chronalrobot :-
+<<1418453198.74	:tmi.twitch.tv 375 chronalrobot :-
+<<1418453198.74	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418453198.75	:tmi.twitch.tv 376 chronalrobot :>
+<<1418453198.91	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418453198.91	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418453198.92	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418453198.92	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418453198.93	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418453198.93	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :x3stenlite chronalrobot yuhoshi matra774 rioseblade drive137 seudafed ortholabs jth_ ilovetsundere skhme klemensbaum ikkir_isth chronaldragon johanofverstedt boz_float paperscraps iamdefinitelybatman blueravengt maxxkioku cottonflop gnuvince tenoften steelgolem andyboy223 quylthulg clunk0 tatamii draiodoir acquark moobals accoun_
+<<1418453198.93	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418453198.93	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+>>1418453276.15	CAP LS
+>>1418453276.15	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418453276.15	NICK chronalRobot
+>>1418453276.15	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418453276.19	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418453276.24	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418453276.24	MODE  chronalRobot +B
+>>1418453276.24	JOIN #chronalrobot
+>>1418453276.24	JOIN #handmade_hero
+<<1418453276.24	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418453276.24	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418453276.24	:tmi.twitch.tv 004 chronalrobot :-
+<<1418453276.24	:tmi.twitch.tv 375 chronalrobot :-
+<<1418453276.24	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418453276.24	:tmi.twitch.tv 376 chronalrobot :>
+<<1418453276.39	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418453276.39	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418453276.39	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418453276.39	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418453276.41	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418453276.41	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418453276.41	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :accoun_ steelgolem skhme rioseblade clunk0 ortholabs matra774 iamdefinitelybatman tatamii ilovetsundere seudafed drive137 moobals jth_ acquark quylthulg yuhoshi klemensbaum maxxkioku johanofverstedt ikkir_isth blueravengt cottonflop gnuvince x3stenlite andyboy223 draiodoir chronaldragon paperscraps chronalrobot boz_float tenoften
+<<1418453276.41	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418453281.99	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418453282.01	:boz_float!boz_float@boz_float.tmi.twitch.tv PART #handmade_hero
+>>1418453370.42	CAP LS
+>>1418453370.42	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418453370.42	NICK chronalRobot
+>>1418453370.42	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418453370.46	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418453370.5	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418453370.51	MODE  chronalRobot +B
+>>1418453370.51	JOIN #chronalrobot
+>>1418453370.51	JOIN #handmade_hero
+<<1418453370.51	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418453370.51	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418453370.51	:tmi.twitch.tv 004 chronalrobot :-
+<<1418453370.51	:tmi.twitch.tv 375 chronalrobot :-
+<<1418453370.51	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418453370.51	:tmi.twitch.tv 376 chronalrobot :>
+<<1418453370.66	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418453370.66	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418453370.66	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418453370.66	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418453370.68	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418453370.68	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418453370.68	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :jth_ chronaldragon steelgolem rioseblade ikkir_isth drive137 ortholabs johanofverstedt draiodoir seudafed quylthulg cottonflop klemensbaum paperscraps tenoften ilovetsundere moobals iamdefinitelybatman x3stenlite yuhoshi clunk0 maxxkioku blueravengt accoun_ andyboy223 skhme tatamii gnuvince acquark matra774
+<<1418453370.68	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418453370.68	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+>>1418453392.05	CAP LS
+>>1418453392.05	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418453392.05	NICK chronalRobot
+>>1418453392.05	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418453392.09	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418453392.14	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418453392.14	MODE  chronalRobot +B
+>>1418453392.14	JOIN #chronalrobot
+>>1418453392.14	JOIN #handmade_hero
+<<1418453392.14	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418453392.14	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418453392.14	:tmi.twitch.tv 004 chronalrobot :-
+<<1418453392.14	:tmi.twitch.tv 375 chronalrobot :-
+<<1418453392.14	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418453392.14	:tmi.twitch.tv 376 chronalrobot :>
+<<1418453392.27	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418453392.27	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418453392.27	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418453392.27	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418453392.29	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418453392.29	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418453392.29	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :tatamii ortholabs accoun_ maxxkioku paperscraps jth_ chronaldragon ikkir_isth johanofverstedt cottonflop clunk0 yuhoshi skhme ilovetsundere acquark rioseblade moobals steelgolem klemensbaum drive137 andyboy223 tenoften quylthulg seudafed gnuvince x3stenlite blueravengt iamdefinitelybatman draiodoir matra774
+<<1418453392.29	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418453392.29	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418453413.34	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418453471.66	:jtv MODE #chronalrobot +o chronalrobot
+>>1418453572.07	PING irc.twitch.tv
+<<1418453572.11	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418453635.45	PING :tmi.twitch.tv
+>>1418453635.45	PONG tmi.twitch.tv
+>>1418453752.08	PING irc.twitch.tv
+<<1418453752.12	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418454819.17	CAP LS
+>>1418454819.18	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418454819.18	NICK chronalRobot
+>>1418454819.19	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418454819.23	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418454819.27	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418454819.27	MODE  chronalRobot +B
+>>1418454819.27	JOIN #chronalrobot
+>>1418454819.27	JOIN #handmade_hero
+<<1418454819.27	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418454819.27	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418454819.27	:tmi.twitch.tv 004 chronalrobot :-
+<<1418454819.27	:tmi.twitch.tv 375 chronalrobot :-
+<<1418454819.27	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418454819.27	:tmi.twitch.tv 376 chronalrobot :>
+<<1418454819.43	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418454819.43	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418454819.43	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418454819.43	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418454819.47	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418454819.47	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418454819.47	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :rioseblade ilovetsundere clunk0 drive137 draiodoir ikkir_isth andyboy223 gnuvince steelgolem johanofverstedt maxxkioku toaoo cottonflop ortholabs yuhoshi klemensbaum tenoften blueravengt seudafed tatamii quylthulg moobals paperscraps accoun_ skhme x3stenlite chronaldragon iamdefinitelybatman acquark jth_
+<<1418454819.47	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418454819.47	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418454828.14	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!time
+>>1418454828.23	PRIVMSG #handmade_hero :AttributeError: 'function' object has no attribute 'strftime' (file "/Users/alexwidener/.willie/modules/handmade.py", line 140, in time)
+<<1418454877.81	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418454877.81	:jtv MODE #chronalrobot +o chronalrobot
+<<1418454877.81	:toaoo!toaoo@toaoo.tmi.twitch.tv PART #handmade_hero
+>>1418454939.19	PING irc.twitch.tv
+<<1418454939.24	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418454985.49	CAP LS
+>>1418454985.49	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418454985.49	NICK chronalRobot
+>>1418454985.49	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418454985.53	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418454985.57	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418454985.57	MODE  chronalRobot +B
+>>1418454985.57	JOIN #chronalrobot
+>>1418454985.57	JOIN #handmade_hero
+<<1418454985.58	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418454985.58	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418454985.58	:tmi.twitch.tv 004 chronalrobot :-
+<<1418454985.58	:tmi.twitch.tv 375 chronalrobot :-
+<<1418454985.58	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418454985.58	:tmi.twitch.tv 376 chronalrobot :>
+<<1418454985.72	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418454985.72	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418454985.72	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418454985.72	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418454985.74	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418454985.74	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418454985.74	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :drive137 ortholabs steelgolem ilovetsundere seudafed clunk0 yuhoshi blueravengt acquark maxxkioku rioseblade chronaldragon andyboy223 gnuvince cottonflop quylthulg chronalrobot ikkir_isth paperscraps skhme klemensbaum draiodoir jth_ tatamii johanofverstedt moobals tenoften accoun_ x3stenlite iamdefinitelybatman
+<<1418454985.74	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418454994.32	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!time
+>>1418454994.33	PRIVMSG #handmade_hero :AttributeError: 'function' object has no attribute 'strftime' (file "/Users/alexwidener/.willie/modules/handmade.py", line 140, in time)
+<<1418455009.89	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :*** it. Going to sleep. I've been coding for 14 hours. 
+<<1418455042.92	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418455042.92	:jtv MODE #chronalrobot +o chronalrobot
+>>1418455304.38	CAP LS
+>>1418455304.39	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418455304.39	NICK chronalRobot
+>>1418455304.39	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418455304.43	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418455304.47	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418455304.47	MODE  chronalRobot +B
+>>1418455304.47	JOIN #chronalrobot
+>>1418455304.47	JOIN #handmade_hero
+<<1418455304.47	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418455304.47	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418455304.47	:tmi.twitch.tv 004 chronalrobot :-
+<<1418455304.47	:tmi.twitch.tv 375 chronalrobot :-
+<<1418455304.47	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418455304.47	:tmi.twitch.tv 376 chronalrobot :>
+<<1418455304.63	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418455304.63	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418455304.63	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418455304.63	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418455304.66	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418455304.66	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418455304.66	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418455304.66	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418455312.59	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!time
+>>1418455312.62	PRIVMSG #handmade_hero :AttributeError: 'function' object has no attribute 'strftime' (file "/Users/alexwidener/.willie/modules/handmade.py", line 140, in time)
+<<1418455336.7	:x3stenlite!x3stenlite@x3stenlite.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.71	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.71	:skhme!skhme@skhme.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.71	:acquark!acquark@acquark.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.71	:tatamii!tatamii@tatamii.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.71	:paperscraps!paperscraps@paperscraps.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.71	:rioseblade!rioseblade@rioseblade.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:cottonflop!cottonflop@cottonflop.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:tenoften!tenoften@tenoften.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:ilovetsundere!ilovetsundere@ilovetsundere.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:maxxkioku!maxxkioku@maxxkioku.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:clunk0!clunk0@clunk0.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:gnuvince!gnuvince@gnuvince.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:blueravengt!blueravengt@blueravengt.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:andyboy223!andyboy223@andyboy223.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:jth_!jth_@jth_.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:johanofverstedt!johanofverstedt@johanofverstedt.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:accoun_!accoun_@accoun_.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:drive137!drive137@drive137.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:klemensbaum!klemensbaum@klemensbaum.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:ortholabs!ortholabs@ortholabs.tmi.twitch
+<<1418455336.72	.tv JOIN #handmade_hero
+<<1418455336.72	:draiodoir!draiodoir@draiodoir.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:quylthulg!quylthulg@quylthulg.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:seudafed!seudafed@seudafed.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:moobals!moobals@moobals.tmi.twitch.tv JOIN #handmade_hero
+<<1418455336.72	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418455336.72	:jtv MODE #chronalrobot +o chronalrobot
+<<1418455356.14	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :that does not look good
+<<1418455375.44	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :How is this working in my terminal, but not in the bot?
+<<1418455419.39	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :    curTime = time.strftime("%I:%M %p")
+<<1418455424.7	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Legitimate, easy line, works every time. Except in the bot. 
+>>1418455544.4	PING irc.twitch.tv
+<<1418455544.5	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418455546.97	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :time is probably shadowed by something unexpected
+<<1418455598.11	PING :tmi.twitch.tv
+>>1418455598.17	PONG tmi.twitch.tv
+>>1418455635.62	CAP LS
+>>1418455635.63	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418455635.63	NICK chronalRobot
+>>1418455635.63	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418455635.67	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418455635.72	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418455635.73	MODE  chronalRobot +B
+>>1418455635.73	JOIN #chronalrobot
+>>1418455635.73	JOIN #handmade_hero
+<<1418455635.74	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418455635.74	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418455635.76	:tmi.twitch.tv 004 chronalrobot :-
+<<1418455635.76	:tmi.twitch.tv 375 chronalrobot :-
+<<1418455635.76	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418455635.76	:tmi.twitch.tv 376 chronalrobot :>
+<<1418455635.87	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418455635.87	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418455635.87	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418455635.87	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418455635.9	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418455635.91	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :ortholabs clunk0 skhme iamdefinitelybatman andyboy223 chronalrobot paperscraps johanofverstedt x3stenlite draiodoir tenoften klemensbaum jth_ ilovetsundere tatamii steelgolem seudafed yuhoshi maxxkioku moobals gnuvince rioseblade chronaldragon accoun_ cottonflop acquark ikkir_isth blueravengt drive137 quylthulg
+<<1418455635.91	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418455635.91	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418455637.87	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!time
+>>1418455637.91	PRIVMSG #handmade_hero :@iamdefinitelybatman: The current time in Seattle is 11:27 PM PST
+<<1418455662.74	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418455662.76	:jtv MODE #chronalrobot +o chronalrobot
+<<1418455674.11	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :!timer
+>>1418455674.11	PRIVMSG #handmade_hero :@drive137: Next stream is in 2 days, 20 hours 32 minutes
+<<1418455687.37	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :2 days, 20 hours too long. 
+<<1418455701.76	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :true
+<<1418455709.74	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :but we are behind on the time stamping
+<<1418455732.17	:blueravengt!blueravengt@blueravengt.tmi.twitch.tv PART #handmade_hero
+<<1418455735.6	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :No it's not. 
+<<1418455746.78	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :I'm in Portland. It's based off of Seattle time. 
+<<1418455755.88	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :?
+<<1418455757.6	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :can confirm, correct times
+<<1418455783.78	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :why are we disscussing it not being PST? 
+<<1418455794.84	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :I said we are behind on the video time stamping
+<<1418455798.62	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :OH
+<<1418455799.45	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :ah
+<<1418455802.66	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :not that the timezone info was wrong :)
+<<1418455803.52	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :I thought you meant the bot. 
+<<1418455813.89	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :no its correct
+>>1418455875.64	PING irc.twitch.tv
+<<1418455875.69	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418455887.62	PING :tmi.twitch.tv
+>>1418455887.62	PONG tmi.twitch.tv
+<<1418455974.15	:dead_xxx!dead_xxx@dead_xxx.tmi.twitch.tv JOIN #handmade_hero
+>>1418456055.66	PING irc.twitch.tv
+<<1418456055.71	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418456135.48	PING :tmi.twitch.tv
+>>1418456135.48	PONG tmi.twitch.tv
+>>1418456183.5	CAP LS
+>>1418456183.5	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418456183.5	NICK chronalRobot
+>>1418456183.5	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418456183.54	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418456183.59	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418456183.59	MODE  chronalRobot +B
+>>1418456183.59	JOIN #chronalrobot
+>>1418456183.59	JOIN #handmade_hero
+<<1418456183.59	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418456183.59	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418456183.59	:tmi.twitch.tv 004 chronalrobot :-
+<<1418456183.59	:tmi.twitch.tv 375 chronalrobot :-
+<<1418456183.59	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418456183.59	:tmi.twitch.tv 376 chronalrobot :>
+<<1418456183.74	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418456183.74	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418456183.74	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418456183.74	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418456183.75	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418456183.76	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418456183.76	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418456183.76	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+>>1418501375.33	CAP LS
+>>1418501375.34	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418501375.34	NICK chronalRobot
+>>1418501375.34	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418501375.38	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418501375.43	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418501375.43	MODE  chronalRobot +B
+>>1418501375.43	JOIN #chronalrobot
+>>1418501375.43	JOIN #handmade_hero
+<<1418501375.43	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418501375.43	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418501375.43	:tmi.twitch.tv 004 chronalrobot :-
+<<1418501375.43	:tmi.twitch.tv 375 chronalrobot :-
+<<1418501375.43	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418501375.43	:tmi.twitch.tv 376 chronalrobot :>
+<<1418501375.62	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418501375.62	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418501375.62	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418501375.62	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418501375.64	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418501375.64	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418501375.64	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418501375.64	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418501392.46	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!time
+>>1418501392.5	PRIVMSG #handmade_hero :AttributeError: 'function' object has no attribute 'strftime' (file "/Users/alexwidener/.willie/modules/handmade.py", line 125, in time)
+<<1418501441.21	:blueravengt!blueravengt@blueravengt.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.21	:paperscraps!paperscraps@paperscraps.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.21	:jth_!jth_@jth_.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.21	:xxxefwe!xxxefwe@xxxefwe.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.21	:rioseblade!rioseblade@rioseblade.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.21	:skhme!skhme@skhme.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.21	:moobals!moobals@moobals.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.21	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.21	:gnuvince!gnuvince@gnuvince.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.21	:accoun_!accoun_@accoun_.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.22	:cottonflop!cottonflop@cottonflop.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.22	:maxxkioku!maxxkioku@maxxkioku.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.22	:andyboy223!andyboy223@andyboy223.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.23	:drive137!drive137@drive137.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.23	:tenoften!tenoften@tenoften.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.23	:seudafed!seudafed@seudafed.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.23	:x3stenlite!x3stenlite@x3stenlite.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.23	:ilovetsundere!ilovetsundere@ilovetsundere.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.23	:dead_xxx!dead_xxx@dead_xxx.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.23	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.23	:johanofverstedt!johanofverstedt@johanofverstedt.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.23	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch
+<<1418501441.23	.tv JOIN #handmade_hero
+<<1418501441.23	:ashkanhoss29!ashkanhoss29@ashkanhoss29.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.23	:namelesslegacy!namelesslegacy@namelesslegacy.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.23	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.23	:christianrohr!christianrohr@christianrohr.tmi.twitch.tv JOIN #handmade_hero
+<<1418501441.23	:ortholabs!ortholabs@ortholabs.tmi.twitch.tv JOIN #handmade_hero
+<<1418501498.35	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch.tv PART #handmade_hero
+<<1418501558.57	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch.tv JOIN #handmade_hero
+<<1418501620.15	PING :tmi.twitch.tv
+>>1418501620.15	PONG tmi.twitch.tv
+<<1418501624.92	:jtv MODE #chronalrobot +o chronalrobot
+>>1418501634.26	CAP LS
+>>1418501634.26	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418501634.26	NICK chronalRobot
+>>1418501634.26	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418501634.3	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418501634.35	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418501634.35	MODE  chronalRobot +B
+>>1418501634.35	JOIN #chronalrobot
+>>1418501634.35	JOIN #handmade_hero
+<<1418501634.35	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418501634.35	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418501634.35	:tmi.twitch.tv 004 chronalrobot :-
+<<1418501634.35	:tmi.twitch.tv 375 chronalrobot :-
+<<1418501634.35	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418501634.35	:tmi.twitch.tv 376 chronalrobot :>
+<<1418501634.52	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418501634.52	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418501634.52	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418501634.52	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418501634.54	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418501634.54	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418501634.54	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418501634.54	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418501640.23	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!time
+>>1418501640.33	PRIVMSG #handmade_hero :@iamdefinitelybatman: The current time in Seattle is 12:14 PM PST
+<<1418501644.33	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Finally. 
+<<1418501666.09	:jtv MODE #chronalrobot +o chronalrobot
+<<1418501666.09	:jth_!jth_@jth_.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.09	:tenoften!tenoften@tenoften.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.09	:johanofverstedt!johanofverstedt@johanofverstedt.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.09	:ashkanhoss29!ashkanhoss29@ashkanhoss29.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.09	:blueravengt!blueravengt@blueravengt.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.09	:seudafed!seudafed@seudafed.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.09	:dead_xxx!dead_xxx@dead_xxx.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:ilovetsundere!ilovetsundere@ilovetsundere.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:christianrohr!christianrohr@christianrohr.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:skhme!skhme@skhme.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:rioseblade!rioseblade@rioseblade.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:accoun_!accoun_@accoun_.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:drive137!drive137@drive137.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:andyboy223!andyboy223@andyboy223.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:maxxkioku!maxxkioku@maxxkioku.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:cottonflop!cottonflop@cottonflop.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:ortholabs!ortholabs@ortholabs.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:namelesslegacy!namelesslegacy@namelesslegacy.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:x3stenlite!x3stenlite@x3stenlite.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:gnuvince!gnuvince@gnuvince.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:xxxefwe!xxxefwe@xxxefwe.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:paperscraps!paperscraps@paperscraps.tmi.twitch.tv JOIN #handmade_hero
+<<1418501666.11	:moobals!moobals@moobals.tmi.twitch.tv JOIN #handmade_hero
+>>1418501754.27	PING irc.twitch.tv
+<<1418501754.32	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418501874.28	PING irc.twitch.tv
+<<1418501874.32	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418501904.02	CAP LS
+>>1418501904.02	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418501904.02	NICK chronalRobot
+>>1418501904.02	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418501904.06	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418501904.11	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418501904.11	MODE  chronalRobot +B
+>>1418501904.11	JOIN #chronalrobot
+>>1418501904.11	JOIN #handmade_hero
+<<1418501904.11	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418501904.11	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418501904.11	:tmi.twitch.tv 004 chronalrobot :-
+<<1418501904.11	:tmi.twitch.tv 375 chronalrobot :-
+<<1418501904.11	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418501904.11	:tmi.twitch.tv 376 chronalrobot :>
+<<1418501904.27	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418501904.27	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418501904.27	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418501904.27	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418501904.3	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418501904.3	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418501904.3	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418501904.3	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418501908.5	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :i was under the impression that i'd be able to call the commandline from inside vim, but that doesn't seem to be the case
+<<1418501922.3	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :or i just haven't found the command to do that
+<<1418501923.05	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :I would think you'd be able to.
+<<1418501951.37	:jtv MODE #chronalrobot +o chronalrobot
+<<1418501951.37	:gnuvince!gnuvince@gnuvince.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.37	:skhme!skhme@skhme.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:christianrohr!christianrohr@christianrohr.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:dead_xxx!dead_xxx@dead_xxx.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:xxxefwe!xxxefwe@xxxefwe.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:paperscraps!paperscraps@paperscraps.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:jth_!jth_@jth_.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:accoun_!accoun_@accoun_.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:tenoften!tenoften@tenoften.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:moobals!moobals@moobals.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:cottonflop!cottonflop@cottonflop.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:rioseblade!rioseblade@rioseblade.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:ilovetsundere!ilovetsundere@ilovetsundere.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:johanofverstedt!johanofverstedt@johanofverstedt.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:ortholabs!ortholabs@ortholabs.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:blueravengt!blueravengt@blueravengt.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:maxxkioku!maxxkioku@maxxkioku.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.38	:drive137!drive137@drive13
+<<1418501951.39	7.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.39	:ashkanhoss29!ashkanhoss29@ashkanhoss29.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.39	:seudafed!seudafed@seudafed.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.39	:namelesslegacy!namelesslegacy@namelesslegacy.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.39	:andyboy223!andyboy223@andyboy223.tmi.twitch.tv JOIN #handmade_hero
+<<1418501951.39	:x3stenlite!x3stenlite@x3stenlite.tmi.twitch.tv JOIN #handmade_hero
+<<1418501954.23	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :@steelgolem do :! or :!start
+<<1418501962.24	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :both of those call the shell from inside of vim
+<<1418501997.26	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :oh! there's a help thingy
+<<1418501998.39	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero ::help
+<<1418502004.24	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :ya and :vimtutor
+<<1418502010.47	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :oh! i should do that too
+<<1418502033.14	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :tip
+<<1418502061.93	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :disable the arror keys, so you CAN NOT use them. so that you have to learn hjkl. makes other things seem reasonable.
+<<1418502073.15	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :but thats just my opinion
+<<1418502078.09	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :i like your keyword "seem"
+<<1418502095.98	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :lol
+<<1418502095.98	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :but you can't combine arrow keys into a command bundle, can you?
+<<1418502110.01	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :as in? 
+<<1418502124.14	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :like if i wanted to delete two lines
+>>1418502134.1	CAP LS
+>>1418502134.1	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418502134.1	NICK chronalRobot
+>>1418502134.1	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418502134.14	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418502134.19	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418502134.19	MODE  chronalRobot +B
+>>1418502134.19	JOIN #chronalrobot
+>>1418502134.19	JOIN #handmade_hero
+<<1418502134.19	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418502134.19	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418502134.19	:tmi.twitch.tv 004 chronalrobot :-
+<<1418502134.19	:tmi.twitch.tv 375 chronalrobot :-
+<<1418502134.19	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418502134.19	:tmi.twitch.tv 376 chronalrobot :>
+<<1418502134.35	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418502134.35	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418502134.5	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418502134.51	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418502134.51	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418502134.58	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418502134.58	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418502134.58	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418502134.9	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :2dd
+<<1418502147.34	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :oh, i figured i'd have to move down with j
+>>1418502154.1	CAP LS
+>>1418502154.1	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418502154.1	NICK chronalRobot
+>>1418502154.1	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418502154.14	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418502154.18	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418502154.18	MODE  chronalRobot +B
+>>1418502154.18	JOIN #chronalrobot
+>>1418502154.19	JOIN #handmade_hero
+<<1418502154.19	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418502154.19	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418502154.19	:tmi.twitch.tv 004 chronalrobot :-
+<<1418502154.19	:tmi.twitch.tv 375 chronalrobot :-
+<<1418502154.19	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418502154.19	:tmi.twitch.tv 376 chronalrobot :>
+<<1418502154.36	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418502154.36	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418502154.36	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418502154.36	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418502154.43	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418502154.43	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418502154.43	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :namelesslegacy moobals jth_ ortholabs xxxefwe rioseblade johanofverstedt drive137 x3stenlite chronalrobot accoun_ dead_xxx steelgolem skhme ikkir_isth ilovetsundere blueravengt cottonflop christianrohr gnuvince seudafed tenoften maxxkioku ashkanhoss29 yuhoshi andyboy223 iamdefinitelybatman paperscraps
+<<1418502154.43	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418502159.36	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :dd deletes the current line
+<<1418502164.39	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :okay, two words to the right of the cursor.
+<<1418502168.07	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :the number tells it how many down to go
+<<1418502169.92	:jtv MODE #chronalrobot +o chronalrobot
+>>1418502224.37	CAP LS
+>>1418502224.37	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418502224.55	NICK chronalRobot
+>>1418502224.56	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418502224.63	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418502224.67	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418502224.67	MODE  chronalRobot +B
+>>1418502224.67	JOIN #chronalrobot
+>>1418502224.68	JOIN #handmade_hero
+<<1418502224.68	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418502224.69	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418502224.69	:tmi.twitch.tv 004 chronalrobot :-
+<<1418502224.69	:tmi.twitch.tv 375 chronalrobot :-
+<<1418502224.69	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418502224.7	:tmi.twitch.tv 376 chronalrobot :>
+<<1418502224.83	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418502224.83	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418502224.84	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418502224.85	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418502224.85	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418502224.86	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418502224.87	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418502224.87	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418502226.75	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :no
+<<1418502227.06	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :er
+<<1418502230.4	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :n is for searching
+<<1418502234.44	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :try w or W
+>>1418502239.21	CAP LS
+>>1418502239.21	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418502239.21	NICK chronalRobot
+>>1418502239.21	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418502239.26	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418502239.3	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418502239.3	MODE  chronalRobot +B
+>>1418502239.3	JOIN #chronalrobot
+>>1418502239.3	JOIN #handmade_hero
+<<1418502239.3	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418502239.3	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418502239.3	:tmi.twitch.tv 004 chronalrobot :-
+<<1418502239.3	:tmi.twitch.tv 375 chronalrobot :-
+<<1418502239.3	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418502239.3	:tmi.twitch.tv 376 chronalrobot :>
+<<1418502239.45	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418502239.45	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418502239.45	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418502239.45	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418502239.47	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418502239.47	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :seudafed moobals skhme ortholabs cottonflop tenoften christianrohr steelgolem rioseblade blueravengt jth_ drive137 accoun_ yuhoshi iamdefinitelybatman johanofverstedt ashkanhoss29 gnuvince andyboy223 paperscraps dead_xxx ilovetsundere namelesslegacy xxxefwe ikkir_isth maxxkioku
+<<1418502239.47	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418502239.47	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418502239.47	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418502245.93	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :alright i want to delete the next 8 characters.
+<<1418502250.1	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :w goes to next word, W goes to the next WORD
+<<1418502250.15	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :jeez.
+<<1418502256.03	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :oh!
+<<1418502257.17	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :b and B do the opposite
+>>1418502268.57	CAP LS
+>>1418502268.57	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418502268.57	NICK chronalRobot
+>>1418502268.57	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418502268.61	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418502268.65	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418502268.65	MODE  chronalRobot +B
+>>1418502268.65	JOIN #chronalrobot
+>>1418502268.65	JOIN #handmade_hero
+<<1418502268.66	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418502268.66	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418502268.66	:tmi.twitch.tv 004 chronalrobot :-
+<<1418502268.66	:tmi.twitch.tv 375 chronalrobot :-
+<<1418502268.66	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418502268.66	:tmi.twitch.tv 376 chronalrobot :>
+<<1418502268.79	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418502268.79	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418502268.79	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418502268.79	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418502268.82	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418502268.82	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418502268.82	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :yuhoshi accoun_ namelesslegacy seudafed rioseblade andyboy223 skhme ortholabs moobals tenoften dead_xxx steelgolem johanofverstedt cottonflop ikkir_isth christianrohr blueravengt iamdefinitelybatman drive137 gnuvince xxxefwe maxxkioku paperscraps jth_ ashkanhoss29 ilovetsundere
+<<1418502268.82	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418502268.82	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418502271.3	:jtv MODE #chronalrobot +o chronalrobot
+<<1418502271.91	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :nice.
+<<1418502293.42	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :also if you didnt figure out how to copy paste, 
+<<1418502298.02	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :y is yank
+<<1418502301.4	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :yy is yank line
+<<1418502303.86	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :p is put
+<<1418502311.54	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :oh it just jumps like control+arrow does
+<<1418502313.19	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :bah.
+<<1418502314.61	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :or paste if you will
+<<1418502324.75	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :looks only for whitespace, W does
+<<1418502331.2	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :W does
+<<1418502336.73	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :lowecase w is not that same
+<<1418502344.11	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :does B do the same?
+<<1418502357.93	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :W and B are opposites, and w and b are opposites
+<<1418502360.42	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :yep
+<<1418502365.61	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :yeah i learned about yanking
+<<1418502366.88	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :so w is foward b is back
+<<1418502428.28	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :there are 3 things i need to learn still, as far as i can tell: how to choose which "clipboard" you yank to, how to split my vim into multiple windows and navigate between said windows, and to call the commandline so i can compile and run from vim
+<<1418502484.7	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :so you want windows, and not tabs
+<<1418502490.65	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :i have no idea.
+<<1418502497.71	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :well a tab is a tab, 
+<<1418502516.15	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :i'd like a visible area to show me output results
+<<1418502521.37	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :and a window is a pane split, like how casey has a left and right in emacs
+<<1418502525.69	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :yeah, that kind of thing.
+<<1418502542.26	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :are you in terminal vim or gvim/macvim
+<<1418502545.34	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :terminal
+<<1418502565.61	PING :tmi.twitch.tv
+>>1418502565.61	PONG tmi.twitch.tv
+<<1418502592.64	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :so atm without me going and looking it up
+<<1418502594.18	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :it's fine though, i need to learn how to use gcc before i want to learn how to put it in a vim ..thingy
+<<1418502603.39	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :you can do :split or :split
+<<1418502618.0	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :err :vsplit
+<<1418502680.22	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero ::q closes the current split
+<<1418502699.46	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :or vim if only 1 window
+<<1418502712.56	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :ZZ does the same thing
+<<1418502756.86	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :or CTRL + [ 
+<<1418502791.82	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :v is visual mode though vimtutor shows you that
+<<1418502801.71	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :V is visual-line mode
+<<1418502847.1	PING :tmi.twitch.tv
+>>1418502847.1	PONG tmi.twitch.tv
+>>1418502928.59	PING irc.twitch.tv
+<<1418502928.63	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+<<1418502979.42	:sparkletone!sparkletone@sparkletone.tmi.twitch.tv JOIN #handmade_hero
+>>1418503048.6	PING irc.twitch.tv
+<<1418503048.64	:tmi.twitch.tv PONG tmi.twitch.tv :irc.twitch.tv
+>>1418503061.14	CAP LS
+>>1418503061.14	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418503061.17	NICK chronalRobot
+>>1418503061.17	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418503061.18	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418503061.23	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418503061.23	MODE  chronalRobot +B
+>>1418503061.23	JOIN #chronalrobot
+>>1418503061.23	JOIN #handmade_hero
+<<1418503061.23	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418503061.23	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418503061.23	:tmi.twitch.tv 004 chronalrobot :-
+<<1418503061.23	:tmi.twitch.tv 375 chronalrobot :-
+<<1418503061.23	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418503061.23	:tmi.twitch.tv 376 chronalrobot :>
+<<1418503061.39	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418503061.39	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418503061.39	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418503061.39	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418503061.41	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418503061.41	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418503061.41	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418503061.41	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+>>1418503081.93	CAP LS
+>>1418503081.93	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418503081.93	NICK chronalRobot
+>>1418503081.93	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418503081.97	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418503082.02	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418503082.02	MODE  chronalRobot +B
+>>1418503082.02	JOIN #chronalrobot
+>>1418503082.02	JOIN #handmade_hero
+<<1418503082.02	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418503082.02	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418503082.02	:tmi.twitch.tv 004 chronalrobot :-
+<<1418503082.02	:tmi.twitch.tv 375 chronalrobot :-
+<<1418503082.03	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418503082.03	:tmi.twitch.tv 376 chronalrobot :>
+<<1418503082.22	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418503082.22	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418503082.22	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418503082.22	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418503082.28	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418503082.28	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418503082.28	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :jth_ namelesslegacy ortholabs paperscraps andyboy223 drive137 christianrohr dead_xxx steelgolem ashkanhoss29 ilovetsundere johanofverstedt xxxefwe blueravengt accoun_ skhme gnuvince ikkir_isth iamdefinitelybatman rioseblade sparkletone moobals tenoften cottonflop seudafed chronalrobot yuhoshi maxxkioku
+<<1418503082.28	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418503112.14	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :if your jumping into code you have, know that * searchs for the WORD under the curors is nice
+<<1418503115.44	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :yeah, i did see v and V
+<<1418503129.95	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :so you don't have to type it in, eh
+<<1418503133.33	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :that's convenient
+<<1418503137.61	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :yes
+<<1418503140.09	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :also .
+<<1418503143.58	:drive137!drive137@drive137.tmi.twitch.tv PRIVMSG #handmade_hero :repeats the last command
+<<1418503152.99	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :i had to learn through experience that p puts things after the cursor and on the next line
+>>1418514308.42	CAP LS
+>>1418514308.44	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418514308.44	NICK chronalRobot
+>>1418514308.44	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418514308.47	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418514308.52	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418514308.52	MODE  chronalRobot +B
+>>1418514308.52	JOIN #chronalrobot
+>>1418514308.52	JOIN #handmade_hero
+<<1418514308.52	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418514308.52	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418514308.52	:tmi.twitch.tv 004 chronalrobot :-
+<<1418514308.52	:tmi.twitch.tv 375 chronalrobot :-
+<<1418514308.52	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418514308.52	:tmi.twitch.tv 376 chronalrobot :>
+<<1418514308.66	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418514308.66	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418514308.66	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418514308.66	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418514308.69	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418514308.69	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418514308.69	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :chronalrobot
+<<1418514308.69	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418514311.87	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!time
+>>1418514311.91	PRIVMSG #handmade_hero :@iamdefinitelybatman: The current time in Seattle is 03:45 PM PST
+<<1418514330.6	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418514330.6	:jtv MODE #chronalrobot +o chronalrobot
+<<1418514330.6	:skhme!skhme@skhme.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.6	:ortholabs!ortholabs@ortholabs.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.6	:namelesslegacy!namelesslegacy@namelesslegacy.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.6	:blueravengt!blueravengt@blueravengt.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.6	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.6	:seudafed!seudafed@seudafed.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.6	:gnuvince!gnuvince@gnuvince.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:jth_!jth_@jth_.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:paperscraps!paperscraps@paperscraps.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:cottonflop!cottonflop@cottonflop.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:xxxefwe!xxxefwe@xxxefwe.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:rioseblade!rioseblade@rioseblade.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:ashkanhoss29!ashkanhoss29@ashkanhoss29.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:andyboy223!andyboy223@andyboy223.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:ikkir_isth!ikkir_isth@ikkir_isth.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:drive137!drive137@drive137.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:johanofverstedt!johanofverstedt@johanofverstedt.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:tenoften!tenoften@tenoften.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:moobals!moobals@moobals.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:yuhoshi!yuhoshi@yuhoshi.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:almostdave!almostdave@almostdave.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:ilovetsundere!ilovetsundere@ilovetsundere.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:supershocker75!supershocker75@supershocker75.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:sorajsm!sorajsm@sorajsm.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:accoun_!accoun_@accoun_.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:christianrohr!christianrohr@christianrohr.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:johnwright01!johnwright01@johnwright01.tmi.twitch.tv JOIN #handmade_hero
+<<1418514330.61	:quylthulg!quylthulg@quylthulg.tmi.twitch.tv JOIN #handmade_hero
+<<1418514335.48	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :K. Making sure I didn't break it. I changed that code to something shorter/what I think is easier to read. Check it out when you look. 
+>>1418695546.09	CAP LS
+>>1418695546.12	PASS oauth:ivzflt55ff908cxc57hvoxaryed6g0
+>>1418695546.12	NICK chronalRobot
+>>1418695546.12	USER chronalRobot +iw chronalRobot :Willie Embosbot, http://willie.dftba.net
+<<1418695546.16	:tmi.twitch.tv 410 :Invalid CAP command
+<<1418695546.21	:tmi.twitch.tv 001 chronalrobot :Welcome, GLHF!
+>>1418695546.21	MODE  chronalRobot +B
+>>1418695546.21	JOIN #chronalrobot
+>>1418695546.22	JOIN #handmade_hero
+<<1418695546.22	:tmi.twitch.tv 002 chronalrobot :Your host is tmi.twitch.tv
+<<1418695546.22	:tmi.twitch.tv 003 chronalrobot :This server is rather new
+<<1418695546.22	:tmi.twitch.tv 004 chronalrobot :-
+<<1418695546.22	:tmi.twitch.tv 375 chronalrobot :-
+<<1418695546.22	:tmi.twitch.tv 372 chronalrobot :You are in a maze of twisty passages, all alike.
+<<1418695546.22	:tmi.twitch.tv 376 chronalrobot :>
+<<1418695546.36	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #chronalrobot
+<<1418695546.36	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #chronalrobot :chronalrobot
+<<1418695546.36	:chronalrobot.tmi.twitch.tv 366 chronalrobot #chronalrobot :End of /NAMES list
+<<1418695546.36	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND chronalrobot
+<<1418695546.38	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv JOIN #handmade_hero
+<<1418695546.38	:jtv!jtv@jtv.tmi.twitch.tv PRIVMSG chronalrobot :HISTORYEND handmade_hero
+<<1418695546.38	:chronalrobot.tmi.twitch.tv 353 chronalrobot = #handmade_hero :cottonflop iamdefinitelybatman ikkir_isth jth_ felipevflash dsuse15 namelesslegacy james4k teddies_favor kemosabe76 steelgolem ilovetsundere raynorous resonious ortholabs rioseblade moobals drive137 quylthulg chronaldragon christianrohr tenoften paperscraps mkaatr chronalrobot moltengrey ez6plfzt gnuvince skhme
+<<1418695546.38	:chronalrobot.tmi.twitch.tv 366 chronalrobot #handmade_hero :End of /NAMES list
+<<1418695550.67	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!time
+>>1418695550.74	PRIVMSG #handmade_hero :@iamdefinitelybatman: The current time in Seattle is 06:05 PM PST
+<<1418695550.83	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv PRIVMSG #handmade_hero :@iamdefinitelybatman: The current time in Seattle is 06:05 PM PST
+<<1418695551.73	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :I think I've figured out how to deal with stream scheduling but I'd rather not do messy merging
+<<1418695557.72	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :!friday
+>>1418695557.73	PRIVMSG #handmade_hero :@iamdefinitelybatman: Handmade Hero typically happens on Fridays at 11 AM PST. This is not necessarily the definitive schedule, for the time being. The replays are on Youtube and Twitch if you missed them.
+<<1418695557.88	:chronalrobot!chronalrobot@chronalrobot.tmi.twitch.tv PRIVMSG #handmade_hero :@iamdefinitelybatman: Handmade Hero typically happens on Fridays at 11 AM PST. This is not necessarily the definitive schedule, for the time being. The replays are on Youtube and Twitch if you missed them.
+<<1418695558.79	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :let me take down mine
+<<1418695560.94	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :lol
+<<1418695562.34	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Oh okay
+<<1418695567.54	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Haha, I was like Uh-oh
+<<1418695572.25	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :ok
+<<1418695574.46	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :!timer
+>>1418695574.46	PRIVMSG #handmade_hero :@chronaldragon: Next stream is in 1 hours 53 minutes
+<<1418695582.96	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :1 hours
+<<1418695583.04	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :Do we have a schedule one? I haven't looked.
+<<1418695587.67	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :not yet
+<<1418695590.43	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :I can fix that. 
+<<1418695598.88	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv JOIN #chronalrobot
+<<1418695598.88	:jtv MODE #chronalrobot +o chronalrobot
+<<1418695601.42	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :And the 1 hours too
+<<1418695611.7	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :just go ahead and do the pull request iwth the current code
+<<1418695621.66	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :it'll be easier to merge those changes than all of it at once
+<<1418695653.32	:iamdefinitelybatman!iamdefinitelybatman@iamdefinitelybatman.tmi.twitch.tv PRIVMSG #handmade_hero :I haven't looked online, you wanted me to merge with the new structure?
+<<1418695653.8	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :for the schedule command, just use the standard schedule, once the system is in place we can have that dynimcally print out whatever the current week's schedule ends up being
+<<1418695686.45	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :no, I want your new structure to be in the main branch of the repo
+<<1418695696.04	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :wb iamdefinitelybatman, chronaldragon 
+<<1418695702.87	:steelgolem!steelgolem@steelgolem.tmi.twitch.tv PRIVMSG #handmade_hero :i hope your weekends were nice
+<<1418695707.48	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :thanks
+<<1418695710.98	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :it was pretty good
+<<1418695759.85	:chronaldragon!chronaldragon@chronaldragon.tmi.twitch.tv PRIVMSG #handmade_hero :https://help.github.com/articles/using-pull-requests/

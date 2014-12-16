@@ -2,10 +2,11 @@ import willie
 import willie.module
 import random
 from datetime import datetime, timedelta
+import time
 import pytz
 from pytz import timezone
-from time import sleep
 from willie.modules.search import google_search
+
 
 ###  Unspecific (not affiliated with existing commands) TODO(chronister):
 ###    1. Conditionally enable some modules/commands based on how close it is to a stream time
@@ -120,7 +121,8 @@ def time(bot, trigger):
         stream, we don't really care about other time zones.
     """
     now = datetime.now(timezone("PST8PDT"))
-    info(bot, trigger, "The current time in Seattle is %s:%s %s PST" % (now.strftime("%I"), now.strftime("%M"), "PM" if now.hour > 11 else "AM"))
+    info(bot, trigger, "The current time in Seattle is %s PST" % (now.strftime("%I:%M %p")))
+
 
 @command('timer', "when", "howlong", "timeleft")
 def timer(bot, trigger):
@@ -142,6 +144,7 @@ def timer(bot, trigger):
         streamTime = streamTime + timedelta(minutes=1) #inc minutes
 
     info(bot, trigger, timeToStream(streamTime, nowTime))
+
 
 def timeToStream(streamTime, nowTime):
     """Utility function that returns a string specifying one of three things:
@@ -232,17 +235,25 @@ def infoMessage(bot, trigger):
     """
     bot.say("I am a Python IRC bot based on Willie (http://willie.dftba.net/). I am run by ChronalDragon, who can be contacted via https://tinyurl.com/ChronalDragon")
 
-@command('buy', 'purchase')
+@command('buy', 'purchase', 'support')
 def buyInfo(bot, trigger):
     """Info command that prints out where you can buy the game/support the project.
     """
-    info(bot, trigger, "Handmade Hero, the compiled game with art assets and full source code, can be purchased at http://handmadehero.org/#buy_now")
+    info(bot, trigger, "Handmade Hero, the compiled game with art assets and full source code, can be purchased at http://handmadehero.org/#buy_now You can now also support Casey monthly at http://www.patreon.com/cmuratori")
 
 @command('game', 'what')
 def gameInfo(bot, trigger):
     """Info command that displays basic information about the game being built.
     """
-    info(bot, trigger, "Handmade Hero is a project to build an entire game in C from scratch, no libraries. We don't know what kind of game it will be yet, but we know it will be 2D, cross-platform, and feature art by Yangtian Li as well as specially licensed music. For more information, visit http://handmadehero.org/")
+    info(bot, trigger, "Handmade Hero is a project to build an entire game in C from scratch, no libraries. "
+        "We don't know what kind of game it will be yet, but we know it will be 2D, cross-platform, and feature art by Yangtian Li "
+        "as well as specially licensed music. For more information, visit http://handmadehero.org/")
+
+@command('friday')
+def fridays(bot, trigger):
+    """Until we have a set schedule and while Casey keeps up doing early Fridays"""
+    info(bot, trigger, "Handmade Hero typically happens on Fridays at 11 AM PST. This is not necessarily the definitive schedule, for the time being. " 
+        "The replays are on Youtube and Twitch if you missed them.")
 
 @command('stream', 'about', 'info')
 def streamInfo(bot, trigger):
@@ -336,6 +347,12 @@ def keyboardInfo(bot, trigger):
     """
     info(bot, trigger, "The mechanical keyboard Casey uses is a Das Keyboard 4.")
 
+@command('length', 'years', 'total')
+def timeOfProject(bot, trigger):
+    """How long is the project going on?"""
+    info(bot, trigger, "The project does not have an exact finish date. This is an ongoing project, although it is estimated to take longer than a year at a rate of one hour per night, 5 days a week.")
+
+
 @command('alias', 'alt')
 def aliasList(bot, trigger):
     """Command that provides a list of registered aliases for the given command. Must be registered
@@ -350,7 +367,7 @@ def aliasList(bot, trigger):
             if (cmd):
                 bot.say("Aliases of !%s: !%s" % (arg, ", !".join(cmd.cmds)))
                 if (len(args) > 1): 
-                    sleep(0.300)
+                    time.sleep(0.300)
             else:
                 bot.say("No aliases found for %s!" % arg)
 
@@ -364,3 +381,5 @@ def commandList(bot, trigger):
         not the built-in Willie module one.
     """
     bot.say("Here are all of the HH stream commands: !%s" % ", !".join([c.main for c in commands if not(c.hide==True)]))
+
+

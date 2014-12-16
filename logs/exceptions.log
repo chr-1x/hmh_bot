@@ -1,0 +1,80 @@
+Signature: TypeError: qaReminder() takes exactly 1 argument (2 given) (file "/usr/local/lib/python2.7/site-packages/willie/bot.py", line 741, in call)
+from #handmade_hero at 2014-12-12 20:55:21.029873:
+Message was: <iamdefinitelybatman> !alextimer
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/willie/bot.py", line 741, in call
+    exit_code = func(willie, trigger)
+TypeError: qaReminder() takes exactly 1 argument (2 given)
+----------------------------------------
+
+Signature: TypeError: qaReminder() takes exactly 1 argument (2 given) (file "/usr/local/lib/python2.7/site-packages/willie/bot.py", line 741, in call)
+from #handmade_hero at 2014-12-12 20:58:08.350444:
+Message was: <iamdefinitelybatman> !alextimer
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/willie/bot.py", line 741, in call
+    exit_code = func(willie, trigger)
+TypeError: qaReminder() takes exactly 1 argument (2 given)
+----------------------------------------
+
+Signature: TypeError: msg() takes at least 3 arguments (2 given) (file "/Users/alexwidener/.willie/modules/handmade.py", line 26, in spam_every_5s)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/willie/bot.py", line 213, in _call
+    func(self.bot)
+  File "/Users/alexwidener/.willie/modules/handmade.py", line 26, in spam_every_5s
+    bot.msg("five seconds")
+TypeError: msg() takes at least 3 arguments (2 given)
+----------------------------------------
+
+Signature: TypeError: msg() takes at least 3 arguments (2 given) (file "/Users/alexwidener/.willie/modules/handmade.py", line 26, in spam_every_5s)
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/willie/bot.py", line 213, in _call
+    func(self.bot)
+  File "/Users/alexwidener/.willie/modules/handmade.py", line 26, in spam_every_5s
+    bot.msg("five seconds")
+TypeError: msg() takes at least 3 arguments (2 given)
+----------------------------------------
+
+Signature: AttributeError: 'function' object has no attribute 'strftime' (file "/Users/alexwidener/.willie/modules/handmade.py", line 140, in time)
+from #handmade_hero at 2014-12-12 23:13:48.225634:
+Message was: <iamdefinitelybatman> !time
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/willie/bot.py", line 741, in call
+    exit_code = func(willie, trigger)
+  File "/Users/alexwidener/.willie/modules/handmade.py", line 140, in time
+    info(bot, trigger, "The current time in Seattle is %s PST" % time.strftime("%I:%M %p"))
+AttributeError: 'function' object has no attribute 'strftime'
+----------------------------------------
+
+Signature: AttributeError: 'function' object has no attribute 'strftime' (file "/Users/alexwidener/.willie/modules/handmade.py", line 140, in time)
+from #handmade_hero at 2014-12-12 23:16:34.330187:
+Message was: <iamdefinitelybatman> !time
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/willie/bot.py", line 741, in call
+    exit_code = func(willie, trigger)
+  File "/Users/alexwidener/.willie/modules/handmade.py", line 140, in time
+    info(bot, trigger, "The current time in Seattle is %s PST" % (time.strftime("%I:%M %p")))
+AttributeError: 'function' object has no attribute 'strftime'
+----------------------------------------
+
+Signature: AttributeError: 'function' object has no attribute 'strftime' (file "/Users/alexwidener/.willie/modules/handmade.py", line 140, in time)
+from #handmade_hero at 2014-12-12 23:21:52.617580:
+Message was: <iamdefinitelybatman> !time
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/willie/bot.py", line 741, in call
+    exit_code = func(willie, trigger)
+  File "/Users/alexwidener/.willie/modules/handmade.py", line 140, in time
+    curTime = time.strftime("%I:%M %p")
+AttributeError: 'function' object has no attribute 'strftime'
+----------------------------------------
+
+Signature: AttributeError: 'function' object has no attribute 'strftime' (file "/Users/alexwidener/.willie/modules/handmade.py", line 125, in time)
+from #handmade_hero at 2014-12-13 12:09:52.502066:
+Message was: <iamdefinitelybatman> !time
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/willie/bot.py", line 741, in call
+    exit_code = func(willie, trigger)
+  File "/Users/alexwidener/.willie/modules/handmade.py", line 125, in time
+    info(bot, trigger, "The current time in Seattle is %s PST" % (time.strftime("%I:%M %p")))
+AttributeError: 'function' object has no attribute 'strftime'
+----------------------------------------
+
