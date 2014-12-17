@@ -6,13 +6,37 @@ from datetime import datetime, timedelta
 import time
 import pytz
 from pytz import timezone
+from willie.modules.search import google_search
 
-###  Unspecific (not affiliated with existing commands) TODO(chronister):
-###    1. Conditionally enable some modules/commands based on how close it is to a stream time
-###         (this could perhaps be accomplished by checking number of users in IRC)
-###    2. Q & A question management (queueing, moderation, replication)
-###    3. FAQ for the "how long will the game take" question
-###TODO(chronister): Make the above be github issues! (Then remove this block)
+#TODO(chronister): engine FAQ
+
+##TODO(chronister): Move out into stream module
+
+def getStreamTime(nowTime):
+    """Temporary function for getting the next stream from the given time. Will soon be superceded 
+        by a more thorough system!
+    """
+    streamTime = nowTime
+    while(not(streamTime.minute == 0 and 
+        (streamTime.weekday() == 4 and streamTime.hour == 11) or
+        (streamTime.weekday() < 4 and streamTime.hour == 20 ))):
+
+        streamTime = streamTime + timedelta(minutes=1) #inc minutes
+
+    return streamTime
+
+def isCurrentlyStreaming(nowTime):
+    streamTime = getStreamTime(nowTime)
+
+    sinceStream = nowTime - streamTime;
+    sinceHours = int(sinceStream.seconds / 3600)
+    sinceMinutes = (sinceStream.seconds - sinceHours * 3600.0) / 60.0
+
+    untilStream = streamTime - nowTime;
+    untilHours = int(untilStream.seconds / 3600)
+    untilMinutes = (untilStream.seconds - untilHours * 3600.0) / 60.0
+    
+    return (sinceHours < 1 or (sinceHours < 2 and sinceMinutes < 30) or untilMinutes < 45)
 
 class Cmd:
     """ Wrapper class that stores the list of commands, main command name (assumed to be first in 
@@ -66,26 +90,46 @@ def info(bot, trigger, text):
         specified in the first argument. Commands which use this method should put "Info Command"
         in their docstring (and maybe in something user-facing...!infocommands?)
     """
-    ###TODO(chronister): Check if the caller provided their own @ symbol, and if so, don't print one.
     ###TODO(chronister): Can this be done as a decorator? (would have to give a custom bot 
     ###     or something?)
-    ###TODO(chronister): Don't let people throw these at @cmuratori to avoid Q&A spam
-    if (trigger):
-        if (trigger.group(2)):
-            args = trigger.group(2).split(" ")
-            bot.say("@%s: %s" % (args[0], text))
-        else:
-            bot.say("@%s: %s" % (trigger.nick, text))
-    else:
-        bot.say(text)
+    streaming = isCurrentlyStreaming(datetime.now(timezone("PST8PDT")))
+    if ((streaming and trigger and trigger.admin) or not streaming):
+        if (trigger):
+            if (trigger.group(2)):
 
-@willie.module.commands('amIadmin')
+                args = trigger.group(2).split(" ")
+                if (args[0][0] == "@"): 
+                    args[0] = args[0][1:]
+
+                if (args[0].lower() != "cmuratori"):
+                    bot.say("@%s: %s" % (args[0], text))
+                else:
+                    bot.say("@%s: Please do not direct info at Casey." % trigger.nick)
+            else:
+                bot.say("@%s: %s" % (trigger.nick, text))
+        else:
+            bot.say(text)
+    else:
+        #temporary measure: whitelist to admins
+            pass
+
+    
+
+@willie.module.commands('amIadmin', 'isAdmin', 'isWhitelisted', 'whitelisted')
 def isAdmin(bot, trigger):
     """Simple command that simply tells the user whether or not they are an admin. Mostly 
         implemented for debugging (double-checking case sensitivity and things)
     """
     if (trigger):
-        if (trigger.admin or trigger.owner):
+        args = trigger.group(2).split(" ")
+        if (args):
+            admins = bot.config.core.admins
+            for arg in args:
+                if (admins and arg in admins):
+                    bot.say("%s is an admin!" % arg)
+                else:
+                    bot.say("%s is not an admin." % arg)
+        elif (trigger.admin or trigger.owner):
             bot.say("%s, you are an admin!" % trigger.nick)
         else:
             bot.say("%s, you are not an admin." % trigger.nick)
@@ -108,6 +152,7 @@ def msdnSearch(bot, trigger):
     ###TODO(chronister): Add hidden C++ keyword to search?
     ###TODO(chronister): Are there any subdomains we don't want? See commented -site above
     if not trigger: return
+    if isCurrentlyStreaming(datetime.now(timezone("PST8PDT"))) and not trigger.admin: return
     if not trigger.group(2):
         bot.say("@%s: http://msdn.microsoft.com/" % trigger.nick)
     else:
@@ -122,12 +167,10 @@ def time(bot, trigger):
     now = datetime.now(timezone("PST8PDT"))
     info(bot, trigger, "The current time in Seattle is %s PST" % (now.strftime("%I:%M %p")))
 
-
 @command('timer', "when", "howlong", "timeleft")
 def timer(bot, trigger):
     """Info command that prints out the time until the next stream.
     """
-    
     nowTime = datetime.now(timezone("PST8PDT"))
     streamTime = stream.getNextStream(nowTime) # Make "now" the default argument?
 
@@ -137,6 +180,62 @@ def timer(bot, trigger):
 
     info(bot, trigger, stream.timeToStream(streamTime, nowTime))
 
+def timeToStream(streamTime, nowTime):
+    """Utility function that returns a string specifying one of three things:
+        1. The time until the next stream, in (days) hours minutes
+        2. The amount of time the stream/Q&A has been going on
+        3. The given streamTime occurs before the given nowTime, which is sort of undefined
+            behavior.
+    """
+    ###TODO(chronister): Would it be a better idea to make this function return a more elementary
+    ###     type of value (int?) and then build the string elsewhere?
+    if (not (streamTime.tzinfo == timezone("PST8PDT"))):
+        streamTime = pytz.utc.localize(streamTime)
+        streamTime = streamTime.astimezone(timezone("PST8PDT"))
+    if (not (nowTime.tzinfo == timezone("PST8PDT"))):
+        nowTime = pytz.utc.localize(nowTime)
+        nowTime = nowTime.astimezone(timezone("PST8PDT"))
+
+    sinceStream = nowTime - streamTime;
+    sinceHours = int(sinceStream.seconds / 3600)
+    sinceMinutes = (sinceStream.seconds - sinceHours * 3600.0) / 60.0
+
+    untilStream = streamTime - nowTime;
+    untilHours = int(untilStream.seconds / 3600)
+    untilMinutes = (untilStream.seconds - untilHours * 3600.0) / 60.0
+
+    if (sinceHours < 1):
+        return "Currently streaming (if Casey is on schedule)" #% sinceMinutes #%d minutes into stream
+    elif (sinceHours < 2 and sinceMinutes < 30):
+        return "Currently doing Q&A (if Casey is on schedule)" #% sinceMinutes #%d minutes into the Q&A
+
+    if (nowTime > streamTime + timedelta(hours=1, minutes=30)):
+        return "I'm confused and think that the stream is %d hours %d minutes in the past!" % (abs(untilStream.days * 24 + untilHours), untilMinutes)
+
+    mydays = ''
+    myhours = ''
+    myminutes = ''
+
+    if untilStream.days == 1:
+        mydays = 'day'
+    else:
+        mydays = 'days'
+    
+    if untilHours == 1:
+        myhours = 'hour'
+    else:
+        myhours = 'hours'
+
+    if untilMinutes == 1:
+        myminutes = 'minute'
+    else:
+        myminutes = 'minutes'
+
+    if untilStream.days != 0:
+        # look at format here after substitution is working
+        return 'Next stream is in %d %s, %d %s, %d %s' % (untilStream.days, mydays, untilHours, myhours, untilMinutes, myminutes)
+    elif untilStream.days == 0:
+        return 'Next stream is in %d %s, %d %s' % (untilHours, myhours, untilMinutes, myminutes)
 
 @command('site')
 def siteInfo(bot, trigger):
@@ -233,31 +332,31 @@ def beepBoop(bot, trigger):
     ]
     bot.say(random.choice(responses))
 
-# @command('flame', hide=True)
-# def flameWar(bot, trigger):
-#     """Easter egg command that randomly chooses whether to insult a language or endorse an
-#        editor.
-#     """
-#     if (random.random() < 0.5):
-#         badLanguage(bot, trigger)
-#     else:
-#         bestEditor(bot, trigger)
+@command('flame', hide=True)
+def flameWar(bot, trigger):
+    """Easter egg command that randomly chooses whether to insult a language or endorse an
+       editor.
+    """
+    if (random.random() < 0.5):
+        badLanguage(bot, trigger)
+    else:
+        bestEditor(bot, trigger)
 
-# @command('throwdown', 'badlanguage', hide=True)
-# def badLanguage(bot, trigger):
-#     """Easter egg command that insults a random language from this list. Feel free to add lots
-#        more languages >:) (Possibly including C???)
-#     """
-#     langs = [ "Ruby", "Python", "C++", "PHP", "Rust", "Go", "Perl", "C#", "Java", "Scala", "Objective-C", "F#",
-#     "Haskell", "Clojure", "BASIC", "Visual Basic", "HTML", "CSS", "Javascript", "Actionscript", "D" ]
-#     bot.say("%s is a bad language :)" % random.choice(langs))
+@command('throwdown', 'badlanguage', hide=True)
+def badLanguage(bot, trigger):
+    """Easter egg command that insults a random language from this list. Feel free to add lots
+       more languages >:) (Possibly including C???)
+    """
+    langs = [ "Ruby", "Python", "C++", "PHP", "Rust", "Go", "Perl", "C#", "Java", "Scala", "Objective-C", "F#",
+    "Haskell", "Clojure", "BASIC", "Visual Basic", "HTML", "CSS", "Javascript", "Actionscript", "D" ]
+    info(bot, None, "%s is a bad language :)" % random.choice(langs))
 
-# @command('holywar', 'besteditor', hide=True)
-# def bestEditor(bot, trigger):
-#     """Easter egg command that endorses either emacs or vim. Feel free to add more editors.
-#     """
-#     editors = ["emacs", "vim"]
-#     bot.say("%s is the best editor :)" % random.choice(editors))
+@command('holywar', 'besteditor', hide=True)
+def bestEditor(bot, trigger):
+    """Easter egg command that endorses either emacs or vim. Feel free to add more editors.
+    """
+    editors = ["emacs", "vim"]
+    info(bot, None, "%s is the best editor :)" % random.choice(editors))
 
 @command('hug')
 def hug(bot, trigger):
@@ -279,6 +378,68 @@ def randomNumber(bot, trigger):
     """
     info(bot, trigger, "Your random number is %s" % (random.randint(100) if random.random() < 0.0001 else 4))
 
+@command('roll')
+def rollNumber(bot, trigger):
+    if (trigger and trigger.group(2)):
+        args = trigger.group(2).split(" ")
+        output = ""
+        for arg in args:
+            diceArgs = arg.split("d")
+            diceAmt = diceArgs[0]
+            try:
+                diceAmt = int(diceAmt)
+            except ValueError:
+                bot.say("@%s: I can't roll %s dice" % (trigger.nick, diceAmt))
+                return
+            diceFaces = diceArgs[1]
+            try:
+                diceFaces = int(diceFaces)
+            except ValueError:
+                bot.say("@%s: I can't roll dice with %s faces!" % (trigger.nick, diceFaces))
+                return
+
+            if (diceAmt < 0):
+                bot.say("@%s: We are currently out of negative dice, please check back before." % trigger.nick)
+                return
+            if (diceAmt == 0):
+                bot.say("@%s: No dice." % trigger.nick)
+                return
+            if (diceAmt > 20):
+                thing = "dice"
+                if (diceFaces == 2):
+                    thing = "coins"
+                if (diceFaces == 1):
+                    thing = "one dimensional constructs"
+                bot.say("@%s: Do you think I have %d %s just lying around??" % (trigger.nick, diceAmt, thing))
+                return
+            if (diceFaces <= 0):
+                bot.say("@%s: Find me a %d sided dice and I'll roll it." % (trigger.nick, diceFaces))
+                return
+            if (diceFaces > 100):
+                bot.say("@%s: I rolled the sphere, and it rolled off the table." % (trigger.nick))
+                return
+
+            results = []
+            for i in range(diceAmt):
+                results.append(random.randint(1, diceFaces))
+
+        
+            for r in results:
+                output += "[%d] " % r
+            output = output[:-1]
+            output += ", for a total of %d" % sum(results)
+            if (len(args) > 1): output += " :: "
+
+        if (len(args) > 1): output = output[:-3]
+        bot.say("@%s: %s" % (trigger.nick, output))
+
+            
+
+
+@command('nn')
+def nightNight(bot, trigger):
+    info(bot, trigger, "Night night <3")
+
 # End easter egg commands (Should these be in a different file?)
 
 @command('lang', 'language', 'codedin')
@@ -294,6 +455,10 @@ def ideInfo(bot, trigger):
     """
     ###TODO(chronister): Get emacs version info, it's a common question
     info(bot, trigger, "Casey uses emacs to edit his code, because that is what he is used to. It is getting pretty old, so you should use whatever you feel most comfortable in.")
+
+@command('college', 'school')
+def collegeInfo(bot, trigger):
+    info(bot, trigger, "Casey did not go to college, he has been coding in the gaming industry since 1995. You can read his biography here: http://mollyrocket.com/casey/about.html")
 
 @command('keyboard', 'kb')
 def keyboardInfo(bot, trigger):
