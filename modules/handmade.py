@@ -399,7 +399,7 @@ def ideInfo(bot, trigger):
 
 @command('college', 'school')
 def collegeInfo(bot, trigger):
-    info(bot, trigger, "Casey did not go to college, he is self-taught and has been coding in the gaming industry since 1995.")
+    info(bot, trigger, "Casey did not go to college, he has been coding in the gaming industry since 1995. You can read his biography here: http://mollyrocket.com/casey/about.html")
 
 @command('keyboard', 'kb')
 def keyboardInfo(bot, trigger):
