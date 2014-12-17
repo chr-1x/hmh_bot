@@ -939,3 +939,354 @@ Registered 2 modules,
 
 Connecting to irc.twitch.tv:6667...
 Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+Traceback (most recent call last):
+  File "c:\Programs\Python27\lib\site-packages\willie\__init__.py", line 50, in run
+    p = bot.Willie(config)
+  File "c:\Programs\Python27\lib\site-packages\willie\bot.py", line 124, in __init__
+    self.setup()
+  File "c:\Programs\Python27\lib\site-packages\willie\bot.py", line 328, in setup
+    rel_path = os.path.relpath(filename, os.path.dirname(__file__))
+  File "c:\Programs\Python27\lib\ntpath.py", line 528, in relpath
+    % (path_prefix, start_prefix))
+ValueError: path is on drive w:, start on drive c:
+
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+Traceback (most recent call last):
+  File "c:\Programs\Python27\lib\site-packages\willie\__init__.py", line 50, in run
+    p = bot.Willie(config)
+  File "c:\Programs\Python27\lib\site-packages\willie\bot.py", line 124, in __init__
+    self.setup()
+  File "c:\Programs\Python27\lib\site-packages\willie\bot.py", line 328, in setup
+    rel_path = os.path.relpath(filename, os.path.dirname(__file__))
+  File "c:\Programs\Python27\lib\ntpath.py", line 528, in relpath
+    % (path_prefix, start_prefix))
+ValueError: path is on drive w:, start on drive c:
+
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+Traceback (most recent call last):
+  File "c:\Programs\Python27\lib\site-packages\willie\__init__.py", line 50, in run
+    p = bot.Willie(config)
+  File "c:\Programs\Python27\lib\site-packages\willie\bot.py", line 124, in __init__
+    self.setup()
+  File "c:\Programs\Python27\lib\site-packages\willie\bot.py", line 328, in setup
+    rel_path = os.path.relpath(filename, os.path.dirname(__file__))
+  File "c:\Programs\Python27\lib\ntpath.py", line 528, in relpath
+    % (path_prefix, start_prefix))
+ValueError: path is on drive w:, start on drive c:
+
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+Error loading handmade: invalid syntax (handmade.py, line 93) (c:\Programs\Python27\lib\site-packages\willie\bot.py:324)
+
+
+Registered 1 modules,
+1 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Traceback (most recent call last):
+  File "c:\Programs\Python27\lib\site-packages\willie\bot.py", line 743, in call
+    exit_code = func(willie, trigger)
+  File "w:/Users/chronal\.willie\modules\handmade.py", line 94, in isAdmin
+    if (admins and admins.find(args)):
+AttributeError: 'list' object has no attribute 'find'
+
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+Error loading handmade: invalid syntax (handmade.py, line 103) (c:\Programs\Python27\lib\site-packages\willie\bot.py:324)
+
+
+Registered 1 modules,
+1 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+Error loading handmade: expected an indented block (handmade.py, line 111) (c:\Programs\Python27\lib\site-packages\willie\bot.py:324)
+
+
+Registered 1 modules,
+1 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Traceback (most recent call last):
+  File "c:\Programs\Python27\lib\site-packages\willie\bot.py", line 743, in call
+    exit_code = func(willie, trigger)
+  File "w:/Users/chronal\.willie\modules\handmade.py", line 166, in time
+    info(bot, trigger, "The current time in Seattle is %s PST" % (now.strftime("%I:%M %p")))
+  File "w:/Users/chronal\.willie\modules\handmade.py", line 102, in info
+    streaming = isCurrentlyStreaming(datetime.now("PST8PDT"))
+TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'str'
+
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+Error loading xkcd: invalid syntax (xkcd.py, line 64) (c:\Programs\Python27\lib\site-packages\willie\bot.py:324)
+
+
+Registered 1 modules,
+1 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.
+Could not open CA certificates file. SSL will not work properly.
+Could not open CA certificates file. SSL will not work properly.
+
+Welcome to Willie. Loading modules...
+
+
+
+
+Registered 2 modules,
+0 modules failed to load
+
+
+Connecting to irc.twitch.tv:6667...
+Connected.

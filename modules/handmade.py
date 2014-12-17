@@ -7,6 +7,33 @@ import pytz
 from pytz import timezone
 from willie.modules.search import google_search
 
+##TODO(chronister): Move out into stream module
+
+def getStreamTime(nowTime):
+    """Temporary function for getting the next stream from the given time. Will soon be superceded 
+        by a more thorough system!
+    """
+    streamTime = nowTime
+    while(not(streamTime.minute == 0 and 
+        (streamTime.weekday() == 4 and streamTime.hour == 11) or
+        (streamTime.weekday() < 4 and streamTime.hour == 20 ))):
+
+        streamTime = streamTime + timedelta(minutes=1) #inc minutes
+
+    return streamTime
+
+def isCurrentlyStreaming(nowTime):
+    streamTime = getStreamTime(nowTime)
+
+    sinceStream = nowTime - streamTime;
+    sinceHours = int(sinceStream.seconds / 3600)
+    sinceMinutes = (sinceStream.seconds - sinceHours * 3600.0) / 60.0
+
+    untilStream = streamTime - nowTime;
+    untilHours = int(untilStream.seconds / 3600)
+    untilMinutes = (untilStream.seconds - untilHours * 3600.0) / 60.0
+    
+    return (sinceHours < 1 or (sinceHours < 2 and sinceMinutes < 30) or untilMinutes < 45)
 
 ###  Unspecific (not affiliated with existing commands) TODO(chronister):
 ###    1. Conditionally enable some modules/commands based on how close it is to a stream time
@@ -72,21 +99,35 @@ def info(bot, trigger, text):
     ###     or something?)
     ###TODO(chronister): Don't let people throw these at @cmuratori to avoid Q&A spam
     if (trigger):
-        if (trigger.group(2)):
-            args = trigger.group(2).split(" ")
-            bot.say("@%s: %s" % (args[0], text))
+        streaming = isCurrentlyStreaming(datetime.now(timezone("PST8PDT")))
+        if ((streaming and trigger.admin) or not streaming):
+            if (trigger.group(2)):
+                args = trigger.group(2).split(" ")
+                bot.say("@%s: %s" % (args[0], text))
+            else:
+                bot.say("@%s: %s" % (trigger.nick, text))
         else:
-            bot.say("@%s: %s" % (trigger.nick, text))
+            #temporary measure: whitelist to admins
+            pass
     else:
         bot.say(text)
 
-@willie.module.commands('amIadmin')
+    
+
+@willie.module.commands('amIadmin', 'isAdmin')
 def isAdmin(bot, trigger):
     """Simple command that simply tells the user whether or not they are an admin. Mostly 
         implemented for debugging (double-checking case sensitivity and things)
     """
     if (trigger):
-        if (trigger.admin or trigger.owner):
+        args = trigger.group(2)
+        if (args):
+            admins = bot.config.core.admins
+            if (admins and args in admins):
+                bot.say("%s is an admin!" % args)
+            else:
+                bot.say("%s is not an admin." % trigger.group(2))
+        elif (trigger.admin or trigger.owner):
             bot.say("%s, you are an admin!" % trigger.nick)
         else:
             bot.say("%s, you are not an admin." % trigger.nick)
@@ -109,6 +150,7 @@ def msdnSearch(bot, trigger):
     ###TODO(chronister): Add hidden C++ keyword to search?
     ###TODO(chronister): Are there any subdomains we don't want? See commented -site above
     if not trigger: return
+    if isCurrentlyStreaming(datetime.now(timezone("PST8PDT"))) and not trigger.admin: return
     if not trigger.group(2):
         bot.say("@%s: http://msdn.microsoft.com/" % trigger.nick)
     else:
@@ -123,25 +165,19 @@ def time(bot, trigger):
     now = datetime.now(timezone("PST8PDT"))
     info(bot, trigger, "The current time in Seattle is %s PST" % (now.strftime("%I:%M %p")))
 
-
 @command('timer', "when", "howlong", "timeleft")
 def timer(bot, trigger):
     """Info command that prints out the time until the next stream.
     """
-    streamTime = datetime.now(timezone("PST8PDT"))
-    nowTime = datetime.now(timezone("PST8PDT"))
 
+    nowTime = datetime.now(timezone("PST8PDT"))
     ###TODO(chronister): Need a way better stream scheduling system! 
     ###     Needs to have the following abilities:
     ###      1. Quickly and easily (read: no git push necessary) add rescheduled stream times
     ###      2. Utility function to determine how far into a stream the current time is (or how
     ###         long until the next stream --- basically something for this command to wrap)
     ###TODO(chronister): This method ends up returning "now" if the stream is currently on! ack!
-    while(not(streamTime.minute == 0 and 
-        (streamTime.weekday() == 4 and streamTime.hour == 11) or
-        (streamTime.weekday() < 4 and streamTime.hour == 20 ))):
-
-        streamTime = streamTime + timedelta(minutes=1) #inc minutes
+    streamTime = getStreamTime(nowTime)
 
     info(bot, trigger, timeToStream(streamTime, nowTime))
 
