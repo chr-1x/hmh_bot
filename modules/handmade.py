@@ -1,12 +1,11 @@
 import willie
 import willie.module
 import random
+from willie.modules.search import google_search
 from datetime import datetime, timedelta
 import time
 import pytz
 from pytz import timezone
-from willie.modules.search import google_search
-
 
 ###  Unspecific (not affiliated with existing commands) TODO(chronister):
 ###    1. Conditionally enable some modules/commands based on how close it is to a stream time
@@ -128,60 +127,15 @@ def time(bot, trigger):
 def timer(bot, trigger):
     """Info command that prints out the time until the next stream.
     """
-    streamTime = datetime.now(timezone("PST8PDT"))
+    
     nowTime = datetime.now(timezone("PST8PDT"))
+    streamTime = stream.getNextStream(nowTime) # Make "now" the default argument?
 
-    ###TODO(chronister): Need a way better stream scheduling system! 
-    ###     Needs to have the following abilities:
-    ###      1. Quickly and easily (read: no git push necessary) add rescheduled stream times
-    ###      2. Utility function to determine how far into a stream the current time is (or how
-    ###         long until the next stream --- basically something for this command to wrap)
-    ###TODO(chronister): This method ends up returning "now" if the stream is currently on! ack!
-    while(not(streamTime.minute == 0 and 
-        (streamTime.weekday() == 4 and streamTime.hour == 11) or
-        (streamTime.weekday() < 4 and streamTime.hour == 20 ))):
+    #TEST CODE
+    stream.scheduleStream(newTime) # sets the time of any existing stream on that day to the new time, or creates one if there is no entry
+    stream.setStreamLength(date, lengthInMinutes) # set the length of the stream (not including Q&A) on that date to the given length
 
-        streamTime = streamTime + timedelta(minutes=1) #inc minutes
-
-    info(bot, trigger, timeToStream(streamTime, nowTime))
-
-
-def timeToStream(streamTime, nowTime):
-    """Utility function that returns a string specifying one of three things:
-        1. The time until the next stream, in (days) hours minutes
-        2. The amount of time the stream/Q&A has been going on
-        3. The given streamTime occurs before the given nowTime, which is sort of undefined
-            behavior.
-    """
-    ###TODO(chronister): Would it be a better idea to make this function return a more elementary
-    ###     type of value (int?) and then build the string elsewhere?
-    if (not (streamTime.tzinfo == timezone("PST8PDT"))):
-        streamTime = pytz.utc.localize(streamTime)
-        streamTime = streamTime.astimezone(timezone("PST8PDT"))
-    if (not (nowTime.tzinfo == timezone("PST8PDT"))):
-        nowTime = pytz.utc.localize(nowTime)
-        nowTime = nowTime.astimezone(timezone("PST8PDT"))
-
-    sinceStream = nowTime - streamTime;
-    sinceHours = int(sinceStream.seconds / 3600)
-    sinceMinutes = (sinceStream.seconds - sinceHours * 3600.0) / 60.0
-
-    untilStream = streamTime - nowTime;
-    untilHours = int(untilStream.seconds / 3600)
-    untilMinutes = (untilStream.seconds - untilHours * 3600.0) / 60.0
-
-    if (sinceHours < 1):
-        return "Currently streaming (if Casey is on schedule)" #% sinceMinutes #%d minutes into stream
-    elif (sinceHours < 2 and sinceMinutes < 30):
-        return "Currently doing Q&A (if Casey is on schedule)" #% sinceMinutes #%d minutes into the Q&A
-
-    if (nowTime > streamTime + timedelta(hours=1, minutes=30)):
-        return "I'm confused and think that the stream is %d hours %d minutes in the past!" % (abs(untilStream.days * 24 + untilHours), untilMinutes)
-
-    if (untilStream.days != 0):
-        return 'Next stream is in %d days, %d hours %d minutes' % (untilStream.days, untilHours, untilMinutes)
-    else:
-        return 'Next stream is in %d hours %d minutes' % (untilHours, untilMinutes)
+    info(bot, trigger, stream.timeToStream(streamTime, nowTime))
 
 
 @command('site')
