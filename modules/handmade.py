@@ -12,32 +12,6 @@ from willie.modules.search import google_search
 
 ##TODO(chronister): Move out into stream module
 
-def getStreamTime(nowTime):
-    """Temporary function for getting the next stream from the given time. Will soon be superceded 
-        by a more thorough system!
-    """
-    streamTime = nowTime
-    while(not(streamTime.minute == 0 and 
-        (streamTime.weekday() == 4 and streamTime.hour == 11) or
-        (streamTime.weekday() < 4 and streamTime.hour == 20 ))):
-
-        streamTime = streamTime + timedelta(minutes=1) #inc minutes
-
-    return streamTime
-
-def isCurrentlyStreaming(nowTime):
-    streamTime = getStreamTime(nowTime)
-
-    sinceStream = nowTime - streamTime;
-    sinceHours = int(sinceStream.seconds / 3600)
-    sinceMinutes = (sinceStream.seconds - sinceHours * 3600.0) / 60.0
-
-    untilStream = streamTime - nowTime;
-    untilHours = int(untilStream.seconds / 3600)
-    untilMinutes = (untilStream.seconds - untilHours * 3600.0) / 60.0
-    
-    return (sinceHours < 1 or (sinceHours < 2 and sinceMinutes < 30) or untilMinutes < 45)
-
 class Cmd:
     """ Wrapper class that stores the list of commands, main command name (assumed to be first in 
         list), and function to call for the command.
@@ -92,7 +66,7 @@ def info(bot, trigger, text):
     """
     ###TODO(chronister): Can this be done as a decorator? (would have to give a custom bot 
     ###     or something?)
-    streaming = isCurrentlyStreaming(datetime.now(timezone("PST8PDT")))
+    streaming = stream.isCurrentlyStreaming(datetime.now(timezone("PST8PDT")))
     if ((streaming and trigger and trigger.admin) or not streaming):
         if (trigger):
             if (trigger.group(2)):
@@ -152,7 +126,7 @@ def msdnSearch(bot, trigger):
     ###TODO(chronister): Add hidden C++ keyword to search?
     ###TODO(chronister): Are there any subdomains we don't want? See commented -site above
     if not trigger: return
-    if isCurrentlyStreaming(datetime.now(timezone("PST8PDT"))) and not trigger.admin: return
+    if stream.isCurrentlyStreaming(datetime.now(timezone("PST8PDT"))) and not trigger.admin: return
     if not trigger.group(2):
         bot.say("@%s: http://msdn.microsoft.com/" % trigger.nick)
     else:
@@ -179,63 +153,6 @@ def timer(bot, trigger):
     stream.setStreamLength(date, lengthInMinutes) # set the length of the stream (not including Q&A) on that date to the given length
 
     info(bot, trigger, stream.timeToStream(streamTime, nowTime))
-
-def timeToStream(streamTime, nowTime):
-    """Utility function that returns a string specifying one of three things:
-        1. The time until the next stream, in (days) hours minutes
-        2. The amount of time the stream/Q&A has been going on
-        3. The given streamTime occurs before the given nowTime, which is sort of undefined
-            behavior.
-    """
-    ###TODO(chronister): Would it be a better idea to make this function return a more elementary
-    ###     type of value (int?) and then build the string elsewhere?
-    if (not (streamTime.tzinfo == timezone("PST8PDT"))):
-        streamTime = pytz.utc.localize(streamTime)
-        streamTime = streamTime.astimezone(timezone("PST8PDT"))
-    if (not (nowTime.tzinfo == timezone("PST8PDT"))):
-        nowTime = pytz.utc.localize(nowTime)
-        nowTime = nowTime.astimezone(timezone("PST8PDT"))
-
-    sinceStream = nowTime - streamTime;
-    sinceHours = int(sinceStream.seconds / 3600)
-    sinceMinutes = (sinceStream.seconds - sinceHours * 3600.0) / 60.0
-
-    untilStream = streamTime - nowTime;
-    untilHours = int(untilStream.seconds / 3600)
-    untilMinutes = (untilStream.seconds - untilHours * 3600.0) / 60.0
-
-    if (sinceHours < 1):
-        return "Currently streaming (if Casey is on schedule)" #% sinceMinutes #%d minutes into stream
-    elif (sinceHours < 2 and sinceMinutes < 30):
-        return "Currently doing Q&A (if Casey is on schedule)" #% sinceMinutes #%d minutes into the Q&A
-
-    if (nowTime > streamTime + timedelta(hours=1, minutes=30)):
-        return "I'm confused and think that the stream is %d hours %d minutes in the past!" % (abs(untilStream.days * 24 + untilHours), untilMinutes)
-
-    mydays = ''
-    myhours = ''
-    myminutes = ''
-
-    if untilStream.days == 1:
-        mydays = 'day'
-    else:
-        mydays = 'days'
-    
-    if untilHours == 1:
-        myhours = 'hour'
-    else:
-        myhours = 'hours'
-
-    if untilMinutes == 1:
-        myminutes = 'minute'
-    else:
-        myminutes = 'minutes'
-
-    if untilStream.days != 0:
-        # look at format here after substitution is working
-        return 'Next stream is in %d %s, %d %s, %d %s' % (untilStream.days, mydays, untilHours, myhours, untilMinutes, myminutes)
-    elif untilStream.days == 0:
-        return 'Next stream is in %d %s, %d %s' % (untilHours, myhours, untilMinutes, myminutes)
 
 @command('site')
 def siteInfo(bot, trigger):
