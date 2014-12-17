@@ -360,6 +360,10 @@ def ideInfo(bot, trigger):
     ###TODO(chronister): Get emacs version info, it's a common question
     info(bot, trigger, "Casey uses emacs to edit his code, because that is what he is used to. It is getting pretty old, so you should use whatever you feel most comfortable in.")
 
+@command('college', 'school')
+def collegeInfo(bot, trigger):
+    info(bot, trigger, "Casey did not go to college, he is self-taught and has been coding in the gaming industry since 1995.")
+
 @command('keyboard', 'kb')
 def keyboardInfo(bot, trigger):
     """Info command that provides information about what keyboard Casey uses.
