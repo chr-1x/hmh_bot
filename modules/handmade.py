@@ -6,6 +6,7 @@ import time
 import pytz
 from pytz import timezone
 from willie.modules.search import google_search
+from time import sleep
 
 #TODO(chronister): engine FAQ
 
@@ -380,6 +381,68 @@ def randomNumber(bot, trigger):
     """Easter egg info command that returns a randomly-selected number.
     """
     info(bot, trigger, "Your random number is %s" % (random.randint(100) if random.random() < 0.0001 else 4))
+
+@command('roll')
+def rollNumber(bot, trigger):
+    if (trigger and trigger.group(2)):
+        args = trigger.group(2).split(" ")
+        output = ""
+        for arg in args:
+            diceArgs = arg.split("d")
+            diceAmt = diceArgs[0]
+            try:
+                diceAmt = int(diceAmt)
+            except ValueError:
+                bot.say("@%s: I can't roll %s dice" % (trigger.nick, diceAmt))
+                return
+            diceFaces = diceArgs[1]
+            try:
+                diceFaces = int(diceFaces)
+            except ValueError:
+                bot.say("@%s: I can't roll dice with %s faces!" % (trigger.nick, diceFaces))
+                return
+
+            if (diceAmt < 0):
+                bot.say("@%s: We are currently out of negative dice, please check back before." % trigger.nick)
+                return
+            if (diceAmt == 0):
+                bot.say("@%s: No dice." % trigger.nick)
+                return
+            if (diceAmt > 20):
+                thing = "dice"
+                if (diceFaces == 2):
+                    thing = "coins"
+                if (diceFaces == 1):
+                    thing = "one dimensional constructs"
+                bot.say("@%s: Do you think I have %d %s just lying around??" % (trigger.nick, diceAmt, thing))
+                return
+            if (diceFaces <= 0):
+                bot.say("@%s: Find me a %d sided dice and I'll roll it." % (trigger.nick, diceFaces))
+                return
+            if (diceFaces > 100):
+                bot.say("@%s: I rolled the sphere, and it rolled off the table." % (trigger.nick))
+                return
+
+            results = []
+            for i in range(diceAmt):
+                results.append(random.randint(1, diceFaces))
+
+        
+            for r in results:
+                output += "[%d] " % r
+            output = output[:-1]
+            output += ", for a total of %d" % sum(results)
+            if (len(args) > 1): output += " :: "
+
+        if (len(args) > 1): output = output[:-3]
+        bot.say("@%s: %s" % (trigger.nick, output))
+
+            
+
+
+@command('nn')
+def nightNight(bot, trigger):
+    info(bot, trigger, "Night night <3")
 
 # End easter egg commands (Should these be in a different file?)
 
