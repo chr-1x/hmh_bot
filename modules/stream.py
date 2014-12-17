@@ -153,3 +153,16 @@ def timeToStream(streamTime, nowTime):
 
 
     return 'Next stream is in %s' % getDurationString(untilStream)
+
+@command('timer', "when", "howlong", "timeleft")
+def timer(bot, trigger):
+    """Info command that prints out the time until the next stream.
+    """
+    nowTime = datetime.now(timezone("PST8PDT"))
+    streamTime = stream.getNextStream(nowTime) # Make "now" the default argument?
+
+    #TEST CODE
+    stream.scheduleStream(newTime) # sets the time of any existing stream on that day to the new time, or creates one if there is no entry
+    stream.setStreamLength(date, lengthInMinutes) # set the length of the stream (not including Q&A) on that date to the given length
+
+    info(bot, trigger, stream.timeToStream(streamTime, nowTime))
