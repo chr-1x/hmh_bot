@@ -7,6 +7,8 @@ import pytz
 from pytz import timezone
 from willie.modules.search import google_search
 
+#TODO(chronister): engine FAQ
+
 ##TODO(chronister): Move out into stream module
 
 def getStreamTime(nowTime):
@@ -34,13 +36,6 @@ def isCurrentlyStreaming(nowTime):
     untilMinutes = (untilStream.seconds - untilHours * 3600.0) / 60.0
     
     return (sinceHours < 1 or (sinceHours < 2 and sinceMinutes < 30) or untilMinutes < 45)
-
-###  Unspecific (not affiliated with existing commands) TODO(chronister):
-###    1. Conditionally enable some modules/commands based on how close it is to a stream time
-###         (this could perhaps be accomplished by checking number of users in IRC)
-###    2. Q & A question management (queueing, moderation, replication)
-###    3. FAQ for the "how long will the game take" question
-###TODO(chronister): Make the above be github issues! (Then remove this block)
 
 class Cmd:
     """ Wrapper class that stores the list of commands, main command name (assumed to be first in 
@@ -94,39 +89,45 @@ def info(bot, trigger, text):
         specified in the first argument. Commands which use this method should put "Info Command"
         in their docstring (and maybe in something user-facing...!infocommands?)
     """
-    ###TODO(chronister): Check if the caller provided their own @ symbol, and if so, don't print one.
     ###TODO(chronister): Can this be done as a decorator? (would have to give a custom bot 
     ###     or something?)
-    ###TODO(chronister): Don't let people throw these at @cmuratori to avoid Q&A spam
-    if (trigger):
-        streaming = isCurrentlyStreaming(datetime.now(timezone("PST8PDT")))
-        if ((streaming and trigger.admin) or not streaming):
+    streaming = isCurrentlyStreaming(datetime.now(timezone("PST8PDT")))
+    if ((streaming and trigger and trigger.admin) or not streaming):
+        if (trigger):
             if (trigger.group(2)):
+
                 args = trigger.group(2).split(" ")
-                bot.say("@%s: %s" % (args[0], text))
+                if (args[0][0] == "@"): 
+                    args[0] = args[0][1:]
+
+                if (args[0].lower() != "cmuratori"):
+                    bot.say("@%s: %s" % (args[0], text))
+                else:
+                    bot.say("@%s: Please do not direct info at Casey." % trigger.nick)
             else:
                 bot.say("@%s: %s" % (trigger.nick, text))
         else:
-            #temporary measure: whitelist to admins
-            pass
+            bot.say(text)
     else:
-        bot.say(text)
+        #temporary measure: whitelist to admins
+            pass
 
     
 
-@willie.module.commands('amIadmin', 'isAdmin')
+@willie.module.commands('amIadmin', 'isAdmin', 'isWhitelisted', 'whitelisted')
 def isAdmin(bot, trigger):
     """Simple command that simply tells the user whether or not they are an admin. Mostly 
         implemented for debugging (double-checking case sensitivity and things)
     """
     if (trigger):
-        args = trigger.group(2)
+        args = trigger.group(2).split(" ")
         if (args):
             admins = bot.config.core.admins
-            if (admins and args in admins):
-                bot.say("%s is an admin!" % args)
-            else:
-                bot.say("%s is not an admin." % trigger.group(2))
+            for arg in args:
+                if (admins and arg in admins):
+                    bot.say("%s is an admin!" % arg)
+                else:
+                    bot.say("%s is not an admin." % arg)
         elif (trigger.admin or trigger.owner):
             bot.say("%s, you are an admin!" % trigger.nick)
         else:
@@ -334,31 +335,31 @@ def beepBoop(bot, trigger):
     ]
     bot.say(random.choice(responses))
 
-# @command('flame', hide=True)
-# def flameWar(bot, trigger):
-#     """Easter egg command that randomly chooses whether to insult a language or endorse an
-#        editor.
-#     """
-#     if (random.random() < 0.5):
-#         badLanguage(bot, trigger)
-#     else:
-#         bestEditor(bot, trigger)
+@command('flame', hide=True)
+def flameWar(bot, trigger):
+    """Easter egg command that randomly chooses whether to insult a language or endorse an
+       editor.
+    """
+    if (random.random() < 0.5):
+        badLanguage(bot, trigger)
+    else:
+        bestEditor(bot, trigger)
 
-# @command('throwdown', 'badlanguage', hide=True)
-# def badLanguage(bot, trigger):
-#     """Easter egg command that insults a random language from this list. Feel free to add lots
-#        more languages >:) (Possibly including C???)
-#     """
-#     langs = [ "Ruby", "Python", "C++", "PHP", "Rust", "Go", "Perl", "C#", "Java", "Scala", "Objective-C", "F#",
-#     "Haskell", "Clojure", "BASIC", "Visual Basic", "HTML", "CSS", "Javascript", "Actionscript", "D" ]
-#     bot.say("%s is a bad language :)" % random.choice(langs))
+@command('throwdown', 'badlanguage', hide=True)
+def badLanguage(bot, trigger):
+    """Easter egg command that insults a random language from this list. Feel free to add lots
+       more languages >:) (Possibly including C???)
+    """
+    langs = [ "Ruby", "Python", "C++", "PHP", "Rust", "Go", "Perl", "C#", "Java", "Scala", "Objective-C", "F#",
+    "Haskell", "Clojure", "BASIC", "Visual Basic", "HTML", "CSS", "Javascript", "Actionscript", "D" ]
+    info(bot, None, "%s is a bad language :)" % random.choice(langs))
 
-# @command('holywar', 'besteditor', hide=True)
-# def bestEditor(bot, trigger):
-#     """Easter egg command that endorses either emacs or vim. Feel free to add more editors.
-#     """
-#     editors = ["emacs", "vim"]
-#     bot.say("%s is the best editor :)" % random.choice(editors))
+@command('holywar', 'besteditor', hide=True)
+def bestEditor(bot, trigger):
+    """Easter egg command that endorses either emacs or vim. Feel free to add more editors.
+    """
+    editors = ["emacs", "vim"]
+    info(bot, None, "%s is the best editor :)" % random.choice(editors))
 
 @command('hug')
 def hug(bot, trigger):
