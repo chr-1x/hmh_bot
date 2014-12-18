@@ -2,6 +2,11 @@ from datetime import datetime, timedelta, date, time
 import pytz
 from pytz import timezone
 
+import os, sys
+sys.path.append(os.path.dirname(__file__))
+
+from handmade import command, info
+
 MONDAY = 0
 TUESDAY = 1
 WEDNESDAY = 2
@@ -94,7 +99,7 @@ def getNextStream(nowTime):
 
         hour = 20 if streamDate.weekday() < FRIDAY else 11
 
-        streamTime = datetime.combine(streamDate, time(hour))
+        streamTime = datetime.combine(streamDate, time(hour, tzinfo=timezone("PST8PDT")))
         scheduleStream(streamTime)
 
     return streamTime
@@ -154,15 +159,17 @@ def timeToStream(streamTime, nowTime):
 
     return 'Next stream is in %s' % getDurationString(untilStream)
 
+
+
 @command('timer', "when", "howlong", "timeleft")
 def timer(bot, trigger):
     """Info command that prints out the time until the next stream.
     """
     nowTime = datetime.now(timezone("PST8PDT"))
-    streamTime = stream.getNextStream(nowTime) # Make "now" the default argument?
+    streamTime = getNextStream(nowTime) # Make "now" the default argument?
 
     #TEST CODE
-    stream.scheduleStream(newTime) # sets the time of any existing stream on that day to the new time, or creates one if there is no entry
-    stream.setStreamLength(date, lengthInMinutes) # set the length of the stream (not including Q&A) on that date to the given length
+    #stream.scheduleStream(newTime) # sets the time of any existing stream on that day to the new time, or creates one if there is no entry
+    #stream.setStreamLength(date, lengthInMinutes) # set the length of the stream (not including Q&A) on that date to the given length
 
-    info(bot, trigger, stream.timeToStream(streamTime, nowTime))
+    info(bot, trigger, timeToStream(streamTime, nowTime))
