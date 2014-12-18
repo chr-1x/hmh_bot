@@ -104,6 +104,10 @@ def buyInfo(bot, trigger):
     """
     info(bot, trigger, "Handmade Hero, the compiled game with art assets and full source code, can be purchased at http://handmadehero.org/#buy_now You can now also support Casey monthly at http://www.patreon.com/cmuratori")
 
+@command('q&a')
+def qaInfo(bot, trigger):
+    bot.say("Q&A session. Please prefix questions w/ @cmuratori. The shorter the question, and if related to the stream, the higher the chances of getting it answered.")
+
 @command('game', 'what')
 def gameInfo(bot, trigger):
     """Info command that displays basic information about the game being built.

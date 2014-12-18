@@ -1,6 +1,9 @@
 from datetime import datetime, timedelta, date, time
 import pytz
 from pytz import timezone
+import parsedatetime
+from willie.tools import stderr
+import math
 
 import os, sys
 sys.path.append(os.path.dirname(__file__))
@@ -16,6 +19,40 @@ SATURDAY = 5
 SUNDAY = 6
 
 streams = []
+dateParser = parsedatetime.Calendar()
+
+def parseDateString(s):
+    pTime,flag = dateParser.parseDT(line)
+
+    if (flag == 1):
+        if (type(pTime) is datetime):
+            pTime = pTime.date()
+
+    elif (flag == 2):
+        if (type(pTime) is datetime):
+            pTime = pTime.timetz()
+
+    elif (flag == 3):
+        pass
+    else:
+        pTime = None
+
+    return pTime(cue)
+
+# def setup(bot):
+#     with open("schedule.txt", 'r') as handle:
+#         for line in handle:
+            
+#             pTime = parseDateString(line)
+#             if (type(pTime) is time):
+#                 pTime = datetime.combine(date.today(), pTime)
+#             if (type(pTime) is date):
+#                 pTime = datetime.combine(pTime, time(tzinfo=timezone("PST8PDT")))
+
+#             streams.append(pTime)
+
+# def shutdown(bot):
+#     stderr("Shutdown ran!")
 
 def getDurationString(delta, showDays=True, showHours=True, showMinutes=True, showSeconds=False):
 
@@ -33,10 +70,10 @@ def getDurationString(delta, showDays=True, showHours=True, showMinutes=True, sh
         appendDuration(delta.days, "day", "days")
 
     if (showHours):
-        appendDuration(int(delta.seconds / 3600), "hour", "hours")
+        appendDuration(int(math.ceil(delta.seconds / 3600)), "hour", "hours")
 
     if (showMinutes):
-        appendDuration(int((delta.seconds % 3600) / 60), "minute", "minutes", showZero=True)
+        appendDuration(int(math.ceil((delta.seconds % 3600) / 60)), "minute", "minutes", showZero=True)
 
     if (showSeconds):
         appendDuration(delta.seconds % 60, "second", "seconds")
@@ -151,7 +188,7 @@ def timeToStream(streamTime, nowTime):
             return "%s into stream (%s until Q&A) if Casey is on schedule" % (getDurationString(sinceStream), getDurationString(timeLeft))
         elif (sinceStream < getTotalStreamLength()):
             timeLeft = getTotalStreamLength() - sinceStream
-            return "%s into the Q&A (%s until end) if Casey is on schedule" % (getDurationString(sinceStream), getDurationString(timeLeft))
+            return "%s into the Q&A (%s until end) if Casey is on schedule" % (getDurationString(sinceStream - getStreamLength()), getDurationString(timeLeft))
 
     if (nowTime > streamTime + getTotalStreamLength()):
         return "I'm confused and think that the stream is %s in the past!" % (getDurationString(sinceStream))
@@ -173,3 +210,82 @@ def timer(bot, trigger):
     #stream.setStreamLength(date, lengthInMinutes) # set the length of the stream (not including Q&A) on that date to the given length
 
     info(bot, trigger, timeToStream(streamTime, nowTime))
+
+
+@command('today', 'nextStream')
+def nextSchedule(bot, trigger):
+    """Info command that prints out the expected time of the next stream
+    """
+    streamTime = getNextStream(datetime.now(timezone("PST8PDT")))
+    info(bot, trigger, "The stream should next be live on %s" % streamTime.strftime("%a at %I:%M %p"))
+
+
+@command('thisweek')
+def currentSchedule(bot, trigger):
+    """Info command that prints out this week's schedule
+    """
+    nowDate = datetime.now(timezone("PST8PDT"))
+    if (nowDate.weekday() <= FRIDAY):
+        while(nowDate.weekday() > MONDAY):
+            nowDate = nowDate - timedelta(days=1)
+    else: # It's a weekend, go forward to the next week
+        while(nowDate.weekday() > MONDAY):
+            nowDate = nowDate + timedelta(days=1)
+
+    times = []
+    while(nowDate.weekday() <= FRIDAY):
+        #check from 8AM for arbitrary reasons
+        times.append(getNextStream(datetime.combine(nowDate, time(hour=8, tzinfo=timezone("PST8PDT")))))
+        nowDate = nowDate + timedelta(days=1)
+
+    info(bot, trigger, "Current schedule: %s " % " :: ".join([t.strftime("%I %p on %a").lstrip("0") for t in times]))
+
+@command('schedule', 'setschedule', 'reschedule')
+def reschedule(bot, trigger):
+    """Allows admins to set stream times on the fly
+    """
+
+    args = trigger.group(2)
+    if (args):
+        pTime,flag = dateParser.parseDT(args)
+        if (type(pTime) is datetime or type(pTime) is time):
+            pTime = pTime.replace(tzinfo=timezone("PST8PDT"))
+
+        if (flag == 1):
+            #parsed as a date, so we can't really do anything with it. Just print the schedule for that day.
+            if (type(pTime) is datetime):
+                pTime = pTime.date()
+            streamTime = getNextStream(datetime.combine(pTime, time(hour=0, tzinfo=timezone("PST8PDT"))))
+            bot.say("@%s: The stream should air at %s" % (trigger.nick, streamTime.strftime("%I %p on %b %d").lstrip("0")))
+            return
+
+        if (flag == 2):
+            #parsed as a time. Assume if its an admin that they want to change the stream time for today.
+            if (trigger.admin): 
+                if (type(pTime) is datetime):
+                    pTime = pTime.timetz()
+
+                scheduleStream(datetime.combine(date.today(), pTime))
+                bot.say("@%s: Set the stream time for today to %s" % (trigger.nick, pTime.strftime("%I:%M %p").lstrip("0")))
+                return
+
+        if (flag == 3):
+            #parsed as a datetime. All is well.
+            if (trigger.admin):
+                
+                scheduleStream(pTime)
+                bot.say("@%s: Set the stream time for %s to %s" % (trigger.nick, pTime.strftime("%b %d"), pTime.strftime("%I:%M %p")))
+                return
+
+        else:
+            #Unable to parse. Only respond if its an admin so that non-admins can't spam failed attempts
+            if (trigger.admin):
+                bot.say("@%s: Sorry, I couldn't figure out what %s meant." % (trigger.nick, args))
+                return
+    else:
+        currentSchedule(bot, trigger)
+        return
+
+
+
+
