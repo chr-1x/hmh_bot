@@ -21,11 +21,14 @@ SUNDAY = 6
 streams = []
 dateParser = parsedatetime.Calendar()
 
+def now():
+    return datetime.now(timezone("PST8PDT"))
+
 def parseDateString(s):
     pTime,flag = dateParser.parseDT(line)
 
     if (flag == 1):
-        if (type(pTime) is datetime):
+        if (type(pTime) is dateTime):
             pTime = pTime.date()
 
     elif (flag == 2):
@@ -39,20 +42,28 @@ def parseDateString(s):
 
     return pTime(cue)
 
-# def setup(bot):
-#     with open("schedule.txt", 'r') as handle:
-#         for line in handle:
-            
-#             pTime = parseDateString(line)
-#             if (type(pTime) is time):
-#                 pTime = datetime.combine(date.today(), pTime)
-#             if (type(pTime) is date):
-#                 pTime = datetime.combine(pTime, time(tzinfo=timezone("PST8PDT")))
+def setup(bot):
+    stderr("setup ran!")
 
-#             streams.append(pTime)
+def shutdown(bot):
+    stderr("Shutdown ran!")
 
-# def shutdown(bot):
-#     stderr("Shutdown ran!")
+def colloquialDate(dt):
+    today = now().date()
+    if (type(dt) is datetime):
+        dt = dt.date()
+    if (dt == today):
+        return "today"
+    elif (dt == today + timedelta(days=1)):
+        return "tomorrow"
+    elif (dt == today - timedelta(days=1)):
+        return "yesterday"
+    else:
+        return streamTime.strftime("%b %d")
+
+def colloquialDateAndTime(dt, timeFormat="%I %p"):
+    cdate = colloquialDate(dt.date())
+    return cdate + " at " + dt.strftime(timeFormat)
 
 def getDurationString(delta, showDays=True, showHours=True, showMinutes=True, showSeconds=False):
 
@@ -109,17 +120,29 @@ def scheduleStream(newTime):
             if (t == streamTime):
                 streams[i] = newTime
 
-def getNextStream(nowTime):
+def getNextStream(nowTime=None):
     """Returns the datetime of the start of the next stream from the nowTime given if a stream is 
         not currently on, or the datetime of the start of the current stream if the nowTime is
         during one.
     """
     if (nowTime == None):
-        nowTime = datetime.now(timezone("PST8PDT"))
+        nowTime = now()
+
+    ###REFACTOR(chronister): This is pretty inefficient...
+    #todayStream = next((t for t in streams if t.date() == nowTime.date()), None) 
+    def countsAsNearFuture(futureTime, nowTime):
+
+        delta = ((futureTime + getTotalStreamLength()) - nowTime)
+        
+        if (delta.days < 0): return False
+        if (delta.days > 3): return False
+        if (futureTime.weekday() <= FRIDAY and delta.days > 0): return False
+
+        return True
 
     # gives first stream date in the future of the given time
-    streamTime = next((t for t in streams if ((t + getTotalStreamLength()) - nowTime).days >= 0), None) 
-
+    streamTime = next((t for t in streams if countsAsNearFuture(t, nowTime)), None) 
+    
     if (streamTime == None):
         # Default schedule behavior: Finds the next weekday and schedules it at 8pm or 11am
         streamDate = nowTime.date()
@@ -141,11 +164,12 @@ def getNextStream(nowTime):
 
     return streamTime
 
-def isCurrentlyStreaming(nowTime):
+def isCurrentlyStreaming(nowTime=None):
     """Utility function that returns a boolean indicating whether or not the given time falls within
         a livestream.
     """
-
+    if (nowTime == None):
+        nowTime = now()
     streamTime = getNextStream(nowTime)
 
     sinceStream = nowTime - streamTime;
@@ -202,7 +226,7 @@ def timeToStream(streamTime, nowTime):
 def timer(bot, trigger):
     """Info command that prints out the time until the next stream.
     """
-    nowTime = datetime.now(timezone("PST8PDT"))
+    nowTime = now()
     streamTime = getNextStream(nowTime) # Make "now" the default argument?
 
     #TEST CODE
@@ -216,7 +240,7 @@ def timer(bot, trigger):
 def nextSchedule(bot, trigger):
     """Info command that prints out the expected time of the next stream
     """
-    streamTime = getNextStream(datetime.now(timezone("PST8PDT")))
+    streamTime = getNextStream(now())
     info(bot, trigger, "The stream should next be live on %s" % streamTime.strftime("%a at %I:%M %p"))
 
 
@@ -224,7 +248,7 @@ def nextSchedule(bot, trigger):
 def currentSchedule(bot, trigger):
     """Info command that prints out this week's schedule
     """
-    nowDate = datetime.now(timezone("PST8PDT"))
+    nowDate = now()
     if (nowDate.weekday() <= FRIDAY):
         while(nowDate.weekday() > MONDAY):
             nowDate = nowDate - timedelta(days=1)
@@ -234,10 +258,10 @@ def currentSchedule(bot, trigger):
 
     times = []
     while(nowDate.weekday() <= FRIDAY):
-        #check from 8AM for arbitrary reasons
-        times.append(getNextStream(datetime.combine(nowDate, time(hour=8, tzinfo=timezone("PST8PDT")))))
+        #check from 12AM for arbitrary reasons
+        times.append(getNextStream(datetime.combine(nowDate, time(hour=0, tzinfo=timezone("PST8PDT")))))
         nowDate = nowDate + timedelta(days=1)
-
+    
     info(bot, trigger, "Current schedule: %s " % " :: ".join([t.strftime("%I %p on %a").lstrip("0") for t in times]))
 
 @command('schedule', 'setschedule', 'reschedule')
@@ -256,7 +280,9 @@ def reschedule(bot, trigger):
             if (type(pTime) is datetime):
                 pTime = pTime.date()
             streamTime = getNextStream(datetime.combine(pTime, time(hour=0, tzinfo=timezone("PST8PDT"))))
-            bot.say("@%s: The stream should air at %s" % (trigger.nick, streamTime.strftime("%I %p on %b %d").lstrip("0")))
+            tense = "should air"
+            if (streamTime + getTotalStreamLength() < now()): tense = "should have aired"
+            bot.say("@%s: The stream %s %s" % (trigger.nick, tense, colloquialDateAndTime(streamTime)))
             return
 
         if (flag == 2):

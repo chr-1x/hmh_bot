@@ -69,7 +69,8 @@ def info(bot, trigger, text):
     import handmade_stream as stream
     ###TODO(chronister): Can this be done as a decorator? (would have to give a custom bot 
     ###     or something?)
-    streaming = stream.isCurrentlyStreaming(datetime.now(timezone("PST8PDT")))
+    streaming = stream.isCurrentlyStreaming()
+    
     if ((streaming and trigger and trigger.admin) or not streaming):
         if (trigger):
             if (trigger.group(2)):
@@ -131,7 +132,11 @@ def aliasList(bot, trigger):
     else:
         bot.say("Please specify a command to list the aliases of.")
 
-@command('list', 'commands', 'cmds', hide=True)
+@command('help')
+def helpInfo(bot, trigger):
+    info(bot, trigger, "To see a list of all commands, use !list. To see the aliases of a command, use !alias. To check when the next stream will air, use !timer or !when.")
+
+@command('list', 'commands', 'commandlist', 'cmds', hide=True)
 def commandList(bot, trigger): 
     """Command that lists all of the (non-hidden) registered commands. 
         Note that you must use the custom-defined @command decorator for commands to appear here, 

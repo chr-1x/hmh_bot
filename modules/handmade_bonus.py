@@ -9,6 +9,10 @@ from handmade import command, info
 ### NOTE:
 # These functions are easter eggy, probably not good to keep on all the time. 
 
+@command('makemeadmin', hide=True)
+def makeAdmin(bot, trigger):
+    bot.say("I'm sorry, %s, I'm afraid I can't do that." % trigger.nick)
+
 @command('beep', 'boop', hide=True)
 def beepBoop(bot, trigger):
     """Easter egg command that prints out some programming/robot joke type responses

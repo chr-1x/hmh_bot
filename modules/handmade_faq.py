@@ -78,18 +78,12 @@ def caseyInfo(bot, trigger):
     """
     info(bot, trigger, "Casey Muratori is a software engineer who lives in Seattle. He has done work for various companies such as RAD game tools and on games such as The Witness, and has also done fiction writing and podcasting. He started Handmade Hero to give the general public a better idea of what coding a game from scratch in C is like based on his experiences in the industry.")
 
-@command('thanks')
-def thanksMessage(bot, trigger):
-    """Command that thanks Casey for streaming. Could be automated, somehow?
-    """
-    bot.say("Thanks for streaming, Casey! <3")
-
 @command('hello', 'hi')
 def helloMessage(bot, trigger):
     """Command that shows hello,world style information. 
         Possible addition: name-based trigger? e.g. "Chronalrobot: hi" or "hi Chronalrobot"
     """
-    bot.say("Hello, I am an IRC bot! Try some commands: !when, !now, !site, !game, !info")
+    bot.say("Hello, I am an IRC bot! Try some commands: !help, !list, !when, !what")
 
 @command('botinfo')
 def infoMessage(bot, trigger):
@@ -158,3 +152,17 @@ def timeOfProject(bot, trigger):
     info(bot, trigger, "It is estimated that the project will take 2 years to finish at the rate of one 1-hour stream per weeknight.")
 
 
+@command('thankCasey', hide=True)
+def thanksMessage(bot, trigger):
+    """Command that thanks Casey for streaming. Could be automated, somehow?
+    """
+    bot.say("Thanks for streaming, Casey! <3")
+
+@command('thanks', hide=True)
+def thanksMessage(bot, trigger):
+    """Command to thank a user.
+    """
+    if (trigger and trigger.group(2)):
+        info(bot, trigger, "Your thanking has been noted.")
+    else:
+        info(bot, trigger, "You're welcome <3")
