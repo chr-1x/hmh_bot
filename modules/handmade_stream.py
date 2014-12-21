@@ -20,6 +20,7 @@ SUNDAY = 6
 
 streams = []
 dateParser = parsedatetime.Calendar()
+scheduleTableColumns = [("dayNumber", "INTEGER"), ("startTime", "INTEGER"), ("streamLength", "INTEGER"), ("qaLength", "INTEGER")]
 
 def now():
     return datetime.now(timezone("PST8PDT"))
@@ -42,8 +43,19 @@ def parseDateString(s):
 
     return pTime(cue)
 
+def createScheduleTable(bot):
+    if (bot.db):
+        if (bot.db.check_table("schedules")):
+            pass
+        else:
+            bot.db.add_table("schedules", scheduleTableColumns, "dayNumber")
+        bot.db.schedules.update(key=["dayNumber"], row=["23"], values={"dayNumber":"23", "startTime":"1418875200", "streamLength": "3600", "qaLength": "1800"})
+        stderr(str(bot.db.schedules.get(key="dayNumber", row="23")))
+    else:
+        stderr("No database found on the bot! Scheduling will not be persistent.")
+
 def setup(bot):
-    stderr("setup ran!")
+    createScheduleTable(bot)
 
 def shutdown(bot):
     stderr("Shutdown ran!")
