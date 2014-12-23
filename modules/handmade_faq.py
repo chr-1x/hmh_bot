@@ -105,7 +105,7 @@ def buyInfo(bot, trigger):
 
 @command('q&a', 'qa')
 def qaInfo(bot, trigger):
-    bot.say("Q&A session. Please prefix questions w/ @cmuratori. The shorter the question, and if related to the stream, the higher the chances of getting it answered.")
+    bot.say("Q&A session. Please prefix questions w/ @cmuratori, @handmade_hero, or Q: .The shorter the question, and if related to the stream, the higher the chances of getting it answered.")
 
 @command('game', 'what')
 def gameInfo(bot, trigger):
