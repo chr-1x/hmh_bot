@@ -8,7 +8,7 @@ import math
 import os, sys
 sys.path.append(os.path.dirname(__file__))
 
-from handmade import command, info
+from handmade import command, info, adminonly
 
 MONDAY = 0
 TUESDAY = 1
