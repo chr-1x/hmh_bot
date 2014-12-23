@@ -19,7 +19,7 @@ def beepBoop(bot, trigger):
     """
     responses = [
     "Don't speak of my mother that way!",
-    "That command was deprecated as of version 1.6.7, please use 1.3.1 for more a more updated API",
+    "That command was deprecated as of version 1.6.7, please use 1.3.1 for a more updated API",
     ":)",
     "Pushing random buttons isn't meaningful communication, you know!",
     "What goes around, comes around",

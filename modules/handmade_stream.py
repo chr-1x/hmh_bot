@@ -19,46 +19,105 @@ SATURDAY = 5
 SUNDAY = 6
 
 streams = []
+db = None
 dateParser = parsedatetime.Calendar()
-scheduleTableColumns = [("dayNumber", "INTEGER"), ("startTime", "INTEGER"), ("streamLength", "INTEGER"), ("qaLength", "INTEGER")]
+scheduleTableColumns = [("streamDate", "INTEGER"), ("startTime", "INTEGER"), ("streamLength", "INTEGER"), ("qaLength", "INTEGER")]
+scheduleTableRequestColumns = ("streamDate", "startTime", "streamLength", "qaLength")
+scheduleTableKey = "streamDate"
+
+
+class StreamEpisode:
+    def __init__(self, streamDate=-1, startTime=-1, streamLength=60, qaLength=30):
+        self.streamDate = streamDate
+        self.startTime = startTime
+        self.streamLength = streamLength
+        self.qaLength = qaLength
+
+    def startDT(self):
+        return datetime.utcfromtimestamp(self.startTime).replace(tzinfo=timezone("UTC")).astimezone(timezone("PST8PDT"))
+
+    def qaDT(self):
+        return self.startDT() + timedelta(minutes=self.streamLength)
+
+    def endDT(self):
+        return self.startDT() + timedelta(minutes=self.streamLength) + timedelta(minutes=self.qaLength)
+
+    def date(self):
+        return self.startDT().date() if self.startTime > 0 else None
+
+    def FromDateTime(newTime):
+        return StreamEpisode(streamDate=newTime.strftime("%Y%m%d"), startTime=getTimestamp(newTime))
+
+    def FromTableColumns(columns):
+        return StreamEpisode(streamDate=columns[0], startTime=columns[1], streamLength=columns[2], qaLength=columns[3])
+
+    def __str__(self):
+        return "Stream Ep %s at %s which is %d minutes long with %d minute q&a" % (self.streamDate, self.startTime, self.streamLength, self.qaLength)
+
+    def columnDict(self):
+        return { "streamDate":str(self.streamDate), "startTime":str(self.startTime), "streamLength":str(self.streamLength), "qaLength":str(self.qaLength) }
+
+    def strftime(self, format):
+        return self.startDT().strftime(format)
+
+    def isoformat(self):
+        return self.startDT().isoformat()
+
+    def getStreamLength(self):
+        return timedelta(minutes=self.streamLength)
+
+    def getTotalStreamLength(self):
+        return timedelta(minutes=self.streamLength+self.qaLength)
+
+    def getQaLength(self):
+        return timedelta(minutes=self.qaLength)
+
+def setup(bot):
+    global streams, db
+    db = bot.db
+
+    createScheduleTable()
+    streams = getStreams(db)
+    stderr([str(s) for s in streams])
+
+def shutdown(bot):
+    stderr("Shutdown ran!")
+
+def getTimestamp(dt, epoch=datetime(1970,1,1,tzinfo=timezone("UTC"))):
+    if (hasattr(dt, "timestamp")):
+        return dt.timestamp()
+    td = dt - epoch
+    # return td.total_seconds()
+    return (td.microseconds + (td.seconds + td.days * 24 * 3600) * 10**6) / 1e6 
+
 
 def now():
     return datetime.now(timezone("PST8PDT"))
 
-def parseDateString(s):
-    pTime,flag = dateParser.parseDT(line)
+def createScheduleTable():
+    global db
+    if (db):
 
-    if (flag == 1):
-        if (type(pTime) is dateTime):
-            pTime = pTime.date()
-
-    elif (flag == 2):
-        if (type(pTime) is datetime):
-            pTime = pTime.timetz()
-
-    elif (flag == 3):
-        pass
-    else:
-        pTime = None
-
-    return pTime(cue)
-
-def createScheduleTable(bot):
-    if (bot.db):
-        if (bot.db.check_table("schedules")):
-            pass
+        if (hasattr(db, "schedules") and db.check_table("schedules", scheduleTableColumns, scheduleTableKey)):
+            stderr("Schedule table exists.")
         else:
-            bot.db.add_table("schedules", scheduleTableColumns, "dayNumber")
-        bot.db.schedules.update(key=["dayNumber"], row=["23"], values={"dayNumber":"23", "startTime":"1418875200", "streamLength": "3600", "qaLength": "1800"})
-        stderr(str(bot.db.schedules.get(key="dayNumber", row="23")))
-    else:
-        stderr("No database found on the bot! Scheduling will not be persistent.")
+            stderr("Schedule table does not exist. Creating...")
+            db.add_table("schedules", scheduleTableColumns, scheduleTableKey)
 
-def setup(bot):
-    createScheduleTable(bot)
+def updateStreamInTable(stream):
+    global db,streams
+    stderr("Updating stream on %s to be at %s" % (stream.strftime("%m %d"), stream.startDT().isoformat()))
+    db.schedules.update(row=stream.streamDate, key=scheduleTableKey, values=stream.columnDict())
+    streams = getStreams(db)
 
-def shutdown(bot):
-    stderr("Shutdown ran!")
+
+def getStreams(db):
+    result = []
+    if (hasattr(db, "schedules")):
+        keys = db.schedules.keys()
+        for key in keys:
+            result.append(StreamEpisode.FromTableColumns(db.schedules.get(key=scheduleTableKey, row=str(key[0]), columns=scheduleTableRequestColumns)))
+    return result
 
 def colloquialDate(dt):
     today = now().date()
@@ -71,14 +130,13 @@ def colloquialDate(dt):
     elif (dt == today - timedelta(days=1)):
         return "yesterday"
     else:
-        return streamTime.strftime("%b %d")
+        return dt.strftime("%b %d")
 
 def colloquialDateAndTime(dt, timeFormat="%I %p"):
     cdate = colloquialDate(dt.date())
-    return cdate + " at " + dt.strftime(timeFormat)
+    return cdate + " at " + dt.strftime(timeFormat).lstrip("0")
 
 def getDurationString(delta, showDays=True, showHours=True, showMinutes=True, showSeconds=False):
-
     string = [""]
 
     def appendDuration(num, singular, plural, showZero=False):
@@ -93,7 +151,7 @@ def getDurationString(delta, showDays=True, showHours=True, showMinutes=True, sh
         appendDuration(delta.days, "day", "days")
 
     if (showHours):
-        appendDuration(int(math.ceil(delta.seconds / 3600)), "hour", "hours")
+        appendDuration(int(math.floor(delta.seconds / 3600)), "hour", "hours")
 
     if (showMinutes):
         appendDuration(int(math.ceil((delta.seconds % 3600) / 60)), "minute", "minutes", showZero=True)
@@ -103,16 +161,6 @@ def getDurationString(delta, showDays=True, showHours=True, showMinutes=True, sh
 
     return string[0][:-1]
 
-def getTotalStreamLength():
-    ###TODO(chronister): Make this settable with commands
-    return getStreamLength() + getQALength()
-
-def getQALength():
-    return timedelta(hours=0, seconds=1800)
-
-def getStreamLength():
-    return timedelta(hours=1)
-
 def scheduleStream(newTime):
     """Sets the time of any existing stream on that day to the new time, or creates one if there is
         no entry.
@@ -120,17 +168,7 @@ def scheduleStream(newTime):
         newTime is a datetime.
     """
 
-    ###REFACTOR(chronister): This code uses two loops, could it be collapsed to one?
-
-    # gives first stream date in the future of the given time
-    streamTime = next((t for t in streams if t.date() == newTime.date()), None) 
-
-    if (streamTime == None):
-        streams.append(newTime)
-    else:
-        for i,t in enumerate(streams):
-            if (t == streamTime):
-                streams[i] = newTime
+    updateStreamInTable(newTime)
 
 def getNextStream(nowTime=None):
     """Returns the datetime of the start of the next stream from the nowTime given if a stream is 
@@ -143,19 +181,21 @@ def getNextStream(nowTime=None):
     ###REFACTOR(chronister): This is pretty inefficient...
     #todayStream = next((t for t in streams if t.date() == nowTime.date()), None) 
     def countsAsNearFuture(futureTime, nowTime):
+        assert(type(futureTime) is StreamEpisode)
 
-        delta = ((futureTime + getTotalStreamLength()) - nowTime)
+        delta = ((futureTime.endDT()) - nowTime)
         
         if (delta.days < 0): return False
         if (delta.days > 3): return False
-        if (futureTime.weekday() <= FRIDAY and delta.days > 0): return False
+        if (futureTime.startDT().weekday() <= FRIDAY and delta.days > 0): return False
 
         return True
 
     # gives first stream date in the future of the given time
     streamTime = next((t for t in streams if countsAsNearFuture(t, nowTime)), None) 
-    
+    isNew = False
     if (streamTime == None):
+        isNew = True
         # Default schedule behavior: Finds the next weekday and schedules it at 8pm or 11am
         streamDate = nowTime.date()
         hour = 20 if nowTime.weekday() < FRIDAY else 11
@@ -171,7 +211,7 @@ def getNextStream(nowTime=None):
 
         hour = 20 if streamDate.weekday() < FRIDAY else 11
 
-        streamTime = datetime.combine(streamDate, time(hour, tzinfo=timezone("PST8PDT")))
+        streamTime = StreamEpisode.FromDateTime(datetime.combine(streamDate, time(hour, tzinfo=timezone("PST8PDT"))))
         scheduleStream(streamTime)
 
     return streamTime
@@ -184,15 +224,11 @@ def isCurrentlyStreaming(nowTime=None):
         nowTime = now()
     streamTime = getNextStream(nowTime)
 
-    sinceStream = nowTime - streamTime;
-    sinceHours = int(sinceStream.seconds / 3600)
-    sinceMinutes = (sinceStream.seconds - sinceHours * 3600.0) / 60.0
+    sinceStream = nowTime - streamTime.startDT();
 
-    untilStream = streamTime - nowTime;
-    untilHours = int(untilStream.seconds / 3600)
-    untilMinutes = (untilStream.seconds - untilHours * 3600.0) / 60.0
+    untilStream = streamTime.startDT() - nowTime;
     
-    return (sinceHours < 1 or (sinceHours < 2 and sinceMinutes < 30) or untilMinutes < 45)
+    return (sinceStream < streamTime.getTotalStreamLength() or untilStream < timedelta(minutes=45))
 
 def timeToStream(streamTime, nowTime):
     """Utility function that returns a string specifying one of three things:
@@ -203,30 +239,26 @@ def timeToStream(streamTime, nowTime):
     """
     ###TODO(chronister): Would it be a better idea to make this function return a more elementary
     ###     type of value (int?) and then build the string elsewhere?
-    if (not (streamTime.tzinfo == timezone("PST8PDT"))):
-        streamTime = pytz.utc.localize(streamTime)
-        streamTime = streamTime.astimezone(timezone("PST8PDT"))
-    if (not (nowTime.tzinfo == timezone("PST8PDT"))):
+    
+    assert(type(streamTime) is StreamEpisode)
+
+    if (type(nowTime) is datetime and not (nowTime.tzinfo == timezone("PST8PDT"))):
         nowTime = pytz.utc.localize(nowTime)
         nowTime = nowTime.astimezone(timezone("PST8PDT"))
 
-    sinceStream = nowTime - streamTime;
-    sinceHours = int(sinceStream.seconds / 3600)
-    sinceMinutes = (sinceStream.seconds - sinceHours * 3600.0) / 60.0
+    sinceStream = nowTime - streamTime.startDT();
 
-    untilStream = streamTime - nowTime;
-    untilHours = int(untilStream.seconds / 3600)
-    untilMinutes = (untilStream.seconds - untilHours * 3600.0) / 60.0
+    untilStream = streamTime.startDT() - nowTime;
 
     if (sinceStream > timedelta(0)):
-        if (sinceStream < getStreamLength()):
-            timeLeft = getStreamLength() - sinceStream
+        if (sinceStream < streamTime.getStreamLength()):
+            timeLeft = streamTime.getStreamLength() - sinceStream
             return "%s into stream (%s until Q&A) if Casey is on schedule" % (getDurationString(sinceStream), getDurationString(timeLeft))
-        elif (sinceStream < getTotalStreamLength()):
-            timeLeft = getTotalStreamLength() - sinceStream
-            return "%s into the Q&A (%s until end) if Casey is on schedule" % (getDurationString(sinceStream - getStreamLength()), getDurationString(timeLeft))
+        elif (sinceStream < streamTime.getTotalStreamLength()):
+            timeLeft = streamTime.getTotalStreamLength() - sinceStream
+            return "%s into the Q&A (%s until end) if Casey is on schedule" % (getDurationString(sinceStream - streamTime.getStreamLength()), getDurationString(timeLeft))
 
-    if (nowTime > streamTime + getTotalStreamLength()):
+    if (nowTime > streamTime.endDT()):
         return "I'm confused and think that the stream is %s in the past!" % (getDurationString(sinceStream))
 
 
@@ -274,7 +306,8 @@ def currentSchedule(bot, trigger):
         times.append(getNextStream(datetime.combine(nowDate, time(hour=0, tzinfo=timezone("PST8PDT")))))
         nowDate = nowDate + timedelta(days=1)
     
-    info(bot, trigger, "Current schedule: %s " % " :: ".join([t.strftime("%I %p on %a").lstrip("0") for t in times]))
+    info(bot, trigger, "Schedule for week of %s: %s (times in PST)" 
+            % (times[0].strftime("%m/%D"), " :: ".join([t.strftime("%I %p on %a").lstrip("0") for t in times])))
 
 @command('schedule', 'setschedule', 'reschedule')
 def reschedule(bot, trigger):
@@ -293,7 +326,7 @@ def reschedule(bot, trigger):
                 pTime = pTime.date()
             streamTime = getNextStream(datetime.combine(pTime, time(hour=0, tzinfo=timezone("PST8PDT"))))
             tense = "should air"
-            if (streamTime + getTotalStreamLength() < now()): tense = "should have aired"
+            if (streamTime.endDT() < now()): tense = "should have aired"
             bot.say("@%s: The stream %s %s" % (trigger.nick, tense, colloquialDateAndTime(streamTime)))
             return
 
@@ -311,7 +344,7 @@ def reschedule(bot, trigger):
             #parsed as a datetime. All is well.
             if (trigger.admin):
                 
-                scheduleStream(pTime)
+                scheduleStream(StreamEpisode.FromDateTime(pTime))
                 bot.say("@%s: Set the stream time for %s to %s" % (trigger.nick, pTime.strftime("%b %d"), pTime.strftime("%I:%M %p")))
                 return
 
