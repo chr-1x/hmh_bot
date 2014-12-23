@@ -183,7 +183,6 @@ def getNextStream(nowTime=None):
     ###REFACTOR(chronister): This is pretty inefficient...
     #todayStream = next((t for t in streams if t.date() == nowTime.date()), None) 
     def countsAsNearFuture(futureTime, nowTime):
-        assert(type(futureTime) is StreamEpisode)
 
         delta = ((futureTime.endDT()) - nowTime)
         
@@ -241,8 +240,6 @@ def timeToStream(streamTime, nowTime):
     """
     ###TODO(chronister): Would it be a better idea to make this function return a more elementary
     ###     type of value (int?) and then build the string elsewhere?
-    
-    assert(type(streamTime) is StreamEpisode)
 
     if (type(nowTime) is datetime and not (nowTime.tzinfo == timezone("PST8PDT"))):
         nowTime = pytz.utc.localize(nowTime)
