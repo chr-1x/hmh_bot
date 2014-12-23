@@ -3,7 +3,7 @@ import random
 import os, sys
 sys.path.append(os.path.dirname(__file__))
 
-from handmade import command, info
+from handmade import command, info, whitelisted, adminonly, whitelisted_streamtime, adminonly_streamtime
 
 
 ### NOTE:
@@ -13,6 +13,7 @@ from handmade import command, info
 def makeAdmin(bot, trigger):
     bot.say("I'm sorry, %s, I'm afraid I can't do that." % trigger.nick)
 
+@whitelisted_streamtime
 @command('beep', 'boop', hide=True)
 def beepBoop(bot, trigger):
     """Easter egg command that prints out some programming/robot joke type responses
@@ -28,6 +29,7 @@ def beepBoop(bot, trigger):
     ]
     bot.say(random.choice(responses))
 
+@adminonly
 @command('flame', hide=True)
 def flameWar(bot, trigger):
     """Easter egg command that randomly chooses whether to insult a language or endorse an
@@ -38,6 +40,7 @@ def flameWar(bot, trigger):
     else:
         bestEditor(bot, trigger)
 
+@adminonly
 @command('throwdown', 'badlanguage', hide=True)
 def badLanguage(bot, trigger):
     """Easter egg command that insults a random language from this list. Feel free to add lots
@@ -47,6 +50,7 @@ def badLanguage(bot, trigger):
     "Haskell", "Clojure", "BASIC", "Visual Basic", "HTML", "CSS", "Javascript", "Actionscript", "D" ]
     info(bot, None, "%s is a bad language :)" % random.choice(langs))
 
+@adminonly
 @command('holywar', 'besteditor', hide=True)
 def bestEditor(bot, trigger):
     """Easter egg command that endorses either emacs or vim. Feel free to add more editors.
@@ -54,6 +58,7 @@ def bestEditor(bot, trigger):
     editors = ["emacs", "vim"]
     info(bot, None, "%s is the best editor :)" % random.choice(editors))
 
+@whitelisted_streamtime
 @command('hug', hide=True)
 def hug(bot, trigger):
     """Easter egg info command that attempts to provide human warmth and empathy in times of 
@@ -68,12 +73,14 @@ def whyInfo(bot, trigger):
     """
     bot.say("Because he can.")
 
+@whitelisted_streamtime
 @command('random', hide=True)
 def randomNumber(bot, trigger):
     """Easter egg info command that returns a randomly-selected number.
     """
     info(bot, trigger, "Your random number is %s" % (random.randint(100) if random.random() < 0.0001 else 4))
 
+@adminonly_streamtime
 @command('roll', hide=True)
 def rollNumber(bot, trigger):
     if (trigger and trigger.group(2)):
@@ -129,7 +136,7 @@ def rollNumber(bot, trigger):
         if (len(args) > 1): output = output[:-3]
         bot.say("@%s: %s" % (trigger.nick, output))
 
-
+@whitelisted_streamtime
 @command('nn', hide=True)
 def nightNight(bot, trigger):
     info(bot, trigger, "Night night <3")

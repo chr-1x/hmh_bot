@@ -24,6 +24,7 @@ def google(query):
     url = google_search(query + sites_query)
     return url
 
+@whitelisted_streamtime
 @command('msdn')
 def msdnSearch(bot, trigger):
     """Command that searchs msdn for the string provided in the command arguments. Performs this
@@ -76,7 +77,10 @@ def caseyInfo(bot, trigger):
     """Info command that prints out info about Casey. Could be refactored into multiple commands
         for better clarity.
     """
-    info(bot, trigger, "Casey Muratori is a software engineer who lives in Seattle. He has done work for various companies such as RAD game tools and on games such as The Witness, and has also done fiction writing and podcasting. He started Handmade Hero to give the general public a better idea of what coding a game from scratch in C is like based on his experiences in the industry.")
+    info(bot, trigger, "Casey Muratori is a software engineer who lives in Seattle. He has done work for various \
+    companies such as RAD game tools and on games such as The Witness, and has also done fiction writing and \
+    podcasting. He started Handmade Hero to give the general public a better idea of what coding a game from scratch \
+    in C is like based on his experiences in the industry.")
 
 @command('hello', 'hi')
 def helloMessage(bot, trigger):
@@ -90,7 +94,8 @@ def infoMessage(bot, trigger):
     """Command that shows information about the chatbot. Should be updated with contributor info
         and github page once that happens.
     """
-    bot.say("I am a Python IRC bot based on Willie (http://willie.dftba.net/). I am run by ChronalDragon, who can be contacted via https://tinyurl.com/ChronalDragon")
+    bot.say("I am a Python IRC bot based on Willie (http://willie.dftba.net/). I am run by ChronalDragon, who can be \
+        contacted via https://tinyurl.com/ChronalDragon")
 
 @command('buy', 'purchase', 'support')
 def buyInfo(bot, trigger):
@@ -98,7 +103,7 @@ def buyInfo(bot, trigger):
     """
     info(bot, trigger, "Handmade Hero, the compiled game with art assets and full source code, can be purchased at http://handmadehero.org/#buy_now You can now also support Casey monthly at http://www.patreon.com/cmuratori")
 
-@command('q&a, qa')
+@command('q&a', 'qa')
 def qaInfo(bot, trigger):
     bot.say("Q&A session. Please prefix questions w/ @cmuratori. The shorter the question, and if related to the stream, the higher the chances of getting it answered.")
 
@@ -158,6 +163,7 @@ def thanksMessage(bot, trigger):
     """
     bot.say("Thanks for streaming, Casey! <3")
 
+@whitelisted_streamtime
 @command('thanks', hide=True)
 def thanksMessage(bot, trigger):
     """Command to thank a user.

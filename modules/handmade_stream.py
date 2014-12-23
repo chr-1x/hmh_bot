@@ -80,7 +80,7 @@ def setup(bot):
 
     createScheduleTable()
     streams = getStreams(db)
-    stderr([str(s) for s in streams])
+    #stderr([str(s) for s in streams])
 
 def shutdown(bot):
     stderr("Shutdown ran!")
@@ -217,6 +217,15 @@ def getNextStream(nowTime=None):
 
     return streamTime
 
+@adminonly
+@command("isStreaming")
+def isStreamingCommand(bot, trigger):
+    streaming = isCurrentlyStreaming()
+    if (streaming):
+        bot.say("Stream is currently going!")
+    else:
+        bot.say("Stream is not currently going.")
+
 def isCurrentlyStreaming(nowTime=None):
     """Utility function that returns a boolean indicating whether or not the given time falls within
         a livestream.
@@ -229,7 +238,7 @@ def isCurrentlyStreaming(nowTime=None):
 
     untilStream = streamTime.startDT() - nowTime;
     
-    return (sinceStream < streamTime.getTotalStreamLength() or untilStream < timedelta(minutes=45))
+    return (sinceStream > timedelta(0) and nowTime < streamTime.endDT()) or untilStream < timedelta(minutes=45)
 
 def timeToStream(streamTime, nowTime):
     """Utility function that returns a string specifying one of three things:
@@ -272,21 +281,19 @@ def timer(bot, trigger):
     nowTime = now()
     streamTime = getNextStream(nowTime) # Make "now" the default argument?
 
-    #TEST CODE
-    #stream.scheduleStream(newTime) # sets the time of any existing stream on that day to the new time, or creates one if there is no entry
-    #stream.setStreamLength(date, lengthInMinutes) # set the length of the stream (not including Q&A) on that date to the given length
-
     info(bot, trigger, timeToStream(streamTime, nowTime))
 
 
+@whitelisted_streamtime
 @command('today', 'nextStream')
 def nextSchedule(bot, trigger):
     """Info command that prints out the expected time of the next stream
     """
     streamTime = getNextStream(now())
-    info(bot, trigger, "The stream should next be live on %s" % streamTime.strftime("%a at %I:%M %p"))
+    info(bot, trigger, "The stream should next be live on %s PST" % streamTime.strftime("%a at %I:%M %p"))
 
 
+@whitelisted_streamtime
 @command('thisweek')
 def currentSchedule(bot, trigger):
     """Info command that prints out this week's schedule
@@ -306,9 +313,20 @@ def currentSchedule(bot, trigger):
         nowDate = nowDate + timedelta(days=1)
     
     info(bot, trigger, "Schedule for week of %s: %s (times in PST)" 
-            % (times[0].strftime("%m/%D"), " :: ".join([t.strftime("%I %p on %a").lstrip("0") for t in times])))
+            % (times[0].strftime("%m/%d"), " :: ".join([t.strftime("%I %p on %a").lstrip("0") for t in times])))
 
-@command('schedule', 'setschedule', 'reschedule')
+@whitelisted_streamtime
+@command('schedule')
+def seeSchedule(bot, trigger):
+    args = trigger.group(2)
+    if (args):
+        if (trigger.admin):
+            reschedule(bot, trigger)
+    else:
+        currentSchedule(bot, trigger)
+
+@adminonly
+@command('setschedule', 'reschedule')
 def reschedule(bot, trigger):
     """Allows admins to set stream times on the fly
     """

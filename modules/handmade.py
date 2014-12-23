@@ -4,6 +4,7 @@ from willie.tools import stderr
 import random
 from datetime import datetime
 from pytz import timezone
+import functools
 
 import os, sys
 sys.path.append(os.path.dirname(__file__))
@@ -11,6 +12,17 @@ sys.path.append(os.path.dirname(__file__))
 
 if not 'commands' in globals():
     commands = []
+
+def getWhiteList(bot):
+    result = []
+    if hasattr(bot, "config") and hasattr(bot.config, "core") and hasattr(bot.config.core, "whitelist"):
+        result = bot.config.core.whitelist.split(",")
+    result.extend(bot.config.core.admins)
+    result.append(bot.config.core.owner)
+    return result
+
+def inWhiteList(bot, nick):
+    return next((n for n in getWhiteList(bot) if n.lower() == nick.lower()), False)
 
 class Cmd:
     """ Wrapper class that stores the list of commands, main command name (assumed to be first in 
@@ -30,35 +42,72 @@ class Cmd:
 
 def command(*args, **kwargs):
     """Decorator that just passes it on to the built-in willie command decorator, but also adds it 
-        to the module's command list (for !list function, etc)
+        to the module's command list (for !list function, etc).
+
+        Use the "hide" keyword argument to prevent the command from being shown on when the list
+        command runs (but still actually be on the list)
     """
     global commands
 
-    #stderr("Registered command %s, total %d commands" % (str(args), len(commands)))
     def passthrough(func):
         commands.append(Cmd(args,func,kwargs.get("hide")))
         return willie.module.commands(*args)(func)
 
     return passthrough
 
-###TODO(chronister): Whitelisted commands that only work if the caller is admin.
-###    Ideally, this should just be an alternate decorator you can call.
-#def whitelistedcommand(*args, **kwargs):
 
-    #result = command(args, kwargs)
-
-
-def whitelistedfunc(func):
-    """When passed a function, returns a new function that will conditionally call the original 
-        depending on whether or not the user is on the whitelist (Note: only admins are whitelisted 
-        right now, do we want a separate admin list and white list?)
+def adminonly(func):
+    """Decorator that only allows the function to run if the caller is an admin or owner.
     """
-    def wrapperFunc(trigger, bot):
+    @functools.wraps(func)
+    def wrapperFunc(bot, trigger):
+        
         if (trigger.admin or trigger.owner):
-            func(trigger, bot)
+            func(bot, trigger)
         else:
             pass #Don't say anything back to the user, to avoid spam.
-    return wrapperFunc        
+    return wrapperFunc
+
+def whitelisted(func):
+    """Decorator that only allows the function to run if the caller is on the whitelist.
+    """
+    @functools.wraps(func)
+    def wrapperFunc(bot, trigger):
+        
+        if (trigger.admin or trigger.owner or inWhiteList(bot, trigger.nick)):
+            func(bot, trigger)
+        else:
+            pass #Don't say anything back to the user, to avoid spam.
+    return wrapperFunc
+
+def adminonly_streamtime(func):
+    """Decorator that only allows the function to run if the caller is an admin or owner if the 
+       stream is currently on.
+    """
+    @functools.wraps(func)
+    def wrapperFunc(bot, trigger):
+        import handmade_stream as stream
+        streaming = stream.isCurrentlyStreaming()
+        if (not streaming or trigger.admin):
+            func(bot, trigger)
+        else:
+            pass #Don't say anything back to the user, to avoid spam.
+    return wrapperFunc
+
+def whitelisted_streamtime(func):
+    """Decorator that only allows the function to run if the caller is an admin or owner if the 
+       stream is currently on.
+    """
+    @functools.wraps(func)
+    def wrapperFunc(bot, trigger):
+        import handmade_stream as stream
+        streaming = stream.isCurrentlyStreaming()
+        if (not streaming or (trigger.admin or inWhiteList(bot, trigger.nick))):
+            func(bot, trigger)
+        else:
+            pass #Don't say anything back to the user, to avoid spam.
+    return wrapperFunc
+
 
 
 def info(bot, trigger, text):
@@ -66,32 +115,27 @@ def info(bot, trigger, text):
         specified in the first argument. Commands which use this method should put "Info Command"
         in their docstring (and maybe in something user-facing...!infocommands?)
     """
-    import handmade_stream as stream
     ###TODO(chronister): Can this be done as a decorator? (would have to give a custom bot 
     ###     or something?)
-    streaming = stream.isCurrentlyStreaming()
     
-    if ((streaming and trigger and trigger.admin) or not streaming):
-        if (trigger):
-            if (trigger.group(2)):
+    if (trigger):
+        if (trigger.group(2)):
 
-                args = trigger.group(2).split(" ")
-                if (args[0][0] == "@"): 
-                    args[0] = args[0][1:]
+            args = trigger.group(2).split(" ")
+            if (args[0][0] == "@"): 
+                args[0] = args[0][1:]
 
-                if (args[0].lower() != "cmuratori"):
-                    bot.say("@%s: %s" % (args[0], text))
-                else:
-                    bot.say("@%s: Please do not direct info at Casey." % trigger.nick)
+            if (args[0].lower() != "cmuratori"):
+                bot.say("@%s: %s" % (args[0], text))
             else:
-                bot.say("@%s: %s" % (trigger.nick, text))
+                bot.say("@%s: Please do not direct info at Casey." % trigger.nick)
         else:
-            bot.say(text)
+            bot.say("@%s: %s" % (trigger.nick, text))
     else:
-        #temporary measure: whitelist to admins
-            pass
+        bot.say(text)
 
-@command('amIadmin', 'isAdmin', 'isWhitelisted', 'whitelisted', hide=True)
+@adminonly_streamtime
+@command('amIadmin', 'isAdmin', hide=True)
 def isAdmin(bot, trigger):
     """Simple command that simply tells the user whether or not they are an admin. Mostly 
         implemented for debugging (double-checking case sensitivity and things)
@@ -106,11 +150,32 @@ def isAdmin(bot, trigger):
                     bot.say("%s is an admin!" % arg)
                 else:
                     bot.say("%s is not an admin." % arg)
-        elif (trigger.admin or trigger.owner):
+        elif (trigger.admin):
             bot.say("%s, you are an admin!" % trigger.nick)
         else:
             bot.say("%s, you are not an admin." % trigger.nick)
 
+@whitelisted_streamtime
+@command('amiwhitelisted', 'isWhitelisted', 'whitelisted', hide=True)
+def isWhitelisted(bot, trigger):
+    """Simple command that simply tells the user whether or not they are whitelisted. Mostly 
+        implemented for debugging (double-checking case sensitivity and things)
+    """
+    if (trigger):
+        args = trigger.group(2)
+        if (args):
+            args = args.split(" ") 
+            for arg in args:
+                if (inWhiteList(bot, arg)):
+                    bot.say("%s is whitelisted!" % arg)
+                else:
+                    bot.say("%s is not whitelisted." % arg)
+        elif (inWhiteList(bot, trigger.nick)):
+            bot.say("%s, you are whitelisted!" % trigger.nick)
+        else:
+            bot.say("%s, you are not whitelisted." % trigger.nick)    
+
+@whitelisted_streamtime
 @command('alias', 'alt')
 def aliasList(bot, trigger):
     """Command that provides a list of registered aliases for the given command. Must be registered
@@ -132,10 +197,12 @@ def aliasList(bot, trigger):
     else:
         bot.say("Please specify a command to list the aliases of.")
 
+@whitelisted_streamtime
 @command('help')
 def helpInfo(bot, trigger):
     info(bot, trigger, "To see a list of all commands, use !list. To see the aliases of a command, use !alias. To check when the next stream will air, use !timer or !when.")
 
+@whitelisted_streamtime
 @command('list', 'commands', 'commandlist', 'cmds', hide=True)
 def commandList(bot, trigger): 
     """Command that lists all of the (non-hidden) registered commands. 
