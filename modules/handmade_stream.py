@@ -45,9 +45,11 @@ class StreamEpisode:
     def date(self):
         return self.startDT().date() if self.startTime > 0 else None
 
+    @staticmethod
     def FromDateTime(newTime):
         return StreamEpisode(streamDate=newTime.strftime("%Y%m%d"), startTime=getTimestamp(newTime))
 
+    @staticmethod
     def FromTableColumns(columns):
         return StreamEpisode(streamDate=columns[0], startTime=columns[1], streamLength=columns[2], qaLength=columns[3])
 
