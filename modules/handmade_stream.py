@@ -218,7 +218,7 @@ def getNextStream(nowTime=None):
     return streamTime
 
 @adminonly
-@command("isStreaming")
+@command("isStreaming", hide=True)
 def isStreamingCommand(bot, trigger):
     streaming = isCurrentlyStreaming()
     if (streaming):
@@ -326,7 +326,7 @@ def seeSchedule(bot, trigger):
         currentSchedule(bot, trigger)
 
 @adminonly
-@command('setschedule', 'reschedule')
+@command('setschedule', 'reschedule', hide=True)
 def reschedule(bot, trigger):
     """Allows admins to set stream times on the fly
     """
@@ -334,6 +334,7 @@ def reschedule(bot, trigger):
     args = trigger.group(2)
     if (args):
         pTime,flag = dateParser.parseDT(args)
+        stderr(pTime)
         if (type(pTime) is datetime or type(pTime) is time):
             pTime = pTime.replace(tzinfo=timezone("PST8PDT"))
 
