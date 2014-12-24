@@ -172,3 +172,11 @@ def thanksMessage(bot, trigger):
         info(bot, trigger, "Your thanking has been noted.")
     else:
         info(bot, trigger, "You're welcome <3")
+
+@command('art')
+def artCreator(bot, trigger):
+    """Command to state who the art is done by
+        TODO: maybe look to casey to get a link the artists profile for viewing
+    """
+    bot.say("The art is done by Yangtian Li") 
+    
