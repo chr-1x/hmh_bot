@@ -174,10 +174,10 @@ def artCreator(bot, trigger):
     """Command to state who the art is done by
         TODO: maybe look to casey to get a link the artists profile for viewing
     """
-    bot.say("The art is done by Yangtian Li")
+    info(bot, trigger, "The art is done by Yangtian Li")
 
 @command('compiler', 'cl', 'msvc', 'clang')
 def usedCompilier(bot, trigger):
     """Command to answer the many what compiler is he using
     """
-    bot.say("Casey compiles from a batch file using MSVC on windows, but uses Clang to compile on GNU/Linux, BSD, and OS X")
+    info(bot, trigger, "Casey compiles from a batch file using MSVC on windows, but uses Clang to compile on GNU/Linux, BSD, and OS X")
