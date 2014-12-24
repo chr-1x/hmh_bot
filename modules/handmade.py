@@ -134,17 +134,6 @@ def info(bot, trigger, text):
     else:
         bot.say(text)
 
-@whitelisted_streamtime
-@command('list', 'commands', 'commandlist', 'cmds', hide=True)
-def commandList(bot, trigger): 
-    """Command that lists all of the (non-hidden) registered commands. 
-        Note that you must use the custom-defined @command decorator for commands to appear here, 
-        not the built-in Willie module one.
-    """
-    global commands
-    visibleCommands = [c.main for c in commands if not(c.hide==True)]
-    bot.say("Here are all of the HH stream commands: !%s" % ", !".join(visibleCommands))
-
 @adminonly_streamtime
 @command('amIadmin', 'isAdmin', hide=True)
 def isAdmin(bot, trigger):
@@ -209,6 +198,29 @@ def aliasList(bot, trigger):
         bot.say("Please specify a command to list the aliases of.")
 
 @whitelisted_streamtime
-@command('help')
+@command('help', hide=True)
 def helpInfo(bot, trigger):
     info(bot, trigger, "To see a list of all commands, use !list. To see the aliases of a command, use !alias. To check when the next stream will air, use !timer or !when.")
+
+
+@whitelisted_streamtime
+@command('list', 'commands', 'commandlist', 'cmds', hide=True)
+def commandList(bot, trigger): 
+    """Command that lists all of the (non-hidden) registered commands. 
+        Note that you must use the custom-defined @command decorator for commands to appear here, 
+        not the built-in Willie module one.
+    """
+    global commands
+    visibleCommands = [c.main for c in commands if not(c.hide==True)]
+    bot.say("Here are all of the HH stream commands: !%s" % ", !".join(visibleCommands))
+
+@whitelisted_streamtime
+@command('listall', 'listeverything', 'allcommands', hide=True)
+def commandList(bot, trigger): 
+    """Command that lists ALL of the registered commands. 
+        Note that you must use the custom-defined @command decorator for commands to appear here, 
+        not the built-in Willie module one.
+    """
+    global commands
+    allCommands = [c.main for c in commands]
+    bot.say("Here are ALL of the commands I know: !%s" % ", !".join(allCommands))

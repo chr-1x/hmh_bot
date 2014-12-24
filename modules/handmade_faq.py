@@ -77,25 +77,21 @@ def caseyInfo(bot, trigger):
     """Info command that prints out info about Casey. Could be refactored into multiple commands
         for better clarity.
     """
-    info(bot, trigger, "Casey Muratori is a software engineer who lives in Seattle. He has done work for various \
-    companies such as RAD game tools and on games such as The Witness, and has also done fiction writing and \
-    podcasting. He started Handmade Hero to give the general public a better idea of what coding a game from scratch \
-    in C is like based on his experiences in the industry.")
+    info(bot, trigger, "Casey Muratori is a software engineer who lives in Seattle. He has done work for various companies such as RAD game tools and on games such as The Witness, and has also done fiction writing and podcasting. He started Handmade Hero to give the general public a better idea of what coding a game from scratch in C is like based on his experiences in the industry.")
 
-@command('hello', 'hi')
+@command('hello', 'hi', hide=True)
 def helloMessage(bot, trigger):
     """Command that shows hello,world style information.
         Possible addition: name-based trigger? e.g. "Chronalrobot: hi" or "hi Chronalrobot"
     """
     bot.say("Hello, I am an IRC bot! Try some commands: !help, !list, !when, !what")
 
-@command('botinfo')
+@command('botinfo', hide=True)
 def infoMessage(bot, trigger):
     """Command that shows information about the chatbot. Should be updated with contributor info
         and github page once that happens.
     """
-    bot.say("I am a Python IRC bot based on Willie (http://willie.dftba.net/). I am run by ChronalDragon, who can be \
-        contacted via https://tinyurl.com/ChronalDragon")
+    bot.say("I am a Python IRC bot based on Willie (http://willie.dftba.net/). I am run by ChronalDragon, who can be contacted via https://tinyurl.com/ChronalDragon")
 
 @command('buy', 'purchase', 'support')
 def buyInfo(bot, trigger):
