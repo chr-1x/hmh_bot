@@ -28,11 +28,12 @@ class Cmd:
     """ Wrapper class that stores the list of commands, main command name (assumed to be first in 
         list), and function to call for the command.
     """
-    def __init__(self, cmds, func, hide=False):
+    def __init__(self, cmds, func, hide=False, hideAlways=False):
         self.main = cmds[0]
         self.cmds = cmds
         self.func = func
         self.hide = hide
+        self.hideAlways = hideAlways
 
     def randCmd(self):
         return random.choice(self.cmds)
@@ -50,7 +51,7 @@ def command(*args, **kwargs):
     global commands
 
     def passthrough(func):
-        commands.append(Cmd(args,func,kwargs.get("hide")))
+        commands.append(Cmd(args,func,kwargs.get("hide"), kwargs.get("hideAlways")))
         return willie.module.commands(*args)(func)
 
     return passthrough
@@ -135,7 +136,7 @@ def info(bot, trigger, text):
         bot.say(text)
 
 @adminonly_streamtime
-@command('amIadmin', 'isAdmin', hide=True)
+@command('isAdmin', 'amIadmin', hide=True)
 def isAdmin(bot, trigger):
     """Simple command that simply tells the user whether or not they are an admin. Mostly 
         implemented for debugging (double-checking case sensitivity and things)
@@ -156,7 +157,7 @@ def isAdmin(bot, trigger):
             bot.say("%s, you are not an admin." % trigger.nick)
 
 @whitelisted_streamtime
-@command('amiwhitelisted', 'isWhitelisted', 'whitelisted', hide=True)
+@command('whitelisted', 'amiwhitelisted', 'isWhitelisted', hide=True)
 def isWhitelisted(bot, trigger):
     """Simple command that simply tells the user whether or not they are whitelisted. Mostly 
         implemented for debugging (double-checking case sensitivity and things)
@@ -211,16 +212,16 @@ def commandList(bot, trigger):
         not the built-in Willie module one.
     """
     global commands
-    visibleCommands = [c.main for c in commands if not(c.hide==True)]
+    visibleCommands = [c.main for c in commands if not(c.hide==True or c.hideAlways==True)]
     bot.say("Here are all of the HH stream commands: !%s" % ", !".join(visibleCommands))
 
-@whitelisted_streamtime
-@command('listall', 'listeverything', 'allcommands', hide=True)
+@whitelisted
+@command('listmore', 'listhidden', hide=True)
 def commandList(bot, trigger): 
     """Command that lists ALL of the registered commands. 
         Note that you must use the custom-defined @command decorator for commands to appear here, 
         not the built-in Willie module one.
     """
     global commands
-    allCommands = [c.main for c in commands]
-    bot.say("Here are ALL of the commands I know: !%s" % ", !".join(allCommands))
+    extraCommands = [c.main for c in commands if (c.hide==True and c.hideAlways!=True)]
+    bot.say("Here are ALL of the commands I know: !%s" % ", !".join(extraCommands))

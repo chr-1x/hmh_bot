@@ -30,7 +30,7 @@ def beepBoop(bot, trigger):
     bot.say(random.choice(responses))
 
 @adminonly
-@command('flame', hide=True)
+@command('flame', hide=True, hideAlways=True)
 def flameWar(bot, trigger):
     """Easter egg command that randomly chooses whether to insult a language or endorse an
        editor.
@@ -41,7 +41,7 @@ def flameWar(bot, trigger):
         bestEditor(bot, trigger)
 
 @adminonly
-@command('throwdown', 'badlanguage', hide=True)
+@command('throwdown', 'badlanguage', hide=True, hideAlways=True)
 def badLanguage(bot, trigger):
     """Easter egg command that insults a random language from this list. Feel free to add lots
        more languages >:) (Possibly including C???)
@@ -51,7 +51,7 @@ def badLanguage(bot, trigger):
     info(bot, None, "%s is a bad language :)" % random.choice(langs))
 
 @adminonly
-@command('holywar', 'besteditor', hide=True)
+@command('holywar', 'besteditor', hide=True, hideAlways=True)
 def bestEditor(bot, trigger):
     """Easter egg command that endorses either emacs or vim. Feel free to add more editors.
     """
