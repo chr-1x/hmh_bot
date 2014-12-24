@@ -84,7 +84,7 @@ def caseyInfo(bot, trigger):
 
 @command('hello', 'hi')
 def helloMessage(bot, trigger):
-    """Command that shows hello,world style information. 
+    """Command that shows hello,world style information.
         Possible addition: name-based trigger? e.g. "Chronalrobot: hi" or "hi Chronalrobot"
     """
     bot.say("Hello, I am an IRC bot! Try some commands: !help, !list, !when, !what")
@@ -118,7 +118,7 @@ def gameInfo(bot, trigger):
 @command('friday', hide=True)
 def fridays(bot, trigger):
     """Until we have a set schedule and while Casey keeps up doing early Fridays"""
-    info(bot, trigger, "Handmade Hero typically happens on Fridays at 11 AM PST. This is not necessarily the definitive schedule, for the time being. " 
+    info(bot, trigger, "Handmade Hero typically happens on Fridays at 11 AM PST. This is not necessarily the definitive schedule, for the time being. "
         "The replays are on Youtube and Twitch if you missed them.")
 
 @command('stream', 'about', 'info')
@@ -136,7 +136,7 @@ def langInfo(bot, trigger):
 
 @command('ide', 'emacs', 'editor')
 def ideInfo(bot, trigger):
-    """Info command that provides information about the editor (emacs) used by Casey. 
+    """Info command that provides information about the editor (emacs) used by Casey.
     """
     ###TODO(chronister): Get emacs version info, it's a common question
     info(bot, trigger, "Casey uses emacs to edit his code, because that is what he is used to. It is getting pretty old, so you should use whatever you feel most comfortable in.")
@@ -172,3 +172,16 @@ def thanksMessage(bot, trigger):
         info(bot, trigger, "Your thanking has been noted.")
     else:
         info(bot, trigger, "You're welcome <3")
+
+@command('art')
+def artCreator(bot, trigger):
+    """Command to state who the art is done by
+        TODO: maybe look to casey to get a link the artists profile for viewing
+    """
+    bot.say("The art is done by Yangtian Li")
+
+@command('compiler', 'cl', 'msvc', 'clang')
+def usedCompilier(bot, trigger):
+    """Command to answer the many what compiler is he using
+    """
+    bot.say("Casey compiles from a batch file using MSVC on windows, but uses Clang to compile on GNU/Linux, BSD, and OS X")

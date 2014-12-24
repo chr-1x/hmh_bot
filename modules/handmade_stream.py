@@ -347,7 +347,7 @@ def reschedule(bot, trigger):
             stderr(now().isoformat())
             tense = "should air"
             if (streamTime.endDT() < now()): tense = "should have aired"
-            bot.say("@%s: The stream %s %s" % (trigger.nick, tense, colloquialDateAndTime(streamTime)))
+            bot.say("@%s: The stream %s %s PST" % (trigger.nick, tense, colloquialDateAndTime(streamTime)))
             return
 
         if (flag == 2):
@@ -357,7 +357,7 @@ def reschedule(bot, trigger):
                     pTime = pTime.timetz()
 
                 scheduleStream(datetime.combine(date.today(), pTime))
-                bot.say("@%s: Set the stream time for today to %s" % (trigger.nick, pTime.strftime("%I:%M %p").lstrip("0")))
+                bot.say("@%s: Set the stream time for today to %s PST" % (trigger.nick, pTime.strftime("%I:%M %p").lstrip("0")))
                 return
 
         if (flag == 3):
@@ -365,7 +365,7 @@ def reschedule(bot, trigger):
             if (trigger.admin):
                 
                 scheduleStream(StreamEpisode.FromDateTime(pTime))
-                bot.say("@%s: Set the stream time for %s to %s" % (trigger.nick, pTime.strftime("%b %d"), pTime.strftime("%I:%M %p")))
+                bot.say("@%s: Set the stream time for %s to %s PST" % (trigger.nick, pTime.strftime("%b %d"), pTime.strftime("%I:%M %p")))
                 return
 
         else:
