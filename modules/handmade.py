@@ -134,6 +134,17 @@ def info(bot, trigger, text):
     else:
         bot.say(text)
 
+@whitelisted_streamtime
+@command('list', 'commands', 'commandlist', 'cmds', hide=True)
+def commandList(bot, trigger): 
+    """Command that lists all of the (non-hidden) registered commands. 
+        Note that you must use the custom-defined @command decorator for commands to appear here, 
+        not the built-in Willie module one.
+    """
+    global commands
+    visibleCommands = [c.main for c in commands if not(c.hide==True)]
+    bot.say("Here are all of the HH stream commands: !%s" % ", !".join(visibleCommands))
+
 @adminonly_streamtime
 @command('amIadmin', 'isAdmin', hide=True)
 def isAdmin(bot, trigger):
@@ -176,7 +187,7 @@ def isWhitelisted(bot, trigger):
             bot.say("%s, you are not whitelisted." % trigger.nick)    
 
 @whitelisted_streamtime
-@command('alias', 'alt')
+@command('alias', 'alt', hide=True)
 def aliasList(bot, trigger):
     """Command that provides a list of registered aliases for the given command. Must be registered
         in the same decorator, commands that simply call the same function aren't grouped.
@@ -201,14 +212,3 @@ def aliasList(bot, trigger):
 @command('help')
 def helpInfo(bot, trigger):
     info(bot, trigger, "To see a list of all commands, use !list. To see the aliases of a command, use !alias. To check when the next stream will air, use !timer or !when.")
-
-@whitelisted_streamtime
-@command('list', 'commands', 'commandlist', 'cmds', hide=True)
-def commandList(bot, trigger): 
-    """Command that lists all of the (non-hidden) registered commands. 
-        Note that you must use the custom-defined @command decorator for commands to appear here, 
-        not the built-in Willie module one.
-    """
-    global commands
-    visibleCommands = [c.main for c in commands if not(c.hide==True)]
-    bot.say("Here are all of the HH stream commands: !%s" % ", !".join(visibleCommands))
