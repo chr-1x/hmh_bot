@@ -298,7 +298,7 @@ def nextSchedule(bot, trigger):
 def currentSchedule(bot, trigger):
     """Info command that prints out this week's schedule
     """
-    nowDate = now()
+    nowDate = now().date()
     if (nowDate.weekday() <= FRIDAY):
         while(nowDate.weekday() > MONDAY):
             nowDate = nowDate - timedelta(days=1)
@@ -342,6 +342,8 @@ def reschedule(bot, trigger):
             if (type(pTime) is datetime):
                 pTime = pTime.date()
             streamTime = getNextStream(datetime.combine(pTime, time(hour=0, tzinfo=timezone("PST8PDT"))))
+            stderr(streamTime.isoformat())
+            stderr(now().isoformat())
             tense = "should air"
             if (streamTime.endDT() < now()): tense = "should have aired"
             bot.say("@%s: The stream %s %s" % (trigger.nick, tense, colloquialDateAndTime(streamTime)))
