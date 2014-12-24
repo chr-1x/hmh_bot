@@ -25,7 +25,7 @@ def google(query):
     return url
 
 @whitelisted_streamtime
-@command('msdn')
+@command('msdn', hide=True)
 def msdnSearch(bot, trigger):
     """Command that searchs msdn for the string provided in the command arguments. Performs this
         with the Google API and site:msdn.microsoft.com
@@ -115,7 +115,7 @@ def gameInfo(bot, trigger):
         "We don't know what kind of game it will be yet, but we know it will be 2D, cross-platform, and feature art by Yangtian Li "
         "as well as specially licensed music. For more information, visit http://handmadehero.org/")
 
-@command('friday')
+@command('friday', hide=True)
 def fridays(bot, trigger):
     """Until we have a set schedule and while Casey keeps up doing early Fridays"""
     info(bot, trigger, "Handmade Hero typically happens on Fridays at 11 AM PST. This is not necessarily the definitive schedule, for the time being. " 
