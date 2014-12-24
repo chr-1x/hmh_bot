@@ -213,15 +213,16 @@ def commandList(bot, trigger):
     """
     global commands
     visibleCommands = [c.main for c in commands if not(c.hide==True or c.hideAlways==True)]
-    bot.say("Here are all of the HH stream commands: !%s" % ", !".join(visibleCommands))
+    stderr(len(visibleCommmands))
+    bot.say("Here are the common HH stream commands: !%s" % ", !".join(visibleCommands))
 
 @whitelisted
 @command('listmore', 'listhidden', hide=True)
-def commandList(bot, trigger): 
+def commandExtras(bot, trigger): 
     """Command that lists ALL of the registered commands. 
         Note that you must use the custom-defined @command decorator for commands to appear here, 
         not the built-in Willie module one.
     """
     global commands
     extraCommands = [c.main for c in commands if (c.hide==True and c.hideAlways!=True)]
-    bot.say("Here are ALL of the commands I know: !%s" % ", !".join(extraCommands))
+    bot.say("Here are more of the commands I know: !%s" % ", !".join(extraCommands))
