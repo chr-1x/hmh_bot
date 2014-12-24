@@ -3,18 +3,18 @@ ChronalRobot
 
 Python module for the Willie IRC bot used in the Handmade Hero twitch chat.
 
-All custom commands are defined in `handmade.py`. (For now) please refer to the docstrings and comments for more specific information on commands and functions.
+Custom commands are defined in `handmade.py`, `handmade_faq.py`, `handmade_stream.py`, and `handmade_bonus.py`. `handmade.py` should be reserved commands related to the bot functionality, `handmade_faq.py` for common stream questions, `handmade_stream.py` for stream scheduling and timing based functions, and `handmade_bonus.py` for easter eggs and miscellaneous commands.
 
-The config options used by the bot are available in `willie.cfg`. Please refer to the [Willie documentation](http://willie.dftba.net/) for where this file needs to be on locally deployed bots.
+The config options used by the bot are available in `default.cfg`. Please refer to the [Willie documentation](http://willie.dftba.net/) for what the common configuration options mean.
 
-Also included in the repository is a light (read: very incomplete) shim of the willie framework for running tests. (NOTE: since 2014/12/15 this is broken, need to do some restructuring to get it working again)
+`test.py` is currently deprecated, it might be useful at some point in the future to attempt to set up a series of tests to run to ensure the bot remains working.
 
 Please refer to the [forum thread](https://forums.handmadehero.org/index.php/forum?view=topic&catid=5&id=65) and Issues page for discussion about features to add and updates.
 
 Installation
 ----
-Copy the contents of this repo to your ~/.willie folder if you're on linux, or to wherever the willie config folder is created on windows. 
+Copy the contents of this repo to your ~/.willie folder (`/home/user/.willie1` on linux, `C:/Users/user/.willie` on windows)
 
 Then run `willie` to start the bot.
 
-Important: Please make sure that there is not already an instance of ChronalRobot running in chat. Twitch will not prevent multiple of them from running at a time, and all active instances will respond to queries. 
+Important: Please make sure that there is not already an instance of ChronalRobot running in chat. Twitch will not prevent multiple of them from running at a time, and all active instances will attempt to respond to queries. An easy way to test for this is to use the **!hello** command, as this should always be available.
