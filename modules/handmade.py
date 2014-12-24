@@ -51,7 +51,10 @@ def command(*args, **kwargs):
     global commands
 
     def passthrough(func):
-        commands.append(Cmd(args,func,kwargs.get("hide"), kwargs.get("hideAlways")))
+        existingCmds = [c.main for c in commands if c.main == args[0]]
+        if (len(existingCmds) == 0):
+            commands.append(Cmd(args,func,kwargs.get("hide"), kwargs.get("hideAlways")))
+            
         return willie.module.commands(*args)(func)
 
     return passthrough
@@ -205,18 +208,18 @@ def helpInfo(bot, trigger):
 
 
 @whitelisted_streamtime
-@command('list', 'commands', 'commandlist', 'cmds', hide=True)
+@command('list', 'commands', 'commandlist', 'cmds', hide=True, hideAlways=True)
 def commandList(bot, trigger): 
     """Command that lists all of the (non-hidden) registered commands. 
         Note that you must use the custom-defined @command decorator for commands to appear here, 
         not the built-in Willie module one.
     """
     global commands
-    visibleCommands = [c.main for c in commands if not(c.hide==True or c.hideAlways==True)]
+    visibleCommands = [c.main for c in commands if not(c.hide==True)]
     bot.say("Here are the common HH stream commands: !%s" % ", !".join(visibleCommands))
 
 @whitelisted
-@command('listmore', 'listhidden', hide=True)
+@command('listmore', 'listhidden', hideAlways=True)
 def commandExtras(bot, trigger): 
     """Command that lists ALL of the registered commands. 
         Note that you must use the custom-defined @command decorator for commands to appear here, 
