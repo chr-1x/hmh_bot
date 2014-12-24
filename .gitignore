@@ -5,3 +5,4 @@ logs/
 chronalRobot-irc.twitch.tv.tell.db
 *.sublime-project
 *.sublime-workspace
+*.swp
