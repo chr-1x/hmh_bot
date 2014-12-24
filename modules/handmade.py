@@ -213,7 +213,6 @@ def commandList(bot, trigger):
     """
     global commands
     visibleCommands = [c.main for c in commands if not(c.hide==True or c.hideAlways==True)]
-    stderr(len(visibleCommmands))
     bot.say("Here are the common HH stream commands: !%s" % ", !".join(visibleCommands))
 
 @whitelisted
