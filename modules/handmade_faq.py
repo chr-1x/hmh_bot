@@ -86,12 +86,20 @@ def helloMessage(bot, trigger):
     """
     bot.say("Hello, I am an IRC bot! Try some commands: !help, !list, !when, !what")
 
+@whitelisted_streamtime
 @command('botinfo', hide=True)
 def infoMessage(bot, trigger):
     """Command that shows information about the chatbot. Should be updated with contributor info
         and github page once that happens.
     """
     bot.say("I am a Python IRC bot based on Willie (http://willie.dftba.net/). I am run by ChronalDragon, who can be contacted via https://tinyurl.com/ChronalDragon")
+
+@whitelisted_streamtime
+@command('credits', hide=True)
+def creditsMessage(bot, trigger):
+    """Shows contributor info! If you make changes, add yourself here (or get someone else to)
+    """
+    bot.say("Thanks to alexwidener (iamdefinitelybatman), dspecht (drive137) and itsuart (isuart2) for their contributions to my code.")
 
 @command('buy', 'purchase', 'support')
 def buyInfo(bot, trigger):
