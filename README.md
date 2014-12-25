@@ -18,3 +18,13 @@ Copy the contents of this repo to your ~/.willie folder (`/home/user/.willie1` o
 Then run `willie` to start the bot.
 
 Important: Please make sure that there is not already an instance of ChronalRobot running in chat. Twitch will not prevent multiple of them from running at a time, and all active instances will attempt to respond to queries. An easy way to test for this is to use the **!hello** command, as this should always be available.
+
+Libraries
+---
+Robot requiers following libraries to be installed: pytz and parsedatetime
+
+To install them, issue following commands:
+
+sudo pip install pytz
+
+sudo pip install parsedatetime
