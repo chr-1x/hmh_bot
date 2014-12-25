@@ -33,6 +33,9 @@ class StreamEpisode:
         self.streamLength = streamLength
         self.qaLength = qaLength
 
+    def startTZ(self, tz):
+        return datetime.utcfromtimestamp(self.startTime).replace(tzinfo=timezone("UTC")).astimezone(timezone(tz))
+
     def startDT(self):
         return datetime.utcfromtimestamp(self.startTime).replace(tzinfo=timezone("UTC")).astimezone(timezone("PST8PDT"))
 
@@ -376,6 +379,55 @@ def reschedule(bot, trigger):
         currentSchedule(bot, trigger)
         return
 
+def getPYTZTimezoneNameFromFriendlyName (friendlyName):
+    if (friendlyName == "PST"):
+        return "PST8PDT"
+    else:
+        return friendlyName
 
+@command("tzschedule", "tzs")
+def timezoneAwareSchedule(bot, trigger):
+    """Info command that prints out this week's schedule, TimeZone aware
+    Usage: tzs time-zone-name
+    Usage: tzs nick-to-respon-to time-zone-name
+    """
+    nowDate = now().date()
+    if (nowDate.weekday() <= FRIDAY):
+        while(nowDate.weekday() > MONDAY):
+            nowDate = nowDate - timedelta(days=1)
+    else: # It's a weekend, go forward to the next week
+        while(nowDate.weekday() > MONDAY):
+            nowDate = nowDate + timedelta(days=1)
 
+    times = []
+    
+    while(nowDate.weekday() <= FRIDAY):
+        #check from 12AM for arbitrary reasons
+        times.append(getNextStream(datetime.combine(nowDate, time(hour=0, tzinfo=timezone("PST8PDT")))))
+        nowDate = nowDate + timedelta(days=1)
 
+    friendlyTzName = "PST" #default timezone name
+    respondTo = trigger.nick
+    words = trigger.bytes.split()
+    nWords = len(words)
+
+    if nWords == 2:
+        friendlyTzName = words[1]
+    elif nWords == 3:
+        respondTo = words[1].lower()
+        if respondTo[0] == "@":
+            respondTo = respondTo [1:]
+        friendlyTzName = words[2]
+        if respondTo in ["cmuratori", "handmade_hero"]:
+            bot.say("@%s: Please do not direct info at Casey or HandmadeHero." % trigger.nick)
+            return
+
+    tzName = getPYTZTimezoneNameFromFriendlyName(friendlyTzName)
+    try:
+        bot.say("@%s, schedule for week of %s: %s (times in %s)" 
+                % (respondTo,
+                   times[0].strftime("%m/%d"),
+                   ", ".join([t.startTZ(tzName).strftime("%I %p on %a").lstrip("0") for t in times]),
+                   friendlyTzName))
+    except pytz.exceptions.UnknownTimeZoneError:
+        bot.say("@%s, I don't know timezone with name '%s', sorry." % (respondTo, friendlyTzName))
