@@ -24,5 +24,7 @@ Libraries
 Robot requiers following libraries to be installed: pytz and parsedatetime
 
 To install them, issue following commands:
+
 sudo pip install pytz
+
 sudo pip install parsedatetime
