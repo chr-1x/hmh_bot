@@ -204,7 +204,7 @@ def getNextStream(nowTime=None, scheduleNew=True):
         streamDate = nowTime.date()
 
         #Check if there was one today
-        today = getNextStream(datetime.combine(streamDate, time(0, tzinfo="PST8PDT")), scheduleNew=False)
+        today = getNextStream(datetime.combine(streamDate, time(0, tzinfo=timezone("PST8PDT"))), scheduleNew=False)
         if (today == None):
             hour = 20 if nowTime.weekday() < FRIDAY else 11
             today = StreamEpisode.FromDateTime(datetime.combine(streamDate, time(hour=hour)))
