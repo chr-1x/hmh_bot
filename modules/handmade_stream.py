@@ -175,7 +175,7 @@ def scheduleStream(newTime):
 
     updateStreamInTable(newTime)
 
-def getNextStream(nowTime=None):
+def getNextStream(nowTime=None, scheduleNew=True):
     """Returns the datetime of the start of the next stream from the nowTime given if a stream is 
         not currently on, or the datetime of the start of the current stream if the nowTime is
         during one.
@@ -198,16 +198,20 @@ def getNextStream(nowTime=None):
     # gives first stream date in the future of the given time
     streamTime = next((t for t in streams if countsAsNearFuture(t, nowTime)), None) 
     isNew = False
-    if (streamTime == None):
+    if (scheduleNew and streamTime == None):
         isNew = True
         # Default schedule behavior: Finds the next weekday and schedules it at 8pm or 11am
         streamDate = nowTime.date()
-        hour = 20 if nowTime.weekday() < FRIDAY else 11
+
+        #Check if there was one today
+        today = getNextStream(datetime.combine(streamDate, time(0, tzinfo="PST8PDT")), scheduleNew=False)
+        if (today == None):
+            hour = 20 if nowTime.weekday() < FRIDAY else 11
+            today = StreamEpisode.FromDateTime(datetime.combine(streamDate, time(hour=hour)))
+
 
         if (streamDate.weekday() < SATURDAY 
-         and (nowTime.hour > hour+1 
-         or (nowTime.hour == hour+1 and nowTime.minute > 30))):
-
+         and (nowTime > today.endDT())):
             streamDate += timedelta(days=1) # If we've already had a stream today, the next one will be tomorrow
 
         while (streamDate.weekday() >= SATURDAY): 
