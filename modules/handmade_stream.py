@@ -91,6 +91,9 @@ def shutdown(bot):
 def getTimestamp(dt, epoch=datetime(1970,1,1,tzinfo=timezone("UTC"))):
     if (hasattr(dt, "timestamp")):
         return dt.timestamp()
+    if (dt.tzinfo == None):
+        #I assume, that it's in PDT. I'm not sure this is actually true, but too sleepy to do proper 'investigation' -- itsuart
+        dt = dt.replace(tzinfo=timezone("PST8PDT"))
     td = dt - epoch
     # return td.total_seconds()
     return (td.microseconds + (td.seconds + td.days * 24 * 3600) * 10**6) / 1e6 
