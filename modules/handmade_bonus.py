@@ -5,9 +5,8 @@ sys.path.append(os.path.dirname(__file__))
 
 from handmade import command, info, whitelisted, adminonly, whitelisted_streamtime, adminonly_streamtime
 
-
 ### NOTE:
-# These functions are easter eggy, probably not good to keep on all the time. 
+# These functions are easter eggy, probably not good to keep on all the time.
 
 @command('makemeadmin', hide=True)
 def makeAdmin(bot, trigger):
@@ -61,7 +60,7 @@ def bestEditor(bot, trigger):
 @whitelisted_streamtime
 @command('hug', hide=True)
 def hug(bot, trigger):
-    """Easter egg info command that attempts to provide human warmth and empathy in times of 
+    """Easter egg info command that attempts to provide human warmth and empathy in times of
         emotional trauma.
     """
     info(bot, trigger, "Were I not a transient being circling through an ether of intangible bits and bytes, I would hug you, with all the human emotional context it implies")
@@ -126,7 +125,7 @@ def rollNumber(bot, trigger):
             for i in range(diceAmt):
                 results.append(random.randint(1, diceFaces))
 
-        
+
             for r in results:
                 output += "[%d] " % r
             output = output[:-1]

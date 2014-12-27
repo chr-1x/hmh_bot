@@ -9,7 +9,6 @@ import functools
 import os, sys
 sys.path.append(os.path.dirname(__file__))
 
-
 if not 'commands' in globals():
     commands = []
 
@@ -25,7 +24,7 @@ def inWhiteList(bot, nick):
     return next((n for n in getWhiteList(bot) if n.lower() == nick.lower()), False)
 
 class Cmd:
-    """ Wrapper class that stores the list of commands, main command name (assumed to be first in 
+    """ Wrapper class that stores the list of commands, main command name (assumed to be first in
         list), and function to call for the command.
     """
     def __init__(self, cmds, func, hide=False, hideAlways=False):
@@ -42,7 +41,7 @@ class Cmd:
         return self.main
 
 def command(*args, **kwargs):
-    """Decorator that just passes it on to the built-in willie command decorator, but also adds it 
+    """Decorator that just passes it on to the built-in willie command decorator, but also adds it
         to the module's command list (for !list function, etc).
 
         Use the "hide" keyword argument to prevent the command from being shown on when the list
@@ -54,7 +53,7 @@ def command(*args, **kwargs):
         existingCmds = [c.main for c in commands if c.main == args[0]]
         if (len(existingCmds) == 0):
             commands.append(Cmd(args,func,kwargs.get("hide"), kwargs.get("hideAlways")))
-            
+
         return willie.module.commands(*args)(func)
 
     return passthrough
@@ -65,7 +64,7 @@ def adminonly(func):
     """
     @functools.wraps(func)
     def wrapperFunc(bot, trigger):
-        
+
         if (trigger.admin or trigger.owner):
             func(bot, trigger)
         else:
@@ -77,7 +76,7 @@ def whitelisted(func):
     """
     @functools.wraps(func)
     def wrapperFunc(bot, trigger):
-        
+
         if (trigger.admin or trigger.owner or inWhiteList(bot, trigger.nick)):
             func(bot, trigger)
         else:
@@ -85,7 +84,7 @@ def whitelisted(func):
     return wrapperFunc
 
 def adminonly_streamtime(func):
-    """Decorator that only allows the function to run if the caller is an admin or owner if the 
+    """Decorator that only allows the function to run if the caller is an admin or owner if the
        stream is currently on.
     """
     @functools.wraps(func)
@@ -99,7 +98,7 @@ def adminonly_streamtime(func):
     return wrapperFunc
 
 def whitelisted_streamtime(func):
-    """Decorator that only allows the function to run if the caller is an admin or owner if the 
+    """Decorator that only allows the function to run if the caller is an admin or owner if the
        stream is currently on.
     """
     @functools.wraps(func)
@@ -115,18 +114,18 @@ def whitelisted_streamtime(func):
 
 
 def info(bot, trigger, text):
-    """Handles directed informational text -- will either direct the text to @caller or to @nick 
+    """Handles directed informational text -- will either direct the text to @caller or to @nick
         specified in the first argument. Commands which use this method should put "Info Command"
         in their docstring (and maybe in something user-facing...!infocommands?)
     """
-    ###TODO(chronister): Can this be done as a decorator? (would have to give a custom bot 
+    ###TODO(chronister): Can this be done as a decorator? (would have to give a custom bot
     ###     or something?)
-    
+
     if (trigger):
         if (trigger.group(2)):
 
             args = trigger.group(2).split(" ")
-            if (args[0][0] == "@"): 
+            if (args[0][0] == "@"):
                 args[0] = args[0][1:]
 
             if (args[0].lower() != "cmuratori"):
@@ -141,13 +140,13 @@ def info(bot, trigger, text):
 @adminonly_streamtime
 @command('isAdmin', 'amIadmin', hide=True)
 def isAdmin(bot, trigger):
-    """Simple command that simply tells the user whether or not they are an admin. Mostly 
+    """Simple command that simply tells the user whether or not they are an admin. Mostly
         implemented for debugging (double-checking case sensitivity and things)
     """
     if (trigger):
         args = trigger.group(2)
         if (args):
-            args = args.split(" ") 
+            args = args.split(" ")
             admins = bot.config.core.admins
             for arg in args:
                 if (admins and arg in admins):
@@ -162,13 +161,13 @@ def isAdmin(bot, trigger):
 @whitelisted_streamtime
 @command('whitelisted', 'amiwhitelisted', 'isWhitelisted', hide=True)
 def isWhitelisted(bot, trigger):
-    """Simple command that simply tells the user whether or not they are whitelisted. Mostly 
+    """Simple command that simply tells the user whether or not they are whitelisted. Mostly
         implemented for debugging (double-checking case sensitivity and things)
     """
     if (trigger):
         args = trigger.group(2)
         if (args):
-            args = args.split(" ") 
+            args = args.split(" ")
             for arg in args:
                 if (inWhiteList(bot, arg)):
                     bot.say("%s is whitelisted!" % arg)
@@ -177,7 +176,7 @@ def isWhitelisted(bot, trigger):
         elif (inWhiteList(bot, trigger.nick)):
             bot.say("%s, you are whitelisted!" % trigger.nick)
         else:
-            bot.say("%s, you are not whitelisted." % trigger.nick)    
+            bot.say("%s, you are not whitelisted." % trigger.nick)
 
 @whitelisted_streamtime
 @command('alias', 'alt', hide=True)
@@ -193,7 +192,7 @@ def aliasList(bot, trigger):
             cmd = next((c for c in commands if arg in c.cmds), None)
             if (cmd):
                 bot.say("Aliases of !%s: !%s" % (arg, ", !".join(cmd.cmds)))
-                if (len(args) > 1): 
+                if (len(args) > 1):
                     time.sleep(0.300)
             else:
                 bot.say("No aliases found for %s!" % arg)
@@ -209,9 +208,9 @@ def helpInfo(bot, trigger):
 
 @whitelisted_streamtime
 @command('list', 'commands', 'commandlist', 'cmds', hide=True, hideAlways=True)
-def commandList(bot, trigger): 
-    """Command that lists all of the (non-hidden) registered commands. 
-        Note that you must use the custom-defined @command decorator for commands to appear here, 
+def commandList(bot, trigger):
+    """Command that lists all of the (non-hidden) registered commands.
+        Note that you must use the custom-defined @command decorator for commands to appear here,
         not the built-in Willie module one.
     """
     global commands
@@ -220,9 +219,9 @@ def commandList(bot, trigger):
 
 @whitelisted
 @command('listmore', 'listhidden', hideAlways=True)
-def commandExtras(bot, trigger): 
-    """Command that lists ALL of the registered commands. 
-        Note that you must use the custom-defined @command decorator for commands to appear here, 
+def commandExtras(bot, trigger):
+    """Command that lists ALL of the registered commands.
+        Note that you must use the custom-defined @command decorator for commands to appear here,
         not the built-in Willie module one.
     """
     global commands

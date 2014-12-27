@@ -60,13 +60,13 @@ def archiveInfo(bot, trigger):
     """
     info(bot, trigger, 'Forum Archive: https://forums.handmadehero.org/jace/   ::   YT Archive: https://www.youtube.com/user/handmadeheroarchive')
 
-@command('wrist', 'wrists', 'braces')
+@command('wrist', 'wrists', 'braces', 'hands')
 def wristInfo(bot, trigger):
     """Info command that prints out info about Casey's wrist braces
     """
     info(bot, trigger, "The wrist braces Casey wears help make typing more comfortable and prevent Repetitive Strain Injury. They probably aren't made anymore, but they're the Medi-Active ones without the thumb brace.")
 
-@command('milk', 'almondmilk')
+@command('milk', 'almondmilk', 'drink')
 def milkInfo(bot, trigger):
     """Info command that prints out info about almond milk.
     """
@@ -155,7 +155,7 @@ def keyboardInfo(bot, trigger):
     """
     info(bot, trigger, "The mechanical keyboard Casey uses is a Das Keyboard 4.")
 
-@command('length', 'years', 'total')
+@command('totalTime','length', 'years', 'total')
 def timeOfProject(bot, trigger):
     """How long is the project going on?"""
     info(bot, trigger, "It is estimated that the project will take 2 years to finish at the rate of one 1-hour stream per weeknight.")
@@ -178,14 +178,21 @@ def thanksMessage(bot, trigger):
         info(bot, trigger, "You're welcome <3")
 
 @command('art')
-def artCreator(bot, trigger):
+def artCreatorInfo(bot, trigger):
     """Command to state who the art is done by
         TODO: maybe look to casey to get a link the artists profile for viewing
     """
     info(bot, trigger, "The art is done by Yangtian Li")
 
 @command('compiler', 'cl', 'msvc', 'clang')
-def usedCompilier(bot, trigger):
+def usedCompilierInfo(bot, trigger):
     """Command to answer the many what compiler is he using
     """
     info(bot, trigger, "Casey compiles from a batch file using MSVC on windows, but uses Clang to compile on GNU/Linux, BSD, and OS X")
+
+@command('render')
+def renderInfo(bot, trigger):
+    """Command to give render information to the chat target
+    """
+    info(bot, trigger, "We are currently using software rendering in order to implement our own renderer. Ultimately the game will take advantage of hardware acceleration (i.e. using OpenGL, Direct3D, etc.) to max out performance.")
+
