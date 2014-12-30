@@ -196,3 +196,8 @@ def renderInfo(bot, trigger):
     """
     info(bot, trigger, "We are currently using software rendering in order to implement our own renderer. Ultimately the game will take advantage of hardware acceleration (i.e. using OpenGL, Direct3D, etc.) to max out performance.")
 
+@command('learning', 'learnProgramming')
+def gettingStartedLearning(bot, trigger):
+    """Command for basic learning instructions for all those where to start learning questions we get during the stream
+    """
+    info(bot, trigger, "A good way to start programming in this manner is to watch the Intro to C series on youtube.com/handmade_hero to get a general feel of things. Later, read 'The C Programming Language' by Brian W. Kernighan and Dennis M. Ritchie and work through all the exercises. After that, start small and continue making ever-bigger projects. Good luck!")
