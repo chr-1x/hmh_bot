@@ -18,6 +18,9 @@ FRIDAY = 4
 SATURDAY = 5
 SUNDAY = 6
 
+PST = timezone("PST8PDT")
+UTC = timezone("UTC")
+
 streams = []
 db = None
 dateParser = parsedatetime.Calendar()
@@ -34,10 +37,10 @@ class StreamEpisode:
         self.qaLength = qaLength
 
     def startTZ(self, tz):
-        return datetime.utcfromtimestamp(self.startTime).replace(tzinfo=timezone("UTC")).astimezone(timezone(tz))
+        return datetime.utcfromtimestamp(self.startTime).replace(tzinfo=UTC).astimezone(timezone(tz))
 
     def startDT(self):
-        return datetime.utcfromtimestamp(self.startTime).replace(tzinfo=timezone("UTC")).astimezone(timezone("PST8PDT"))
+        return datetime.utcfromtimestamp(self.startTime).replace(tzinfo=UTC).astimezone(PST)
 
     def qaDT(self):
         return self.startDT() + timedelta(minutes=self.streamLength)
@@ -88,19 +91,21 @@ def setup(bot):
 def shutdown(bot):
     stderr("Shutdown ran!")
 
-def getTimestamp(dt, epoch=datetime(1970,1,1,tzinfo=timezone("UTC"))):
+def getTimestamp(dt, epoch=datetime(1970,1,1,tzinfo=UTC)):
     if (hasattr(dt, "timestamp")):
         return dt.timestamp()
-    if (dt.tzinfo == None):
-        #I assume, that it's in PDT. I'm not sure this is actually true, but too sleepy to do proper 'investigation' -- itsuart
-        dt = dt.replace(tzinfo=timezone("PST8PDT"))
+
+    ##NOTE(chronister): It's not really this function's responsibility to deal with naive datetimes.
+    ##  Anything which passes to it should have already taken care of the timezone.
+    assert(dt.tzinfo != None)
+
     td = dt - epoch
     # return td.total_seconds()
     return (td.microseconds + (td.seconds + td.days * 24 * 3600) * 10**6) / 1e6 
 
 
 def now():
-    return datetime.now(timezone("PST8PDT"))
+    return datetime.now(PST)
 
 def createScheduleTable():
     global db
@@ -207,10 +212,10 @@ def getNextStream(nowTime=None, scheduleNew=True):
         streamDate = nowTime.date()
 
         #Check if there was one today
-        today = getNextStream(datetime.combine(streamDate, time(0, tzinfo=timezone("PST8PDT"))), scheduleNew=False)
+        today = getNextStream(datetime.combine(streamDate, time(0, tzinfo=PST)), scheduleNew=False)
         if (today == None):
             hour = 20 if nowTime.weekday() < FRIDAY else 11
-            today = StreamEpisode.FromDateTime(datetime.combine(streamDate, time(hour=hour)))
+            today = StreamEpisode.FromDateTime(datetime.combine(streamDate, time(hour=hour, tzinfo=PST)))
 
 
         if (streamDate.weekday() < SATURDAY 
@@ -222,7 +227,7 @@ def getNextStream(nowTime=None, scheduleNew=True):
 
         hour = 20 if streamDate.weekday() < FRIDAY else 11
 
-        streamTime = StreamEpisode.FromDateTime(datetime.combine(streamDate, time(hour, tzinfo=timezone("PST8PDT"))))
+        streamTime = StreamEpisode.FromDateTime(datetime.combine(streamDate, time(hour, tzinfo=PST)))
         scheduleStream(streamTime)
 
     return streamTime
@@ -260,9 +265,9 @@ def timeToStream(streamTime, nowTime):
     ###TODO(chronister): Would it be a better idea to make this function return a more elementary
     ###     type of value (int?) and then build the string elsewhere?
 
-    if (type(nowTime) is datetime and not (nowTime.tzinfo == timezone("PST8PDT"))):
+    if (type(nowTime) is datetime and not (nowTime.tzinfo == PST)):
         nowTime = pytz.utc.localize(nowTime)
-        nowTime = nowTime.astimezone(timezone("PST8PDT"))
+        nowTime = nowTime.astimezone(PST)
 
     sinceStream = nowTime - streamTime.startDT();
 
@@ -319,7 +324,7 @@ def currentSchedule(bot, trigger):
     times = []
     while(nowDate.weekday() <= FRIDAY):
         #check from 12AM for arbitrary reasons
-        times.append(getNextStream(datetime.combine(nowDate, time(hour=0, tzinfo=timezone("PST8PDT")))))
+        times.append(getNextStream(datetime.combine(nowDate, time(hour=0, tzinfo=PST))))
         nowDate = nowDate + timedelta(days=1)
     
     info(bot, trigger, "Schedule for week of %s: %s (times in PST)" 
@@ -346,13 +351,13 @@ def reschedule(bot, trigger):
         pTime,flag = dateParser.parseDT(args)
         stderr(pTime)
         if (type(pTime) is datetime or type(pTime) is time):
-            pTime = pTime.replace(tzinfo=timezone("PST8PDT"))
+            pTime = pTime.replace(tzinfo=PST)
 
         if (flag == 1):
             #parsed as a date, so we can't really do anything with it. Just print the schedule for that day.
             if (type(pTime) is datetime):
                 pTime = pTime.date()
-            streamTime = getNextStream(datetime.combine(pTime, time(hour=0, tzinfo=timezone("PST8PDT"))))
+            streamTime = getNextStream(datetime.combine(pTime, time(hour=0, tzinfo=PST)))
             stderr(streamTime.isoformat())
             stderr(now().isoformat())
             tense = "should air"
@@ -411,7 +416,7 @@ def timezoneAwareSchedule(bot, trigger):
     
     while(nowDate.weekday() <= FRIDAY):
         #check from 12AM for arbitrary reasons
-        times.append(getNextStream(datetime.combine(nowDate, time(hour=0, tzinfo=timezone("PST8PDT")))))
+        times.append(getNextStream(datetime.combine(nowDate, time(hour=0, tzinfo=PST))))
         nowDate = nowDate + timedelta(days=1)
 
     friendlyTzName = "PST" #default timezone name
