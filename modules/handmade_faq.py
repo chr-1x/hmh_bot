@@ -179,3 +179,11 @@ def gettingStartedLearning(bot, trigger):
     """Command for basic learning instructions for all those where to start learning questions we get during the stream
     """
     info(bot, trigger, "One way to start programming in this manner is to watch the Intro to C series on youtube.com/handmade_hero to get a general feel of things. Later, read 'The C Programming Language' by Brian W. Kernighan and Dennis M. Ritchie and work through all the exercises. The most important part is to start coding and to make lots of things in code. Good luck!")
+
+@command("lib", "library", "api")
+def libCommand(bot, trigger):
+    info(bot, trigger, "The point of Handmade Hero is to build it all from scratch. To that extent, the only external libraries we'll be referencing are platform libraries (such as the Windows API).")
+
+@command("what")
+def whatcommand(bot, trigger):
+    info(bot, trigger, "This is a stream about learning to code games from scratch. For more information, see !game, !stream, !who")
