@@ -112,7 +112,7 @@ def buyInfo(bot, trigger):
 def gameInfo(bot, trigger):
     """Info command that displays basic information about the game being built.
     """
-    info(bot, trigger, "Handmade hero will be a 2D, top-down game inspired by classic Zelda games and modern games like the Binding of Isaac. The entire development of the game will be catalogued in these streams. (More: !art, !lang, ")
+    info(bot, trigger, "Handmade hero will be a 2D, top-down game inspired by classic Zelda games and modern games like the Binding of Isaac. The entire development of the game will be catalogued in these streams. (More: !art, !lang)")
 
 @command('friday', hide=True)
 def fridays(bot, trigger):
