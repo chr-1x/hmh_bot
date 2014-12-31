@@ -142,7 +142,7 @@ def nightNight(bot, trigger):
     info(bot, trigger, "Night night <3")
 
 @command('thankCasey', hide=True)
-def thanksMessage(bot, trigger):
+def thankCaseyMessage(bot, trigger):
     """Command that thanks Casey for streaming. Could be automated, somehow?
     """
     bot.say("Thanks for streaming, Casey! <3")
