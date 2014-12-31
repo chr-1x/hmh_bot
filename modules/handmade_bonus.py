@@ -8,7 +8,7 @@ from handmade import command, info, whitelisted, adminonly, whitelisted_streamti
 ### NOTE:
 # These functions are easter eggy, probably not good to keep on all the time.
 
-@command('makemeadmin', hide=True)
+@command('makemeadmin', hide=True, hideAlways=True)
 def makeAdmin(bot, trigger):
     bot.say("I'm sorry, %s, I'm afraid I can't do that." % trigger.nick)
 
@@ -24,7 +24,8 @@ def beepBoop(bot, trigger):
     "Pushing random buttons isn't meaningful communication, you know!",
     "What goes around, comes around",
     "Do it again. I dare you.",
-    "What good is an IRC bot without easter egg commands?"
+    "What good is an IRC bot without easter egg commands?",
+    "The 317th digit of pi is five."
     ]
     bot.say(random.choice(responses))
 
@@ -63,7 +64,7 @@ def hug(bot, trigger):
     """Easter egg info command that attempts to provide human warmth and empathy in times of
         emotional trauma.
     """
-    info(bot, trigger, "Were I not a transient being circling through an ether of intangible bits and bytes, I would hug you, with all the human emotional context it implies")
+    info(bot, trigger, "I would love to, but alas, I am a transient being circling through an ether of intangible bits and bytes and cannot interact in the physical realm.")
 
 @command('why', hide=True)
 def whyInfo(bot, trigger):
@@ -139,3 +140,19 @@ def rollNumber(bot, trigger):
 @command('nn', hide=True)
 def nightNight(bot, trigger):
     info(bot, trigger, "Night night <3")
+
+@command('thankCasey', hide=True)
+def thanksMessage(bot, trigger):
+    """Command that thanks Casey for streaming. Could be automated, somehow?
+    """
+    bot.say("Thanks for streaming, Casey! <3")
+
+@whitelisted_streamtime
+@command('thanks', hide=True)
+def thanksMessage(bot, trigger):
+    """Command to thank a user.
+    """
+    if (trigger and trigger.group(2)):
+        info(bot, trigger, "%s would like to express their gratitude." % trigger.nick)
+    else:
+        info(bot, trigger, "You're welcome <3")

@@ -96,7 +96,7 @@ def getTimestamp(dt, epoch=datetime(1970,1,1,tzinfo=UTC)):
         return dt.timestamp()
 
     ##NOTE(chronister): It's not really this function's responsibility to deal with naive datetimes.
-    ##  Anything which passes to it should have already taken care of the timezone.
+    ##  Anything which passes to it should have already taken care of the timezone.`
     assert(dt.tzinfo != None)
 
     td = dt - epoch

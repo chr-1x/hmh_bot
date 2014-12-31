@@ -205,6 +205,15 @@ def aliasList(bot, trigger):
 def helpInfo(bot, trigger):
     info(bot, trigger, "To see a list of all commands, use !list. To see the aliases of a command, use !alias. To check when the next stream will air, use !timer or !when.")
 
+@adminonly
+@command('q&a', 'qa', hide=True, hideAlways=True)
+def qaInfo(bot, trigger):
+    bot.say("Q&A session. Please prefix questions w/ @cmuratori, @handmade_hero, or Q: . Your question will have a higher chance of being answered if it is succinct and related to today's or a previous day's code.")
+
+@adminonly
+@command('prestream', 'preqa', hide=True, hideAlways=True)
+def qaInfo(bot, trigger):
+    bot.say("Prestream Q&A. Please prefix questions w/ @cmuratori, @handmade_hero, or Q: . Feel free to ask about anything, keeping in mind that some questions may have already been answered in previous streams.")
 
 @whitelisted_streamtime
 @command('list', 'commands', 'commandlist', 'cmds', hide=True, hideAlways=True)

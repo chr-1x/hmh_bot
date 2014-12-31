@@ -52,19 +52,19 @@ def getTime(bot, trigger):
 def siteInfo(bot, trigger):
     """Info command that prints out the site/forum links.
     """
-    info(bot, trigger, 'HH Website: http://handmadehero.org/  ::  HH Forums: http://forums.handmadehero.org/')
+    info(bot, trigger, 'HH Website: http://goo.gl/fmjocD  ::  HH Forums: http://goo.gl/NuArvD')
 
 @command('old', 'archive')
 def archiveInfo(bot, trigger):
     """Info command that prints out the forum/youtube archive links.
     """
-    info(bot, trigger, 'Forum Archive: https://forums.handmadehero.org/jace/   ::   YT Archive: https://www.youtube.com/user/handmadeheroarchive')
+    info(bot, trigger, 'Forum Archive: http://goo.gl/isjX3o   ::   YT Archive: http://goo.gl/u3hKKj')
 
 @command('wrist', 'wrists', 'braces', 'hands')
 def wristInfo(bot, trigger):
     """Info command that prints out info about Casey's wrist braces
     """
-    info(bot, trigger, "The wrist braces Casey wears help make typing more comfortable and prevent Repetitive Strain Injury. They probably aren't made anymore, but they're the Medi-Active ones without the thumb brace.")
+    info(bot, trigger, "The wrist braces Casey wears help make typing more comfortable and prevent Repetitive Strain Injury. They were made by Medi-Active (the ones without the thumb brace) but are no longer in production.")
 
 @command('milk', 'almondmilk', 'drink')
 def milkInfo(bot, trigger):
@@ -77,7 +77,7 @@ def caseyInfo(bot, trigger):
     """Info command that prints out info about Casey. Could be refactored into multiple commands
         for better clarity.
     """
-    info(bot, trigger, "Casey Muratori is a software engineer who lives in Seattle. He has done work for various companies such as RAD game tools and on games such as The Witness, and has also done fiction writing and podcasting. He started Handmade Hero to give the general public a better idea of what coding a game from scratch in C is like based on his experiences in the industry.")
+    info(bot, trigger, "Casey Muratori is a software engineer who lives in Seattle. He started Handmade Hero to give the general public a better idea of what coding a game from scratch in C is like based on his experiences in the industry. For a full bio, see http://mollyrocket.com/casey/about.html")
 
 @command('hello', 'hi', hide=True)
 def helloMessage(bot, trigger):
@@ -92,32 +92,27 @@ def infoMessage(bot, trigger):
     """Command that shows information about the chatbot. Should be updated with contributor info
         and github page once that happens.
     """
-    bot.say("I am a Python IRC bot based on Willie (http://willie.dftba.net/). I am run by ChronalDragon, who can be contacted via https://tinyurl.com/ChronalDragon")
+    bot.say("I am a Python IRC bot based on Willie (http://willie.dftba.net/). I was started by ChronalDragon and am now jointly maintained by the good folks who commit to my github repo (https://github.com/Chronister/ChronalRobot)")
 
 @whitelisted_streamtime
 @command('credits', hide=True)
 def creditsMessage(bot, trigger):
     """Shows contributor info! If you make changes, add yourself here (or get someone else to)
     """
-    bot.say("Thanks to alexwidener (iamdefinitelybatman), dspecht (drive137) and itsuart (isuart2) for their contributions to my code.")
+    bot.say("Thanks to chronaldragon (chronister), alexwidener (iamdefinitelybatman), dspecht (drive137) and itsuart (isuart2) for their contributions to my code.")
 
 @command('buy', 'purchase', 'support')
 def buyInfo(bot, trigger):
     """Info command that prints out where you can buy the game/support the project.
     """
-    info(bot, trigger, "Handmade Hero, the compiled game with art assets and full source code, can be purchased at http://handmadehero.org/#buy_now You can now also support Casey monthly at http://www.patreon.com/cmuratori")
+    info(bot, trigger, "The Handmade Hero art assets and full source code, can be purchased at http://goo.gl/y20Q9C . You can also support Casey monthly at http://www.patreon.com/cmuratori")
 
-@command('q&a', 'qa')
-def qaInfo(bot, trigger):
-    bot.say("Q&A session. Please prefix questions w/ @cmuratori, @handmade_hero, or Q: .The shorter the question, and if related to the stream, the higher the chances of getting it answered.")
 
-@command('game', 'what')
+@command('game', 'gameinfo')
 def gameInfo(bot, trigger):
     """Info command that displays basic information about the game being built.
     """
-    info(bot, trigger, "Handmade Hero is a project to build an entire game in C from scratch, no libraries. "
-        "We don't know what kind of game it will be yet, but we know it will be 2D, cross-platform, and feature art by Yangtian Li "
-        "as well as specially licensed music. For more information, visit http://handmadehero.org/")
+    info(bot, trigger, "Handmade hero will be a 2D, top-down game inspired by classic Zelda games and modern games like the Binding of Isaac. The entire development of the game will be catalogued in these streams. (More: !art, !lang, ")
 
 @command('friday', hide=True)
 def fridays(bot, trigger):
@@ -129,25 +124,25 @@ def fridays(bot, trigger):
 def streamInfo(bot, trigger):
     """Info command that displays basic information about the stream itself.
     """
-    info(bot, trigger, "In this stream, game programmer Casey Muratori is walking us through the creation of a game from scratch in C. The game is being developed for educational purposes: he will explain what he is doing every step of the way. For more information, visit http://handmadehero.org/")
+    info(bot, trigger, "In this stream, game programmer Casey Muratori is walking us through the creation of a game from scratch in C. The game is being developed for educational purposes: he will explain what he is doing every step of the way. For more information, visit http://goo.gl/fmjocD")
 
 @command('lang', 'language', 'codedin')
 def langInfo(bot, trigger):
     """Info command that provides a description of the language and style used on the stream.
         Could be split into two commands, one for simple info and one about the structural choices.
     """
-    info(bot, trigger, "The language we are using in Handmade Hero is C++ coded in a C-like style. We will most likely not be using classes, inheritance, or polymorphism to any significant degree.")
+    info(bot, trigger, "The language used in the stream is essentially C (with a few C++ features like operator overloading and function overloading anticipated). Since we're writing everything from scratch, we will not be using the C standard library wherever possible.")
 
 @command('ide', 'emacs', 'editor')
 def ideInfo(bot, trigger):
     """Info command that provides information about the editor (emacs) used by Casey.
     """
     ###TODO(chronister): Get emacs version info, it's a common question
-    info(bot, trigger, "Casey uses emacs to edit his code, because that is what he is used to. It is getting pretty old, so you should use whatever you feel most comfortable in.")
+    info(bot, trigger, "Casey uses emacs to edit his code, because that is what he is used to. There are a lot of editors out there, however, so you should use whatever you feel most comfortable in.")
 
 @command('college', 'school')
 def collegeInfo(bot, trigger):
-    info(bot, trigger, "Casey did not go to college, he has been coding in the gaming industry since 1995. You can read his biography here: http://mollyrocket.com/casey/about.html")
+    info(bot, trigger, "Casey did not go to college; he has been coding in the gaming industry since 1995. You can read his biography here: http://mollyrocket.com/casey/about.html")
 
 @command('keyboard', 'kb')
 def keyboardInfo(bot, trigger):
@@ -160,44 +155,27 @@ def timeOfProject(bot, trigger):
     """How long is the project going on?"""
     info(bot, trigger, "It is estimated that the project will take 2 years to finish at the rate of one 1-hour stream per weeknight.")
 
-
-@command('thankCasey', hide=True)
-def thanksMessage(bot, trigger):
-    """Command that thanks Casey for streaming. Could be automated, somehow?
-    """
-    bot.say("Thanks for streaming, Casey! <3")
-
-@whitelisted_streamtime
-@command('thanks', hide=True)
-def thanksMessage(bot, trigger):
-    """Command to thank a user.
-    """
-    if (trigger and trigger.group(2)):
-        info(bot, trigger, "Your thanking has been noted.")
-    else:
-        info(bot, trigger, "You're welcome <3")
-
-@command('art')
+@command('art', 'artist')
 def artCreatorInfo(bot, trigger):
     """Command to state who the art is done by
         TODO: maybe look to casey to get a link the artists profile for viewing
     """
-    info(bot, trigger, "The art is done by Yangtian Li")
+    info(bot, trigger, "The art in Handmade Hero will be created by Yangtian Li (http://www.yangtianli.com/), an artist Casey knows whom he contracted using the funds provided by purchases of the game.")
 
 @command('compiler', 'cl', 'msvc', 'clang')
 def usedCompilierInfo(bot, trigger):
     """Command to answer the many what compiler is he using
     """
-    info(bot, trigger, "Casey compiles from a batch file using MSVC on windows, but uses Clang to compile on GNU/Linux, BSD, and OS X")
+    info(bot, trigger, "Casey compiles from a batch file using MSVC on windows, but has told us he uses Clang to compile on GNU/Linux, BSD, and OS X")
 
-@command('render')
+@command('render', 'opengl', 'd3d')
 def renderInfo(bot, trigger):
     """Command to give render information to the chat target
     """
-    info(bot, trigger, "We are currently using software rendering in order to implement our own renderer. Ultimately the game will take advantage of hardware acceleration (i.e. using OpenGL, Direct3D, etc.) to max out performance.")
+    info(bot, trigger, "We are currently using software rendering in order to implement our own renderer. Ultimately the game will take advantage of hardware acceleration (i.e. using OpenGL, Direct3D, etc.) to maximize performance.")
 
 @command('learning', 'learnProgramming')
 def gettingStartedLearning(bot, trigger):
     """Command for basic learning instructions for all those where to start learning questions we get during the stream
     """
-    info(bot, trigger, "A good way to start programming in this manner is to watch the Intro to C series on youtube.com/handmade_hero to get a general feel of things. Later, read 'The C Programming Language' by Brian W. Kernighan and Dennis M. Ritchie and work through all the exercises. After that, start small and continue making ever-bigger projects. Good luck!")
+    info(bot, trigger, "One way to start programming in this manner is to watch the Intro to C series on youtube.com/handmade_hero to get a general feel of things. Later, read 'The C Programming Language' by Brian W. Kernighan and Dennis M. Ritchie and work through all the exercises. The most important part is to start coding and to make lots of things in code. Good luck!")
