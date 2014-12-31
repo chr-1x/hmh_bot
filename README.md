@@ -13,11 +13,11 @@ Please refer to the [forum thread](https://forums.handmadehero.org/index.php/for
 
 Installation
 ----
-Copy the contents of this repo to your ~/.willie folder (`/home/user/.willie1` on linux, `C:/Users/user/.willie` on windows)
+Copy the contents of this repo to your ~/.willie folder (`/home/user/.willie` on linux, `C:/Users/user/.willie` on windows)
 
 Then run `willie` to start the bot.
 
-Important: Please make sure that there is not already an instance of ChronalRobot running in chat. Twitch will not prevent multiple of them from running at a time, and all active instances will attempt to respond to queries. An easy way to test for this is to use the **!hello** command, as this should always be available.
+Important: Please make sure that there is not already an instance of ChronalRobot running in chat. Twitch will not prevent multiple of them from running at a time, and all active instances will attempt to respond to queries. An easy way to test for this is to use the **!hello** command, as this should always be available. (Note: as of recently, the default bot username is now **hmh_bot**. You can run your own instance alongside if you change the username, oauth, and command character for the bot.)
 
 Libraries
 ---
