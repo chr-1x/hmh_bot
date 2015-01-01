@@ -120,7 +120,7 @@ def fridays(bot, trigger):
     info(bot, trigger, "Handmade Hero typically happens on Fridays at 11 AM PST. This is not necessarily the definitive schedule, for the time being. "
         "The replays are on Youtube and Twitch if you missed them.")
 
-@command('stream', 'about', 'info')
+@command('stream', 'about', 'info', 'what')
 def streamInfo(bot, trigger):
     """Info command that displays basic information about the stream itself.
     """
@@ -184,10 +184,6 @@ def gettingStartedLearning(bot, trigger):
 def libCommand(bot, trigger):
     info(bot, trigger, "The point of Handmade Hero is to build it all from scratch. To that extent, the only external libraries we'll be referencing are platform libraries (such as the Windows API).")
 
-@command("what")
-def whatcommand(bot, trigger):
-    info(bot, trigger, "This is a stream about learning to code games from scratch. For more information, see !game, !stream, !who")
-
 @command("wrench")
 def codeIsAToll(bot, trigger):
-    info(bot, trigger, "Programming is not about code. Code is the tool used to solve the problems programmers must addressed. For more on this viewpoint, watch Mike Acton's talk: 'Data-Oriented Design and C++' (https://www.youtube.com/watch?v=rX0ItVEVjHc)"
+    info(bot, trigger, "Programming is not about code. Code is the tool used to solve the problems programmers must addressed. For more on this viewpoint, watch Mike Acton's talk: 'Data-Oriented Design and C++' (https://www.youtube.com/watch?v=rX0ItVEVjHc)")
