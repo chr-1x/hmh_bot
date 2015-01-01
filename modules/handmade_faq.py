@@ -185,5 +185,5 @@ def libCommand(bot, trigger):
     info(bot, trigger, "The point of Handmade Hero is to build it all from scratch. To that extent, the only external libraries we'll be referencing are platform libraries (such as the Windows API).")
 
 @command("wrench")
-def codeIsAToll(bot, trigger):
-    info(bot, trigger, "Programming is not about code. Code is the tool used to solve the problems programmers must addressed. For more on this viewpoint, watch Mike Acton's talk: 'Data-Oriented Design and C++' (https://www.youtube.com/watch?v=rX0ItVEVjHc)")
+def codeIsATool(bot, trigger):
+    info(bot, trigger, "Programming is not about the languages. Code is the tool used to solve the problems programmers must address. For more on this perspective, refer to Mike Acton's talk: 'Data-Oriented Design and C++' (https://www.youtube.com/watch?v=rX0ItVEVjHc)"
