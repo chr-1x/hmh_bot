@@ -21,7 +21,7 @@ Important: Please make sure that there is not already an instance of ChronalRobo
 
 Libraries
 ---
-Robot requiers following libraries to be installed: pytz and parsedatetime
+Robot requires the following libraries to be installed: pytz and parsedatetime
 
 To install them, issue following commands:
 
