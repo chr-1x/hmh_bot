@@ -186,4 +186,4 @@ def libCommand(bot, trigger):
 
 @command("wrench")
 def codeIsATool(bot, trigger):
-    info(bot, trigger, "Programming is not about the languages. Code is the tool used to solve the problems programmers must address. For more on this perspective, refer to Mike Acton's talk: 'Data-Oriented Design and C++' (https://www.youtube.com/watch?v=rX0ItVEVjHc)"
+    info(bot, trigger, "Programming is not about the languages. Code is the tool used to solve the problems programmers must address. For more on this perspective, refer to Mike Acton's talk: 'Data-Oriented Design and C++' (https://www.youtube.com/watch?v=rX0ItVEVjHc)")
