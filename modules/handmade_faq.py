@@ -77,7 +77,7 @@ def caseyInfo(bot, trigger):
     """Info command that prints out info about Casey. Could be refactored into multiple commands
         for better clarity.
     """
-    info(bot, trigger, "Casey Muratori is a software engineer who lives in Seattle. He started Handmade Hero to give the general public a better idea of what coding a game from scratch in C is like based on his experiences in the industry. For a full bio, see http://mollyrocket.com/casey/about.html")
+    info(bot, trigger, "Casey Muratori is 38 and a software engineer who lives in Seattle. He started Handmade Hero to give the general public a better idea of what coding a game from scratch in C is like based on his experiences in the industry. For a full bio, see http://mollyrocket.com/casey/about.html")
 
 @command('hello', 'hi', hide=True)
 def helloMessage(bot, trigger):
