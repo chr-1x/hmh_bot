@@ -208,7 +208,7 @@ def helpInfo(bot, trigger):
 @adminonly
 @command('q&a', 'qa', hide=True, hideAlways=True)
 def qaInfo(bot, trigger):
-    bot.say("Q&A session. Please prefix questions w/ @cmuratori, @handmade_hero, or Q: . Your question will have a higher chance of being answered if it is succinct and related to today's or a previous day's code.")
+    bot.say("Q&A session. Please prefix questions w/ @cmuratori, @handmade_hero, or Q: . Your question will have a higher chance of being answered if it is succinct and related to today's or a previous day's code. Also please do repeat questions that have been asked")
 
 @adminonly
 @command('prestream', 'preqa', hide=True, hideAlways=True)
