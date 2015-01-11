@@ -2,10 +2,7 @@ import willie
 import willie.module
 import random
 from willie.modules.search import google_search
-from datetime import datetime, timedelta
-import pytz
-from pytz import timezone
-from willie.modules.search import google_search
+import arrow
 
 import os, sys
 sys.path.append(os.path.dirname(__file__))
@@ -33,7 +30,7 @@ def msdnSearch(bot, trigger):
     ###TODO(chronister): Add hidden C++ keyword to search?
     ###TODO(chronister): Are there any subdomains we don't want? See commented -site above
     if not trigger: return
-    if stream.isCurrentlyStreaming(datetime.now(timezone("PST8PDT"))) and not trigger.admin: return
+    if stream.isCurrentlyStreaming() and not trigger.admin: return
     if not trigger.group(2):
         bot.say("@%s: http://msdn.microsoft.com/" % trigger.nick)
     else:
@@ -45,8 +42,8 @@ def getTime(bot, trigger):
     """Info command that prints out the current time in PST. For the purposes of the handmade hero
         stream, we don't really care about other time zones.
     """
-    now = datetime.now(timezone("PST8PDT"))
-    info(bot, trigger, "The current time in Seattle is %s PST" % (now.strftime("%I:%M %p")))
+    now = arrow.now('US/Pacific')
+    info(bot, trigger, "The current time in Seattle is %s" % (now.strftime("%I:%M %p %Z")))
 
 @command('site')
 def siteInfo(bot, trigger):
