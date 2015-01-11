@@ -91,10 +91,9 @@ def getEndOfDay(someTime=None):
 
 def setup(bot):
 	global dbURI 
-	dbURI = bot.config.db.userdb_type+':/'+bot.config.db.userdb_file
+	dbURI = bot.config.db.userdb_type+':/'+os.path.abspath(bot.config.db.userdb_file) # URI must be absolute.
 	requireDb()
 	StreamEpisode.createTable(ifNotExists=True)
-
 
 
 def getStreamsOnDay(day):
