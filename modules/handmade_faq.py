@@ -191,3 +191,7 @@ def codeIsATool(bot, trigger):
 @command("partner")
 def twitchPartner(bot, trigger):
     info(bot, trigger, "A Twitch partnership would require Casey to hold the archive videos for 24 hours before uploading to YouTube.")
+
+@command("math")
+def whyMath(bot, trigger):
+    info(bot, trigger, "Much of game programming goes into deciding what computations or permutation of content in different states need to be put in place. Tackling some of these computations without having been taught a mathematical concept, such as vectors for player movement, can be a major roadblock for many. Mathematics can take you a long way if you don't dismiss it so quickly. For the major benefits of learning useful mathematics for games, please check out: https://www.youtube.com/watch?v=WN3_d_QcJZE")
