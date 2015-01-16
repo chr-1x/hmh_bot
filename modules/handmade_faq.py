@@ -195,3 +195,7 @@ def twitchPartner(bot, trigger):
 @command("math")
 def whyMath(bot, trigger):
     info(bot, trigger, "Much of game programming goes into deciding what computations or permutation of content in different states need to be put in place. Tackling some of these computations without having been taught a mathematical concept, such as vectors for player movement, can be a major roadblock for many. Mathematics can take you a long way if you don't dismiss it so quickly. For the major benefits of learning useful mathematics for games, please check out: https://www.youtube.com/watch?v=WN3_d_QcJZE")
+
+@command('wheel', 'gamasutra')
+def reinventingWheel(bot, trigger):
+    info(bot, trigger, "Why reinvent the wheel? Please check out http://ubm.io/1y3iIbT, specifically questions #3 and #4 posed by the interviewer, and come back with any further questions, if any.")
