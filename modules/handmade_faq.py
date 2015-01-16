@@ -199,3 +199,7 @@ def whyMath(bot, trigger):
 @command('wheel', 'gamasutra')
 def reinventingWheel(bot, trigger):
     info(bot, trigger, "Why reinvent the wheel? Please check out http://ubm.io/1y3iIbT, specifically questions #3 and #4 posed by the interviewer, and come back with any further questions, if any.")
+
+@command("cleancode")
+def cleanCode(bot, trigger):
+    info(bot, trigger, "Clean Code emphasizes Principles, Rules, and 'code smells' in a manner that can at times be misleading or dogmatic. Programming requires critical thinking and to look for context to know when to use one approach or another. For a general article by Casey Muratori (creator of Handmade Hero), see http://bit.ly/1qEUkvn. For an example of why blindly breaking functions into smaller ones may be a bad idea, see http://bit.ly/1y3mGkQ by Jonathan Blow or http://bit.ly/100gY5G by John Carmack.")
