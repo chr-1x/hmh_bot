@@ -191,3 +191,15 @@ def codeIsATool(bot, trigger):
 @command("partner")
 def twitchPartner(bot, trigger):
     info(bot, trigger, "A Twitch partnership would require Casey to hold the archive videos for 24 hours before uploading to YouTube.")
+
+@command("math")
+def whyMath(bot, trigger):
+    info(bot, trigger, "Much of game programming goes into deciding what computations or permutation of content in different states need to be put in place. Tackling some of these computations without having been taught a mathematical concept, such as vectors for player movement, can be a major roadblock for many. Mathematics can take you a long way if you don't dismiss it so quickly. For the major benefits of learning useful mathematics for games, please check out: https://www.youtube.com/watch?v=WN3_d_QcJZE")
+
+@command('wheel', 'gamasutra')
+def reinventingWheel(bot, trigger):
+    info(bot, trigger, "Why reinvent the wheel? Please check out http://ubm.io/1y3iIbT, specifically questions #3 and #4 posed by the interviewer, and come back with any further questions, if any.")
+
+@command("cleancode")
+def cleanCode(bot, trigger):
+    info(bot, trigger, "Clean Code emphasizes Principles, Rules, and 'code smells' in a manner that can at times be misleading or dogmatic. Programming requires critical thinking and to look for context to know when to use one approach or another. For a general article by Casey Muratori (creator of Handmade Hero), see http://bit.ly/1qEUkvn. For an example of why blindly breaking functions into smaller ones may be a bad idea, see http://bit.ly/1y3mGkQ by Jonathan Blow or http://bit.ly/100gY5G by John Carmack.")
