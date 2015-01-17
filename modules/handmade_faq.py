@@ -58,7 +58,7 @@ def siteInfo(bot, trigger):
 def archiveInfo(bot, trigger):
     """Info command that prints out the forum/youtube archive links.
     """
-    info(bot, trigger, 'Forum Archive: http://goo.gl/isjX3o   ::   YT Archive: http://goo.gl/u3hKKj')
+    info(bot, trigger, 'Forum Archive: http://goo.gl/8ouung   ::   YT Archive: http://goo.gl/u3hKKj')
 
 @command('wrist', 'wrists', 'braces', 'hands')
 def wristInfo(bot, trigger):
