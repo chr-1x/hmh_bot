@@ -202,4 +202,4 @@ def reinventingWheel(bot, trigger):
 
 @command("cleancode")
 def cleanCode(bot, trigger):
-    info(bot, trigger, "'Clean Code' can at times be misleading or dogmatic. See http://goo.gl/s1su1P, http://goo.gl/xqUMK0 or http://goo.gl/8fwGXY")
+    info(bot, trigger, "'Clean Code' can at times be misleading or dogmatic. See http://goo.gl/N4AJdu or http://goo.gl/xqUMK0")
