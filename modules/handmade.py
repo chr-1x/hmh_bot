@@ -238,5 +238,5 @@ def commandExtras(bot, trigger):
 @whitelisted
 @command('reboot')
 def reboot(bot, trigger)
-  bot.say("Restarting...")
-  os.system("reboot")
+    bot.say("Restarting...")
+    os.system("reboot")
