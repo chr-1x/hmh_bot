@@ -215,9 +215,8 @@ def currentSchedule(bot, trigger):
 @command('schedule')
 def seeSchedule(bot, trigger):
 	args = trigger.group(2)
-	if (args):
-		if (trigger.admin):
-			reschedule(bot, trigger)
+	if (args and trigger.admin):
+		reschedule(bot, trigger)
 	else:
 		currentSchedule(bot, trigger)
 
@@ -229,7 +228,7 @@ def reschedule(bot, trigger):
 
 	args = trigger.group(2)
 	if (args):
-		pTime,flag = dateParser.parseDT(args, sourceTime=getStartOfDay()) # use beginning of today as the source day to ensure DT returned.
+		pTime,flag = dateParser.parseDT(args, sourceTime=getStartOfDay().replace(months=-6)) # use beginning of today as the source day to ensure DT returned.
 		pTime = arrow.get(pTime, defaultTz) # avoid python AWFUL datetimes.
 
 		if (flag == 1):
