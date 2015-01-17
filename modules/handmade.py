@@ -2,8 +2,6 @@ import willie
 import willie.module
 from willie.tools import stderr
 import random
-from datetime import datetime
-from pytz import timezone
 import functools
 
 import os, sys

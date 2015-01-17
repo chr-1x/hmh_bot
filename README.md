@@ -21,12 +21,8 @@ Important: Please make sure that there is not already an instance of ChronalRobo
 
 Libraries
 ---
-Robot requires the following libraries to be installed: willie, pytz, and parsedatetime
+Robot requires the following libraries to be installed: willie, arrow, parsedatetime, and sqlobject
 
 To install them, issue following commands:
 
-sudo pip install willie
-
-sudo pip install pytz
-
-sudo pip install parsedatetime
+sudo pip install willie arrrow parsedatetime sqlobject
