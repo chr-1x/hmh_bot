@@ -163,7 +163,7 @@ def artCreatorInfo(bot, trigger):
 def usedCompilierInfo(bot, trigger):
     """Command to answer the many what compiler is he using
     """
-    info(bot, trigger, "Casey compiles from a batch file using MSVC on windows, but has told us he uses Clang to compile on GNU/Linux, BSD, and OS X")
+    info(bot, trigger, "Casey compiles from a batch file using MSVC on windows, but has told us he uses Clang to compile on GNU/Linux, BSD, and OS X. You can get the same version of MSVC which he uses on stream completely free as part of Visual Studio 2013 Community Edition here: http://goo.gl/BzGwMC")
 
 @command('render', 'opengl', 'd3d')
 def renderInfo(bot, trigger):
