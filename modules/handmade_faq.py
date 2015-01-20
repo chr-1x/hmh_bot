@@ -203,4 +203,4 @@ def cleanCode(bot, trigger):
 
 @command("jai")
 def jai(bot, trigger):
-    info(bot, trigger, "JAI is a new programming language designed for games being created by Jonathan Blow, the designer of Braid and The Witness. You can find out more about JAI here: http://goo.gl/oS9Er4")
+    info(bot, trigger, "JAI is a new programming language designed for games being created by Jonathan Blow, the designer of Braid and The Witness. You can find out more about JAI here: http://goo.gl/oS9Er4 Follow Jonathan Blow on twitch for new demos here: http://goo.gl/wEPKq5")
