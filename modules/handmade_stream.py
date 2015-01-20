@@ -161,7 +161,7 @@ def isStreamingCommand(bot, trigger):
 		bot.say("Stream is not currently going.")
 
 
-@command('timer', "when", "howlong", "timeleft")
+@command("time", "timer", "when", "howlong", "timeleft")
 def timer(bot, trigger):
 	"""Info command that prints out the time until the next stream.
 	"""

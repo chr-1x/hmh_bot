@@ -37,7 +37,7 @@ def msdnSearch(bot, trigger):
         query = trigger.group(2).strip()
         bot.say("@%s: %s" % (trigger.nick, google(query)))
 
-@command('time', 'now', 'pst', 'PST')
+@command('now', 'pst', 'PST')
 def getTime(bot, trigger):
     """Info command that prints out the current time in PST. For the purposes of the handmade hero
         stream, we don't really care about other time zones.
