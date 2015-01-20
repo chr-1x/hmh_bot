@@ -264,10 +264,9 @@ def reschedule(bot, trigger):
 				return
 
 		else:
-			#Unable to parse. Only respond if its an admin so that non-admins can't spam failed attempts
-			if (trigger.admin):
-				bot.say("@%s: Sorry, I couldn't figure out what %s meant." % (trigger.nick, args))
-				return
+			#Unable to parse. Probably because it someones name. Revert to CurrentSchedule.
+			currentSchedule(bot, trigger)
+			return
 	else:
 		currentSchedule(bot, trigger)
 		return
