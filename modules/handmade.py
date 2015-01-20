@@ -234,3 +234,9 @@ def commandExtras(bot, trigger):
     global commands
     extraCommands = [c.main for c in commands if (c.hide==True and c.hideAlways!=True)]
     bot.say("Here are more of the commands I know: !%s" % ", !".join(extraCommands))
+
+@whitelisted
+@command('reboot')
+def reboot(bot, trigger)
+    bot.say("Restarting...")
+    os.system("reboot")
