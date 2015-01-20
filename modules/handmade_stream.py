@@ -228,13 +228,20 @@ def reschedule(bot, trigger):
 
 	args = trigger.group(2)
 	if (args):
-		pTime,flag = dateParser.parseDT(args, sourceTime=getStartOfDay().replace(months=-6)) # use beginning of today as the source day to ensure DT returned.
+		pTime,flag = dateParser.parseDT(args, sourceTime=getStartOfDay()) # use beginning of today as the source day to ensure DT returned.
+		
+		#Anything not explicitly dated will go to next occurance of that date
+		#so check if the date given was pushed more than 6 months in the future
+		#if it was assume the issuer ment the past. Will break setting dates manually with years.
 		pTime = arrow.get(pTime, defaultTz) # avoid python AWFUL datetimes.
+		if (pTime > arrow.now(defaultTz).replace(months=+6)):
+			pTime = pTime.replace(years=-1) 
 
 		if (flag == 1):
 			# parsed as a date, so we can't really do anything with it. Just print the schedule for that day.
-			stream = getNextStream(pTime)
-			if (stream != None):
+			streams = getStreamsOnDay(pTime)
+			if (len(streams) > 0):
+				stream = streams[0];
 				tense = "should air"
 				if (stream.getEnd() < arrow.now()): 
 					tense = "should have aired"
@@ -258,10 +265,9 @@ def reschedule(bot, trigger):
 				return
 
 		else:
-			#Unable to parse. Only respond if its an admin so that non-admins can't spam failed attempts
-			if (trigger.admin):
-				bot.say("@%s: Sorry, I couldn't figure out what %s meant." % (trigger.nick, args))
-				return
+			#Unable to parse. Probably because it someones name. Revert to CurrentSchedule.
+			currentSchedule(bot, trigger)
+			return
 	else:
 		currentSchedule(bot, trigger)
 		return
