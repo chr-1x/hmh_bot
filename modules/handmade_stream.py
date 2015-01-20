@@ -239,8 +239,9 @@ def reschedule(bot, trigger):
 
 		if (flag == 1):
 			# parsed as a date, so we can't really do anything with it. Just print the schedule for that day.
-			stream = getNextStream(pTime)
-			if (stream != None):
+			streams = getStreamsOnDay(pTime)
+			if (len(streams) > 0):
+				stream = streams[0];
 				tense = "should air"
 				if (stream.getEnd() < arrow.now()): 
 					tense = "should have aired"
