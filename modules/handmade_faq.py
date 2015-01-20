@@ -200,3 +200,7 @@ def reinventingWheel(bot, trigger):
 @command("cleancode")
 def cleanCode(bot, trigger):
     info(bot, trigger, "'Clean Code' can at times be misleading or dogmatic. See http://goo.gl/N4AJdu or http://goo.gl/xqUMK0")
+
+@command("jai")
+def jai(bot, trigger):
+    info(bot, trigger, "JAI is a new programming language designed for games being created by Jonathan Blow, the designer of Braid and The Witness. You can find out more about JAI here: http://goo.gl/oS9Er4")
