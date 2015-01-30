@@ -73,6 +73,7 @@ def whyInfo(bot, trigger):
     """
     bot.say("Because he can.")
 
+#NOTE <cmuratori> I think the Handmade Hero bot should just always return 4.
 @whitelisted_streamtime
 @command('random', hide=True)
 def randomNumber(bot, trigger):
