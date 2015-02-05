@@ -18,6 +18,9 @@ class FakeTrigger():
 
 emptyRE = re.compile("()()")
 
+
+##NOTE(chronister): Difference between @reminder and @interval is that @reminder spoofs the arguments
+#   that are normally passed to module commands (a bot with .say(), and a Trigger)
 def reminder(*args, **kwargs):
 
     def mutate(func):

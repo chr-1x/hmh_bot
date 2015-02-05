@@ -1,12 +1,16 @@
 from willie.tools import stderr
+import willie.module
+from willie import web
 from sqlobject import *
 from sqlobject.dbconnection import dbConnectionForScheme
 import parsedatetime
+from datetime import timedelta
 import arrow
-import math
+import math, csv
 
 import os, sys
 sys.path.append(os.path.dirname(__file__))
+
 
 from handmade import command, info, whitelisted, adminonly, whitelisted_streamtime, adminonly_streamtime
 
@@ -91,7 +95,7 @@ def getEndOfDay(someTime=None):
 
 def setup(bot):
 	global dbURI 
-	dbURI = bot.config.db.userdb_type+'://'+os.path.abspath(bot.config.db.userdb_file) # URI must be absolute.
+	dbURI = bot.config.db.userdb_type+':///'+os.path.abspath(bot.config.db.userdb_file) # URI must be absolute.
 	requireDb()
 	StreamEpisode.createTable(ifNotExists=True)
 
@@ -150,6 +154,37 @@ def scheduleStream(newTime):
 			streams.start = newTime
 	else:
 		StreamEpisode(start=newTime) # Create the new episode.
+
+handmadeScheduleURI = "http://handmadehero.org/broadcast.csv"
+@willie.module.interval(3600) ###TODO(chronister): Is once an hour good?
+def checkSchedule(bot):
+	print("Checking for new schedule...")
+	bytes = web.get(handmadeScheduleURI)
+	reader = csv.DictReader(bytes.split("\n"), ["date", "time", "description"])
+	result = ""
+	for row in reader:
+		rowSplit = row["date"].split("-")
+		date = arrow.now().replace(year=int(rowSplit[0]), month=int(rowSplit[1]), day=int(rowSplit[2]))
+		#date = arrow.get(date, defaultTz)
+
+		streams = getStreamsOnDay(date)
+		time,flag = dateParser.parseDT(row["time"], sourceTime=date.datetime)
+		time = arrow.get(time, defaultTz)
+		for stream in streams: ## Don't worry, this is usually 1 element long (if it's not, we have some refactoring to do elsewhere!)
+			if(abs(stream.start - time) > timedelta(0)):
+				print("%s now at %s (was %s), " % (time.strftime("%b %d %Y"), time.strftime("%I:%M%p"), stream._get_start().strftime("%I:%M%p")))
+				scheduleStream(time)
+				result += "%s now at %s (was %s), " % (time.strftime("%b %d %Y"), time.strftime("%I:%M%p"), stream._get_start().strftime("%I:%M%p"))
+		print(date, streams)
+		if (len(streams) == 0):
+			print("No stream on %s, added one at %s" % (time.strftime("%b %d %Y"), time.strftime("%I:%M%p")))
+			scheduleStream(time)
+			result += time.strftime("%b %d %Y at %I:%M%p %Z") + ", "
+	if (len(result) > 0):
+		result = result[:-2]
+		for channel in bot.channels:
+			bot.msg(channel, "Updated the stream schedule: %s" % result)
+
 
 @adminonly
 @command("isStreaming", hide=True)
