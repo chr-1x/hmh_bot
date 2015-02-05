@@ -1,7 +1,9 @@
 import threading, time, re
 import arrow
 from willie.tools import stderr
+from willie import web
 import willie.module
+import json
 
 import os, sys
 sys.path.append(os.path.dirname(__file__))
@@ -85,3 +87,31 @@ def remindQA(bot, trigger):
     stream = getStreamAt(now)
     if (stream != None and stream.getQaStart() < now and now < stream.getEnd()):
         qaInfo(bot, trigger)
+
+wasUp = False
+streamURL="https://api.twitch.tv/kraken/streams/handmade_hero"
+@reminder(60) ##TODO(chronister): Is once a minute too often?
+def checkStreamStatus(bot, trigger):
+    try:
+        response = web.get(streamURL)
+    except Exception as e:
+        stderr("Couldn't access twitch API! %s" % e.message)
+        return
+
+    if response:
+        trigger.nick = "Stream Notice"
+
+        result = json.loads(response)
+        if (hasattr(result, "stream")):
+            up = result["stream"] != "null"
+            if (up and not(wasUp)):
+                bot.say("Handmade Hero just went live!")
+            elif (not(up) and (wasUp)):
+                bot.say("Handmade hero is no longer live.")
+
+            wasUp = up
+            return
+        else:
+            stderr("Unexpected response from twitch API: %s" % str(result))
+    else:
+        stderr("No response from twitch API")
