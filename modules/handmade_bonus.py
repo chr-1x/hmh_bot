@@ -157,3 +157,10 @@ def thanksMessage(bot, trigger):
         info(bot, trigger, "%s would like to express their gratitude." % trigger.nick)
     else:
         info(bot, trigger, "You're welcome <3")
+
+@whitelisted_streamtime
+@command('ten', hide=True)
+def tenCommandmentsMessage(bot, trigger):
+    """Command to list the 0x10 commandments"
+    """
+    bot.say("Thou must read and follow these 0x10 Commandments: http://goo.gl/aoQVYT")
