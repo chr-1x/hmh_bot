@@ -88,30 +88,30 @@ def remindQA(bot, trigger):
     if (stream != None and stream.getQaStart() < now and now < stream.getEnd()):
         qaInfo(bot, trigger)
 
-wasUp = False
-streamURL="https://api.twitch.tv/kraken/streams/handmade_hero"
-@reminder(60) ##TODO(chronister): Is once a minute too often?
-def checkStreamStatus(bot, trigger):
-    try:
-        response = web.get(streamURL)
-    except Exception as e:
-        stderr("Couldn't access twitch API! %s" % e.message)
-        return
+# wasUp = False
+# streamURL="https://api.twitch.tv/kraken/streams/handmade_hero"
+# @reminder(60) ##TODO(chronister): Is once a minute too often?
+# def checkStreamStatus(bot, trigger):
+#     try:
+#         response = web.get(streamURL)
+#     except Exception as e:
+#         stderr("Couldn't access twitch API! %s" % e.message)
+#         return
 
-    if response:
-        trigger.nick = "Stream Notice"
+#     if response:
+#         trigger.nick = "Stream Notice"
 
-        result = json.loads(response)
-        if (hasattr(result, "stream")):
-            up = result["stream"] != "null"
-            if (up and not(wasUp)):
-                bot.say("Handmade Hero just went live!")
-            elif (not(up) and (wasUp)):
-                bot.say("Handmade hero is no longer live.")
+#         result = json.loads(response)
+#         try:
+#             up = result["stream"] != "null"
+#             if (up and not(wasUp)):
+#                 bot.say("Handmade Hero just went live!")
+#             elif (not(up) and (wasUp)):
+#                 bot.say("Handmade hero is no longer live.")
 
-            wasUp = up
-            return
-        else:
-            stderr("Unexpected response from twitch API: %s" % str(result))
-    else:
-        stderr("No response from twitch API")
+#             wasUp = up
+#             return
+#         except Exception as e:
+#             stderr("Unexpected response from twitch API: %s" % str(result))
+#     else:
+#         stderr("No response from twitch API")
