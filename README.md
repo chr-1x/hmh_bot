@@ -25,4 +25,4 @@ Robot requires the following libraries to be installed: willie, arrow, parsedate
 
 To install them, issue following commands:
 
-sudo pip install willie arrrow parsedatetime sqlobject
+sudo pip install willie arrow parsedatetime sqlobject
