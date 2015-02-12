@@ -206,5 +206,5 @@ def jai(bot, trigger):
     info(bot, trigger, "JAI is a new programming language designed for games being created by Jonathan Blow, the designer of Braid and The Witness. You can find out more about JAI here: http://goo.gl/oS9Er4 Follow Jonathan Blow on twitch for new demos here: http://goo.gl/wEPKq5")
 
 @command("unittest", "unittests", "tests")
-def jai(bot, trigger):
+def unitTest(bot, trigger):
     info(bot, trigger, "We won't be doing unit tests on Handmade Hero because the structure of a game changes a lot over the course of its development, and game systems don't tend to fit into easily testable components.")
