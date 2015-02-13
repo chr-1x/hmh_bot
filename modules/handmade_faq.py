@@ -208,3 +208,7 @@ def jai(bot, trigger):
 @command("unittest", "unittests", "tests")
 def unitTest(bot, trigger):
     info(bot, trigger, "We won't be doing unit tests on Handmade Hero because the structure of a game changes a lot over the course of its development, and game systems don't tend to fit into easily testable components.")
+    
+@command("compression")
+def compressionOriented(bot, trigger):
+    info(bot, trigger, "Casey programs using an approach which he often calls Compression Oriented Programming, in which he will code things in the most straightforward way first, and only loft up common functionality into higher level structures as it becomes apparent that it is necessary. You can read more about the approach here: http://goo.gl/rVgCHI")
