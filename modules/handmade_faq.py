@@ -98,7 +98,7 @@ def creditsMessage(bot, trigger):
     """
     bot.say("Thanks to chronaldragon (chronister), alexwidener (iamdefinitelybatman), dspecht (drive137) and itsuart (isuart2) for their contributions to my code.")
 
-@command('buy', 'purchase', 'support')
+@command('buy', 'purchase', 'support', 'patreon')
 def buyInfo(bot, trigger):
     """Info command that prints out where you can buy the game/support the project.
     """
