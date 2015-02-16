@@ -172,18 +172,19 @@ def checkSchedule(bot):
 		time = arrow.get(time, defaultTz)
 		for stream in streams: ## Don't worry, this is usually 1 element long (if it's not, we have some refactoring to do elsewhere!)
 			if(abs(stream.start - time) > timedelta(0)):
-				print("%s now at %s (was %s), " % (time.strftime("%b %d %Y"), time.strftime("%I:%M%p"), stream._get_start().strftime("%I:%M%p")))
+				#print("%s now at %s (was %s), " % (time.strftime("%b %d %Y"), time.strftime("%I:%M%p"), stream._get_start().strftime("%I:%M%p")))
 				scheduleStream(time)
 				result += "%s now at %s (was %s), " % (time.strftime("%b %d %Y"), time.strftime("%I:%M%p"), stream._get_start().strftime("%I:%M%p"))
-		print(date, streams)
+		#print(date, streams)
 		if (len(streams) == 0):
-			print("No stream on %s, added one at %s" % (time.strftime("%b %d %Y"), time.strftime("%I:%M%p")))
+			#print("No stream on %s, added one at %s" % (time.strftime("%b %d %Y"), time.strftime("%I:%M%p")))
 			scheduleStream(time)
 			result += time.strftime("%b %d %Y at %I:%M%p %Z") + ", "
 	if (len(result) > 0):
 		result = result[:-2]
 		for channel in bot.channels:
-			bot.msg(channel, "Updated the stream schedule: %s" % result)
+			#bot.msg(channel, "Updated the stream schedule: %s" % result)
+			pass
 
 
 @adminonly
