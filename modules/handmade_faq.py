@@ -24,7 +24,7 @@ def google(query):
 @whitelisted_streamtime
 @command('msdn', hide=True)
 def msdnSearch(bot, trigger):
-    """Command that searchs msdn for the string provided in the command arguments. Performs this
+    """Command that searches msdn for the string provided in the command arguments. Performs this
         with the Google API and site:msdn.microsoft.com
     """
     ###TODO(chronister): Add hidden C++ keyword to search?
@@ -134,8 +134,7 @@ def langInfo(bot, trigger):
 def ideInfo(bot, trigger):
     """Info command that provides information about the editor (emacs) used by Casey.
     """
-    ###TODO(chronister): Get emacs version info, it's a common question
-    info(bot, trigger, "Casey uses emacs to edit his code, because that is what he is used to. There are a lot of editors out there, however, so you should use whatever you feel most comfortable in.")
+    info(bot, trigger, "Casey uses Emacs to edit his code, because that is what he is used to. There are a lot of editors out there, however, so you should use whatever you feel most comfortable in. The version he uses is GNU Emacs 23.4.1 (i386-mingw-nt6.1.7601), released in 2012.")
 
 @command('college', 'school')
 def collegeInfo(bot, trigger):
@@ -163,8 +162,20 @@ def artCreatorInfo(bot, trigger):
 def usedCompilierInfo(bot, trigger):
     """Command to answer the many what compiler is he using
     """
-    info(bot, trigger, "Casey compiles from a batch file using MSVC on windows, but has told us he uses Clang to compile on GNU/Linux, BSD, and OS X. You can get the same version of MSVC which he uses on stream completely free as part of Visual Studio 2013 Community Edition here: http://goo.gl/BzGwMC")
+    info(bot, trigger, "Casey compiles from a batch file using MSVC on windows, but has told us he uses Clang to compile on GNU/Linux, BSD, and OS X. You can get the same version of MSVC which he uses on stream completely free as part of Visual Studio 2013 Community Edition here: http://goo.gl/BzGwMC (More: !build, !batch)")
 
+@command('templates')
+def whyNoTemplatesInfo(bot, trigger):
+	"""Command to answer the many why Casey avoids using C++ templates where possible
+	"""
+	info(bot, trigger, "Casey avoids using C++ templates where not absolutely necessary, as they lead to longer compile times and make debugging harder. See also: http://mollyrocket.com/forums/molly_forum_402.html")
+	
+@command('build', 'batch')
+def usedBuildBatchInfo(bot, trigger):
+    """Command to answer the many why Casey builds HMH the way he does
+    """
+    info(bot, trigger, "Casey compiles from a batch file using MSVC on windows, allowing a rebuild from the command line, from Emacs (his editor), or even from within MSVC. The program is actually compiled as a single translation unit (it uses #include to compile all involved files in one go), this keeps things simple, as the build script mostly needs to be changed only when adding a dependency. (More: !editor, !compiler)")
+	
 @command('render', 'opengl', 'd3d')
 def renderInfo(bot, trigger):
     """Command to give render information to the chat target
