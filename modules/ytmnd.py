@@ -26,7 +26,7 @@ def sayWhoIsTheManOrWomanNowDog(bot):
 	bot.say("@%s You're the %s now, dog!" % (__m.whoDog, __m.manOrWomanDog))
 
 def youreTheManOrWomanNowDog(bot, trigger, manOrWomanDog):
-        __m.whoDog = trigger.group(2)
+	__m.whoDog = trigger.group(2)
 	__m.manOrWomanDog = manOrWomanDog
 	sayWhoIsTheManOrWomanNowDog(bot)
 
