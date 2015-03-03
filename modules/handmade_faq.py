@@ -223,3 +223,7 @@ def unitTest(bot, trigger):
 @command("compression")
 def compressionOriented(bot, trigger):
     info(bot, trigger, "Casey programs using an approach which he often calls Compression Oriented Programming, in which he will code things in the most straightforward way first, and only loft up common functionality into higher level structures as it becomes apparent that it is necessary. You can read more about the approach here: http://goo.gl/rVgCHI")
+
+@command("break", "vacation")
+def breakInfo(bot, trigger):
+    info(bot, trigger, "Handmade Hero is currently on break so people can catch up! We'll resume Monday, March 9th at the regularly scheduled time.")
