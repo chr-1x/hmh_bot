@@ -235,3 +235,7 @@ def jeffandcasey(bot, trigger):
 @command("software", "programs")
 def software(bot, trigger):
     info(bot, trigger, "The software visibly used on the stream are: Mischief, emacs, cmd, cloc, MS Visual Studio 2013 (Community Edition), and OBS")
+
+@command("port", "porting")
+def port(bot, trigger):
+    info(bot, trigger, "Handmade Hero is being programmed for Windows and is planned to be ported to Mac OS, Linux, Raspberry Pi, and Android.")
