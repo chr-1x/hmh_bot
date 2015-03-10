@@ -226,4 +226,12 @@ def compressionOriented(bot, trigger):
 
 @command("break", "vacation")
 def breakInfo(bot, trigger):
-    info(bot, trigger, "Handmade Hero is currently on break so people can catch up! We'll resume Monday, March 9th at the regularly scheduled time.")
+    info(bot, trigger, "Handmade Hero was on break so people could catch up! We resumed Monday, March 9th at the regularly scheduled time.")
+
+@command("jeffandcasey", "jeffandcaseyshow")
+def jeffandcasey(bot, trigger):
+    info(bot, trigger, "The Jeff and Casey show! http://mollyrocket.com/jacs/index.html")
+
+@command("software", "programs")
+def software(bot, trigger):
+    info(bot, trigger, "The software visibly used on the stream are: Mischief, emacs, cmd, cloc, MS Visual Studio 2013 (Community Edition), and OBS")
