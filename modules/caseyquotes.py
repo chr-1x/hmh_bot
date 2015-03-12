@@ -104,8 +104,9 @@ def fixQuoteTime(bot, trigger):
 	quote.timestamp = pTime.to('UTC').timestamp;
 	bot.say("Quote #%d moved to date: %s" %(quote.id, quote.time.strftime("%b %d")))
 
+#flamedog alais is because of flamedog using all the time.
 @whitelisted_streamtime
-@command("randomquote", "rq")
+@command("randomquote", "rq", "flamedog")
 def randomQuote(bot, trigger):
 	requireDb()
 	query = Quote.select()
