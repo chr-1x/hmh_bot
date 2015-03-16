@@ -226,7 +226,7 @@ def compressionOriented(bot, trigger):
 
 @command("break", "vacation")
 def breakInfo(bot, trigger):
-    info(bot, trigger, "Handmade Hero was on break so people could catch up! We resumed Monday, March 9th at the regularly scheduled time.")
+    info(bot, trigger, "Handmade Hero will be on break till the March 18th due to Casey traveling March 16th through the 17th.")
 
 @command("jeffandcasey", "jeffandcaseyshow")
 def jeffandcasey(bot, trigger):
