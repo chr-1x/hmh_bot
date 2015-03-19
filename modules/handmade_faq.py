@@ -188,7 +188,7 @@ def gettingStartedLearning(bot, trigger):
     """
     info(bot, trigger, "One way to start programming in this manner is to watch the Intro to C series on www.youtube.com/handmadeheroarchive to get a general feel of things. Later, read 'The C Programming Language' by Brian W. Kernighan and Dennis M. Ritchie and work through all the exercises. The most important part is to start coding and to make lots of things in code. Good luck!")
 
-@command("lib", "library", "api")
+@command("lib", "library", "api", "engine")
 def libCommand(bot, trigger):
     info(bot, trigger, "The point of Handmade Hero is to build it all from scratch. To that extent, the only external libraries we'll be referencing are platform libraries (such as the Windows API).")
 
