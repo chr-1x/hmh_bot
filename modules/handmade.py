@@ -96,7 +96,7 @@ def adminonly_streamtime(func):
     return wrapperFunc
 
 def whitelisted_streamtime(func):
-    """Decorator that only allows the function to run if the caller is an admin or owner if the
+    """Decorator that only allows the function to run if the caller is whitelisted if the
        stream is currently on.
     """
     @functools.wraps(func)
