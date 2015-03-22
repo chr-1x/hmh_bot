@@ -35,7 +35,6 @@ def setup(bot):
 	Quote.createTable(ifNotExists=True)
 
 def getQuote(quoteId):
-	quoteId = int(quoteId)
 	try:
 		return Quote.get(quoteId);
 	except SQLObjectNotFound:
@@ -122,7 +121,12 @@ def randomQuote(bot, trigger):
 def sayQuote(bot, trigger):
 	args = trigger.group(2);
 	if(args):
-		quote = getQuote(args)
+		quoteNum = -1
+		try:
+			quoteNum = int(args)
+		except ValueError:
+			bot.say("Hey now, quotes have integer IDs! I can't read %s as an integer!" % args)
+		quote = getQuote(quoteNum)
 		if(quote == None):
 			bot.say("No such quote found!")
 		else:

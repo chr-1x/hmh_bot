@@ -127,6 +127,16 @@ def rollNumber(bot, trigger):
             for i in range(diceAmt):
                 results.append(random.randint(1, diceFaces))
 
+            if (len(diceArgs) > 2):
+                try:
+                    drop = int(diceArgs[2])
+                except ValueError:
+                    drop = 0
+                if (drop >= diceAmt):
+                    bot.say("@%s: Whoops, I dropped all the dice. Sorry." % trigger.nick)
+                    return
+                for i in range(drop):
+                    results.remove(min(results))
 
             for r in results:
                 output += "[%d] " % r
