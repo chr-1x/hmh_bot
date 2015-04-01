@@ -5,9 +5,32 @@ from streambot import Cmd, command, info, whitelisted, adminonly, whitelisted_st
 
 @command("jai", "what", "lang")
 def jai(bot, trigger):
-	info(bot, trigger, "JAI is the codename for the language Jonathan Blow is creating to address common problems game programmers face using existing languages.")
+	info(bot, trigger, "JAI is the codename for the language Jonathan Blow is creating to address common problems game programmers face using existing languages. To more about these problems in detail, check out http://goo.gl/dZ9QVe")
 
 @command("jon", "who")
 def jonbio(bot, trigger):
-	info(bot, trigger, "Jonathan Blow is a game developer and programmer who created Braid and The Witness, and is now developing a new language for game progrmaming.")
+	info(bot, trigger, "Jonathan Blow is a game designer and programmer who released Braid (http://braid-game.com/) and is currently working on The Witness (http://the-witness.net/news) and a new programming language for games called JAI. For more info: !jai")
 
+@command("!old", "!archive")
+def archive(bot, trigger):
+    info(bot, trigger, "YT Archive: http://goo.gl/2tXMSY")
+
+@command('ide', 'emacs', 'editor')
+def ideInfo(bot, trigger):
+    """Info command that provides information about the editor (emacs) used by Casey.
+    """
+    info(bot, trigger, "Jon uses Emacs to edit his code, because that is what he is used to. There are a lot of editors out there, however, so you should use whatever you feel most comfortable in. The version he uses is GNU Emacs 23.4.1 (i386-mingw-nt6.1.7601), released in 2012.")
+
+@command('college', 'school')
+def collegeInfo(bot, trigger):
+    info(bot, trigger, "Jon did not finish college; he has been coding in the gaming industry since god knows when. You can read his thoughts here: http://number-none.com/blow")
+
+@command('site')
+def siteInfo(bot, trigger):
+    """Info command that prints out the site/forum links.
+    """
+    info(bot, trigger, "Jon's Website: http://number-none.com/blow  ::  YT Archive: http://goo.gl/2tXMSY")
+
+@command('chocolate')
+def chocolateBar(bot, trigger):
+    info(bot, trigger, "Jon always has chocolate bars handy during stream. It eases the tension of difficult compiler demos.")
