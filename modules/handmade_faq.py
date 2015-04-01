@@ -7,7 +7,7 @@ import arrow
 import os, sys
 sys.path.append(os.path.dirname(__file__))
 
-from handmade import Cmd, command, info, whitelisted, adminonly, whitelisted_streamtime, adminonly_streamtime
+from streambot import Cmd, command, info, whitelisted, adminonly, whitelisted_streamtime, adminonly_streamtime
 import handmade_stream as stream
 
 #TODO(chronister): engine FAQ
