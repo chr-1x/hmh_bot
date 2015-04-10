@@ -239,3 +239,7 @@ def software(bot, trigger):
 @command("port", "porting")
 def port(bot, trigger):
     info(bot, trigger, "Handmade Hero is being programmed for Windows and is planned to be ported to Mac OS, Linux, Raspberry Pi, and Android.")
+
+@command("tablet", "wacom", "mouse")
+def tablet(bot, trigger):
+    info(bot, trigger, "Casey's handwriting is aided by the use of a Wacom Intuos 3 tablet. The 'blackboard' is the graphics program Mischief.")
