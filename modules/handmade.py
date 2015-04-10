@@ -221,7 +221,7 @@ def commandList(bot, trigger):
         not the built-in Willie module one.
     """
     global commands
-    visibleCommands = [c.main for c in commands if not(c.hide==True)]
+    visibleCommands = [c.main for c in commands if c.hide==False]
     bot.say("Here are the common HH stream commands: !%s" % ", !".join(visibleCommands))
 
 @whitelisted
@@ -232,5 +232,5 @@ def commandExtras(bot, trigger):
         not the built-in Willie module one.
     """
     global commands
-    extraCommands = [c.main for c in commands if (c.hide==True and c.hideAlways!=True)]
+    extraCommands = [c.main for c in commands if (c.hide!= False and c.hideAlways!=True)]
     bot.say("Here are more of the commands I know: !%s" % ", !".join(extraCommands))
