@@ -62,7 +62,7 @@ def delQuote(bot, trigger):
 	quote.destroySelf()
 
 @adminonly
-@command("fixquote", "fq")
+@command("fixquote", "fq", "edit", "editQuote")
 def fixQuote(bot, trigger):
 	requireDb()
 	split = trigger.group(2).split(' ', 1);
