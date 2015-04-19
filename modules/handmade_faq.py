@@ -191,7 +191,7 @@ def renderInfo(bot, trigger):
 def gettingStartedLearning(bot, trigger):
     """Command for basic learning instructions for all those where to start learning questions we get during the stream
     """
-    info(bot, trigger, "Programming can actually be quite simple if you start from the beginning. The languages that many people find easiest to learn initially typically include Python, C#, and Java. Learning C and C++ can be daunting at first, but they give you much finer-grained control over your code. For absolute beginners, try khanacademy.org or codecademy.com for garden-path tutorials and explanations, or c.learncodethehardway.org/book/ for a more self-directed introduction to C programming.")
+    info(bot, trigger, "Programming can actually be quite simple if you start out right. For absolute beginners, try khanacademy.org or codecademy.com for garden-path tutorials and explanations, or c.learncodethehardway.org/book/ for a more self-directed introduction to C programming. See !learnC for more.")
 
 @command('learnC', 'learnC\+\+', 'likeCasey')
 def learningC(bot, trigger):
