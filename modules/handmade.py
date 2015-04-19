@@ -3,6 +3,7 @@ import willie.module
 from willie.tools import stderr
 import random
 import functools
+from datetime import datetime, timedelta
 
 import os, sys
 sys.path.append(os.path.dirname(__file__))
@@ -48,6 +49,23 @@ def command(*args, **kwargs):
     global commands
 
     def passthrough(func):
+
+        originalFunc = func
+
+        def cooldown(bot, trigger):
+            if (hasattr(originalFunc, "lastcall")):
+                if (datetime.now() - originalFunc.lastcall > timedelta(seconds=kwargs.get("cooldown"))):
+                    originalFunc.lastcall = datetime.now()
+                    originalFunc(bot, trigger)
+                else:
+                    info(bot, trigger, "See above")
+            else:
+                originalFunc.lastcall = datetime.now()
+                originalFunc(bot, trigger)
+
+        if ("cooldown" in kwargs):
+            func = cooldown
+
         existingCmds = [c.main for c in commands if c.main == args[0]]
         if (len(existingCmds) == 0):
             commands.append(Cmd(args,func,kwargs.get("hide"), kwargs.get("hideAlways")))
