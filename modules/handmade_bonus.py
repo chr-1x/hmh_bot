@@ -35,7 +35,7 @@ def beepBoop(bot, trigger):
     "The %d%s digit of pi is %s." % (digit, suffix, digits[pi[digit]]),
     "You win! Play again?",
     "Beeeeeeeeeep",
-    "\xe2 \xe2",
+    u"\u266A \u266A",
     "Who do you think you are!?",
     "%s yourself" % trigger.group(1),
     "Fatal Error: Sarcastic response not found"
