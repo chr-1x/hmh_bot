@@ -102,14 +102,14 @@ def creditsMessage(bot, trigger):
 def buyInfo(bot, trigger):
     """Info command that prints out where you can buy the game/support the project.
     """
-    info(bot, trigger, "The Handmade Hero art assets and full source code, can be purchased at http://goo.gl/y20Q9C . You can also support Casey monthly at http://www.patreon.com/cmuratori")
+    info(bot, trigger, "The Handmade Hero art assets and full source code can be purchased at http://goo.gl/y20Q9C . You can also support Casey monthly at http://www.patreon.com/cmuratori")
 
 
 @command('game', 'gameinfo', hide=False, cooldown=10)
 def gameInfo(bot, trigger):
     """Info command that displays basic information about the game being built.
     """
-    info(bot, trigger, "Handmade hero will be a 2D, top-down game inspired by classic Zelda games and modern games like the Binding of Isaac. The entire development of the game will be catalogued in these streams. (More: !art, !lang)")
+    info(bot, trigger, "Handmade hero is a 2D top-down(ish) game inspired by classic Zelda games and modern games like the Binding of Isaac. The entire development of the game is being catalogued in these streams. (More: !art, !lang)")
 
 @command('friday', hide=True, cooldown=10)
 def fridays(bot, trigger):
@@ -127,13 +127,19 @@ def langInfo(bot, trigger):
     """Info command that provides a description of the language and style used on the stream.
         Could be split into two commands, one for simple info and one about the structural choices.
     """
-    info(bot, trigger, "The language used in the stream is essentially C (with a few C++ features like operator overloading and function overloading anticipated). Since we're writing everything from scratch, we will not be using the C standard library wherever possible.")
+    info(bot, trigger, "The language used in the stream is essentially C (with a few C++ features like operator overloading and function overloading). Since we're writing everything from scratch, we will not be using the C or C++ standard libraries wherever possible.")
 
 @command('ide', 'emacs', 'editor', hide=False, cooldown=10)
 def ideInfo(bot, trigger):
     """Info command that provides information about the editor (emacs) used by Casey.
     """
-    info(bot, trigger, "Casey uses Emacs to edit his code, because that is what he is used to. There are a lot of editors out there, however, so you should use whatever you feel most comfortable in. The version he uses is GNU Emacs 23.4.1 (i386-mingw-nt6.1.7601), released in 2012.")
+    info(bot, trigger, "Casey uses Emacs to edit his code because that is what he is used to. There are a lot of editors out there, however, so you should use whatever you feel most comfortable in.")
+
+@command('emacsversion', 'version')
+def emacsVersion(bot, trigger):
+    """Info command that provides information about the emacs version.
+    """
+    info(bot, trigger, "The version of emacs that Casey uses is GNU Emacs 23.4.1 (i386-mingw-nt6.1.7601), released in 2012.")
 
 @command('college', 'school', hide=False, cooldown=10)
 def collegeInfo(bot, trigger):
@@ -143,19 +149,19 @@ def collegeInfo(bot, trigger):
 def keyboardInfo(bot, trigger):
     """Info command that provides information about what keyboard Casey uses.
     """
-    info(bot, trigger, "The mechanical keyboard Casey uses is a Das Keyboard 4.")
+    info(bot, trigger, "Casey was using a Das Keyboard 4, but it broke, so he is currently using an unknown keyboard he had lying around.")
 
 @command('totalTime','length', 'years', 'total', hide=False, cooldown=10)
 def timeOfProject(bot, trigger):
     """How long is the project going on?"""
-    info(bot, trigger, "It is estimated that the project will take 2 years to finish at the rate of one 1-hour stream per weeknight.")
+    info(bot, trigger, "It is estimated that the project will take 2 years or more to finish at the current rate of five 1-hour streams per week.")
 
 @command('art', 'artist', hide=False, cooldown=10)
 def artCreatorInfo(bot, trigger):
     """Command to state who the art is done by
         TODO: maybe look to casey to get a link the artists profile for viewing
     """
-    info(bot, trigger, "The art in Handmade Hero will be created by Yangtian Li (http://www.yangtianli.com/), an artist Casey knows whom he contracted using the funds provided by purchases of the game.")
+    info(bot, trigger, "The art in Handmade Hero is created by Yangtian Li (http://www.yangtianli.com/), an artist Casey knows whom he contracted using the funds provided by purchases of the game.")
 
 @command('compiler', 'cl', 'msvc', 'clang', hide=False, cooldown=10)
 def usedCompilierInfo(bot, trigger):
@@ -173,7 +179,7 @@ def whyNoTemplatesInfo(bot, trigger):
 def usedBuildBatchInfo(bot, trigger):
     """Command to answer the many why Casey builds HMH the way he does
     """
-    info(bot, trigger, "Casey compiles from a batch file using MSVC on windows, allowing a rebuild from the command line, from Emacs (his editor), or even from within MSVC. The program is actually compiled as a single translation unit (it uses #include to compile all involved files in one go), this keeps things simple, as the build script mostly needs to be changed only when adding a dependency. (More: !editor, !compiler)")
+    info(bot, trigger, "Casey compiles from a batch file using MSVC on windows, allowing a rebuild from the command line, from Emacs (his editor), or even from within MSVC. The program is actually compiled as a single translation unit (it uses #include to compile all involved files in one go); this keeps things simple, as the build script mostly needs to be changed only when adding a dependency. (More: !editor, !compiler)")
 	
 @command('render', 'opengl', 'd3d', hide=False, cooldown=10)
 def renderInfo(bot, trigger):
@@ -185,6 +191,12 @@ def renderInfo(bot, trigger):
 def gettingStartedLearning(bot, trigger):
     """Command for basic learning instructions for all those where to start learning questions we get during the stream
     """
+    info(bot, trigger, "Programming can actually be quite simple if you start from the beginning. The languages that many people find easiest to learn initially typically include Python, C#, and Java. Learning C and C++ can be daunting at first, but they give you much finer-grained control over your code. For absolute beginners, try khanacademy.org or codecademy.com for garden-path tutorials and explanations, or c.learncodethehardway.org/book/ for a more self-directed introduction to C programming.")
+
+@command('learnC', 'learnC\+\+', 'likeCasey')
+def learningC(bot, trigger):
+    """Command describing how you can begin learning C, like this
+    """
     info(bot, trigger, "One way to start programming in this manner is to watch the Intro to C series on www.youtube.com/handmadeheroarchive to get a general feel of things. Later, read 'The C Programming Language' by Brian W. Kernighan and Dennis M. Ritchie and work through all the exercises. The most important part is to start coding and to make lots of things in code. Good luck!")
 
 @command("lib", "library", "api", "engine", hide=False, cooldown=10)
@@ -193,7 +205,11 @@ def libCommand(bot, trigger):
 
 @command("wrench", hide=True, hideAlways=False, cooldown=10)
 def codeIsATool(bot, trigger):
-    info(bot, trigger, "Programming is not about the languages. Code is the tool used to solve the problems programmers must address. For more on this perspective, refer to Mike Acton's talk: 'Data-Oriented Design and C++' (https://www.youtube.com/watch?v=rX0ItVEVjHc)")
+    info(bot, trigger, "Programming is not about the languages: code is a tool used to solve problems that programmers face. Some languages address certain tasks better than others, but ultimately you just need to end up with code that hasn't wasted your users' time or your own time.")
+
+@command("data", "dataOriented", "dataDesign", hideAlways=False, cooldown=10)
+def dataOrientation(bot, trigger):
+    info(bot, trigger, "A lot of software, including games, require the programmer to focus on the flow of data in the computer rather than the abstract structure of their program. For more on this perspective, refer to Mike Acton's talk: 'Data-Oriented Design and C++' (https://www.youtube.com/watch?v=rX0ItVEVjHc)")
 
 @command("partner", hide=True, hideAlways=False, cooldown=10)
 def twitchPartner(bot, trigger):
@@ -201,7 +217,7 @@ def twitchPartner(bot, trigger):
 
 @command("math", hide=True, hideAlways=False, cooldown=10)
 def whyMath(bot, trigger):
-    info(bot, trigger, "Tackling game programming issues, such as vectors for player movement, can be a roadblock for many. To learn math for games, please check out: http://goo.gl/bOn6To")
+    info(bot, trigger, "Tackling the math required to program games can be a roadblock for many. To learn about the kinds of math used in games, please check out: http://goo.gl/bOn6To")
 
 @command('wheel', 'gamasutra', hide=True, hideAlways=False, cooldown=10)
 def reinventingWheel(bot, trigger):
@@ -225,7 +241,7 @@ def compressionOriented(bot, trigger):
 
 @command("break", "vacation", hide=True, hideAlways=True, cooldown=10)
 def breakInfo(bot, trigger):
-    info(bot, trigger, "Handmade Hero is on break and will resume March 18th due to Casey traveling March 16th through the 17th.")
+    info(bot, trigger, "Handmade Hero is not currently on break.")
 
 @command("jeffandcasey", "jeffandcaseyshow", hide=True, hideAlways=False, cooldown=10)
 def jeffandcasey(bot, trigger):
@@ -233,11 +249,11 @@ def jeffandcasey(bot, trigger):
 
 @command("software", "programs", hide=False, cooldown=10)
 def software(bot, trigger):
-    info(bot, trigger, "The software visibly used on the stream are: Mischief, emacs, cmd, cloc, MS Visual Studio 2013 (Community Edition), and OBS")
+    info(bot, trigger, "The programs visibly used on the stream are Mischief, emacs, cmd, cloc, MS Visual Studio 2013 (Community Edition), and OBS")
 
 @command("port", "porting", hide=True, hideAlways=False, cooldown=10)
 def port(bot, trigger):
-    info(bot, trigger, "Handmade Hero is being programmed for Windows and is planned to be ported to Mac OS, Linux, Raspberry Pi, and Android.")
+    info(bot, trigger, "Handmade Hero is being programmed on Windows at the moment but most likely will be ported to Mac OS, Linux, Raspberry Pi, and Android.")
 
 @command("tablet", "wacom", "mouse", hide=False, cooldown=10)
 def tablet(bot, trigger):

@@ -17,15 +17,28 @@ def makeAdmin(bot, trigger):
 def beepBoop(bot, trigger):
     """Easter egg command that prints out some programming/robot joke type responses
     """
+    pi = [1,4,1,5,9,2,6,5,3,5,8,9,7,9,3,2,3,8,4,6,2,6,4,3,3,8,3,2,7,9,5,0,2,8,8,4,1,9,7,1,6,9,3,9,9,3,7,5,1,0,5,8,2,0,9,7,4,9,4,4,5,9,2,3,0,7,8,1,6,4,0,6,2,8,6,2,0,8,9,9,8,6,2,8,0,3,4,8,2,5,3,4,2,1,1,7,0,6,7,9,8,2,1,4,8,0,8,6,5,1,3,2,8,2,3,0,6,6,4,7,0,9,3,8,4,4,6,0,9,5,5,0,5,8,2,2,3,1,7,2,5,3,5,9,4,0,8,1,2,8,4,8,1]
+    digits = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
+    digit = random.randint(0, len(pi))
+    suffix = "th"
+    if (digit == 1): suffix = "st"
+    if (digit == 2): suffix = "nd"
+
     responses = [
     "Don't speak of my mother that way!",
     "That command was deprecated as of version 1.6.7, please use 1.3.1 for a more updated API",
-    ":)",
+    "o/",
     "Pushing random buttons isn't meaningful communication, you know!",
     "What goes around, comes around",
     "Do it again. I dare you.",
     "What good is an IRC bot without easter egg commands?",
-    "The 317th digit of pi is five."
+    "The %d%s digit of pi is %s." % (digit, suffix, digits[pi[digit]]),
+    "You win! Play again?",
+    "Beeeeeeeeeep",
+    "\xe2 \xe2",
+    "Who do you think you are!?",
+    "%s yourself" % trigger.group(1),
+    "Fatal Error: Sarcastic response not found"
     ]
     bot.say(random.choice(responses))
 
@@ -47,7 +60,7 @@ def badLanguage(bot, trigger):
        more languages >:) (Possibly including C???)
     """
     langs = [ "Ruby", "Python", "C++", "PHP", "Rust", "Go", "Perl", "C#", "Java", "Scala", "Objective-C", "F#",
-    "Haskell", "Clojure", "BASIC", "Visual Basic", "HTML", "CSS", "Javascript", "Actionscript", "D" ]
+    "Haskell", "Clojure", "BASIC", "Visual Basic", "HTML", "CSS", "Javascript", "Actionscript", "D", "Fortran" ]
     info(bot, None, "%s is a bad language :)" % random.choice(langs))
 
 @adminonly
@@ -55,16 +68,21 @@ def badLanguage(bot, trigger):
 def bestEditor(bot, trigger):
     """Easter egg command that endorses either emacs or vim. Feel free to add more editors.
     """
-    editors = ["emacs", "vim"]
+    editors = ["emacs", "vim", "sublime", "notepad++", "notepad2", "ed", "nano"]
     info(bot, None, "%s is the best editor :)" % random.choice(editors))
 
 @whitelisted_streamtime
 @command('hug', hide=True)
 def hug(bot, trigger):
-    """Easter egg info command that attempts to provide human warmth and empathy in times of
+    """Easter egg command that attempts to provide human warmth and empathy in times of
         emotional trauma.
     """
-    info(bot, trigger, "I would love to, but alas, I am a transient being circling through an ether of intangible bits and bytes and cannot interact in the physical realm.")
+    target = trigger.name
+    if (trigger.group(2)):
+        args = trigger.group(2).split(" ")
+        if (args[0][0] == "@"):
+            target = args[0][1:]
+    bot.say("/me hugs %s" % target)
 
 @command('why', hide=True)
 def whyInfo(bot, trigger):
