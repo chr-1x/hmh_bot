@@ -89,17 +89,27 @@ def rollNumber(bot, trigger):
         output = ""
         for arg in args:
             diceArgs = arg.split("d")
-            diceAmt = diceArgs[0]
-            try:
-                diceAmt = int(diceAmt)
-            except ValueError:
-                bot.say("@%s: I can't roll %s dice" % (trigger.nick, diceAmt))
+
+            if (len(diceArgs) > 0):
+                diceAmt = diceArgs[0]
+                try:
+                    diceAmt = int(diceAmt)
+                except ValueError:
+                    bot.say("@%s: I can't roll %s dice" % (trigger.nick, diceAmt))
+                    return
+            else:
+                bot.say("@%s: Wait, how many dice is that?" % trigger.nick)
                 return
-            diceFaces = diceArgs[1]
-            try:
-                diceFaces = int(diceFaces)
-            except ValueError:
-                bot.say("@%s: I can't roll dice with %s faces!" % (trigger.nick, diceFaces))
+
+            if (len(diceArgs) > 1):
+                diceFaces = diceArgs[1]
+                try:
+                    diceFaces = int(diceFaces)
+                except ValueError:
+                    bot.say("@%s: I can't roll dice with %s faces!" % (trigger.nick, diceFaces))
+                    return
+            else:
+                bot.say("@%s: Wait, how many faces is that?" % trigger.nick)
                 return
 
             if (diceAmt < 0):
