@@ -77,7 +77,7 @@ def hug(bot, trigger):
     """Easter egg command that attempts to provide human warmth and empathy in times of
         emotional trauma.
     """
-    target = trigger.name
+    target = trigger.nick
     if (trigger.group(2)):
         args = trigger.group(2).split(" ")
         if (args[0][0] == "@"):
