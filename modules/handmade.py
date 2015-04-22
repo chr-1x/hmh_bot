@@ -231,6 +231,11 @@ def qaInfo(bot, trigger):
 def preqaInfo(bot, trigger):
     bot.say("Prestream Q&A. Please prefix questions w/ @cmuratori, @handmade_hero, or Q: . Feel free to ask about anything, keeping in mind that some questions may have already been answered in previous streams.")
 
+@whitelisted
+@command('owner', hide=True, hideAlways=False)
+def OwnerInfo(bot, trigger):
+    info(bot, trigger, "My owner is %s." % bot.config.core.owner)
+
 @whitelisted_streamtime
 @command('list', 'commands', 'commandlist', 'cmds', hide=True, hideAlways=True)
 def commandList(bot, trigger):
