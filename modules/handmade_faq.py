@@ -258,3 +258,7 @@ def port(bot, trigger):
 @command("tablet", "wacom", "mouse", hide=False, cooldown=10)
 def tablet(bot, trigger):
     info(bot, trigger, "Casey's handwriting is aided by the use of a Wacom Intuos 3 tablet. The 'blackboard' is the graphics program Mischief.")
+
+@command("script", "scripting", hide=False, cooldown=10)
+def scripting(bot, trigger):
+    info(bot, trigger, "We will not be creating a scripting language for Handmade Hero because we have a hot-reloading feature! We can keep all the code in one language with all the benefits that scripting languages typically try to offer.")
