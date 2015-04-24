@@ -2,11 +2,9 @@ __pycache__
 *.pyc
 *.pid
 logs/
-chronalRobot-irc.twitch.tv.tell.db
 *.sublime-project
 *.sublime-workspace
 *.swp
-test.cfg
-test.db
-/nbm.cfg
 /.env
+*.db
+*.cfg

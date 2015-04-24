@@ -3,6 +3,7 @@ import willie.module
 from willie.tools import stderr
 import random
 import functools
+from datetime import datetime, timedelta
 
 import os, sys
 sys.path.append(os.path.dirname(__file__))
@@ -48,6 +49,23 @@ def command(*args, **kwargs):
     global commands
 
     def passthrough(func):
+
+        originalFunc = func
+
+        def cooldown(bot, trigger):
+            if (hasattr(originalFunc, "lastcall")):
+                if (datetime.now() - originalFunc.lastcall > timedelta(seconds=kwargs.get("cooldown"))):
+                    originalFunc.lastcall = datetime.now()
+                    originalFunc(bot, trigger)
+                else:
+                    info(bot, trigger, "See above")
+            else:
+                originalFunc.lastcall = datetime.now()
+                originalFunc(bot, trigger)
+
+        if ("cooldown" in kwargs):
+            func = cooldown
+
         existingCmds = [c.main for c in commands if c.main == args[0]]
         if (len(existingCmds) == 0):
             commands.append(Cmd(args,func,kwargs.get("hide"), kwargs.get("hideAlways")))
@@ -214,6 +232,11 @@ def preqaInfo(bot, trigger):
     bot.say("Prestream Q&A. Please prefix questions w/ @cmuratori, @handmade_hero, or Q: . Feel free to ask about anything, keeping in mind that some questions may have already been answered in previous streams.")
 
 @whitelisted_streamtime
+@command('owner', hide=True, hideAlways=False)
+def OwnerInfo(bot, trigger):
+    info(bot, trigger, "My owner is %s." % bot.config.core.owner)
+
+@whitelisted_streamtime
 @command('list', 'commands', 'commandlist', 'cmds', hide=True, hideAlways=True)
 def commandList(bot, trigger):
     """Command that lists all of the (non-hidden) registered commands.
@@ -221,7 +244,7 @@ def commandList(bot, trigger):
         not the built-in Willie module one.
     """
     global commands
-    visibleCommands = [c.main for c in commands if not(c.hide==True)]
+    visibleCommands = [c.main for c in commands if c.hide==False]
     bot.say("Here are the common HH stream commands: !%s" % ", !".join(visibleCommands))
 
 @whitelisted
@@ -232,5 +255,5 @@ def commandExtras(bot, trigger):
         not the built-in Willie module one.
     """
     global commands
-    extraCommands = [c.main for c in commands if (c.hide==True and c.hideAlways!=True)]
+    extraCommands = [c.main for c in commands if (c.hide!= False and c.hideAlways!=True)]
     bot.say("Here are more of the commands I know: !%s" % ", !".join(extraCommands))

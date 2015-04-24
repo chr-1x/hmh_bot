@@ -197,7 +197,7 @@ def isStreamingCommand(bot, trigger):
 		bot.say("Stream is not currently going.")
 
 
-@command("time", "timer", "when", "howlong", "timeleft")
+@command("time", "timer", "when", "howlong", "timeleft", hide=False)
 def timer(bot, trigger):
 	"""Info command that prints out the time until the next stream.
 	"""
@@ -219,7 +219,7 @@ def timer(bot, trigger):
 		return info(bot, trigger, "%s into the Q&A (%s until end) if Casey is on schedule" % (getDurationString(now - currentStream.getQaStart()), getDurationString(currentStream.getEnd() - now)))
 
 @whitelisted_streamtime
-@command('today', 'nextStream')
+@command('today', 'nextStream', hide=False)
 def nextSchedule(bot, trigger):
 	"""Info command that prints out the expected time of the next stream
 	"""
@@ -248,7 +248,7 @@ def currentSchedule(bot, trigger):
 	info( bot, trigger, "Schedule for week of %s: %s (times in PST)" % (startOfWeek.strftime("%m/%d"), streamTimes) )
 
 @whitelisted_streamtime
-@command('schedule')
+@command('schedule', hide=False)
 def seeSchedule(bot, trigger):
 	args = trigger.group(2)
 	if (args and trigger.admin):
