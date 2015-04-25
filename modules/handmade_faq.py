@@ -96,7 +96,7 @@ def infoMessage(bot, trigger):
 def creditsMessage(bot, trigger):
     """Shows contributor info! If you make changes, add yourself here (or get someone else to)
     """
-    bot.say("Thanks to chronaldragon (chronister), alexwidener (iamdefinitelybatman), dspecht (drive137), itsuart (isuart2), abnercoimbre, kkartaltepe (kurufu), mvandevander (garlandobloom), nxsy, flamedog, and insofaras for their contributions to my code!")
+    bot.say("Thanks to chronaldragon (chronister), alexwidener (iamdefinitelybatman), dspecht (drive137), itsuart (isuart2), abnercoimbre, kkartaltepe (kurufu), mvandevander (garlandobloom), nxsy, flamedog, insofaras, and soulflare3 for their contributions to my code!")
 
 @command('buy', 'purchase', 'support', 'patreon', hide=False, cooldown=10)
 def buyInfo(bot, trigger):
