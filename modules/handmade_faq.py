@@ -149,7 +149,7 @@ def collegeInfo(bot, trigger):
 def keyboardInfo(bot, trigger):
     """Info command that provides information about what keyboard Casey uses.
     """
-    info(bot, trigger, "Casey was using a Das Keyboard 4, but it broke, so he is currently using an unknown keyboard he had lying around.")
+    info(bot, trigger, "Casey was using a Das Keyboard 4, but it broke, so he is currently using a Das Keyboard 3 he had lying around.")
 
 @command('totalTime','length', 'years', 'total', hide=False, cooldown=10)
 def timeOfProject(bot, trigger):
