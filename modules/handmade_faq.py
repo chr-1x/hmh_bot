@@ -98,7 +98,7 @@ def creditsMessage(bot, trigger):
     """
     bot.say("Thanks to chronaldragon (chronister), alexwidener (iamdefinitelybatman), dspecht (drive137), itsuart (isuart2), abnercoimbre, kkartaltepe (kurufu), mvandevander (garlandobloom), nxsy, flamedog, insofaras, and soulflare3 for their contributions to my code!")
 
-@command('buy', 'purchase', 'support', 'patreon', hide=False, cooldown=10)
+@command('buy', 'purchase', 'support', 'patreon','source','sauce', hide=False, cooldown=10)
 def buyInfo(bot, trigger):
     """Info command that prints out where you can buy the game/support the project.
     """
