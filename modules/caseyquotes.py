@@ -44,6 +44,10 @@ def getQuote(quoteId):
 @command("addquote", "aq")
 def addQuote(bot, trigger):
 	requireDb()
+	if((trigger.group(2) == None) or (trigger.group(2) == "")):
+		bot.say("No quote Text provided!")
+		return
+
 	text = trigger.group(2)
 	# Perhaps someone would want to set the time for a quote.
 	newQuote = Quote(text=text, timestamp=arrow.now().timestamp)
@@ -53,8 +57,12 @@ def addQuote(bot, trigger):
 @command("deletequote", "dq")
 def delQuote(bot, trigger):
 	requireDb()
+	if((trigger.group(2) == None) or (trigger.group(2) == "")):
+		bot.say("Please provide a quote number to delete!")
+		return
+
 	quote = getQuote(trigger.group(2))
-	if(quote != None):
+	if(quote == None): #NOTE(dustin) was this change of != to == correct?
 		bot.say("Could not find quote #%s" % (trigger.group(2)))
 		return
 
@@ -65,6 +73,10 @@ def delQuote(bot, trigger):
 @command("fixquote", "fq", "edit", "editQuote")
 def fixQuote(bot, trigger):
 	requireDb()
+	if((trigger.group(2) == None) or (trigger.group(2) == "")):
+		bot.say("Please provide the quote to fix and the fixed version!")
+		return
+
 	split = trigger.group(2).split(' ', 1);
 	if(len(split) != 2):
 		bot.say("Please provide the fixed quote!")
@@ -82,9 +94,13 @@ def fixQuote(bot, trigger):
 @command("fixquotetime", "fqt")
 def fixQuoteTime(bot, trigger):
 	requireDb()
+	if((trigger.group(2) == None) or (trigger.group(2) == "")):
+		bot.say("Please provide the quote to fix and the fixed time!")
+		return
+
 	split = trigger.group(2).split(' ', 1);
 	if(len(split) != 2):
-		bot.say("Please provide the fixed quote!")
+		bot.say("Please provide the fixed quote time!")
 		return
 
 	quote = getQuote(split[0])
@@ -118,7 +134,7 @@ def randomQuote(bot, trigger):
 
 #flamedog alais is because of flamedog using all the time.
 @whitelisted_streamtime
-@command("sayquote", "quote", "flamedog")
+@command("sayquote", "quote", "flamedog", "q")
 def sayQuote(bot, trigger):
 	args = trigger.group(2);
 	if(args):
