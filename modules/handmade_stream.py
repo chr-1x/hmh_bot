@@ -170,13 +170,18 @@ def checkSchedule(bot):
 		streams = getStreamsOnDay(date)
 		time,flag = dateParser.parseDT(row["time"], sourceTime=date.datetime)
 		time = arrow.get(time, defaultTz)
+		off_day = row["description"] == "off"
 		for stream in streams: ## Don't worry, this is usually 1 element long (if it's not, we have some refactoring to do elsewhere!)
+			if(off_day):
+				#kill the stream
+				StreamEpisode.delete(getID(stream))
+				pass
 			if(abs(stream.start - time) > timedelta(0)):
 				#print("%s now at %s (was %s), " % (time.strftime("%b %d %Y"), time.strftime("%I:%M%p"), stream._get_start().strftime("%I:%M%p")))
 				scheduleStream(time)
 				result += "%s now at %s (was %s), " % (time.strftime("%b %d %Y"), time.strftime("%I:%M%p"), stream._get_start().strftime("%I:%M%p"))
 		#print(date, streams)
-		if (len(streams) == 0):
+		if (len(streams) == 0 and off_day == False):
 			#print("No stream on %s, added one at %s" % (time.strftime("%b %d %Y"), time.strftime("%I:%M%p")))
 			scheduleStream(time)
 			result += time.strftime("%b %d %Y at %I:%M%p %Z") + ", "
