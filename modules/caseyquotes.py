@@ -150,29 +150,29 @@ def sayQuote(bot, trigger):
 			bot.say('(#%d)"%s" -Casey %s' % (quote.id, quote.text, quote.time.strftime("%b %d")))
 	else:
 		randomQuote(bot, trigger)
-		
-#NOTE(effect0r): This should probably be changed to query the db using a regex of searchString to eliminate the forloop, 
+
+#NOTE(effect0r): This should probably be changed to query the db using a regex of searchString to eliminate the forloop,
 #                but my knowledge of SQLobject is too limited to properly form such a statement
 #searchquote - find a quote basted on a search string
 @whitelisted_streamtime
 @command("findquote", "fquote")
 def findQuote(bot, trigger):
-    requireDb()
-    reply = ""
-    totalQuotes = 0
-    
-    searchString = trigger.group(2).lower()    
-    if (searchString):
-        quotes = Quote.select()
-        for q in quotes:
-            if q.text.lower().find(searchString) > -1:
-                reply = reply + str(q.id) + " "
-                totalQuotes += 1                
-        if reply == "":
-            bot.say("No quotes found with string %s" % searchString)
-        else:
-            bot.say("Found %d quote(s) matching %s: %s" % (totalQuotes, searchString, reply))
-    else:
-        bot.say("Usage: !findquote <word> or !fquote <word>")
-        
+	requireDb()
+	reply = ""
+	totalQuotes = 0
+
+	searchString = trigger.group(2)
+	if (searchString):
+		quotes = Quote.select()
+		for q in quotes:
+			if q.text.lower().find(searchString.lower()) > -1:
+				reply = reply + str(q.id) + " "
+				totalQuotes += 1
+		if reply == "":
+			bot.say("No quotes found with string %s" % searchString.lower())
+		else:
+			bot.say("Found %d quote(s) matching %s: %s" % (totalQuotes, searchString.lower(), reply))
+	else:
+		bot.say("Usage: !findquote <word> or !fquote <word>")
+
 
