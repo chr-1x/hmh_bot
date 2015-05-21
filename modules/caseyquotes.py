@@ -44,7 +44,7 @@ def getQuote(quoteId):
 @command("addquote", "aq")
 def addQuote(bot, trigger):
 	requireDb()
-	if((trigger.group(2) == None) or (trigger.group(2) == "")):
+	if(trigger.group(2)):
 		bot.say("No quote Text provided!")
 		return
 
@@ -57,8 +57,8 @@ def addQuote(bot, trigger):
 @command("deletequote", "dq")
 def delQuote(bot, trigger):
 	requireDb()
-	if((trigger.group(2) == None) or (trigger.group(2) == "")):
-		bot.say("Please provide a quote number to delete!")
+	if(trigger.group(2)):
+		bot.say("Usage: !deletequote <quote id>")
 		return
 
 	quote = getQuote(trigger.group(2))
@@ -73,8 +73,8 @@ def delQuote(bot, trigger):
 @command("fixquote", "fq", "edit", "editQuote")
 def fixQuote(bot, trigger):
 	requireDb()
-	if((trigger.group(2) == None) or (trigger.group(2) == "")):
-		bot.say("Please provide the quote to fix and the fixed version!")
+	if(trigger.group(2)):
+		bot.say("Usage: !fixquote <quote id> <quote text>")
 		return
 
 	split = trigger.group(2).split(' ', 1);
@@ -94,8 +94,8 @@ def fixQuote(bot, trigger):
 @command("fixquotetime", "fqt")
 def fixQuoteTime(bot, trigger):
 	requireDb()
-	if((trigger.group(2) == None) or (trigger.group(2) == "")):
-		bot.say("Please provide the quote to fix and the fixed time!")
+	if(trigger.group(2)):
+		bot.say("Usage: !fixquotetime <quote id> <quote time>")
 		return
 
 	split = trigger.group(2).split(' ', 1);
