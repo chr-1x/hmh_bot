@@ -15,7 +15,7 @@ dbURI = 'sqlite:/:memory:'
 defaultTz = 'US/Pacific'
 
 def requireDb():
-	if ( not hasattr(sqlhub, 'threadConnection') ): # Ensure whatever thread we are in has its own db connection.
+	if (not hasattr(sqlhub, 'threadConnection') ): # Ensure whatever thread we are in has its own db connection.
 		sqlhub.threadConnection = dbConnectionForScheme('sqlite').connectionFromURI(dbURI)
 
 class Quote(SQLObject):
@@ -44,7 +44,7 @@ def getQuote(quoteId):
 @command("addquote", "aq")
 def addQuote(bot, trigger):
 	requireDb()
-	if(trigger.group(2)):
+	if(not trigger.group(2)):
 		bot.say("No quote Text provided!")
 		return
 
@@ -57,7 +57,7 @@ def addQuote(bot, trigger):
 @command("deletequote", "dq")
 def delQuote(bot, trigger):
 	requireDb()
-	if(trigger.group(2)):
+	if(not trigger.group(2)):
 		bot.say("Usage: !deletequote <quote id>")
 		return
 
@@ -73,7 +73,7 @@ def delQuote(bot, trigger):
 @command("fixquote", "fq", "edit", "editQuote")
 def fixQuote(bot, trigger):
 	requireDb()
-	if(trigger.group(2)):
+	if(not trigger.group(2)):
 		bot.say("Usage: !fixquote <quote id> <quote text>")
 		return
 
@@ -94,7 +94,7 @@ def fixQuote(bot, trigger):
 @command("fixquotetime", "fqt")
 def fixQuoteTime(bot, trigger):
 	requireDb()
-	if(trigger.group(2)):
+	if(not trigger.group(2)):
 		bot.say("Usage: !fixquotetime <quote id> <quote time>")
 		return
 
