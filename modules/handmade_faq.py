@@ -187,7 +187,7 @@ def renderInfo(bot, trigger):
     """
     info(bot, trigger, "We are currently using software rendering in order to implement our own renderer. Ultimately the game will take advantage of hardware acceleration (i.e. using OpenGL, Direct3D, etc.) to maximize performance.")
 
-@command('learning', 'learnProgramming','learn', hide=False, cooldown=10)
+@command('learning', 'learnProgramming', 'learn', hide=False, cooldown=10)
 def gettingStartedLearning(bot, trigger):
     """Command for basic learning instructions for all those where to start learning questions we get during the stream
     """
