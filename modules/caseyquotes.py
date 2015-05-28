@@ -49,6 +49,7 @@ def addQuote(bot, trigger):
 		return
 
 	text = trigger.group(2)
+	text = text.strip('"')
 	# Perhaps someone would want to set the time for a quote.
 	newQuote = Quote(text=text, timestamp=arrow.now().timestamp)
 	bot.say("Quote #%d added!" % (newQuote.id))
