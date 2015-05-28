@@ -262,3 +262,7 @@ def tablet(bot, trigger):
 @command("script", "scripting", hide=False, cooldown=10)
 def scripting(bot, trigger):
     info(bot, trigger, "We will not be creating a scripting language for Handmade Hero because we have a hot-reloading feature! We can keep all the code in one language with all the benefits that scripting languages typically try to offer.")
+
+@command("quotelist", "listquotes", "listq", "lq", hide=False, cooldown=10)
+def quotelist(bot, trigger):
+    info(bot, trigger, "A list of all saved quotes is available here: http://goo.gl/2qCAqT.")
