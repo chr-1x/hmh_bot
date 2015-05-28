@@ -174,13 +174,13 @@ def whyNoTemplatesInfo(bot, trigger):
 	"""Command to answer the many why Casey avoids using C++ templates where possible
 	"""
 	info(bot, trigger, "Casey avoids using C++ templates where not absolutely necessary, as they lead to longer compile times and make debugging harder. See also: http://mollyrocket.com/forums/molly_forum_402.html")
-	
+
 @command('build', 'batch', hide=False, cooldown=10)
 def usedBuildBatchInfo(bot, trigger):
     """Command to answer the many why Casey builds HMH the way he does
     """
     info(bot, trigger, "Casey compiles from a batch file using MSVC on windows, allowing a rebuild from the command line, from Emacs (his editor), or even from within MSVC. The program is actually compiled as a single translation unit (it uses #include to compile all involved files in one go); this keeps things simple, as the build script mostly needs to be changed only when adding a dependency. (More: !editor, !compiler)")
-	
+
 @command('render', 'opengl', 'd3d', hide=False, cooldown=10)
 def renderInfo(bot, trigger):
     """Command to give render information to the chat target
@@ -234,7 +234,7 @@ def jai(bot, trigger):
 @command("unittest", "unittests", "tests", hide=True, hideAlways=False, cooldown=10)
 def unitTest(bot, trigger):
     info(bot, trigger, "We won't be doing unit tests on Handmade Hero because the structure of a game changes a lot over the course of its development, and game systems don't tend to fit into easily testable components.")
-    
+
 @command("compression", hide=True, hideAlways=False, cooldown=10)
 def compressionOriented(bot, trigger):
     info(bot, trigger, "Casey programs using an approach which he often calls Compression Oriented Programming, in which he will code things in the most straightforward way first, and only loft up common functionality into higher level structures as it becomes apparent that it is necessary. You can read more about the approach here: http://goo.gl/rVgCHI")
@@ -251,7 +251,7 @@ def jeffandcasey(bot, trigger):
 def software(bot, trigger):
     info(bot, trigger, "The programs visibly used on the stream are Mischief, emacs, cmd, cloc, MS Visual Studio 2013 (Community Edition), and OBS")
 
-@command("port", "porting", "linux", "platform", "mac", "android", hide=True, hideAlways=False, cooldown=10)
+@command("port", "porting", "linux", "platform", "platforms", "mac", "android", hide=True, hideAlways=False, cooldown=10)
 def port(bot, trigger):
     info(bot, trigger, "Handmade Hero is being programmed on Windows at the moment but most likely will be ported to Mac OS, Linux, Raspberry Pi, and Android.")
 
