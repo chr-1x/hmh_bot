@@ -80,8 +80,8 @@ def hug(bot, trigger):
     target = trigger.nick
     if (trigger.group(2)):
         args = trigger.group(2).split(" ")
-        if (args[0][0] == "@"):
-            target = args[0][1:]
+        if (args[0][0] != None):
+            target = args[0][0:]
     bot.say("/me hugs %s" % target)
 
 @command('why', hide=True)
