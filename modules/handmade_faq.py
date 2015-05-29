@@ -89,7 +89,7 @@ def infoMessage(bot, trigger):
     """Command that shows information about the chatbot. Should be updated with contributor info
         and github page once that happens.
     """
-    bot.say("I am a Python IRC bot based on Willie (http://willie.dftba.net/). I was started by ChronalDragon and am now jointly maintained by the good folks who commit to my github repo (https://github.com/Chronister/ChronalRobot)")
+    bot.say("I am a Python IRC bot based on Willie (http://willie.dftba.net/). I was started by ChronalDragon and am now jointly maintained by the good folks who commit to my github repo (https://github.com/Chronister/ChronalRobot). See also: !credits")
 
 @whitelisted_streamtime
 @command('credits', hide=True, hideAlways=False, cooldown=10)
@@ -213,7 +213,7 @@ def dataOrientation(bot, trigger):
 
 @command("partner", hide=True, hideAlways=False, cooldown=10)
 def twitchPartner(bot, trigger):
-    info(bot, trigger, "A Twitch partnership would require Casey to hold the archive videos for 24 hours before uploading to YouTube.")
+    info(bot, trigger, "A Twitch partnership would require Casey to hold the archive videos for 24 hours before uploading to YouTube. See also: !support")
 
 @command("math", hide=True, hideAlways=False, cooldown=10)
 def whyMath(bot, trigger):
