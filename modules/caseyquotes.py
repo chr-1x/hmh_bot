@@ -52,7 +52,7 @@ def addQuote(bot, trigger):
 	text = text.strip('"')
 	# Perhaps someone would want to set the time for a quote.
 	newQuote = Quote(text=text, timestamp=arrow.now().timestamp)
-	bot.say("Quote #%d added!" % (newQuote.id))
+	bot.say("Quote id%d added!" % (newQuote.id))
 
 @adminonly
 @command("deletequote", "dq")
@@ -64,7 +64,7 @@ def delQuote(bot, trigger):
 
 	quote = getQuote(trigger.group(2))
 	if(quote == None): #NOTE(dustin) was this change of != to == correct?
-		bot.say("Could not find quote #%s" % (trigger.group(2)))
+		bot.say("Could not find quote id%s" % (trigger.group(2)))
 		return
 
 	bot.say("Deleted quote %i '%s'" % (quote.id, quote.text))
@@ -85,7 +85,7 @@ def fixQuote(bot, trigger):
 
 	quote = getQuote(split[0])
 	if(quote == None):
-		bot.say("Could not find quote #%s" % (split[0]))
+		bot.say("Could not find quote id%s" % (split[0]))
 		return
 
 	quote.text = split[1]
@@ -106,7 +106,7 @@ def fixQuoteTime(bot, trigger):
 
 	quote = getQuote(split[0])
 	if(quote == None):
-		bot.say("Could not find quote #%s" % (split[0]))
+		bot.say("Could not find quote id%s" % (split[0]))
 		return
 
 	pTime,flag = dateParser.parseDT(split[1], sourceTime=arrow.now(defaultTz)) # use beginning of today as the source day to ensure DT returned.
