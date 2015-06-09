@@ -263,11 +263,10 @@ def tablet(bot, trigger):
 def scripting(bot, trigger):
     info(bot, trigger, "We will not be creating a scripting language for Handmade Hero because we have a hot-reloading feature! We can keep all the code in one language with all the benefits that scripting languages typically try to offer.")
 
-@command("quotelist", "listquotes", "listq", "lq", hide=False, cooldown=10)
+@command("quotelist", "listquotes", "listq", "lq", "ql", hide=False, cooldown=10)
 def quotelist(bot, trigger):
     info(bot, trigger, "A list of all saved quotes is available here: http://goo.gl/2qCAqT.")
 
-@command("rules", "chatrules", "chat")
-def quotelist(bot, trigger):
+@command("rules", "chatrules", "chat", hide=False, cooldown=10)
+def rules(bot, trigger):
     info(bot, trigger, "The Handmade Hero moderator team volunteer their time in order to keep chat civil and clean during stream time. Spamming, as well as argumentative or disrespectful attitudes will not be tolerated, and continued defiance will result in a ban from the chat.")
-
