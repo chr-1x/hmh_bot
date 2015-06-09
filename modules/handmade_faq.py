@@ -266,3 +266,8 @@ def scripting(bot, trigger):
 @command("quotelist", "listquotes", "listq", "lq", hide=False, cooldown=10)
 def quotelist(bot, trigger):
     info(bot, trigger, "A list of all saved quotes is available here: http://goo.gl/2qCAqT.")
+
+@command("rules", "chatrules", "chat")
+def quotelist(bot, trigger):
+    info(bot, trigger, "The Handmade Hero moderator team volunteers their time in order to keep chat civil and clean during stream time. Spamming, as well as argumentative or disrespectful attitudes will not be tolerated, and continued defiance will result in a ban from the chat.")
+
