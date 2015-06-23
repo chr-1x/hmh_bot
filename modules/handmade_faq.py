@@ -271,3 +271,6 @@ def quotelist(bot, trigger):
 def rules(bot, trigger):
     info(bot, trigger, "The Handmade Hero moderator team volunteers their time in order to keep chat civil and clean during stream time. Spamming, repetitive arguments that clog up the chat, or refusal to cooperate with a reasonable request from a moderator may result in a ban from the chat at the moderators' sole discretion.")
 
+@command("userlist", "users", hide=False, cooldown=10)
+def userlist(bot, trigger):
+    info(bot, trigger, "Are you on IRC and missing a user list? Twitch is making changes on their end and you now have to request it specifically. Use the raw command in your irc client (/raw or /quote usually) to issue the following command: CAP REQ :twitch.tv/membership")
