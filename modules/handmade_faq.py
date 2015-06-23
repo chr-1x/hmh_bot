@@ -269,4 +269,5 @@ def quotelist(bot, trigger):
 
 @command("rules", "chatrules", "chat", hide=False, cooldown=10)
 def rules(bot, trigger):
-    info(bot, trigger, "The Handmade Hero moderator team volunteer their time in order to keep chat civil and clean during stream time. Spamming, as well as argumentative or disrespectful attitudes will not be tolerated, and continued defiance will result in a ban from the chat.")
+    info(bot, trigger, "The Handmade Hero moderator team volunteers their time in order to keep chat civil and clean during stream time. Spamming, repetitive arguments that clog up the chat, or refusal to cooperate with a reasonable request from a moderator may result in a ban from the chat at the moderators' sole discretion.")
+
