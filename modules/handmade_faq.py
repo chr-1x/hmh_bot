@@ -273,4 +273,4 @@ def rules(bot, trigger):
 
 @command("userlist", "users", hide=False, cooldown=10)
 def userlist(bot, trigger):
-    info(bot, trigger, "Are you on IRC and missing a user list? Twitch is making changes on their end and you now have to request it specifically. Use the raw command in your irc client (/raw or /quote usually) to issue the following command: CAP REQ :twitch.tv/membership")
+    info(bot, trigger, "Are you on IRC and missing a user list? Twitch is making changes on their end and you now have to request it specifically. Use the raw command in your irc client (/raw or /quote usually, or just /cap) to issue the following command: CAP REQ :twitch.tv/membership")
