@@ -156,7 +156,7 @@ def moreKeyboardInfo(bot, trigger):
 	"""What switches are in your keyboard?
 	"""
 	info(bot, trigger, "The keyboard switches are Cherry MX Brown. See also: !keyboard")
-	
+
 @command('totalTime','length', 'years', 'total', hide=False, cooldown=10)
 def timeOfProject(bot, trigger):
     """How long is the project going on?"""
@@ -197,13 +197,13 @@ def renderInfo(bot, trigger):
 def gettingStartedLearning(bot, trigger):
     """Command for basic learning instructions for all those where to start learning questions we get during the stream
     """
-    info(bot, trigger, "Programming can actually be quite simple if you start out right. For absolute beginners, try khanacademy.org or codecademy.com for garden-path tutorials and explanations, or c.learncodethehardway.org/book/ for a more self-directed introduction to C programming. See !learnC for more.")
+    info(bot, trigger, "Programming can actually be quite simple if you start out right. For absolute beginners, try khanacademy.org or codecademy.com for garden-path tutorials and explanations, or c.learncodethehardway.org/book/ for a more self-directed introduction to C programming, LearnXinYminutes is a quick way to get a overview of a language found here http://goo.gl/ZEDxDt. See !learnC for more.")
 
 @command('learnC', 'learnC\+\+', 'likeCasey')
 def learningC(bot, trigger):
     """Command describing how you can begin learning C, like this
     """
-    info(bot, trigger, "One way to start programming in this manner is to watch the Intro to C series on www.youtube.com/handmadeheroarchive to get a general feel of things. Later, read 'The C Programming Language' by Brian W. Kernighan and Dennis M. Ritchie and work through all the exercises. The most important part is to start coding and to make lots of things in code. Good luck!")
+    info(bot, trigger, "One way to start programming in this manner is to watch the Intro to C series on www.youtube.com/handmadeheroarchive to get a general feel of things. Later, read 'The C Programming Language' by Brian W. Kernighan and Dennis M. Ritchie and work through all the exercises, LearnXinYminutes can be used to see the basics of c http://goo.gl/qmluuM. The most important part is to start coding and to make lots of things in code. Good luck!")
 
 @command("lib", "library", "api", "engine", hide=False, cooldown=10)
 def libCommand(bot, trigger):
