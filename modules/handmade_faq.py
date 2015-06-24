@@ -149,8 +149,14 @@ def collegeInfo(bot, trigger):
 def keyboardInfo(bot, trigger):
     """Info command that provides information about what keyboard Casey uses.
     """
-    info(bot, trigger, "Casey was using a Das Keyboard 4, but it broke, so he is currently using a Das Keyboard 3 he had lying around.")
+    info(bot, trigger, "Casey was using a Das Keyboard 4, but it broke, so he is currently using a Das Keyboard 3 he had lying around. See also: !switches")
 
+@command('switches', 'switch', 'mechanical', hide=False, cooldown=10)
+def moreKeyboardInfo(bot, trigger):
+	"""What switches are in your keyboard?
+	"""
+	info(bot, trigger, "The keyboard switches are Cherry MX Brown. See also: !keyboard")
+	
 @command('totalTime','length', 'years', 'total', hide=False, cooldown=10)
 def timeOfProject(bot, trigger):
     """How long is the project going on?"""
@@ -263,7 +269,7 @@ def tablet(bot, trigger):
 def scripting(bot, trigger):
     info(bot, trigger, "We will not be creating a scripting language for Handmade Hero because we have a hot-reloading feature! We can keep all the code in one language with all the benefits that scripting languages typically try to offer.")
 
-@command("quotelist", "listquotes", "listq", "lq", "ql", hide=False, cooldown=10)
+@command("quotelist", "listquotes", "listquote", "listq", "lq", "ql", hide=False, cooldown=10)
 def quotelist(bot, trigger):
     info(bot, trigger, "A list of all saved quotes is available here: http://goo.gl/2qCAqT.")
 
@@ -273,4 +279,4 @@ def rules(bot, trigger):
 
 @command("userlist", "users", hide=False, cooldown=10)
 def userlist(bot, trigger):
-    info(bot, trigger, "Are you on IRC and missing a user list? Twitch is making changes on their end and you now have to request it specifically. Use the raw command in your irc client (/raw or /quote usually, or just /cap) to issue the following command: CAP REQ :twitch.tv/membership")
+    info(bot, trigger, "Are you on IRC and missing a user list? Twitch is making changes on their end and you now have to request it specifically. Use the raw command in your IRC client (/raw or /quote usually, or just /cap) to issue the following command: CAP REQ :twitch.tv/membership  For the change to take effect you will need to use /cycle (if supported by your client) or disconnect (usually /disconnect) from and reconnect (usually /connect) to the Twitch IRC network. It is recommended to add this to your client's connect command, because you have to request this capability every time you connect to Twitch.")
