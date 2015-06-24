@@ -283,9 +283,9 @@ def userlist(bot, trigger):
 
 @command("never", "neverabout", hide=False, cooldown=10)
 def never(bot, trigger):
-    info(bot, trigger, "Programming is not really about the code. See http://y2u.be/Lzc3HcIgXis or http://y2u.be/rX0ItVEVjHc for a more advanced talk")
+    info(bot, trigger, "Programming is not really about the code. See http://y2u.be/Lzc3HcIgXis or http://y2u.be/rX0ItVEVjHc for a more advanced talk.")
 
 @command("design", "gamedesign", hide=False, cooldown=10)
 def design(bot, trigger):
-    info(bot, trigger, "Handmade Hero is a game coded from scratch which will make use of classic game design techniques. For design talk Casey has references, see http://y2u.be/0zVjdEhHmGo")
+    info(bot, trigger, "Handmade Hero is a game coded from scratch which will make use of classic game design techniques. For a design talk Casey has referenced, see http://y2u.be/0zVjdEhHmGo")
 
