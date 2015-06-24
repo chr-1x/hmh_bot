@@ -152,7 +152,7 @@ def keyboardInfo(bot, trigger):
     info(bot, trigger, "Casey was using a Das Keyboard 4, but it broke, so he is currently using a Das Keyboard 3 he had lying around. See also: !switches")
 
 @command('switches', 'switch', 'mechanical', hide=False, cooldown=10)
-def moreKeyboardInfo(bot,trigger):
+def moreKeyboardInfo(bot, trigger):
 	"""What switches are in your keyboard?
 	"""
 	info(bot, trigger, "The keyboard switches are Cherry MX Brown. See also: !keyboard")
