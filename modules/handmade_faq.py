@@ -279,7 +279,7 @@ def rules(bot, trigger):
 
 @command("userlist", "users", hide=False, cooldown=10)
 def userlist(bot, trigger):
-    info(bot, trigger, "Are you on IRC and missing a user list? Twitch is making changes on their end and you now have to request it specifically. Use the raw command in your IRC client (/raw or /quote usually, or just /cap) to issue the following command: CAP REQ :twitch.tv/membership  For the change to take effect you will need to use /cycle (if supported by your client) or disconnect (usually /disconnect) from and reconnect (usually /connect) to the Twitch IRC network. It is recommended to add this to your client's connect command, because you have to request this capability every time you connect to Twitch.")
+    info(bot, trigger, "Are you on IRC and missing a user list? Twitch is making changes on their end and you now have to request it specifically. Use the raw command in your IRC client (/raw or /quote usually, or just /cap) to issue the following command: CAP REQ :twitch.tv/membership For the change to take effect you will need to use /cycle (if supported) or /disconnect and /connect. It is recommended to add this to your connect command.")
 
 @command("never", "neverabout", hide=False, cooldown=10)
 def never(bot, trigger):
@@ -288,4 +288,3 @@ def never(bot, trigger):
 @command("design", "gamedesign", hide=False, cooldown=10)
 def design(bot, trigger):
     info(bot, trigger, "Handmade Hero is a game coded from scratch which will make use of classic game design techniques. For a design talk Casey has referenced, see http://y2u.be/0zVjdEhHmGo")
-
