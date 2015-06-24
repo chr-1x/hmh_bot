@@ -283,9 +283,9 @@ def userlist(bot, trigger):
 
 @command("never", "neverabout", hide=False, cooldown=10)
 def never(bot, trigger):
-    info(bot, trigger, "An obvious but important statement to make is that programming is never about the code, but what you do with it and how it's structured when growing your codebase. For a talk that Casey and Sean Barrett have referenced, check out Abner Coimbre's talk (https://www.youtube.com/watch?v=Lzc3HcIgXis) or the more advanced lecture by Mike Acton (https://www.youtube.com/watch?v=rX0ItVEVjHc)") 
+    info(bot, trigger, "Programming is not really about the code. See http://y2u.be/Lzc3HcIgXis or http://y2u.be/rX0ItVEVjHc for a more advanced talk")
 
 @command("design", "gamedesign", hide=False, cooldown=10)
 def design(bot, trigger):
-    info(bot, trigger, "Handmade Hero is a game coded from scratch which will make use of classic game design techniques. For a more in-depth discussion on game design that Casey references, see Jonathan Blow's current dev blog posts (http://the-witness.net/news/) or Matthew VanDeVanDer's recent puzzle design talk: (https://www.youtube.com/watch?v=0zVjdEhHmGo)")
+    info(bot, trigger, "Handmade Hero is a game coded from scratch which will make use of classic game design techniques. For design talk Casey has references, see http://y2u.be/0zVjdEhHmGo")
 
