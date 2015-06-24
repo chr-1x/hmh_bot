@@ -280,3 +280,12 @@ def rules(bot, trigger):
 @command("userlist", "users", hide=False, cooldown=10)
 def userlist(bot, trigger):
     info(bot, trigger, "Are you on IRC and missing a user list? Twitch is making changes on their end and you now have to request it specifically. Use the raw command in your IRC client (/raw or /quote usually, or just /cap) to issue the following command: CAP REQ :twitch.tv/membership  For the change to take effect you will need to use /cycle (if supported by your client) or disconnect (usually /disconnect) from and reconnect (usually /connect) to the Twitch IRC network. It is recommended to add this to your client's connect command, because you have to request this capability every time you connect to Twitch.")
+
+@command("never", "neverabout", hide=False, cooldown=10)
+def never(bot, trigger):
+    info(bot, trigger, "An obvious but important statement to make is that programming is never about the code, but what you do with it and how it's structured when growing your codebase. For a talk that Casey and Sean Barrett have referenced, check out Abner Coimbre's talk (https://www.youtube.com/watch?v=Lzc3HcIgXis) or the more advanced lecture by Mike Acton (https://www.youtube.com/watch?v=rX0ItVEVjHc)") 
+
+@command("design", "gamedesign", hide=False, cooldown=10)
+def design(bot, trigger):
+    info(bot, trigger, "Handmade Hero is a game coded from scratch which will make use of classic game design techniques. For a more in-depth discussion on game design that Casey references, see Jonathan Blow's current dev blog posts (http://the-witness.net/news/) or Matthew VanDeVanDer's recent puzzle design talk: (https://www.youtube.com/watch?v=0zVjdEhHmGo)")
+
