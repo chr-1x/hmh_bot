@@ -247,7 +247,7 @@ def compressionOriented(bot, trigger):
 
 @command("break", "vacation", hide=True, hideAlways=True, cooldown=10)
 def breakInfo(bot, trigger):
-    info(bot, trigger, "Handmade Hero is not currently on break.")
+    info(bot, trigger, "Handmade Hero is off for the rest of the week as Casey must attend a family medical emergency. It will resume next Monday.")
 
 @command("jeffandcasey", "jeffandcaseyshow", hide=True, hideAlways=False, cooldown=10)
 def jeffandcasey(bot, trigger):
