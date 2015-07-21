@@ -67,7 +67,7 @@ def wristInfo(bot, trigger):
 def milkInfo(bot, trigger):
     """Info command that prints out info about almond milk.
     """
-    info(bot, trigger, "One of Casey's drinks of choice is Almond Milk, a delicious and refreshing beverage. Some common brands are Silk and Almond Breeze.")
+    info(bot, trigger, "One of Casey's drinks of choice is Almond Milk, a delicious and refreshing beverage. Some common brands are Silk and Almond Breeze. Over Summer, Casey has been making his own lemonade.")
 
 @command('who', 'casey', hide=False, cooldown=10)
 def caseyInfo(bot, trigger):
