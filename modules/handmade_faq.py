@@ -223,7 +223,7 @@ def twitchPartner(bot, trigger):
 
 @command("math", hide=True, hideAlways=False, cooldown=10)
 def whyMath(bot, trigger):
-    info(bot, trigger, "Tackling the math required to program games can be a roadblock for many. To learn about the kinds of math used in games, please check out: http://goo.gl/bOn6To")
+    info(bot, trigger, "Tackling the math required to program games can be a roadblock for many. To learn about the kinds of math used in games, please check out: http://goo.gl/bOn6To and https://goo.gl/67ZG1F for coding math a youtube series on simple math for programmers.")
 
 @command('wheel', 'gamasutra', hide=True, hideAlways=False, cooldown=10)
 def reinventingWheel(bot, trigger):
