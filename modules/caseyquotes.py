@@ -110,12 +110,12 @@ def fixQuoteTime(bot, trigger):
 		return
 
 	pTime,flag = dateParser.parseDT(split[1], sourceTime=arrow.now(defaultTz)) # use beginning of today as the source day to ensure DT returned.
-	#Anything not explicitly dated will go to next occurance of that date
-	#so check if the date given was pushed more than 6 months in the future
-	#if it was assume the issuer ment the past. Will break setting dates manually with years.
+	
+	#NOTE(chronister): Offset time by -1 year so that any given month is assumed to be the _last_ occurrence of that month.
+	# This still breaks explicitly setting by year...
+	#TODO: Can we check if the user passed a year, and avoid doing the -1 offset if so?
 	pTime = arrow.get(pTime, defaultTz) # avoid python AWFUL datetimes.
-	if (pTime > arrow.now(defaultTz).replace(months=+6)):
-			pTime = pTime.replace(years=-1)
+	pTime = pTime.replace(years=-1)
 
 	quote.timestamp = pTime.to('UTC').timestamp;
 	bot.say("Quote #%d moved to date: %s" %(quote.id, quote.time.strftime("%b %d")))
