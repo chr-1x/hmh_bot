@@ -276,7 +276,7 @@ def scripting(bot, trigger):
 
 @command("quotelist", "listquotes", "listquote", "listq", "lq", "ql", hide=False, cooldown=10)
 def quotelist(bot, trigger):
-    info(bot, trigger, "A list of all saved quotes is available here: http://goo.gl/2qCAqT.")
+    info(bot, trigger, "A list of all saved quotes is available here: https://goo.gl/YYT8rN.")
 
 @command("rules", "chatrules", "chat", hide=False, cooldown=10)
 def rules(bot, trigger):
