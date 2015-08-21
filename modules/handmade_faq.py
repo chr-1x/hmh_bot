@@ -293,3 +293,7 @@ def never(bot, trigger):
 @command("design", "gamedesign", hide=False, cooldown=10)
 def design(bot, trigger):
     info(bot, trigger, "Handmade Hero is primarily a demonstration of game _programming_, and the design of the game is intended only to facilitate that by employing complex mechanics and interesting interactions, and may not necessarily innovate in any particular direction. If you'd like to see a lecture on game design from moderator GarlandoBloom, see http://y2u.be/0zVjdEhHmGo")
+
+@command("manifesto", hide=False, cooldown=10)
+def manifesto(bot, trigger):
+    info(bot, trigger, "You can read The Handmade Manifesto here: http://goo.gl/9sX1fN")
