@@ -293,3 +293,13 @@ def never(bot, trigger):
 @command("design", "gamedesign", hide=False, cooldown=10)
 def design(bot, trigger):
     info(bot, trigger, "Handmade Hero is primarily a demonstration of game _programming_, and the design of the game is intended only to facilitate that by employing complex mechanics and interesting interactions, and may not necessarily innovate in any particular direction. If you'd like to see a lecture on game design from moderator GarlandoBloom, see http://y2u.be/0zVjdEhHmGo")
+
+#TODO(soul): Update with new site when handmade.dev goes up
+@command("manifesto", hide=False, cooldown=10)
+def manifesto(bot, trigger):
+    info(bot, trigger, "You can read The Handmade Manifesto here: http://goo.gl/9sX1fN")
+
+#TODO(soul): Maybe we want to change the wording of this? What do you guys think?
+@command("ask","question","a2a","asktoask","ask2ask", hide=False, cooldown=10)
+def ask2ask(bot, trigger):
+    info(bot, trigger, "Don't ask to ask a question, simply ask your question. Many regulars use IRC, so we will see your question eventually. If you can't stay long, you may also ask your question on the !forum")
