@@ -99,7 +99,7 @@ def randomNumber(bot, trigger):
     """
     info(bot, trigger, "Your random number is %s" % (random.randint(100) if random.random() < 0.0001 else 4))
 
-@adminonly_streamtime
+@whitelisted_streamtime
 @command('roll', hide=True)
 def rollNumber(bot, trigger):
     if (trigger and trigger.group(2)):
