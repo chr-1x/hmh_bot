@@ -110,12 +110,12 @@ def fixQuoteTime(bot, trigger):
 		return
 
 	pTime,flag = dateParser.parseDT(split[1], sourceTime=arrow.now(defaultTz)) # use beginning of today as the source day to ensure DT returned.
-	#Anything not explicitly dated will go to next occurance of that date
-	#so check if the date given was pushed more than 6 months in the future
-	#if it was assume the issuer ment the past. Will break setting dates manually with years.
+	
+	#NOTE(chronister): Offset time by -1 year so that any given month is assumed to be the _last_ occurrence of that month.
+	# This still breaks explicitly setting by year...
+	#TODO: Can we check if the user passed a year, and avoid doing the -1 offset if so?
 	pTime = arrow.get(pTime, defaultTz) # avoid python AWFUL datetimes.
-	if (pTime > arrow.now(defaultTz).replace(months=+6)):
-			pTime = pTime.replace(years=-1)
+	pTime = pTime.replace(years=-1)
 
 	quote.timestamp = pTime.to('UTC').timestamp;
 	bot.say("Quote #%d moved to date: %s" %(quote.id, quote.time.strftime("%b %d")))
@@ -152,28 +152,44 @@ def sayQuote(bot, trigger):
 	else:
 		randomQuote(bot, trigger)
 
-#NOTE(effect0r): This should probably be changed to query the db using a regex of searchString to eliminate the forloop,
-#                but my knowledge of SQLobject is too limited to properly form such a statement
-#searchquote - find a quote basted on a search string
+#searchquote - find a quote basted on a search string. Outputs the quote if only one is found
 @whitelisted_streamtime
-@command("findquote", "fquote")
+@command("searchquote", "squote", "sq")
 def findQuote(bot, trigger):
-	requireDb()
-	reply = ""
-	totalQuotes = 0
-
-	searchString = trigger.group(2)
-	if (searchString):
-		quotes = Quote.select()
-		for q in quotes:
-			if q.text.lower().find(searchString.lower()) > -1:
-				reply = reply + str(q.id) + " "
-				totalQuotes += 1
-		if reply == "":
-			bot.say("No quotes found with string %s" % searchString.lower())
-		else:
-			bot.say("Found %d quote(s) matching %s: %s" % (totalQuotes, searchString.lower(), reply))
-	else:
-		bot.say("Usage: !findquote <word> or !fquote <word>")
-
-
+    requireDb()
+    reply = ""
+    
+    searchString = trigger.group(2)
+    if (searchString):
+        searchString = searchString.replace("'", "\'")
+        try:
+            selectQuotes = Quote.select(LIKE(Quote.q.text,"%" + searchString + "%"))
+        except SQLObjectNotFound:
+            pass
+        if (selectQuotes):
+            quotes = selectQuotes
+            totalQuotes = 0
+            for q in quotes:
+                reply = reply + str(q.id) + ", "
+                totalQuotes += 1
+                
+            if reply == "":
+                bot.say("No quotes found with string %s" % searchString.lower())
+            else:
+                if (totalQuotes == 1):
+                    # remove the final ", ", and cast to an integer to lookup quote.
+                    try:
+                        quoteNumber = int(reply[:(len(reply)-2)])
+                    except ValueError:
+                        print("findQuote: Couldn't cast reply to int")
+                    quote = getQuote(quoteNumber)
+                    bot.say('(#%d)"%s" - Casey %s' % (quote.id, quote.text, quote.time.strftime("%b %d")))
+                        
+                else:
+                    # remove the final ", "
+                    reply = reply[:(len(reply)-2)]
+                    bot.say("Found %d quote(s) matching %s: %s" % (totalQuotes, searchString.lower(), reply))
+        else:
+            bot.say("No quotes found with string %s" & searchString.lower())
+    else:
+        bot.say("Usage: !searchquote, !squote, or !sq <word>")

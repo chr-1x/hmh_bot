@@ -82,7 +82,7 @@ def hug(bot, trigger):
         args = trigger.group(2).split(" ")
         if (args[0][0] != None):
             target = args[0][0:]
-    bot.say("/me hugs %s" % target)
+    bot.say("\x01ACTION hugs %s\x01" % target)
 
 @command('why', hide=True)
 def whyInfo(bot, trigger):
@@ -99,7 +99,7 @@ def randomNumber(bot, trigger):
     """
     info(bot, trigger, "Your random number is %s" % (random.randint(100) if random.random() < 0.0001 else 4))
 
-@adminonly_streamtime
+@whitelisted_streamtime
 @command('roll', hide=True)
 def rollNumber(bot, trigger):
     if (trigger and trigger.group(2)):
