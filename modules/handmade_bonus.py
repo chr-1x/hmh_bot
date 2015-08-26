@@ -82,7 +82,7 @@ def hug(bot, trigger):
         args = trigger.group(2).split(" ")
         if (args[0][0] != None):
             target = args[0][0:]
-    bot.say("/me hugs %s" % target)
+    bot.say("\u0001ACTION hugs %s\u0001" % target)
 
 @command('why', hide=True)
 def whyInfo(bot, trigger):
