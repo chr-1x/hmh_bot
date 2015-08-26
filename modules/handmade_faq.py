@@ -96,7 +96,7 @@ def infoMessage(bot, trigger):
 def creditsMessage(bot, trigger):
     """Shows contributor info! If you make changes, add yourself here (or get someone else to)
     """
-    bot.say("Thanks to chronister (chronaldragon), alexwidener (iamdefinitelybatman), dspecht (drive137), itsuart (isuart2), abnercoimbre, kkartaltepe (kurufu), mvandevander (garlandobloom), deguerre (pseudonym73), effect0r, EpicDavi, nxsy, flamedog, insofaras, and soulflare3 for their contributions to my code!")
+    bot.say("Thanks to chronister (chronaldragon), alexwidener (iamdefinitelybatman), dspecht (drive137), itsuart (isuart2), abnercoimbre, kkartaltepe (kurufu), mvandevander (garlandobloom), deguerre (pseudonym73), effect0r, EpicDavi, nxsy, flamedog, insofaras, soulflare3 and kelimion for their contributions to my code!")
 
 @command('buy', 'purchase', 'support', 'patreon','source','sauce', hide=False, cooldown=10)
 def buyInfo(bot, trigger):
@@ -190,7 +190,7 @@ def whyNoTemplatesInfo(bot, trigger):
 def usedBuildBatchInfo(bot, trigger):
     """Command to answer the many why Casey builds HMH the way he does
     """
-    info(bot, trigger, "Casey compiles from a batch file using MSVC on windows, allowing a rebuild from the command line, from Emacs (his editor), or even from within MSVC. The program is actually compiled as a single translation unit (STU). It uses #include to compile all involved files in one go; this keeps things simple, as the build script mostly needs to be changed only when adding a dependency. This is sometimes called a Unity or STU build. See also: Day 011 at 31m41s mark, http://goo.gl/8ATplA (More: !editor, !compiler)")
+    info(bot, trigger, "On windows, Casey compiles with MSVC from a batch script, also called by Emacs for rebuilds. The program builds as a single translation unit (STU) using #include to compile all involved files in one go, which we call a unity or STU build. The script needs a change only when adding a dependency. See also: Day 011, http://goo.gl/8ATplA (More: !editor, !compiler)")
 
 @command('render', 'opengl', 'd3d', hide=False, cooldown=10)
 def renderInfo(bot, trigger):
