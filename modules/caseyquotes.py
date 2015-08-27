@@ -43,16 +43,16 @@ def getQuote(quoteId):
 @adminonly
 @command("addquote", "aq")
 def addQuote(bot, trigger):
-	requireDb()
-	if(not trigger.group(2)):
-		bot.say("No quote Text provided!")
-		return
-
-	text = trigger.group(2)
-	text = text.strip('"')
-	# Perhaps someone would want to set the time for a quote.
-	newQuote = Quote(text=text, timestamp=arrow.now().timestamp)
-	bot.say("Quote id%d added!" % (newQuote.id))
+    requireDb()
+    if(not trigger.group(2)):
+        bot.say("No quote Text provided!")
+        return
+    
+    text = trigger.group(2)
+    text = text.strip('"')
+    # Perhaps someone would want to set the time for a quote.
+    newQuote = Quote(text=text, timestamp=arrow.now().timestamp)
+    bot.say("Added as !quote %d." % (newQuote.id))
 
 @adminonly
 @command("deletequote", "dq")
@@ -94,31 +94,35 @@ def fixQuote(bot, trigger):
 @adminonly
 @command("fixquotetime", "fqt")
 def fixQuoteTime(bot, trigger):
-	requireDb()
-	if(not trigger.group(2)):
-		bot.say("Usage: !fixquotetime <quote id> <quote time>")
-		return
+    requireDb()
+    if(not trigger.group(2)):
+        bot.say("Usage: !fixquotetime <quote id> month day year ")
+        return
 
-	split = trigger.group(2).split(' ', 1);
-	if(len(split) != 2):
-		bot.say("Please provide the fixed quote time!")
-		return
+    # NOTE(effect0r): splits to [id] [month day year] then to [mm][dd][yy] 
+    #                 to provide an error condition.
+    split = trigger.group(2).split(' ', 1)
 
-	quote = getQuote(split[0])
-	if(quote == None):
-		bot.say("Could not find quote id%s" % (split[0]))
-		return
+    date = split[1].split(' ') #split splits
+    if(len(date) < 3):
+        bot.say("Please provide the fixed quote time!")
+        return
 
-	pTime,flag = dateParser.parseDT(split[1], sourceTime=arrow.now(defaultTz)) # use beginning of today as the source day to ensure DT returned.
-	
-	#NOTE(chronister): Offset time by -1 year so that any given month is assumed to be the _last_ occurrence of that month.
-	# This still breaks explicitly setting by year...
-	#TODO: Can we check if the user passed a year, and avoid doing the -1 offset if so?
-	pTime = arrow.get(pTime, defaultTz) # avoid python AWFUL datetimes.
-	pTime = pTime.replace(years=-1)
+    if(len(date[2]) < 4):
+        bot.say("Please provide a year!")
+        return
+    
+    quote = getQuote(split[0])
+    if(quote == None):
+        bot.say("Could not find quote id%s" % (split[0]))
+        return
 
-	quote.timestamp = pTime.to('UTC').timestamp;
-	bot.say("Quote #%d moved to date: %s" %(quote.id, quote.time.strftime("%b %d")))
+    pTime,flag = dateParser.parseDT(split[1], sourceTime=arrow.now(defaultTz)) # use beginning of today as the source day to ensure DT returned.
+    
+    pTime = arrow.get(pTime, defaultTz) # avoid python AWFUL datetimes.
+    
+    quote.timestamp = pTime.to('UTC').timestamp;
+    bot.say("Quote #%d moved to date: %s" %(quote.id, quote.time.strftime("%b %d %Y")))
 
 
 @whitelisted_streamtime
@@ -131,7 +135,7 @@ def randomQuote(bot, trigger):
 		return
 	randomNum = random.randrange(numQuotes)
 	quote = query[randomNum]
-	bot.say('(#%d)"%s" -Casey %s' % (quote.id, quote.text, quote.time.strftime("%b %d")))
+	bot.say('(#%d) "%s" -Casey %s' % (quote.id, quote.text, quote.time.strftime("%b %d %Y")))
 
 #flamedog alais is because of flamedog using all the time.
 @whitelisted_streamtime
@@ -148,7 +152,7 @@ def sayQuote(bot, trigger):
 		if(quote == None):
 			bot.say("No such quote found!")
 		else:
-			bot.say('(#%d)"%s" -Casey %s' % (quote.id, quote.text, quote.time.strftime("%b %d")))
+			bot.say('(#%d) "%s" -Casey %s' % (quote.id, quote.text, quote.time.strftime("%b %d %Y")))
 	else:
 		randomQuote(bot, trigger)
 
@@ -183,13 +187,13 @@ def findQuote(bot, trigger):
                     except ValueError:
                         print("findQuote: Couldn't cast reply to int")
                     quote = getQuote(quoteNumber)
-                    bot.say('(#%d)"%s" - Casey %s' % (quote.id, quote.text, quote.time.strftime("%b %d")))
+                    bot.say('(#%d)" %s" - Casey %s' % (quote.id, quote.text, quote.time.strftime("%b %d %Y")))
                         
                 else:
                     # remove the final ", "
                     reply = reply[:(len(reply)-2)]
-                    bot.say("Found %d quote(s) matching %s: %s" % (totalQuotes, searchString.lower(), reply))
+                    bot.say("Found %d quotes matching %s: %s" % (totalQuotes, searchString.lower(), reply))
         else:
-            bot.say("No quotes found with string %s" & searchString.lower())
+            bot.say("No quotes found with string %s" % searchString.lower())
     else:
         bot.say("Usage: !searchquote, !squote, or !sq <word>")
