@@ -83,6 +83,19 @@ def hug(bot, trigger):
         if (args[0][0] != None):
             target = args[0][0:]
     bot.say("\x01ACTION hugs %s\x01" % target)
+    
+@whitelisted_streamtime
+@command('highfive', 'high5', 'hi5', hide=True)
+def highFive(bot, trigger):
+    """Easter egg command that attempts to provide human warmth and empathy in times of
+        emotional trauma.
+    """
+    target = trigger.nick
+    if (trigger.group(2)):
+        args = trigger.group(2).split(" ")
+        if (args[0][0] != None):
+            target = args[0][0:]
+    bot.say("\x01ACTION leaps into the air and slams %s a thunderous high five\x01" % target)
 
 @command('why', hide=True)
 def whyInfo(bot, trigger):
