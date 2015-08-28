@@ -122,7 +122,7 @@ def fixQuoteTime(bot, trigger):
     pTime = arrow.get(pTime, defaultTz) # avoid python AWFUL datetimes.
     
     quote.timestamp = pTime.to('UTC').timestamp;
-    bot.say("Quote #%d moved to date: %s" %(quote.id, quote.time.strftime("%b %d %Y")))
+    bot.say("Quote #%d moved to date: %s" %(quote.id, quote.time.strftime("%d %b %Y")))
 
 
 @whitelisted_streamtime
@@ -135,7 +135,7 @@ def randomQuote(bot, trigger):
 		return
 	randomNum = random.randrange(numQuotes)
 	quote = query[randomNum]
-	bot.say('(#%d) "%s" --Casey, %s' % (quote.id, quote.text, quote.time.strftime("%b %d %Y")))
+	bot.say('(#%d) "%s" --Casey, %s' % (quote.id, quote.text, quote.time.strftime("%d %b %Y")))
 
 #flamedog alais is because of flamedog using all the time.
 @whitelisted_streamtime
@@ -152,7 +152,7 @@ def sayQuote(bot, trigger):
 		if(quote == None):
 			bot.say("No such quote found!")
 		else:
-			bot.say('(#%d) "%s" --Casey, %s' % (quote.id, quote.text, quote.time.strftime("%b %d %Y")))
+			bot.say('(#%d) "%s" --Casey, %s' % (quote.id, quote.text, quote.time.strftime("%d %b %Y")))
 	else:
 		randomQuote(bot, trigger)
 
@@ -187,7 +187,7 @@ def findQuote(bot, trigger):
                     except ValueError:
                         print("findQuote: Couldn't cast reply to int")
                     quote = getQuote(quoteNumber)
-                    bot.say('(#%d)" %s" --Casey, %s' % (quote.id, quote.text, quote.time.strftime("%b %d %Y")))
+                    bot.say('(#%d) "%s" --Casey, %s' % (quote.id, quote.text, quote.time.strftime("%d %b %Y")))
                         
                 else:
                     # remove the final ", "
