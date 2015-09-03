@@ -1,0 +1,37 @@
+[core]
+nick = [botname]
+user = [bot username]
+host = [irc network]
+use_ssl = False
+port = 6667
+owner = [used for !owner]
+channels = [comma separated channel list]
+server_password = [serverpass]
+prefix = \!
+extra = /path/to/modules
+exclude = meetbot,clock,bugzilla,rss,ipython,reddit,currency,weather,ip,spellcheck,youtube
+enable= handmade,handmade_stream,handmade_faq,handmade_bonus,xkcd,caseyquotes,ytmnd,chanlogs
+admins=[list of admins]
+whitelist=[whitelisted users]
+debug_target=stdio
+logdir=/home/ChronalRobot/logs
+
+[db]
+userdb_type = sqlite
+userdb_file = /path/to/dbfile.db
+
+[wikipedia]
+default_lang = en
+
+[clock]
+tz = PST
+time_format = %T%Z, %F
+
+[chanlogs]
+dir = /path/to/logs
+by_day = True
+privmsg = False
+microseconds = False
+
+[admin]
+hold_ground = True
