@@ -1,6 +1,6 @@
 import random
 
-import os, sys
+import os, sys, re
 sys.path.append(os.path.dirname(__file__))
 
 from handmade import command, info, whitelisted, adminonly, whitelisted_streamtime, adminonly_streamtime
@@ -116,76 +116,91 @@ def randomNumber(bot, trigger):
 @command('roll', hide=True)
 def rollNumber(bot, trigger):
     if (trigger and trigger.group(2)):
-        args = trigger.group(2).split(" ")
+        rawArgs = trigger.group(2)
+        args = rawArgs.split(" ")
+
         output = ""
-        for arg in args:
-            diceArgs = arg.split("d")
 
-            if (len(diceArgs) > 0):
-                diceAmt = diceArgs[0]
-                try:
-                    diceAmt = int(diceAmt)
-                except ValueError:
-                    bot.say("@%s: I can't roll %s dice" % (trigger.nick, diceAmt))
-                    return
-            else:
-                bot.say("@%s: Wait, how many dice is that?" % trigger.nick)
-                return
+        arg = args[0]
+        diceArgs = arg.split("d")
 
-            if (len(diceArgs) > 1):
-                diceFaces = diceArgs[1]
-                try:
-                    diceFaces = int(diceFaces)
-                except ValueError:
-                    bot.say("@%s: I can't roll dice with %s faces!" % (trigger.nick, diceFaces))
-                    return
-            else:
-                bot.say("@%s: Wait, how many faces is that?" % trigger.nick)
-                return
+        if (len(diceArgs) > 0):
+            diceAmt = diceArgs[0]
+            try:
+                diceAmt = int(diceAmt)
+            except ValueError:
+                diceAmt = 1
+        else:
+            bot.say("@%s: Wait, how many dice is that?" % trigger.nick)
+            return
 
-            if (diceAmt < 0):
-                bot.say("@%s: We are currently out of negative dice, please check back before." % trigger.nick)
+        if (len(diceArgs) > 1):
+            diceFaces = diceArgs[1]
+            diceFaces = diceFaces.split("+")
+            diceFaces = diceFaces[0]
+            try:
+                diceFaces = int(diceFaces)
+            except ValueError:
+                bot.say("@%s: I can't roll dice with %s faces!" % (trigger.nick, diceFaces))
                 return
-            if (diceAmt == 0):
-                bot.say("@%s: No dice." % trigger.nick)
-                return
-            if (diceAmt > 20):
-                thing = "dice"
-                if (diceFaces == 2):
-                    thing = "coins"
-                if (diceFaces == 1):
-                    thing = "one dimensional constructs"
-                bot.say("@%s: Do you think I have %d %s just lying around??" % (trigger.nick, diceAmt, thing))
-                return
-            if (diceFaces <= 0):
-                bot.say("@%s: Find me a %d sided dice and I'll roll it." % (trigger.nick, diceFaces))
-                return
-            if (diceFaces > 100):
-                bot.say("@%s: I rolled the sphere, and it rolled off the table." % (trigger.nick))
-                return
+        else:
+            bot.say("@%s: Wait, how many faces is that?" % trigger.nick)
+            return
 
-            results = []
-            for i in range(diceAmt):
-                results.append(random.randint(1, diceFaces))
+        if (diceAmt < 0):
+            bot.say("@%s: We are currently out of negative dice, please try again earlier." % trigger.nick)
+            return
+        if (diceAmt == 0):
+            bot.say("@%s: No dice." % trigger.nick)
+            return
+        if (diceAmt > 20):
+            thing = "dice"
+            if (diceFaces == 2):
+                thing = "coins"
+            if (diceFaces == 1):
+                thing = "one dimensional constructs"
+            bot.say("@%s: Do you think I have %d %s just lying around??" % (trigger.nick, diceAmt, thing))
+            return
+        if (diceFaces <= 0):
+            bot.say("@%s: Find me a %d sided dice and I'll roll it." % (trigger.nick, diceFaces))
+            return
+        if (diceFaces > 100):
+            bot.say("@%s: I rolled the sphere, and it rolled off the table." % (trigger.nick))
+            return
 
-            if (len(diceArgs) > 2):
-                try:
-                    drop = int(diceArgs[2])
-                except ValueError:
-                    drop = 0
-                if (drop >= diceAmt):
-                    bot.say("@%s: Whoops, I dropped all the dice. Sorry." % trigger.nick)
-                    return
-                for i in range(drop):
-                    results.remove(min(results))
+        modifier = 0
+        plusRegex = re.compile('\+\s*(\d+)')
+        plusMatch = plusRegex.search(rawArgs)
+        if (plusMatch != None):
+            try:
+                modifier = int(plusMatch.group(1))
+            except ValueError:
+                bot.say("@%s: I can't add %s to your roll!" % (trigger.nick, plusMatch.group(1)))
 
-            for r in results:
-                output += "[%d] " % r
-            output = output[:-1]
-            output += ", for a total of %d" % sum(results)
-            if (len(args) > 1): output += " :: "
+        results = []
+        for i in range(diceAmt):
+            results.append(random.randint(1, diceFaces))
 
-        if (len(args) > 1): output = output[:-3]
+        if (len(diceArgs) > 2):
+            drop = diceArgs[2]
+            drop = drop.split("+")
+            drop = drop[0]
+            try:
+                drop = int(drop)
+            except ValueError:
+                drop = 0
+            if (drop >= diceAmt):
+                bot.say("@%s: Whoops, I dropped all the dice. Sorry." % trigger.nick)
+                return
+            for i in range(drop):
+                results.remove(min(results))
+
+        for r in results:
+            output += "[%d] " % r
+        output = output[:-1]
+        if (modifier > 0): output += " +%d" % modifier
+        output += ", for a total of %d" % (sum(results) + modifier)
+
         bot.say("@%s: %s" % (trigger.nick, output))
 
 @whitelisted_streamtime
