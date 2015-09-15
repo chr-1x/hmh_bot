@@ -37,6 +37,19 @@ def msdnSearch(bot, trigger):
         query = trigger.group(2).strip()
         bot.say("@%s: %s" % (trigger.nick, google(query)))
 
+@whitelisted_streamtime
+@command('google', 'g' ,'search', 's', hide=True)
+def googleSearch(bot,trigger):
+    """Command that searches google for the string provided
+    """
+    if not trigger: return
+    if stream.isCurrentlyStreaming() and not trigger.admin: return
+    if not trigger.group(2):
+        bot.say("@%s: https://google.com/" % trigger.nick)
+    else:
+        query = trigger.group(2).strip()
+        bot.say("@%s: %s" % (trigger.nick, google_search(query)))
+
 @command('now', 'pst', 'PST', hide=False, cooldown=10)
 def getTime(bot, trigger):
     """Info command that prints out the current time in PST. For the purposes of the handmade hero
@@ -134,7 +147,7 @@ def ideInfo(bot, trigger):
     """Info command that provides information about the editor (emacs) used by Casey.
     """
     info(bot, trigger, "Casey uses Emacs to edit his code because that is what he is used to. There are a lot of editors out there, however, so you should use whatever you feel most comfortable in. (See also: !emacsversion)")
-    
+
 @command('editoradvice', 'whicheditor', hide=False, cooldown=10)
 def ideAdvice(bot, trigger):
     """Info command that suggests what to use for editing code"""
