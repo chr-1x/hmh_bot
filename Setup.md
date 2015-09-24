@@ -23,7 +23,7 @@ This file is intended as a resource to help you get started should you want to s
 * **logdir** - Where to put the bot's logs. Examples of the files that will go here are `exceptions.log`, `raw.log`, and `stdio.log`
 
 ###[db]
-* **userdb_file** - File where the bot will read and store information from. *If the bot does not have read and write permissions, you may see errors in chat*
+* **userdb_file** - File where the bot will read and store information from. *If the bot does not have read and write permissions, you may see errors in chat*. This is where we use `handmade.db`. If you would like a copy of that db file, [you can get it here](http://j.mp/hmh_db).
 
 ###[chanlogs]
 * **dir** - Folder where the bot will log everything IRC.
