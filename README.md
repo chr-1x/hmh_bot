@@ -22,6 +22,8 @@ Important: Please make sure that there is not already an instance of ChronalRobo
 
 If you should need to find out who is running a particular instance of the bot, use `!owner` in chat.
 
+For help setting up the config, have a look at `Setup.md`
+
 Libraries
 ---
 Robot requires the following libraries to be installed: willie, arrow, parsedatetime, and sqlobject
