@@ -1,20 +1,20 @@
 [core]
-nick = [botname]
-user = [bot username]
-host = [irc network]
+nick = botname
+user = bot_username
+host = irc_network
 use_ssl = False
 port = 6667
-owner = [used for !owner]
-channels = [comma separated channel list]
-server_password = [serverpass]
+owner = used_for_!owner
+channels = comma,separated,channel,list
+server_password = serverpass
 prefix = \!
 extra = /path/to/modules
 exclude = meetbot,clock,bugzilla,rss,ipython,reddit,currency,weather,ip,spellcheck,youtube
-enable= handmade,handmade_stream,handmade_faq,handmade_bonus,xkcd,caseyquotes,ytmnd,chanlogs
-admins=[list of admins]
-whitelist=[whitelisted users]
+enable= handmade,handmade_stream,handmade_faq,handmade_bonus,xkcd,caseyquotes,ytmnd,chanlogs,search
+admins= comma,separated,admin,names
+whitelist= comma,separated,whitelisted,names
 debug_target=stdio
-logdir=/home/ChronalRobot/logs
+logdir=/path/to/logs
 
 [db]
 userdb_type = sqlite
@@ -28,7 +28,7 @@ tz = PST
 time_format = %T%Z, %F
 
 [chanlogs]
-dir = /path/to/logs
+dir = /path/to/daily/channel/logs
 by_day = True
 privmsg = False
 microseconds = False

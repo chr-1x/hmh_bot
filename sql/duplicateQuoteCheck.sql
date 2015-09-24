@@ -1,1 +1,1 @@
-SELECT text, COUNT(*) occurances FROM quote GROUP BY text HAVING occurances > 1;
+SELECT text, COUNT(*) occurrences FROM quote GROUP BY text HAVING occurrences > 1;
