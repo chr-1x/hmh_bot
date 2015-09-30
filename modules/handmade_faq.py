@@ -311,6 +311,11 @@ def design(bot, trigger):
 def manifesto(bot, trigger):
     info(bot, trigger, "You can read The Handmade Manifesto here: http://handmadedev.org/manifesto/")
 
+@command("hmhcon", "con", "convention", hide=False, cooldown=10)
+def hmhcon(bot, trigger):
+    info(bot, trigger, "HandmadeCon 2015 will be held on Krampusnacht in Seattle. More specifically: Saturday, December 5th, 2015, from 10AM to 6PM PST, in the auditorium at the central branch of the Seattle Public Library. There are 275 tickets total, at $45/ticket (or $35/ticket if ordered before November 5th). Read the latest info at http://handmadecon.org")
+
+
 #TODO(soul): Maybe we want to change the wording of this? What do you guys think?
 @command("ask","question","a2a","asktoask","ask2ask", hide=False, cooldown=10)
 def ask2ask(bot, trigger):
