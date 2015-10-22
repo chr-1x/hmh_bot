@@ -41,6 +41,35 @@ def beepBoop(bot, trigger):
     "Fatal Error: Sarcastic response not found"
     ]
     bot.say(random.choice(responses))
+    
+@whitelisted_streamtime
+@command('8', '8ball', hide=True)
+def eightball(bot, trigger):
+    """Easter egg command that prints out some 8ball responses
+    """
+    responses = [
+        "It is certain",
+        "It is decidedly so",
+        "Without a doubt",
+        "Yes, definitely",
+        "You may rely on it",
+        "As I see it, yes",
+        "Most likely",
+        "Outlook good",
+        "Yes",
+        "Signs point to yes",
+        "Reply hazy try again",
+        "Ask again later",
+        "Better not tell you now",
+        "Cannot predict now",
+        "Concentrate and ask again",
+        "Don't count on it",
+        "My reply is no",
+        "My sources say no",
+        "Outlook not so good",
+        "Very doubtful"
+    ]
+    bot.say(random.choice(responses))
 
 @adminonly
 @command('flame', hide=True, hideAlways=True)
