@@ -82,6 +82,17 @@ def flameWar(bot, trigger):
     else:
         bestEditor(bot, trigger)
 
+@whitelisted_streamtime
+@command('blame', "satya", hide=True, hideAlways=True)
+def SatyaNadella(bot, trigger):
+    """Easter egg command that blames the MS CEO for the current predicament"""
+
+    that = "that"
+    if (trigger and trigger.group(2)):
+        that = trigger.group(2).strip()
+
+    bot.say("\x01ACTION blames Satya Nadella for %s.\x01" % that)
+
 @adminonly
 @command('throwdown', 'badlanguage', hide=True, hideAlways=True)
 def badLanguage(bot, trigger):
