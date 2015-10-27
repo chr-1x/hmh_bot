@@ -87,11 +87,11 @@ def flameWar(bot, trigger):
 def SatyaNadella(bot, trigger):
     """Easter egg command that blames the MS CEO for the current predicament"""
 
-    that = "that"
     if (trigger and trigger.group(2)):
         that = trigger.group(2).strip()
-
-    bot.say("\x01ACTION blames Satya Nadella for %s.\x01" % that)
+        bot.say("\x01ACTION blames Satya Nadella %s.\x01" % that)
+    else:
+        bot.say("\x01ACTION blames Satya Nadella.\x01")
 
 @adminonly
 @command('throwdown', 'badlanguage', hide=True, hideAlways=True)
