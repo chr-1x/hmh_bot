@@ -297,7 +297,7 @@ def rules(bot, trigger):
 
 @command("userlist", "users", hide=False, cooldown=10)
 def userlist(bot, trigger):
-    info(bot, trigger, "Are you on IRC and missing a user list? Use the raw command in your IRC client (/raw or /quote usually, or just /cap) to issue the following command: CAP REQ :twitch.tv/membership For the change to take effect you will need to use /cycle (if supported) or /disconnect and /connect. It is recommended to add this to your connect command.")
+    info(bot, trigger, "Are you on IRC and missing a user list? Use the raw command in your IRC client (/raw or /quote usually, or just /cap) to issue the following command: CAP REQ :twitch.tv/membership For the change to take effect you will need to use /cycle (if supported) or /part and /join in that order. It is recommended to add this to your connect command.")
 
 @command("never", "neverabout", hide=False, cooldown=10)
 def never(bot, trigger):
