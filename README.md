@@ -32,4 +32,4 @@ To install them, issue following command:
 
 `sudo pip install willie arrow parsedatetime sqlobject`
 
-#NOTE WILLIE BECAME 'SOPAL' FIND IT HERE (https://github.com/sopel-irc/sopel) we are not upgrading for the time being
+#NOTE WILLIE BECAME SOPAL FIND IT HERE (https://github.com/sopel-irc/sopel) we are not upgrading for the time being
