@@ -12,7 +12,7 @@ The config options used by the bot are available in `handmade.cfg`. Please refer
 Please refer to the [forum thread](https://forums.handmadehero.org/index.php/forum?view=topic&catid=5&id=65) and Issues page for discussion about features to add and updates.
 
 Installation
-----
+============
 * Clone the repository and cd into the directory.
 * Read through `sampleconfig.txt` and fill in necessary information
 * Rename the config file, e.g. `handmade.cfg`
