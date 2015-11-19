@@ -62,13 +62,13 @@ def getTime(bot, trigger):
 def siteInfo(bot, trigger):
     """Info command that prints out the site/forum links.
     """
-    info(bot, trigger, 'HMH Website: http://goo.gl/fmjocD  ::  HMH Forums: http://goo.gl/NuArvD')
+    info(bot, trigger, 'HMH Website: http://goo.gl/fmjocD  ::  HMH Forums: http://goo.gl/X5JDvT')
 
 @command('old', 'archive', hide=False, cooldown=10)
 def archiveInfo(bot, trigger):
     """Info command that prints out the forum/youtube archive links.
     """
-    info(bot, trigger, 'Annotated Episode Guide: http://goo.gl/8ouung   ::   YouTube Archive: http://goo.gl/u3hKKj')
+    info(bot, trigger, 'Annotated Episode Guide: https://goo.gl/O5ljen   ::   YouTube Archive: http://goo.gl/u3hKKj')
 
 @command('wrist', 'wrists', 'braces', 'hands', hide=False, cooldown=10)
 def wristInfo(bot, trigger):
