@@ -62,13 +62,13 @@ def getTime(bot, trigger):
 def siteInfo(bot, trigger):
     """Info command that prints out the site/forum links.
     """
-    info(bot, trigger, 'HH Website: http://goo.gl/fmjocD  ::  HH Forums: http://goo.gl/NuArvD')
+    info(bot, trigger, 'HMH Website: http://goo.gl/fmjocD  ::  HMH Forums: http://goo.gl/X5JDvT')
 
 @command('old', 'archive', hide=False, cooldown=10)
 def archiveInfo(bot, trigger):
     """Info command that prints out the forum/youtube archive links.
     """
-    info(bot, trigger, 'Forum Archive (with notes): http://goo.gl/8ouung   ::   YouTube Archive: http://goo.gl/u3hKKj')
+    info(bot, trigger, 'Annotated Episode Guide: https://goo.gl/O5ljen   ::   YouTube Archive: http://goo.gl/u3hKKj')
 
 @command('wrist', 'wrists', 'braces', 'hands', hide=False, cooldown=10)
 def wristInfo(bot, trigger):
@@ -122,7 +122,7 @@ def buyInfo(bot, trigger):
 def gameInfo(bot, trigger):
     """Info command that displays basic information about the game being built.
     """
-    info(bot, trigger, "Handmade hero is a 2Dish top-down game inspired by classic Zelda games and modern games like the Binding of Isaac. The entire development of the game is being catalogued in these streams. (More: !art, !lang)")
+    info(bot, trigger, "Handmade Hero is a 2Dish top-down game inspired by classic Zelda games and modern games like The Binding of Isaac. The entire development of the game is being catalogued in these streams. (More: !art, !lang)")
 
 @command('friday', hide=True, cooldown=10)
 def fridays(bot, trigger):
