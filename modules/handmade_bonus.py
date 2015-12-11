@@ -207,6 +207,10 @@ def rollNumber(bot, trigger):
         if (diceFaces > 100):
             bot.say("@%s: I rolled the sphere, and it rolled off the table." % (trigger.nick))
             return
+        
+        if (diceFaces == 7):
+            bot.say("@%s: [0], for a total of 0" % (trigger.nick))
+            return
 
         modifier = 0
         plusRegex = re.compile('\+\s*(\d+)')
