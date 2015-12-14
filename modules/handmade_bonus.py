@@ -274,3 +274,18 @@ def tenCommandmentsMessage(bot, trigger):
     """Command to list the 0x10 commandments"
     """
     bot.say("Thou must read and follow these 0x10 Commandments: http://goo.gl/aoQVYT")
+
+@command("o/", hide=True)
+def MorningYou(bot, trigger) :
+    if(trigger) :
+        args = trigger.group(2)
+        if (args) :
+            bot.say("Good morning @%s!" % (args))
+
+@command("UGT", hide=True)
+def ExplainUGT(bot, trigger):
+    info(bot, trigger, "Use UGT to greet people! It's always morning when you arrive, and always night when you leave ;) You can also use !o/ and !\o/.")
+
+@command("\\\\o/", hide=True)
+def MorningAll(bot, trigger):
+    bot.say("Good morning, everyone!")
