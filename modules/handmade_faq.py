@@ -322,5 +322,5 @@ def ask2ask(bot, trigger):
     info(bot, trigger, "Don't ask to ask a question, simply ask your question. Many regulars use IRC, so we will see your question eventually. If you can't stay long, you may also ask your question on the !forum")
 
 @command("creative", "category", hide=False, cooldown=10)
-def hmhcon(bot, trigger):
+def creativeAsk(bot, trigger):
     info(bot, trigger, "Handmade Hero is being streamed in the Creative section of twitch because twitch administration asked Casey to do so. It is unclear if there is a larger reason behind the decision.")
