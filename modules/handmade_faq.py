@@ -221,7 +221,7 @@ def gettingStartedLearning(bot, trigger):
 def learningC(bot, trigger):
     """Command describing how you can begin learning C, like this
     """
-    info(bot, trigger, "One way to start programming in this manner is to watch the Intro to C series on www.youtube.com/handmadeheroarchive to get a general feel of things. Later, read 'The C Programming Language' by Brian W. Kernighan and Dennis M. Ritchie and work through all the exercises, LearnXinYminutes can be used to see the basics of c http://goo.gl/qmluuM. The most important part is to start coding and to make lots of things in code. Good luck!")
+    info(bot, trigger, "One way to start programming in this manner is to watch the Intro to C series at https://hero.handmadedev.org/jace/guide/ to get a general feel of things. Later, read 'The C Programming Language' by Brian W. Kernighan and Dennis M. Ritchie and work through all the exercises, LearnXinYminutes can be used to see the basics of C http://goo.gl/qmluuM. The most important part is to start coding and to make lots of things in code. Good luck!")
 
 @command("lib", "library", "api", "engine", hide=False, cooldown=10)
 def libCommand(bot, trigger):
