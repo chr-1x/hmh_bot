@@ -301,7 +301,7 @@ def userlist(bot, trigger):
 
 @command("never", "neverabout", hide=False, cooldown=10)
 def never(bot, trigger):
-    info(bot, trigger, "Programming is not really about the code. See moderator AbnerCoimbre's informal lecture on the subject here: http://y2u.be/Lzc3HcIgXis or a more extensive talk from Mike Action here: http://y2u.be/rX0ItVEVjHc")
+    info(bot, trigger, "Programming is not really about the code. See moderator AbnerCoimbre's informal lecture on the subject here: http://y2u.be/Lzc3HcIgXis or a more extensive talk from Mike Acton here: http://y2u.be/rX0ItVEVjHc")
 
 @command("design", "gamedesign", hide=False, cooldown=10)
 def design(bot, trigger):
