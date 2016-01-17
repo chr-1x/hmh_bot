@@ -26,12 +26,12 @@ This file is intended as a resource to help you get started should you want to s
 * **userdb_file** - File where the bot will read and store information from. *If the bot does not have read and write permissions, you may see errors in chat*. This is where we use `handmade.db`. If you would like a copy of that db file, [you can get it here](http://j.mp/hmh_db).
 
 ###[chanlogs]
-* **dir** - Folder where the bot will log everything IRC.
+* **dir** - Folder where the bot will log everything that happens in IRC channels.
 * **by_day** - Rotate the log every day. Creates a new .log file for each channel every 24 hours. (bool)(recommended)
 
 That's it! You're all set to run your own instance of the bot!
 
 ##Notes
 * [Willie](http://willie.dftba.net/) will automatically create a database in the format `configname.db` in addition to what you specify for `userdb_file` e.g. if you have your config file named `myawesomeconfig.cfg`, when you start the bot it will create a database named `myawesomeconfig.db`.
-* Timezone is set to PST (Casey's timezone). We are using this to confusion elsewhere.
+* Timezone is set to PST (Casey's timezone). We are using this to avoid confusion elsewhere.
 * Depending on your install, you *may* require absolute paths in your config instead of relative paths, else problems will arise. E.g. `/full/path/to/modules` instead of `./modules`
