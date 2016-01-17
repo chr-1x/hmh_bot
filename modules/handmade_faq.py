@@ -205,11 +205,17 @@ def usedBuildBatchInfo(bot, trigger):
     """
     info(bot, trigger, "On windows, Casey compiles with MSVC from a batch script, also called by Emacs for rebuilds. The program builds as a single translation unit (STU) using #include to compile all involved files in one go, which we call a unity or STU build. The script needs a change only when adding a dependency. See also: Day 011, http://goo.gl/8ATplA (More: !editor, !compiler)")
 
-@command('render', 'opengl', 'd3d', hide=False, cooldown=10)
+@command('render', 'renderer', 'd3d', hide=False, cooldown=10)
 def renderInfo(bot, trigger):
     """Command to give render information to the chat target
     """
-    info(bot, trigger, "We are currently using software rendering in order to implement our own renderer. Ultimately the game will take advantage of hardware acceleration (i.e. using OpenGL, Direct3D, etc.) to maximize performance.")
+    info(bot, trigger, "We are currently using software rendering in order to implement our own renderer. Ultimately the game will take advantage of hardware acceleration (i.e. using OpenGL, Direct3D, etc.) to maximize performance. See also !opengl.")
+
+@command('opengl', 'ogl', , hide=False, cooldown=10)
+def renderInfo(bot, trigger):
+    """Command to give openGL information to the chat target
+    """
+	info(bot, trigger, "While Casey will rewrite the renderer using OpenGL in the future - see !render - the current OpenGL code is to allow for vsync, giving a more predictable frame time.")
 
 @command('learning', 'learnProgramming', 'learn', hide=False, cooldown=10)
 def gettingStartedLearning(bot, trigger):
