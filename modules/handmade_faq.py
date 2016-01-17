@@ -211,7 +211,7 @@ def renderInfo(bot, trigger):
     """
     info(bot, trigger, "We are currently using software rendering in order to implement our own renderer. Ultimately the game will take advantage of hardware acceleration (i.e. using OpenGL, Direct3D, etc.) to maximize performance. See also !opengl.")
 
-@command('opengl', 'ogl', , hide=False, cooldown=10)
+@command('opengl', 'ogl', hide=False, cooldown=10)
 def renderInfo(bot, trigger):
     """Command to give openGL information to the chat target
     """
