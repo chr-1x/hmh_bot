@@ -1,4 +1,4 @@
-ChronalRobot
+hmh_bot
 ============
 
 Python module for the Willie IRC bot used in the Handmade Hero twitch chat.
