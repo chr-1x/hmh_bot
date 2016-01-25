@@ -102,7 +102,7 @@ def infoMessage(bot, trigger):
     """Command that shows information about the chatbot. Should be updated with contributor info
         and github page once that happens.
     """
-    bot.say("I am a Python IRC bot based on Willie (http://willie.dftba.net/). I was started by ChronalDragon and am now jointly maintained by the good folks who commit to my github repo (https://github.com/Chronister/ChronalRobot). See also: !credits")
+    bot.say("I am a Python IRC bot based on Willie (http://willie.dftba.net/). I was started by ChronalDragon and am now jointly maintained by the good folks who commit to my github repo (https://github.com/Chronister/hmh_bot). See also: !credits")
 
 @whitelisted_streamtime
 @command('credits', hide=True, hideAlways=False, cooldown=10)
@@ -215,7 +215,7 @@ def renderInfo(bot, trigger):
 def renderInfo(bot, trigger):
     """Command to give openGL information to the chat target
     """
-    info(bot, trigger, "While Casey will rewrite the renderer using OpenGL in the future - see !render - the current OpenGL code is to allow for vsync, giving a more predictable frame time.")
+    info(bot, trigger, "Handmade Hero is now rendered using OpenGL! The rendering started out in OpenGL 1/2 but will likely use OpenGL 3 by the end of the rendering work.")
 
 @command('learning', 'learnProgramming', 'learn', hide=False, cooldown=10)
 def gettingStartedLearning(bot, trigger):
@@ -271,7 +271,7 @@ def compressionOriented(bot, trigger):
 
 @command("break", "vacation", hide=True, hideAlways=True, cooldown=10)
 def breakInfo(bot, trigger):
-    info(bot, trigger, "Handmade Hero is on break from Oct 30 to Nov 16 as Casey is travelling.")
+    info(bot, trigger, "Handmade Hero is off the week of Januray 25th as Casey recovers from strain injury in his hand.")
 
 @command("jeffandcasey", "jeffandcaseyshow", hide=True, hideAlways=False, cooldown=10)
 def jeffandcasey(bot, trigger):
