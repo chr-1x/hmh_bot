@@ -144,9 +144,9 @@ def langInfo(bot, trigger):
 
 @command('ide', 'emacs', 'editor', hide=False, cooldown=10)
 def ideInfo(bot, trigger):
-    """Info command that provides information about the editor (emacs) used by Casey.
+    """Info command that provides information about the editor used by Casey.
     """
-    info(bot, trigger, "Casey uses Emacs to edit his code because that is what he is used to. There are a lot of editors out there, however, so you should use whatever you feel most comfortable in. (See also: !emacsversion)")
+    info(bot, trigger, "Casey is using 4coder to edit his code, an editor created by community member Allen Webster (mr4thdimention) that uses plain C to configure its plugins. More information is available at http://www.4coder.net/ and you may support Allen, receive development builds, and download the handmade hero configuration at https://www.patreon.com/mr4thdimention")
 
 @command('editoradvice', 'whicheditor', hide=False, cooldown=10)
 def ideAdvice(bot, trigger):
@@ -157,7 +157,7 @@ def ideAdvice(bot, trigger):
 def emacsVersion(bot, trigger):
     """Info command that provides information about the emacs version.
     """
-    info(bot, trigger, "The version of emacs that Casey uses is GNU Emacs 23.4.1 (i386-mingw-nt6.1.7601), released in 2012.")
+    info(bot, trigger, "The version of emacs that Casey used to use is GNU Emacs 23.4.1 (i386-mingw-nt6.1.7601), released in 2012.")
 
 @command('college', 'school', hide=False, cooldown=10)
 def collegeInfo(bot, trigger):
@@ -279,7 +279,7 @@ def jeffandcasey(bot, trigger):
 
 @command("software", "programs", hide=False, cooldown=10)
 def software(bot, trigger):
-    info(bot, trigger, "The programs visibly used on the stream are Mischief (drawing), emacs (coding), cmd (command line), cloc (line counting), MS Visual Studio 2013 - Community Edition (debugging), and OBS (recording)")
+    info(bot, trigger, "The programs visibly used on the stream are Mischief (drawing), 4coder (coding), cmd (command line), cloc (line counting), MS Visual Studio 2013 - Community Edition (debugging), and OBS (recording)")
 
 @command("port", "porting", "linux", "platform", "platforms", "mac", "android", hide=True, hideAlways=False, cooldown=10)
 def port(bot, trigger):
