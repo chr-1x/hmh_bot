@@ -202,16 +202,15 @@ def aliasList(bot, trigger):
         Note that you must use the custom-defined @command decorator instead of the built-in
         Willie module one for this to work.
     """
-    args = trigger.group(2).split(" ") if trigger and trigger.group(2) else None
-    if (args and len(args) > 0):
-        for arg in args:
-            cmd = next((c for c in commands if arg in c.cmds), None)
-            if (cmd):
-                bot.say("Aliases of !%s: !%s" % (arg, ", !".join(cmd.cmds)))
-                if (len(args) > 1):
-                    time.sleep(0.300)
-            else:
-                bot.say("No aliases found for %s!" % arg)
+    arg = trigger.group(2)
+    if (arg):
+        cmd = next((c for c in commands if arg in c.cmds), None)
+        if (cmd):
+            bot.say("Aliases of !%s: !%s" % (arg, ", !".join(cmd.cmds)))
+            if (len(args) > 1):
+                time.sleep(0.300)
+        else:
+            bot.say("No aliases found for %s!" % arg)
 
     else:
         bot.say("Please specify a command to list the aliases of.")
